@@ -183,9 +183,13 @@ Error message and password prompt
 
 <li>Charmonium Talks</li>
 
+<li>Cling Interpreter</li>
+
 <li>ContentList</li>
 
 <li>Latex</li>
+
+<li>Linux</li>
 
 <li>Linux Commands</li>
 
@@ -209,7 +213,29 @@ Error message and password prompt
 
 <li>Physics Resources</li>
 
+<li>RooFit</li>
+
+<li>RooFit Convolution</li>
+
+<li>roofit Data Handling</li>
+
+<li>roofit Drawing</li>
+
+<li>RooFit Integral</li>
+
+<li>roofit Model</li>
+
+<li>RooFit Navigation Tools</li>
+
+<li>RooFit Shapes</li>
+
+<li>RooFit Simultaneous Fit</li>
+
 <li>ROOT</li>
+
+<li>ROOT C++</li>
+
+<li>ROOT Examples</li>
 
 <li>ROOT Histograms</li>
 
@@ -217,7 +243,11 @@ Error message and password prompt
 
 <li>ROOT Histograms Basic 2</li>
 
+<li>ROOT I/O</li>
+
 <li>root_example1</li>
+
+<li>root_example2</li>
 
 <li>root_gStyle</li>
 
@@ -232,6 +262,8 @@ Error message and password prompt
 <li>root_superimposehists</li>
 
 <li>Tips on Making Slides</li>
+
+<li>vim Editor</li>
 
 <li>Working with BOSS</li>
 
@@ -252,13 +284,13 @@ Error message and password prompt
 <div created="20170407032742459" creator="Yifan" modified="20170407032743401" modifier="Yifan" title="$:/config/AnimationDuration">
 <pre>250</pre>
 </div>
-<div created="20170411010051323" creator="Yifan" modified="20170411010051323" modifier="Yifan" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel">
+<div created="20170411141004733" creator="Yifan" modified="20170411141004733" modifier="Yifan" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel">
 <pre>hide</pre>
 </div>
-<div created="20170411010050059" creator="Yifan" modified="20170411010050059" modifier="Yifan" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-tiddler">
+<div created="20170411141000684" creator="Yifan" modified="20170411141000684" modifier="Yifan" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-tiddler">
 <pre>hide</pre>
 </div>
-<div created="20170411010045060" creator="Yifan" modified="20170411010045060" modifier="Yifan" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/save-wiki">
+<div created="20170411141002188" creator="Yifan" modified="20170411141002188" modifier="Yifan" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/save-wiki">
 <pre>hide</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.13">
@@ -7930,16 +7962,16 @@ Error message and password prompt
 <div created="20170411005206925" creator="Yifan" modified="20170411005206925" modifier="Yifan" title="$:/state/tab--1963855381">
 <pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
 </div>
-<div created="20170411005206005" creator="Yifan" modified="20170411005206005" modifier="Yifan" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div created="20170411005206005" creator="Yifan" modified="20170411115230519" modifier="Yifan" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
-<div created="20170407054919167" creator="Yifan" modified="20170411010041347" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
+<div created="20170407054919167" creator="Yifan" modified="20170411141010676" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/Tools</pre>
 </div>
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="$:/ControlPanel ContentList" title="$:/StoryList">
+<div list="ContentList" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8401,7 +8433,55 @@ Set Font, Color:
 
 ----</pre>
 </div>
-<div created="20170407022748393" creator="Yifan" modified="20170410120752201" modifier="Yifan" title="ContentList">
+<div created="20170411014736799" creator="Yifan" modified="20170411023203653" modifier="Yifan" title="Cling Interpreter">
+<pre>ROOT has a C++ interpreter called cling built in. 
+
+*It is used for the prompt, @@color:green;both C++ and Python.@@
+*It also serves as a source of information to store C++ objects
+*And it provides the back-end for ROOT’s signal/slot and plug-in mechanisms.
+
+----
+!!ROOT Prompt
+
+*`?` to show command lists
+*Single line command can do without `;`, it makes a difference of whether to output expression value.
+*`.&gt;` to redirect output
+
+*There is no way to back up; you are better off writing a script.
+
+----
+!!C++ Scripts
+
+!!!Run a Script:
+
+```
+root myScript.C
+```
+or
+
+```
+root [] .x myScript.C
+root [] .x myScript2.C(12, &quot;A String&quot;)
+
+```
+
+or
+
+```
+root [] .L myScript.C
+root [] myScript()
+```
+
+!!!@@color:green;Executing a Script From a Script@@:
+
+```
+void cernstaff() {
+   if (gSystem-&gt;AccessPathName(&quot;cernstaff.root&quot;)) {
+      gROOT-&gt;ProcessLine(&quot;.x cernbuild.C&quot;);
+   }
+```</pre>
+</div>
+<div created="20170407022748393" creator="Yifan" modified="20170411133528155" modifier="Yifan" title="ContentList">
 <pre>----
 !!Physics
 #[[Physics Resources]]: talks, memos and papers
@@ -8409,7 +8489,7 @@ Set Font, Color:
 
 ----
 !!Computer Skills
-#[[Linux Commands]]
+#[[Linux]]
 #[[ROOT]]
 #[[Latex]]
 
@@ -8421,6 +8501,11 @@ Set Font, Color:
 <pre>----
 *[ext[BES3 Latex Convention|./materials/bes3latex.zip]]: zip file
 *[[Beamer]]</pre>
+</div>
+<div created="20170411133533155" creator="Yifan" modified="20170411133618475" modifier="Yifan" title="Linux">
+<pre>#[[Linux Commands]]
+#[[Bash Scripts]]
+#[[vim Editor]]</pre>
 </div>
 <div created="20170407022820254" creator="Yifan" modified="20170407060613469" modifier="Yifan" title="Linux Commands">
 <pre>----
@@ -8570,19 +8655,499 @@ Stream EDitor, used for modifying files in unix/linux.
 <div created="20170410120928650" creator="Yifan" modified="20170410121127929" modifier="Yifan" title="Luminosity Resources">
 <pre>*[[GaoQing's Previous Work|http://hnbes3.ihep.ac.cn/HyperNews/get/paper110.html]]</pre>
 </div>
-<div created="20170410120718342" creator="Yifan" modified="20170410121112553" modifier="Yifan" title="Physics Resources">
-<pre>#[[Charmonium Talks]]: Things that happen in the groups.
+<div created="20170410120718342" creator="Yifan" modified="20170411121448099" modifier="Yifan" title="Physics Resources">
+<pre>----
+!!Charmonium
+
+#[[Charmonium Talks]]: Things that happen in the groups.
 #[[Luminosity Resources]]: Relating to my work of luminosity measurement.</pre>
 </div>
-<div created="20170407061511667" creator="Yifan" modified="20170409121049040" modifier="Yifan" title="ROOT">
+<div created="20170411110616088" creator="Yifan" modified="20170411132901149" modifier="Yifan" title="RooFit">
+<pre>[[roofit User Manual|https://root.cern.ch/download/doc/RooFit_Users_Manual_2.91-33.pdf]]
+
+----
+
+| !Concept | !Class |
+| Function | ~RooRealVar |
+| Function | ~RooAbsReal |
+| P.D.F. | ~RooAbsPdf |
+| Integral | ~RooRealIntegral |
+| Arg Set | ~RooArgSet |
+| Addition | ~RooAddPdf |
+| Convolution | ~RooFFTConvPdf |
+
+[[Basic example|root_example2]]
+
+----
+!!Basic logic:
+ 
+*[[Build a model|roofit Model]];
+*[[Fit to data|roofit Data Handling]];
+*[[Draw on frame|roofit Drawing]].
+
+----
+*[[RooFit Integral]]
+*[[RooFit Navigation Tools]]
+*[[RooFit Shapes]]
+*[[RooFit Convolution]]
+*[[RooFit Simultaneous Fit]]</pre>
+</div>
+<div created="20170411131325997" creator="Yifan" modified="20170411132028989" modifier="Yifan" title="RooFit Convolution">
+<pre>----
+!!Using '~RooFFTConvPdf
+
+```
+// Observable
+RooRealVar t(&quot;t&quot;,&quot;t&quot;,-10,30) ;
+// Theoretical model
+RooRealVar ml(&quot;ml&quot;,&quot;mean landau&quot;,5.,-20,20) ;
+RooRealVar sl(&quot;sl&quot;,&quot;sigma landau&quot;,1,0.1,10) ;
+RooLandau landau(&quot;lx&quot;,&quot;lx&quot;,t,ml,sl) ;
+// Detector response function
+RooRealVar mg(&quot;mg&quot;,&quot;mg&quot;,0) ;
+RooRealVar sg(&quot;sg&quot;,&quot;sg&quot;,2,0.1,10) ;
+RooGaussian gauss(&quot;gauss&quot;,&quot;gauss&quot;,t,mg,sg) ;
+// Define sampling frequency
+t.setBins(“fft”,10000) ;
+// Construct convolution
+RooFFTConvPdf lxg(&quot;lxg&quot;,&quot;landau (X) gauss&quot;,t,landau,gauss) ; 
+```
+
+''Performance'':  making FFT-based convolution 10 to 100 times faster than convolution through plain numeric integration. 
+
+
+''Limitation:''
+
+* The resulting convolution is explicitly circular: overflow go to low side.
+* A small but finite approximation is introduced by the sampling frequency.
+* The shape of both the theory model and the resolution are truncated at the boundaries of the defined range of the observable
+
+----
+!!Using class ~RooNumConvPdf 
+
+```
+RooRealVar x(“x”,”x”,-10,10) ;
+RooRealVar meanl(“meanl”,”mean of Landau”,2) ;
+RooRealVar sigmal(“sigmal”,”sigma of Landau”,1) ;
+RooLandau landau(“landau”,”landau”,x,meanl,sigmal) ;
+RooRealVar meang(“meang”,”mean of Gaussian”,0) ;
+RooRealVar sigmag(“sigmag”,”sigma of Gaussian”,2) ;
+RooGaussian gauss(“gauss”,”gauss”,x,meang,sigmag) ;
+RooNumConvPdf model(“model”,”model”,x,landau,gauss) ;
+RooPlot* frame = x.frame() ;
+model.plotOn(frame) ;
+landau.plotOn(frame,LineStyle(kDashed)) ;
+frame-&gt;Draw() ; 
+```</pre>
+</div>
+<div created="20170411112049413" creator="Yifan" modified="20170411120739516" modifier="Yifan" title="roofit Data Handling">
+<pre>----
+!!Data Input
+
+!!!Read Binned data (histograms) 
+
+```
+TH1* hh = (TH1*) gDirectory-&gt;Get(“ahisto”) ;
+RooRealVar x(“x”,”x”,-10,10) ;
+RooDataHist data(“data”,”dataset with x”,x,hh) ; 
+```
+
+!!!Read Unbinned data (trees)
+```
+TTree* tree = (TTree*) gDirectory-&gt;Get(“atree”) ;
+RooRealVar x(“x”,”x”,-10,10) ;
+RooDataSet data(“data”,”dataset with x”,tree,x) ; 
+```
+
+@@color:green;Generally speaking, `RooDataHist` and `RooDataSet` is treated in the same way@@, with few exceptions.
+
+!!!Generate Data from a Model
+
+```
+RooDataSet* data = gauss.generate(x,10000) ; 
+```
+
+----
+!!Fit a Model to Data
+It's easy: `gauss.fitTo(data);`. The function builds a likelihood function and pass it to MINUIT.
+
+In general, @@color:blue;an unbinned fit is more powerful, but slower.@@
+
+!!!Fit Options:
+
+*`mean.setConstant(kTRUE) ; `
+*`sigma.setRange(0.1,3) ; `
+*`gauss.fitTo(data, Range(-5,5)) ; `
+*`gauss.fitTo(data, Minos(kTRUE), PrintLevel(-1)) ; `
+
+!!!@@color:green; Dynamic Observable Concept@@:  
+~RooAbsPdf objects do not have a unique return value, it depends on the local definition of observables.
+
+Therefore different normalization methods: 
+
+```
+Double_t gauss_raw = gauss.getVal() ; // raw unnormalized value
+Double_t gauss_pdfX = gauss.getVal(x) ; // value when used as p.d.f in x
+Double_t gauss_pdfM = gauss.getVal(mean) ; // value when used as p.d.f in mean
+Double_t gauss_pdfS = gauss.getVal(sigma) ; // value when used as p.d.f in sigma
+```
+
+----
+!!Get Result:
+`getVal()`: the value of a parameter, or function.</pre>
+</div>
+<div created="20170411112103900" creator="Yifan" modified="20170411120308397" modifier="Yifan" title="roofit Drawing">
+<pre>----
+!!Model Drawing
+Barebone:
+
+```
+RooPlot* xframe = x.frame() ;
+gauss.plotOn(frame) ;
+frame-&gt;Draw();
+```
+
+Overlay:
+
+```
+RooPlot* xframe = x.frame() ;
+gauss.plotOn(frame) ;
+sigma = 2 ;
+gauss.plotOn(frame,LineColor(kRed)) ;
+frame-&gt;Draw();
+```
+
+----
+!!Data Drawing
+Drawing unbinned data is the same as drawing models.
+
+```
+RooPlot* xframe = x.frame() ;
+data.plotOn(frame) ;
+frame-&gt;Draw();
+```
+
+While drawing binned data you can show in any bins instead.
+
+```
+RooPlot* xframe = x.frame() ;
+data.plotOn(frame,Binning(25)) ;
+frame-&gt;Draw() 
+```
+
+----
+!!Plot Compound Model
+
+Draw Components:
+
+```
+RooPlot* frame = x.frame() ;
+model.plotOn(frame) ;
+model.plotOn(frame, Components(bkg),LineStyle(kDashed)) ;
+frame-&gt;Draw() ; 
+```
+
+Draw Sum of Components:
+
+```
+model.plotOn(frame, Components(RooArgSet(bkg1,bkg2)),LineStyle(kDashed)) ;
+model.plotOn(frame, Components(“bkg1,bkg2”),LineStyle(kDashed)) ; 
+```
+</pre>
+</div>
+<div created="20170411115208958" creator="Yifan" modified="20170411115310558" modifier="Yifan" title="RooFit Integral">
+<pre>!!Calculating integrals over models
+
+Integrals over p.d.f.s and functions are represented as separate objects in ~RooFit. Thus, rather than defining integration as an action, an integral is defined by object inheriting from ~RooAbsReal.
+
+```
+RooAbsReal* intGaussX = gauss.createIntegral(x) ; 
+```
+
+Result into a `RooRealIntegral` class. The integration can be either numerical or analytic.
+
+Can integral on a subrange of a normalized function
+
+```
+x.setRange(“signal”,-2,2) ;
+RooAbsReal* intGaussX = gauss.createIntegral(x,NormSet(x),Range(“signal”)) ; 
+```
+
+!!Cumulative distribution functions
+
+Can avoid repeating numerical calculations.
+
+```
+RooAbsReal* cdf = pdf-&gt;createCdf(x) ; 
+```</pre>
+</div>
+<div created="20170411111911148" creator="Yifan" modified="20170411120341365" modifier="Yifan" title="roofit Model">
+<pre>----
+!!Basics
+
+```
+RooRealVar x(“x”,”x”,-10,10) ;
+RooRealVar mean(“mean”,”Mean of Gaussian”,0,-10,10) ;
+RooRealVar sigma(“sigma”,”Width of Gaussian”,3,-10,10) ;
+RooGaussian gauss(“gauss”,”gauss(x,mean,sigma)”,x,mean,sigma) ; 
+```
+
+----
+!!Compound Models
+!!! Model with fractions:
+
+```
+RooRealVar x(“x”,”x”,-10,10) ;
+RooRealVar mean(“mean”,”mean”,0,-10,10) ;
+RooRealVar sigma(“sigma,”sigma”,2,0.,10.) ;
+RooGaussian sig(“sig”,”signal p.d.f.”,x,mean,sigma) ;
+RooRealVar c0(“c0”,”coefficient #0”, 1.0,-1.,1.) ;
+RooRealVar c1(“c1”,”coefficient #1”, 0.1,-1.,1.) ;
+RooRealVar c2(“c2”,”coefficient #2”,-0.1,-1.,1.) ;
+RooChebychev bkg(“bkg”,”background p.d.f.”,x,RooArgList(c0,c1,c2)) ;
+RooRealVar fsig(“fsig”,”signal fraction”,0.5,0.,1.) ;
+// model(x) = fsig*sig(x) + (1-fsig)*bkg(x)
+RooAddPdf model(“model”,”model”,RooArgList(sig,bkg),fsig) ; 
+```
+
+More coefficients:
+
+```
+// model2(x) = fsig*sig(x) + fbkg1*bkg1(x) + (1-fsig-fbkg)*bkg2(x)
+RooAddPdf model2(“model2”,”model2”,RooArgList(sig,bkg1,bkg2),
+ RooArgList(fsig,fbkg1)) ;
+```
+
+Adding reculsively:
+
+```
+// Construct a third pdf bkg_peak
+RooRealVar mean_bkg(“mean_bkg”,”mean”,0,-10,10) ;
+RooRealVar sigma_bkg(“sigma_bkg,”sigma”,2,0.,10.) ;
+RooGaussian bkg_peak(“bkg_peak”,”peaking bkg p.d.f.”,x,mean_bkg,sigma_bkg) ;
+// First add sig and peak together with fraction fpeak
+RooRealVar fpeak(“fpeak”,”peaking background fraction”,0.1,0.,1.) ;
+RooAddPdf sigpeak(“sigpeak”,”sig+peak”,RooArgList(bkg_peak,sig),fpeak) ;
+// Next add (sig+peak) to bkg with fraction fpeak
+RooRealVar fbkg(”fbkg”,”background fraction”,0.5,0.,1.) ;
+RooAddPdf model(“model”,”bkg+(sig+peak)”,RooArgList(bkg,sigpeak),fbkg) ; 
+```
+
+Allowing accommodable ratio:
+
+```
+RooAddPdf model(“model”,”model”,RooArgList(sig,bkg),RooArgList(nsig,nbkg)) ; 
+```
+</pre>
+</div>
+<div created="20170411121822727" creator="Yifan" modified="20170411122254481" modifier="Yifan" title="RooFit Navigation Tools">
+<pre>''To print a list of variables used by the model:''
+
+```
+RooArgSet* params = model-&gt;getVariables() ;
+params-&gt;Print(“v”) ; 
+```
+''To retrieve a pointer to a variable:''
+
+```
+RooRealVar* c0 = (RooRealVar*) params-&gt;find(“c0”) ;
+c0-&gt;setVal(5.3) ; 
+```
+or `params-&gt;setRealValue(“c0”,5.3) ; `
+
+
+''What are the parameters and observable of my model? ''
+
+```
+// Given a p.d.f model(x,m,s) and a dataset D(x,y)
+// Using (RooArgSet of) variables as given observable definition
+RooArgSet* params = model.getParameters(x) ; // Returns (m,s)
+RooArgSet* obs = model.getObservables(x) ; // Returns x
+// Using RooAbsData as definition of observables
+RooArgSet* params = model.getParameters(D) ; // Returns (m,s)
+RooArgSet* obs = model.getObservables(D) ; // Return x 
+```
+
+''What is the structure of my composite model? ''
+
+```
+model.Print(“t”) ;   //tree printing mode
+```</pre>
+</div>
+<div created="20170411124344081" creator="Yifan" modified="20170411125951642" modifier="Yifan" title="RooFit Shapes">
+<pre>----
+!!Provided P.D.F.s
+
+''Basic functions:''
+
+*`RooGaussian`
+*`RooBifurGauss`: left and right width independent
+*`RooExponential`
+*`RooPolynomial`
+*`RooChebychev`
+*`RooPoisson`
+
+''Non-parametric functions'': describe data
+
+*`RooHisPdf`
+*`RooKeysPdf`:Kernel estimation, the shape of an external unbinned dataset as a superposition of Gaussians
+
+''Physics inspired functions''
+
+*`RooLandau`
+*`RooBreitWigner`
+*`RooCBShape`: Crystal Ball
+*`Novosibirsk`: Gaussian with long tail on one side, short on the other
+*`RooArgusBG`:  An empirical formula to model the phase space of multi-body decays near threshold.
+*`RooDstD0BG`:  An empirical function with one parameter that can model the background phase space in invariant mass difference distribution.
+
+!!Reparameterizing existing basic p.d.f.s 
+```
+// Construct function mean_shifted(mean,shift)
+RooRealVar shift(“shift”,”shift”,1.0) ; 
+RooFormulaVar mean_shifted(“mean_shifte”,”mean+shift”,RooArgSet(mean,shift)); 
+
+// Construct sig_right(x,mean_shifted(mean,shift),sigma)
+RooGaussian sig_right(“sig_right”,”signal p.d.f.”,x,mean_shifted,sigma) ; 
+
+```
+
+
+----
+!!Binding TFx, external C++ functions as ~RooFit functions
+
+''bind existing C++ function:''
+
+```
+RooRealVar x(“x”,”x”,-10,10) ;
+RooAbsReal* erfFunc = bindFunction(TMath::Erf,x) ;
+RooPlot* frame = x.frame() ;
+erfFunc-&gt;plotOn(frame) ; 
+```
+
+''bindPdf()''
+
+```
+RooRealVar x(&quot;x&quot;,&quot;x&quot;,0,1) ;
+RooRealVar a(&quot;a&quot;,&quot;a&quot;,5,0,10) ;
+RooRealVar b(&quot;b&quot;,&quot;b&quot;,2,0,10) ;
+RooAbsPdf* beta = bindPdf(&quot;beta&quot;,ROOT::Math::beta_pdf,x,a,b) ;
+RooDataSet* data = beta.generate(x,10000) ;
+RooPlot* frame = x.frame() ;
+data-&gt;plotOn(frame) ;
+beta-&gt;plotOn(frame) ; 
+```
+
+''~RooGenericPdf''
+
+```
+RooRealVar x(“x”,”x”,-10,10) ;
+RooRealVar alpha(“alpha”,”alpha”,1.0,0.,10.) ;
+RooGenericPdf g(“g”,”sqrt(abs(alpha*x))+0.1”,RooArgSet(x,alpha)) ;
+
+```
+
+''Using ~RooClassFactory''
+
+@@color:purple;to add@@
+</pre>
+</div>
+<div created="20170411132905454" creator="Yifan" modified="20170411132927508" modifier="Yifan" title="RooFit Simultaneous Fit">
+<pre>[[rf504_simwstool.C|https://root.cern.ch/root/htmldoc/tutorials/roofit/rf504_simwstool.C.html]]</pre>
+</div>
+<div created="20170407061511667" creator="Yifan" modified="20170411131056785" modifier="Yifan" title="ROOT">
 <pre>----
 !Topics
 #[[Histograms|ROOT Histograms]]
 #[[Handling Strings|root_handlingstrings]]
+#[[ROOT C++]]: a quick reminder of C++ syntaxs
+#[[Cling Interpreter]]: ROOT's C++ Interpreter
+#[[Input/Output|ROOT I/O]]
+#[[RooFit]]
+#[[Example Scripts|ROOT Examples]]: Codes that may be quickly reused
 
 ----
 *[[User Guide|https://root.cern.ch/root/htmldoc/guides/users-guide/ROOTUsersGuide.html]]
 *[[Reference Database|https://root.cern.ch/doc/master/index.html]]</pre>
+</div>
+<div created="20170411011622096" creator="Yifan" modified="20170411014827893" modifier="Yifan" title="ROOT C++">
+<pre>Just a little C++ to help with better utilizing ROOT.
+
+----
+!!Class
+
+How to define:
+
+```
+   class TLine {
+      Double_t x1;
+      Double_t y1;
+      Double_t x2;
+      Double_t y2;
+      TLine(int x1, int y1, int x2, int y2);
+      void Draw();
+   }
+```
+
+How to use:
+
+```
+   TLine l(0.2,0.2,0.8,0.9);
+   l.Draw();
+```
+
+----
+!!Inheritance
+
+The child class has everything of its parents, and more.
+
+```
+   class TArrow : public TLine {
+      int ArrowHeadSize;
+      void Draw();
+      void SetArrowSize(int arrowsize);
+   }
+```
+
+Method Overriding: If a method is defined in both the child and parent, use the child's one.
+
+ `class TArrow : public TLine { ...` vs ` class TArrow : private TLine { ...`: The former is normal, while the latter allows only TArrow methods to access TLine members.
+
+!!Data Encapsulation
+
+```
+   private:
+      int ArrowHeadSize;
+```
+
+The private members can only be used by the methods of this class. @@color:green;Not even its children can see them.@@
+
+Data encapsulation means all data member of a class should be private. That's one of the greatest advantage of OOP. Using getter/setter functions allow programmer to change how things work internally without affecting users.
+
+
+----
+!!@@color:green;Creating Objects on the Stack and Heap@@
+
+```
+root[] Quad my_object(1.,2.,-3.);
+```
+
+The command line create an object on the stack, @@color:blue;it would be deleted as soon as the control leaves the innermost {}@@.
+
+```
+root[] Quad *my_objptr = new Quad(1.,2.,-3.);
+```
+
+But after this command, pointer would be on the stack, while the object on heap, @@color:green;which make it persist until deleted@@.
+
+----
+!![[Cling Interpreter]]
+Cling is ROOT's C++ Interpreter.</pre>
+</div>
+<div created="20170411031736270" creator="Yifan" modified="20170411111354182" modifier="Yifan" title="ROOT Examples">
+<pre>#[[Reading MC CrossSections|root_example1]]: dealing with txt files
+#[[Superimpose 2 Hists|root_superimposehists]]
+#[[roofit 1|root_example2]]: basic roofit</pre>
 </div>
 <div created="20170407105009632" creator="Yifan" modified="20170409114825685" modifier="Yifan" title="ROOT Histograms">
 <pre>*[[Basic 1|ROOT Histograms Basic 1]]: create, bins, fill, read/write
@@ -8713,6 +9278,12 @@ h1-&gt;Scale(const) TH1F h3 = 8*(*h1); TH1F h4 = (*h1)*(*h2);
 *These projections can be fit via things like `TH2::FitSlicesX()`
 </pre>
 </div>
+<div created="20170411023740915" creator="Yifan" modified="20170411025035327" modifier="Yifan" title="ROOT I/O">
+<pre>----
+*A ROOT can contain directories in unlimited levels.
+*`gFile` points to current file.
+</pre>
+</div>
 <div created="20170407062104770" creator="Yifan" modified="20170407063312592" modifier="Yifan" title="root_example1">
 <pre>!!Reading MC ~CrossSections
 
@@ -8807,6 +9378,38 @@ void GetCrossSection(){
         cout&lt;&lt;&quot;Unweighted&quot;&lt;&lt;endl;
         cout&lt;&lt;&quot;mean = &quot;&lt;&lt;mean_&lt;&lt;&quot;, uncertainty = &quot;&lt;&lt;sqrt(err2_)/counter&lt;&lt;endl;
 }
+```</pre>
+</div>
+<div created="20170411111249174" creator="Yifan" modified="20170411111522854" modifier="Yifan" title="root_example2">
+<pre>Simple example of roofit code.
+
+```
+using namespace RooFit ; 
+```
+
+```
+// --- Observable ---
+RooRealVar mes(&quot;mes&quot;,&quot;m_{ES} (GeV)&quot;,5.20,5.30) ;
+// --- Build Gaussian signal PDF ---
+RooRealVar sigmean(&quot;sigmean&quot;,&quot;B^{#pm} mass&quot;,5.28,5.20,5.30) ;
+RooRealVar sigwidth(&quot;sigwidth&quot;,&quot;B^{#pm} width&quot;,0.0027,0.001,1.) ;
+RooGaussian gauss(&quot;gauss&quot;,&quot;gaussian PDF&quot;,mes,sigmean,sigwidth) ;
+// --- Build Argus background PDF ---
+RooRealVar argpar(&quot;argpar&quot;,&quot;argus shape parameter&quot;,-20.0,-100.,-1.) ;
+RooArgusBG argus(&quot;argus&quot;,&quot;Argus PDF&quot;,mes,RooConst(5.291),argpar) ;
+// --- Construct signal+background PDF ---
+RooRealVar nsig(&quot;nsig&quot;,&quot;#signal events&quot;,200,0.,10000) ;
+RooRealVar nbkg(&quot;nbkg&quot;,&quot;#background events&quot;,800,0.,10000) ;
+RooAddPdf sum(&quot;sum&quot;,&quot;g+a&quot;,RooArgList(gauss,argus),RooArgList(nsig,nbkg)) ;
+// --- Generate a toyMC sample from composite PDF ---
+RooDataSet *data = sum.generate(mes,2000) ;
+// --- Perform extended ML fit of composite PDF to toy data ---
+sum.fitTo(*data,Extended()) ;
+// --- Plot toy data and composite PDF overlaid ---
+RooPlot* mesframe = mes.frame() ;
+data-&gt;plotOn(mesframe) ;
+sum.plotOn(mesframe) ;
+sum.plotOn(mesframe,Components(argus),LineStyle(kDashed)) ; 
 ```</pre>
 </div>
 <div created="20170407121512042" creator="Yifan" modified="20170409115519948" modifier="Yifan" title="root_gStyle">
@@ -9087,6 +9690,54 @@ void twoscales() {
 *Break lines “by hand” using the command \\.
 *Don't use a smaller font size to “fit more on a frame.” 
 </pre>
+</div>
+<div created="20170411133712979" creator="Yifan" modified="20170411140806844" modifier="Yifan" title="vim Editor">
+<pre>`gvim text_file &amp;`: open a window of graphic vi editor
+
+''Insert Mode'': `a/A/i/I/o/O`
+
+''Curser Movements Commands''
+
+*`3g/gg/G`
+*`$`: end of current line
+
+''Exit Commands''
+
+*`:wq`
+*`:10,25 w temp`: write lines into temp
+
+''Yank/Delete/Paste'':
+
+*`yy/5yy/y$/y^`
+*`cc/5cc`
+*`d/dd/5dd/d$/d^`
+*`p/P`
+*`u`: undo last change
+*`U`: restore line
+*`J`: join next line to the current
+
+
+''Search'': 
+
+*`/pattern`, and `n/N` to navigate.
+*patterns: `^`,`$`,`\d`(0~9),`[abd]`,`string1|string2`
+*`%:s/pat1/pat2/g`: ''replace'', `%`all lines, `g` every occurances
+*`:1,5 /pat/d`: ''removes'' all lines containing pattern in [1,5], `!/pat/` to reverse select
+
+''Block edit'': `v/Ctrl+v`
+
+----
+!!Setting
+
+Default files:
+
+```
+~/.vimrc
+~/.gvimrc
+~/.vim/ (directory of vim config files.)
+```
+
+[[Config Example|http://vimconfig.com/]]</pre>
 </div>
 <div created="20170407055652826" creator="Yifan" modified="20170407055725479" modifier="Yifan" title="Working with BOSS">
 <pre></pre>
