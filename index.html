@@ -159,11 +159,21 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla/options/sidebarlayout</li>
 
+<li>参数估计</li>
+
+<li>大数定理和中心极限定理</li>
+
+<li>子样及其分布</li>
+
 <li>About Tiddlywiki</li>
 
 <li>Bash Scripts</li>
 
 <li>Bash_Conditions</li>
+
+<li>bash_example1</li>
+
+<li>bash_example2</li>
 
 <li>Bash_Functions</li>
 
@@ -191,6 +201,8 @@ Error message and password prompt
 
 <li>ContentList</li>
 
+<li>IHEP Condor</li>
+
 <li>Important Distributions</li>
 
 <li>Latex</li>
@@ -202,6 +214,8 @@ Error message and password prompt
 <li>Linux Commands</li>
 
 <li>linux_cat</li>
+
+<li>linux_cut</li>
 
 <li>linux_find</li>
 
@@ -279,6 +293,8 @@ Error message and password prompt
 
 <li>Tips on Making Slides</li>
 
+<li>Typing Practices</li>
+
 <li>vim Editor</li>
 
 <li>Working with BOSS</li>
@@ -302,13 +318,13 @@ Error message and password prompt
 <div created="20170407032742459" creator="Yifan" modified="20170407032743401" modifier="Yifan" title="$:/config/AnimationDuration">
 <pre>250</pre>
 </div>
-<div created="20170413050931882" creator="Yifan" modified="20170413050931882" modifier="Yifan" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel">
+<div created="20170414054811779" creator="Yifan" modified="20170414054811779" modifier="Yifan" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel">
 <pre>hide</pre>
 </div>
-<div created="20170413050935753" creator="Yifan" modified="20170413050935753" modifier="Yifan" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-tiddler">
+<div created="20170414054810891" creator="Yifan" modified="20170414054810891" modifier="Yifan" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-tiddler">
 <pre>hide</pre>
 </div>
-<div created="20170413050933921" creator="Yifan" modified="20170413050933921" modifier="Yifan" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/save-wiki">
+<div created="20170414054807115" creator="Yifan" modified="20170414054807115" modifier="Yifan" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/save-wiki">
 <pre>hide</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.13">
@@ -7983,7 +7999,7 @@ Error message and password prompt
 <div created="20170411005206005" creator="Yifan" modified="20170412030123100" modifier="Yifan" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
-<div created="20170407054919167" creator="Yifan" modified="20170412024328936" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
+<div created="20170407054919167" creator="Yifan" modified="20170414051622155" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/Tools</pre>
 </div>
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
@@ -8118,6 +8134,62 @@ Error message and password prompt
 <div created="20170411005211261" creator="Yifan" modified="20170411005211261" modifier="Yifan" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
 <pre>fluid-fixed</pre>
 </div>
+<div created="20170414051712634" creator="Yifan" modified="20170414053759573" modifier="Yifan" title="参数估计">
+<pre>参数估计，估计量，估计值，似然函数（参数条件下，现象的概率）。
+
+*一致性：估计量依概率收敛到参数。
+*无偏性：估计量期望等于参数真值。
+*有效性：满足正规条件,且达到方差下界(MVB)。
+*充分性：包含了子样对于待估计参数的全部信息。
+
+
+区间估计，置信区间，置信概率，显著性，上下置信限，置信域
+
+----
+!!极大似然法
+
+极大似然估计量，似然方程。
+
+极大似然估计量的性质：参数变换不变，一致，无偏，充分，有效，唯一，渐近正态(lnL是参数的抛物线函数)。
+
+合并估计：`L(x,y|par)=L(x|par)*L(y|par)`
+
+</pre>
+</div>
+<div created="20170414045145343" creator="Yifan" modified="20170414051547060" modifier="Yifan" title="大数定理和中心极限定理">
+<pre>----
+
+!Law of large numbers(LLN)
+
+According to the law, the average of the results obtained from a large number of trials should be close to the expected value, and will tend to become closer as more trials are performed.
+
+!Central limit theorem(CLT)
+
+In more precise terms, given certain conditions, the arithmetic mean of a sufficiently large number of iterates of @@color:green;independent random variables@@, @@color:blue;each with a well-defined (finite) expected value@@ and @@color:orange;finite variance@@, will be approximately normally distributed, regardless of the underlying distribution.
+
+
+</pre>
+</div>
+<div created="20170414051520883" creator="Yifan" modified="20170414051525589" modifier="Yifan" title="子样及其分布">
+<pre>子样，总体，抽样，统计推断，简单随机抽样，子样观测值，子样空间。
+
+统计量，子样平均值，子样方差，子样标准差，子样k阶原点矩(Λ,,k,,)，子样k阶中心矩(M,,k,,)，子样偏度，子样峰度。子样协方差，子样相关系数。
+
+*子样平均值期望等于总体平均值期望
+*子样平均值方差等于总体方差的1/n
+*子样方差期望等于总体方差
+
+抽样分布：
+
+*泊松总体的子样均值服从泊松分布
+*正态分布总体的子样均值服从正态分布
+*当n很大时，任意总体子样平均值服从正态分布
+*两正态总体的子样平均值之差也是正态变量
+*标准正态分布的子样平方和服从卡方分布
+*正态总体的子样方差服从卡方分布
+*标准正态总体的平均值/方差分布服从t分布；
+*两标准正态总体的方差之商服从F分布</pre>
+</div>
 <div created="20170407035445794" creator="Yifan" modified="20170407054927759" modifier="Yifan" title="About Tiddlywiki">
 <pre>This note is stored as a Tiddlywiki file. Here are some more information about this helpful tool.
 
@@ -8126,7 +8198,7 @@ Error message and password prompt
 #[[A Cheat Sheet|http://www.personal.psu.edu/kkm11/files/Tiddlywiki%20Guide.pdf]]
 </pre>
 </div>
-<div created="20170407044557916" creator="Yifan" modified="20170407055125394" modifier="Yifan" title="Bash Scripts">
+<div created="20170407044557916" creator="Yifan" modified="20170413135740290" modifier="Yifan" title="Bash Scripts">
 <pre>----
 !The Basics
 A bash script start with the header `#!/bin/bash `, then it can be as simple as a collection of [[linux command lines|Linux Commands]]. But there're more to it.
@@ -8145,6 +8217,10 @@ A bash script start with the header `#!/bin/bash `, then it can be as simple as 
 *`echo 1 + 1`: string
 *`echo $((1+1))`, `echo $[1+1]`: value, @@color:green;but only integers.@@
 
+!!Parameters
+*`$1`,`$2` and so on. `$*` for the list, `$#` for the number.
+
+
 ----
 !More:
 *[[Operators|Bash_Operators]]
@@ -8153,11 +8229,13 @@ A bash script start with the header `#!/bin/bash `, then it can be as simple as 
 *[[Functions|Bash_Functions]]
 
 ----
-!Example Scripts</pre>
+!Useful Codes
+*[[Delete Condor Jobs|bash_example1]]
+*[[Save/Load Paths|bash_example2]]</pre>
 </div>
-<div created="20170407051314544" creator="Yifan" modified="20170407061326779" modifier="Yifan" title="Bash_Conditions">
+<div created="20170407051314544" creator="Yifan" modified="20170413133018667" modifier="Yifan" title="Bash_Conditions">
 <pre>!!Conditions
-If-then:
+*If-then:
 
 ```
 if [ &quot;foo&quot; = &quot;foo&quot; ]; then
@@ -8165,19 +8243,22 @@ if [ &quot;foo&quot; = &quot;foo&quot; ]; then
 fi
 ```
 
-If-then-else with variables:
+*If-then-else with variables:
+* and(&amp;&amp;)/or(||)
+
 
 ```
 T1=&quot;foo&quot;
 T2=&quot;bar&quot;
-if [ &quot;$T1&quot; = &quot;$T2&quot; ]; then
+T3=&quot;t3&quot;
+if [[ (&quot;$T1&quot; = &quot;$T2&quot;) &amp;&amp; (&quot;$T1&quot; = &quot;$T3&quot;) ]]; then
     echo expression evaluated as true
 else
     echo expression evaluated as false
 fi
 ```
 
-Case:
+*Case:
 
 ```
 case $rental in
@@ -8187,6 +8268,57 @@ case $rental in
    &quot;bicycle&quot;) echo &quot;For $rental 20 paisa per k/m&quot;;;
    *) echo &quot;Sorry, I can not gat a $rental for you&quot;;;
 esac
+```</pre>
+</div>
+<div created="20170413132055664" creator="Yifan" modified="20170413132619202" modifier="Yifan" title="bash_example1">
+<pre>!!Deleting Condor Jobs in an ID Range.
+
+```
+#!/bin/bash
+# This script remove the jobs whose id range from [$1,$2] or [$1,inf];
+# if $#==0, do nothing, to avoid mistakenly deleting all jobs
+
+nline=`hep_q -u yangyf| wc -l`
+nline=$(( nline - 2 ))
+
+if [ $# -lt 2 ]; then
+        max_id=99999999
+else
+        max_id=$2
+fi
+if [ $# -lt 1 ]; then
+        echo Need starting/ending JobID as parameters
+        exit
+else
+        min_id=$1
+fi
+
+echo &quot;minID: $min_id maxID: $max_id&quot;
+
+hep_q -u yangyf &gt; info.txt
+
+for i in `seq 3 $nline`; do
+        jobid=`cat info.txt| head -$i |tail -1| cut -d &quot;.&quot; -f 1 `
+        if [[ (&quot;$jobid&quot; -le &quot;$max_id&quot;)  &amp;&amp;  (&quot;$jobid&quot; -ge &quot;$min_id&quot;) ]]
+        then
+                hep_rm $jobid
+        fi
+done
+```</pre>
+</div>
+<div created="20170413135455907" creator="Yifan" modified="20170413135628986" modifier="Yifan" title="bash_example2">
+<pre>!!Save and Load Paths
+Save the paths to a file, so the tags can cross tab.
+
+in `~/.bashrc`
+
+```
+alias sd1=' pwd &gt; ~/scripts/.saved_dir1'
+alias sd2=' pwd &gt; ~/scripts/.saved_dir2'
+alias sd3=' pwd &gt; ~/scripts/.saved_dir3'
+alias cd1=' cd `cat ~/scripts/.saved_dir1`  '
+alias cd2=' cd `cat ~/scripts/.saved_dir2`  '
+alias cd3=' cd `cat ~/scripts/.saved_dir3`  '
 ```</pre>
 </div>
 <div created="20170407051401206" creator="Yifan" modified="20170407053656579" modifier="Yifan" title="Bash_Functions">
@@ -8440,8 +8572,13 @@ Set Font, Color:
 
 ```</pre>
 </div>
-<div created="20170412111817131" creator="Yifan" modified="20170412111858592" modifier="Yifan" title="BOSS">
-<pre>[[Class Reference Documentation |http://bes3.to.infn.it/BESIII_Doxygen_Documentation.html]]</pre>
+<div created="20170412111817131" creator="Yifan" modified="20170413115859729" modifier="Yifan" title="BOSS">
+<pre>*[[Offline Software Group Page|http://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Main_Page]]
+*[[Class Reference Documentation |http://bes3.to.infn.it/BESIII_Doxygen_Documentation.html]]
+*[[IHEP Condor]]
+
+
+</pre>
 </div>
 <div created="20170410115822410" creator="Yifan" modified="20170412004755166" modifier="Yifan" title="Charmonium Talks">
 <pre>----
@@ -8526,6 +8663,71 @@ void cernstaff() {
 !!Others
 #[[Communication Skills]]
 #[[About Tiddlywiki]]</pre>
+</div>
+<div created="20170413115846627" creator="Yifan" modified="20170413132407491" modifier="Yifan" title="IHEP Condor">
+<pre>----
+!!基本操作
+
+1. ''设置环境变量''：
+
+建议直接修改~/.bashrc或是~/.tcshrc
+
+a. 在lxslc6.ihep.ac.cn:
+tcsh shell 设置命令:   
+
+`setenv PATH /afs/ihep.ac.cn/soft/common/sysgroup/hep_job/bin:${PATH}
+`
+
+bash shell 设置命令:  
+
+`export PATH=/afs/ihep.ac.cn/soft/common/sysgroup/hep_job/bin:$PATH` 
+
+b. 在lxslc5.ihep.ac.cn:
+
+tcsh shell设置命令: 
+
+`setenv PATH /afs/ihep.ac.cn/soft/common/sysgroup/hep_job/bin5:${PATH}`
+
+bash shell设置命令: 
+
+`export PATH=/afs/ihep.ac.cn/soft/common/sysgroup/hep_job/bin5:$PATH `
+
+
+
+2.'' 提交作业''：
+
+方式一： 
+
+*替换`boss -q joboption`为 `boss.condor  joboption`
+
+方式二：
+
+*替换 `qsub -q besq jobscript.sh`为`hep_sub -g physics jobscript.sh` (@@color:green;jobscript.sh  要有可执行权限@@)
+*` [-o OUT]`,`[-e ERROR]`, `[-l LOG]`,指定输出，报错和日志。输出和报错默认`./jobscript.sh.out/err`，日志默认不产生
+*`[-argu ARGUMENTS [ARGUMENTS ...]]`
+
+
+
+3. ''查询作业：''
+
+*`hep_q -u username`
+
+
+4. ''删除作业''：
+
+*`hep_rm jobid`
+*`hep_rm -a`
+*[[批量删作业脚本|bash_example1]]
+
+----
+!!其他
+
+''作业程序中获取作业号''
+
+```
+#!/bin/bash
+JobId=$_CONDOR_IHEP_JOB_ID
+```</pre>
 </div>
 <div created="20170412032237352" creator="Yifan" modified="20170412112940014" modifier="Yifan" title="Important Distributions">
 <pre>----
@@ -8661,7 +8863,7 @@ text to be influenced
 #[[Bash Scripts]]
 #[[vim Editor]]</pre>
 </div>
-<div created="20170407022820254" creator="Yifan" modified="20170407060613469" modifier="Yifan" title="Linux Commands">
+<div created="20170407022820254" creator="Yifan" modified="20170413134339214" modifier="Yifan" title="Linux Commands">
 <pre>----
 !The Basics
 *`pwd`
@@ -8677,7 +8879,7 @@ text to be influenced
 *`passwd`: change user password
 *`head/tail -n file`: print the first/last n lines of a file.
 *`echo`
-
+*`touch`
 
 ----
 !More
@@ -8688,6 +8890,7 @@ Single commands:
 *[[grep|linux_grep]]
 *[[sed|linux_sed]]
 *[[cat|linux_cat]]
+*[[cut|linux_cut]]
 
 Topics:
 
@@ -8711,6 +8914,15 @@ cat means to concatenate. It can be used to combine text files.
 *`-b`: to number unblank lines.
 *`-n`: to number all lines.
 *`-s`: to squeeze adjacent blank lines</pre>
+</div>
+<div created="20170413133305242" creator="Yifan" modified="20170413134328952" modifier="Yifan" title="linux_cut">
+<pre>!!cut
+Remove sections from each line of a file.
+
+*`cut -d &quot;:&quot; -f 1 filename`: get the content before `:` in each line; `d` for delimiter, `f` for fields to select.
+*`cut -c 4-10 filename`: characters in [4,10]; `4,10` means {4,10}, `10-` means [10,end]
+*`-s, --only-delimited`: Don't print lines without delimiter
+</pre>
 </div>
 <div created="20170407034554481" creator="Yifan" modified="20170407034557753" modifier="Yifan" title="linux_find">
 <pre>!!find
@@ -8816,19 +9028,26 @@ Stream EDitor, used for modifying files in unix/linux.
 *https://en.wikipedia.org/wiki/Bonferroni_correction
 </pre>
 </div>
-<div created="20170410120928650" creator="Yifan" modified="20170410121127929" modifier="Yifan" title="Luminosity Resources">
-<pre>*[[GaoQing's Previous Work|http://hnbes3.ihep.ac.cn/HyperNews/get/paper110.html]]</pre>
+<div created="20170410120928650" creator="Yifan" modified="20170413093157083" modifier="Yifan" title="Luminosity Resources">
+<pre>*[[GaoQing's Previous Work|http://hnbes3.ihep.ac.cn/HyperNews/get/paper110.html]]: memo</pre>
 </div>
-<div created="20170412115420240" creator="Yifan" modified="20170412115838193" modifier="Yifan" title="Particle Detectors">
+<div created="20170412115420240" creator="Yifan" modified="20170413055818880" modifier="Yifan" title="Particle Detectors">
 <pre>----
+!!Typical Resolutions
+
+[img[./img/physics/DetectorResolutions.png]]
+
+----
 #[ext[Book by Grupen|./materials/books/Particle_Detectors_Grupen.pdf]]</pre>
 </div>
-<div created="20170410120718342" creator="Yifan" modified="20170412114738594" modifier="Yifan" title="Physics Resources">
+<div created="20170410120718342" creator="Yifan" modified="20170413115308133" modifier="Yifan" title="Physics Resources">
 <pre>----
 !!Charmonium
 
 #[[Charmonium Talks]]: Things that happen in the groups.
 #[[Luminosity Resources]]: Relating to my work of luminosity measurement.
+
+*[[Charmonium Indico|http://indico.ihep.ac.cn/category/52/]]
 
 ----
 #[[PDG Webpage|http://pdglive.lbl.gov/Viewer.action]]</pre>
@@ -9855,8 +10074,11 @@ void twoscales() {
 }
 ```</pre>
 </div>
-<div created="20170412032224446" creator="Yifan" modified="20170412120646333" modifier="Yifan" title="Statistics">
+<div created="20170412032224446" creator="Yifan" modified="20170414051700651" modifier="Yifan" title="Statistics">
 <pre>#[[Important Distributions]]
+#[[大数定理和中心极限定理]]
+#[[子样及其分布]]
+#[[参数估计]]
 #[[Look-elsewhere Effect]]
 
 ----
@@ -10089,6 +10311,9 @@ I am reminded of the advice of my neighbor, &quot;Never worry about your heart t
 *Don't use a smaller font size to “fit more on a frame.” 
 </pre>
 </div>
+<div created="20170413095123511" creator="Yifan" modified="20170413095150461" modifier="Yifan" title="Typing Practices">
+<pre>[[Typeracer|http://play.typeracer.com]]: a typing game.</pre>
+</div>
 <div created="20170411133712979" creator="Yifan" modified="20170411140806844" modifier="Yifan" title="vim Editor">
 <pre>`gvim text_file &amp;`: open a window of graphic vi editor
 
@@ -10143,8 +10368,9 @@ Default files:
 <div created="20170407055733031" creator="Yifan" modified="20170407055750919" modifier="Yifan" title="Working with Condor">
 <pre></pre>
 </div>
-<div created="20170412013714902" creator="Yifan" modified="20170412024908253" modifier="Yifan" title="Writing">
+<div created="20170412013714902" creator="Yifan" modified="20170413095025253" modifier="Yifan" title="Writing">
 <pre>*[[The Element of Style]]: a book referred to on Charmonium webpage.
+*[[Typing Practices]]
 *[[Latex]]</pre>
 </div>
 <div created="20170407131924789" creator="Yifan" modified="20170412004103833" modifier="Yifan" title="Yifan">
