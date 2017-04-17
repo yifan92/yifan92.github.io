@@ -201,6 +201,12 @@ Error message and password prompt
 
 <li>ContentList</li>
 
+<li>Fortran</li>
+
+<li>Fortran Example 1</li>
+
+<li>Fortran Example 2</li>
+
 <li>IHEP Condor</li>
 
 <li>Important Distributions</li>
@@ -209,9 +215,13 @@ Error message and password prompt
 
 <li>Latex Basics</li>
 
+<li>Latex Packages</li>
+
 <li>Linux</li>
 
 <li>Linux Commands</li>
+
+<li>linux_awk</li>
 
 <li>linux_cat</li>
 
@@ -318,13 +328,13 @@ Error message and password prompt
 <div created="20170407032742459" creator="Yifan" modified="20170407032743401" modifier="Yifan" title="$:/config/AnimationDuration">
 <pre>250</pre>
 </div>
-<div created="20170414054811779" creator="Yifan" modified="20170414054811779" modifier="Yifan" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel">
+<div created="20170417092519128" creator="Yifan" modified="20170417092519128" modifier="Yifan" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel">
 <pre>hide</pre>
 </div>
-<div created="20170414054810891" creator="Yifan" modified="20170414054810891" modifier="Yifan" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-tiddler">
+<div created="20170417092516288" creator="Yifan" modified="20170417092516288" modifier="Yifan" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-tiddler">
 <pre>hide</pre>
 </div>
-<div created="20170414054807115" creator="Yifan" modified="20170414054807115" modifier="Yifan" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/save-wiki">
+<div created="20170417092514839" creator="Yifan" modified="20170417092514839" modifier="Yifan" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/save-wiki">
 <pre>hide</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.13">
@@ -7990,7 +8000,7 @@ Error message and password prompt
 <div created="20170407022931231" modified="20170407022931231" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20170407022746366" creator="Yifan" modified="20170411005230397" modifier="Yifan" title="$:/state/sidebar">
+<div created="20170407022746366" creator="Yifan" modified="20170415053245860" modifier="Yifan" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20170411005206925" creator="Yifan" modified="20170411005206925" modifier="Yifan" title="$:/state/tab--1963855381">
@@ -7999,13 +8009,13 @@ Error message and password prompt
 <div created="20170411005206005" creator="Yifan" modified="20170412030123100" modifier="Yifan" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
-<div created="20170407054919167" creator="Yifan" modified="20170414051622155" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
+<div created="20170407054919167" creator="Yifan" modified="20170417092512002" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/Tools</pre>
 </div>
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList" title="$:/StoryList">
+<div list="$:/ControlPanel ContentList" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8572,9 +8582,12 @@ Set Font, Color:
 
 ```</pre>
 </div>
-<div created="20170412111817131" creator="Yifan" modified="20170413115859729" modifier="Yifan" title="BOSS">
-<pre>*[[Offline Software Group Page|http://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Main_Page]]
+<div created="20170412111817131" creator="Yifan" modified="20170415061553172" modifier="Yifan" title="BOSS">
+<pre>BES-3 Offline Software System.
+
+*[[Offline Software Group Page|http://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Main_Page]]
 *[[Class Reference Documentation |http://bes3.to.infn.it/BESIII_Doxygen_Documentation.html]]
+----
 *[[IHEP Condor]]
 
 
@@ -8644,7 +8657,7 @@ void cernstaff() {
 <pre>#[[Writing]]
 </pre>
 </div>
-<div created="20170407022748393" creator="Yifan" modified="20170412115333072" modifier="Yifan" title="ContentList">
+<div created="20170407022748393" creator="Yifan" modified="20170414094305576" modifier="Yifan" title="ContentList">
 <pre>----
 !!Physics
 #[[Statistics]]
@@ -8658,11 +8671,254 @@ void cernstaff() {
 #[[ROOT]]
 #[[Latex]]
 #[[BOSS]]
+#[[Fortran]]
 
 ----
 !!Others
 #[[Communication Skills]]
 #[[About Tiddlywiki]]</pre>
+</div>
+<div created="20170414094329770" creator="Yifan" modified="20170415053551654" modifier="Yifan" title="Fortran">
+<pre>Just a little fortran grammar to help with reading Fortran codes.
+
+*[[A Tutorial Site|http://web.stanford.edu/class/me200c/tutorial_77/]]
+
+
+
+----
+!!Basics
+
+[[Fortran Example 1]]
+
+
+
+*`c`/`!` means comments
+*Fortran is not case-sensitive
+*Column position rules: Col. 7-72 : Statements
+
+----
+!!Variables
+
+```
+     integer   list of variables
+      real      list of variables
+      double precision  list of variables
+      complex   list of variables
+      logical   list of variables
+      character list of variables
+```
+
+''parameter'': const `parameter (pi = 3.14159)`
+
+Assignment: `variable_name = expression`
+
+----
+!!Logical Expressions
+
+*`.LT.` less than ...
+*`.TRUE.`
+*`.AND.`
+
+
+----
+!!Flow Control
+
+''If then''
+
+```
+ if (x .GT. 0) then
+         if (x .GE. y) then
+            write(*,*) 'x is positive and x &gt;= y'
+         else
+            write(*,*) 'x is positive but x 
+```
+
+''do loop'': for loop
+
+```
+      integer i, n, sum
+ 
+      sum = 0
+      do 10 i = 1, n
+         sum = sum + i
+         write(*,*) 'i =', i
+         write(*,*) 'sum =', sum
+  10  continue
+```
+
+Also: while-loop, until-loop
+
+----
+!!Array
+
+*`real a(20)`: a[20]
+*` real b(0:19), weird(-162:237)`: arbitrary index range
+*`real A(3,5)`: two dimensional
+
+----
+!!Functions
+
+```
+      abs     absolute value
+      min     minimum value
+      max     maximum value
+      sqrt    square root
+      sin     sine
+      cos     cosine
+      tan     tangent
+      atan    arctangent
+      exp     exponential (natural)
+      log     logarithm (natural)
+```
+
+*Functions have a type. This type must also be declared in the calling program.
+*The return value should be stored in a variable with the same name as the function.
+*Functions are terminated by the return statement instead of stop.
+
+!!Subroutines
+
+```
+      subroutine iswap (a, b)
+      integer a, b
+c Local variables
+      integer tmp
+
+      tmp = a
+      a = b
+      b = tmp
+
+      return
+      end
+```
+
+*''call-by-reference'':传指针到subroutine，可以改动参数的值
+
+----
+!!Common Block
+
+`common /coeff/ alpha, beta` 类似于class
+
+----
+!!Data Statement
+定义常数
+`data list-of-variables/ list-of-values/, ...`
+
+----
+!!File I/O
+
+`open (list-of-specifiers)`
+
+Specifiers:
+
+```
+    [UNIT=]  u
+    IOSTAT=  ios
+    ERR=     err
+    FILE=    fname
+    STATUS=  sta
+    ACCESS=  acc
+    FORM=    frm
+    RECL=    rl
+```
+
+[[FILE I/O|Fortran Example 2]]
+
+
+!!Simple I/O
+
+```
+      read (unit no, format no) list-of-variables
+      write(unit no, format no) list-of-variables
+```
+
+Or simplified as:
+
+```
+      read (*,*) list-of-variables
+      write(*,*) list-of-variables
+```
+The first statement will read values from the standard input and assign the values to the variables in the variable list, while the second one writes to the standard output.
+
+----
+!!Format Statement
+
+Format options like: how many decimals places in real numbers...
+
+```
+      write(*, label) list-of-variables
+ label format format-code
+```
+
+```
+      write(*, 900) i, x
+  900 format (I4,F8.3)
+```
+
+```
+   A - text string
+   D - double precision numbers, exponent notation
+   E - real numbers, exponent notation
+   F - real numbers, fixed point format
+   I - integer
+   X - horizontal skip (space)
+   / - vertical skip (newline)
+```
+
+</pre>
+</div>
+<div created="20170414100757138" creator="Yifan" modified="20170414100801207" modifier="Yifan" title="Fortran Example 1">
+<pre>```
+      program circle
+      real r, area
+ 
+c This program reads a real number r and prints
+c the area of a circle with radius r.
+ 
+      write (*,*) 'Give radius r:'
+      read  (*,*) r
+      area = 3.14159*r*r
+      write (*,*) 'Area = ', area
+ 
+      stop
+      end
+```</pre>
+</div>
+<div created="20170414100724800" creator="Yifan" modified="20170414100733009" modifier="Yifan" title="Fortran Example 2">
+<pre>```
+      program inpdat
+c
+c  This program reads n points from a data file and stores them in 
+c  3 arrays x, y, z.
+c
+      integer nmax, u
+      parameter (nmax=1000, u=20)
+      real x(nmax), y(nmax), z(nmax)
+
+c  Open the data file
+      open (u, FILE='points.dat', STATUS='OLD')
+
+c  Read the number of points
+      read(u,*) n
+      if (n.GT.nmax) then
+         write(*,*) 'Error: n = ', n, 'is larger than nmax =', nmax
+         goto 9999
+      endif
+
+c  Loop over the data points
+      do 10 i= 1, n
+         read(u,100) x(i), y(i), z(i)
+   10 enddo
+  100 format (3(F10.4))
+
+c  Close the file
+      close (u)
+
+c  Now we should process the data somehow...
+c  (missing part)
+
+ 9999 stop
+      end
+```</pre>
 </div>
 <div created="20170413115846627" creator="Yifan" modified="20170413132407491" modifier="Yifan" title="IHEP Condor">
 <pre>----
@@ -8803,17 +9059,20 @@ https://en.wikipedia.org/wiki/Student%27s_t-distribution
 ----
 </pre>
 </div>
-<div created="20170410042910516" creator="Yifan" modified="20170412012413326" modifier="Yifan" title="Latex">
+<div created="20170410042910516" creator="Yifan" modified="20170415051553082" modifier="Yifan" title="Latex">
 <pre>----
 *[[Basics|Latex Basics]]
+*[[Useful Packages|Latex Packages]]
 *[[Beamer]]
 
 ----
-*[[wiki site|https://en.wikibooks.org/wiki/LaTeX]]
+*[[A wiki site|https://en.wikibooks.org/wiki/LaTeX]]
+*[[miktex|https://miktex.org/]]: for downloading.
+*[[Overleaf|https://www.overleaf.com]]: an online tex editor.
 *[ext[BES3 Latex Convention|./materials/bes3latex.zip]]: zip file
 </pre>
 </div>
-<div created="20170412011126422" creator="Yifan" modified="20170412011902528" modifier="Yifan" title="Latex Basics">
+<div created="20170412011126422" creator="Yifan" modified="20170415053814461" modifier="Yifan" title="Latex Basics">
 <pre>```
 \documentclass{article}
 
@@ -8856,14 +9115,77 @@ text to be influenced
 \end{environmentname}
 ```
 
-----</pre>
+----
+''Include Figures''
+
+`\usepackage{graphicx}`
+
+```
+\begin{figure}
+\centering
+\includegraphics[width=0.3\textwidth]{frog.jpg}
+\caption{\label{fig:frog}This frog was uploaded via the project menu.}
+\end{figure}
+```</pre>
+</div>
+<div created="20170415051606598" creator="Yifan" modified="20170415053211421" modifier="Yifan" title="Latex Packages">
+<pre>[[wiki: Package Reference|https://en.wikibooks.org/wiki/LaTeX/Package_Reference]]
+
+----
+
+''Language and font encodings''
+
+```
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+```
+
+''Sets page size and margins''
+
+```
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+```
+
+''Math''
+
+```
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+```
+
+''Include Graphics''
+
+```
+\usepackage{graphicx}
+```
+
+*`\includegraphics[width=0.3\textwidth]{frog.jpg}`
+
+''Notes''
+
+```
+\usepackage[colorinlistoftodos]{todonotes}
+```
+
+*`\todo{Here's a comment in the margin!}`
+*`\todo[inline, color=green!40]{This is an inline comment.}`
+
+''Manage links''
+
+```
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+```
+
+*`\hyperref[label_name]{''link text''}`
+*`\url{&lt;my_url&gt;}`
+*`\href{&lt;my_url&gt;}{&lt;description&gt;}`</pre>
 </div>
 <div created="20170411133533155" creator="Yifan" modified="20170411133618475" modifier="Yifan" title="Linux">
 <pre>#[[Linux Commands]]
 #[[Bash Scripts]]
 #[[vim Editor]]</pre>
 </div>
-<div created="20170407022820254" creator="Yifan" modified="20170413134339214" modifier="Yifan" title="Linux Commands">
+<div created="20170407022820254" creator="Yifan" modified="20170417074647016" modifier="Yifan" title="Linux Commands">
 <pre>----
 !The Basics
 *`pwd`
@@ -8891,6 +9213,7 @@ Single commands:
 *[[sed|linux_sed]]
 *[[cat|linux_cat]]
 *[[cut|linux_cut]]
+*[[awk|linux_awk]]
 
 Topics:
 
@@ -8902,6 +9225,13 @@ Topics:
 ----
 !Shell Scripts
 *[[Bash Scripts]]
+</pre>
+</div>
+<div created="20170417074652452" creator="Yifan" modified="20170417075537661" modifier="Yifan" title="linux_awk">
+<pre>`awk '/search_pattern/ { action_to_take_on_matches; another_action; }' file_to_parse`
+
+*default action = `print`
+*`{print $2}`: print the 2nd field; default field separater is blank space.
 </pre>
 </div>
 <div created="20170407035807883" creator="Yifan" modified="20170407041048261" modifier="Yifan" title="linux_cat">
@@ -9040,13 +9370,17 @@ Stream EDitor, used for modifying files in unix/linux.
 ----
 #[ext[Book by Grupen|./materials/books/Particle_Detectors_Grupen.pdf]]</pre>
 </div>
-<div created="20170410120718342" creator="Yifan" modified="20170413115308133" modifier="Yifan" title="Physics Resources">
+<div created="20170410120718342" creator="Yifan" modified="20170417080018246" modifier="Yifan" title="Physics Resources">
 <pre>----
 !!Charmonium
 
 #[[Charmonium Talks]]: Things that happen in the groups.
 #[[Luminosity Resources]]: Relating to my work of luminosity measurement.
+#[ext[XYZ at BES3|./materials/documents/XYZ_BESIII_HIEPA.pdf]]: 2015
+#[ext[Issues and Opportunities in Exotic Hadrons|./materials/documents/WhitePaper.pdf]]: 2015
 
+
+*[[Charmonium Group Page|http://docbes3.ihep.ac.cn/~charmoniumgroup/index.php/Main_Page]]
 *[[Charmonium Indico|http://indico.ihep.ac.cn/category/52/]]
 
 ----
@@ -10311,8 +10645,9 @@ I am reminded of the advice of my neighbor, &quot;Never worry about your heart t
 *Don't use a smaller font size to “fit more on a frame.” 
 </pre>
 </div>
-<div created="20170413095123511" creator="Yifan" modified="20170413095150461" modifier="Yifan" title="Typing Practices">
-<pre>[[Typeracer|http://play.typeracer.com]]: a typing game.</pre>
+<div created="20170413095123511" creator="Yifan" modified="20170415054627898" modifier="Yifan" title="Typing Practices">
+<pre>*[[Numpad Typing |http://www.typeonline.co.uk/number_pad_lesson1.html]]
+*[[Typeracer|http://play.typeracer.com]]: a typing game.</pre>
 </div>
 <div created="20170411133712979" creator="Yifan" modified="20170411140806844" modifier="Yifan" title="vim Editor">
 <pre>`gvim text_file &amp;`: open a window of graphic vi editor
