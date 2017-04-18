@@ -187,7 +187,11 @@ Error message and password prompt
 
 <li>BOSS</li>
 
+<li>Charmonium Readings</li>
+
 <li>Charmonium Talks</li>
+
+<li>Charmonium_Reading 1</li>
 
 <li>Cling Interpreter</li>
 
@@ -8000,7 +8004,7 @@ Error message and password prompt
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList [[Physics Resources]] Linux" title="$:/StoryList">
+<div list="ContentList [[Physics Resources]] [[Charmonium Readings]] [[Charmonium_Reading 1]] [[Charmonium Talks]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8301,7 +8305,7 @@ for i in `seq 3 $nline`; do
 done
 ```</pre>
 </div>
-<div created="20170413135455907" creator="Yifan" modified="20170413135628986" modifier="Yifan" title="bash_example2">
+<div created="20170413135455907" creator="Yifan" modified="20170418050906132" modifier="Yifan" title="bash_example2">
 <pre>!!Save and Load Paths
 Save the paths to a file, so the tags can cross tab.
 
@@ -8314,6 +8318,10 @@ alias sd3=' pwd &gt; ~/scripts/.saved_dir3'
 alias cd1=' cd `cat ~/scripts/.saved_dir1`  '
 alias cd2=' cd `cat ~/scripts/.saved_dir2`  '
 alias cd3=' cd `cat ~/scripts/.saved_dir3`  '
+alias pd1='cat ~/scripts/.saved_dir1'
+alias pd2='cat ~/scripts/.saved_dir2'
+alias pd3='cat ~/scripts/.saved_dir3'
+alias pd='echo &quot;Print Saved Paths:&quot;; for i in `seq 1 9`; do  echo $i: `cat ~/scripts/.saved_dir$i`; done'
 ```</pre>
 </div>
 <div created="20170407051401206" creator="Yifan" modified="20170407053656579" modifier="Yifan" title="Bash_Functions">
@@ -8578,6 +8586,13 @@ Set Font, Color:
 
 </pre>
 </div>
+<div created="20170418052439621" creator="Yifan" modified="20170418063906446" modifier="Yifan" title="Charmonium Readings">
+<pre>#[ext[XYZ at BES3|./materials/documents/XYZ_BESIII_HIEPA.pdf]]: 2015
+#[ext[Issues and Opportunities in Exotic Hadrons|./materials/documents/WhitePaper.pdf]]: 2015
+#[[Measurement of Phase between strong and EM amplitudes in Jpsi decays|Charmonium_Reading 1]]: April 2017, a paper by Wang Yadi. Read and discussed at round table.
+
+</pre>
+</div>
 <div created="20170410115822410" creator="Yifan" modified="20170412004755166" modifier="Yifan" title="Charmonium Talks">
 <pre>----
 ! 2017
@@ -8589,6 +8604,90 @@ Set Font, Color:
 *[[Y(4220) Parameters|http://indico.ihep.ac.cn/event/6883/session/4/contribution/27/material/slides/0.pdf]]: by Shen Chenping, [[Arxiv|https://xxx.arxiv.org/pdf/1703.10351.pdf]]
 
 ----</pre>
+</div>
+<div created="20170418052841713" creator="Yifan" modified="20170418063841665" modifier="Yifan" title="Charmonium_Reading 1">
+<pre>[[Document|http://docbes3.ihep.ac.cn/cgi-bin/DocDB/ShowDocument?docid=506]]
+
+----
+!!Abstract
+
+Measured:
+
+#relative phase between the EM amplitudes of the J/ψ resonant and continuum: consistent with 0.
+#The relative phase between the J/ψ strong and EM amplitudes: pi+pi-pi+pi-pi0 final state. No interference pattern, and the phase turns out to be ±(83.4 ± 4.6)◦.
+#Stutied the lineshape of etapi+pi-, measured branch fractions.
+
+----
+!!Introduction
+意义：
+
+*EM &amp; strong Relative phase φ3g,γ(A3g and Aγ,): in 1st order pertQCD, should be 0/180 degree.
+*模型分析： =90degree when for J/ψ two-body decays into mesons with the JP(1-0-,0-0-,1-1-,1+0-) or into baryon-pairs 但实验上倾向 1−0−,1+0− 非90度
+*根据unsubtracted dispersion relations，渐近自由和OZI规则， Φ3g,γ is predicted to be 90◦
+*@@color:green;也许J/ψ and ψ(2S) 不同的phases in decay amplitudes，可以解释粲偶素里的rhopi难题。@@
+
+
+策略：
+
+*ee-&gt;mumu证明angle(A3g,Acont)=0，然后用5pi来测Φ3g,EM
+
+!!BEPC &amp; Data Sets
+3050~3120 ~MeV, 90+ pb^^-1^^
+
+----
+!!Analysis
+''ee-&gt;mumu'':
+
+*ngood=2, ncharge=0, barrel region, 
+*E(emc)/E(mdc)&lt;0.3(suppress Bhabha),
+*delta(TOF)&lt;4ns, suppress cosmic ray
+*vtxfit帮测动量
+*p在[theory-4sigma, theory+3sigma]范围内
+
+本底： 检查了ppbar,KK,pipi,ee；仅pipi可能有贡献，算截面后忽略。
+
+''ee-&gt;5pi''
+
+*nGood=4, nCharge=0, nGam&gt;=2
+*|cos(theta)|&lt;0.93
+*PID(dE/dx + TOF): p(pi)&gt;p(k)
+*Egamma&gt;threshold(50/25 MeV)
+*700ns, angle(photon, any track)&gt;10degree
+*vtxfit
+*4C kmfit, 找chisquare最小
+*M(gg) in [0,0.3]
+*pi0 rest frame中衰变夹角，cos = |Eg1-Eg2|/p(pi0)应小于0.9
+
+本底：g4pi, g5pi, pi0pi04pi,
+
+''中间态 etapipi''
+
+*找质量最接近m(eta)=3pi，拟合求事例数
+*M(eta) outside [0.517, 0.577]，来拒绝eta rho中的eta pipi
+*5pi事例数：拟合M(gg)，背景用多项式描述
+*综合各能量点数据，来得到拟合参数结果
+
+----
+!!Cross Section
+
+xsec=N/(Lum*effi)
+
+!!Systematic Uncertainties
+
+Common to all energy points: 
+
+*muon tracking: study with stricter cut on one charged track
+*pion tracking/PID: Jpsi-&gt;pp pipi
+*photon identification: ee-&gt;gmumu, J/psi -&gt; 3pi
+*4C fit: changing chisquare cut
+*fit M(eta): use MC hist-shape
+*Cut on E/P ratio, delta(TOF), p(mu): vary cuts
+
+----
+!!Result
+一些理论计算
+
+</pre>
 </div>
 <div created="20170411014736799" creator="Yifan" modified="20170411023203653" modifier="Yifan" title="Cling Interpreter">
 <pre>ROOT has a C++ interpreter called cling built in. 
@@ -9355,14 +9454,14 @@ Stream EDitor, used for modifying files in unix/linux.
 ----
 #[ext[Book by Grupen|./materials/books/Particle_Detectors_Grupen.pdf]]</pre>
 </div>
-<div created="20170410120718342" creator="Yifan" modified="20170417080018246" modifier="Yifan" title="Physics Resources">
+<div created="20170410120718342" creator="Yifan" modified="20170418052435553" modifier="Yifan" title="Physics Resources">
 <pre>----
 !!Charmonium
 
 #[[Charmonium Talks]]: Things that happen in the groups.
+#[[Reading Materials|Charmonium Readings]]
 #[[Luminosity Resources]]: Relating to my work of luminosity measurement.
-#[ext[XYZ at BES3|./materials/documents/XYZ_BESIII_HIEPA.pdf]]: 2015
-#[ext[Issues and Opportunities in Exotic Hadrons|./materials/documents/WhitePaper.pdf]]: 2015
+
 
 
 *[[Charmonium Group Page|http://docbes3.ihep.ac.cn/~charmoniumgroup/index.php/Main_Page]]
