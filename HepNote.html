@@ -121,6 +121,8 @@ Error message and password prompt
 
 <li>$:/config/AnimationDuration</li>
 
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
+
 <li>$:/core</li>
 
 <li>$:/DefaultTiddlers</li>
@@ -193,6 +195,8 @@ Error message and password prompt
 
 <li>Charmonium_Reading 1</li>
 
+<li>Charmonium_Reading 2</li>
+
 <li>Cling Interpreter</li>
 
 <li>Communication Skills</li>
@@ -213,7 +217,11 @@ Error message and password prompt
 
 <li>Latex Basics</li>
 
+<li>Latex Fonts</li>
+
 <li>Latex Packages</li>
+
+<li>Latex Page Layout</li>
 
 <li>Linux</li>
 
@@ -271,6 +279,8 @@ Error message and password prompt
 
 <li>ROOT Examples</li>
 
+<li>ROOT Fit</li>
+
 <li>ROOT Histograms</li>
 
 <li>ROOT Histograms Basic 1</li>
@@ -325,6 +335,9 @@ Error message and password prompt
 <div id="storeArea" style="display:none;">
 <div created="20170407032742459" creator="Yifan" modified="20170407032743401" modifier="Yifan" title="$:/config/AnimationDuration">
 <pre>250</pre>
+</div>
+<div created="20170419051059457" creator="Yifan" modified="20170419051631336" modifier="Yifan" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
+<pre>hide</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.13">
 <pre>{
@@ -7998,13 +8011,13 @@ Error message and password prompt
 <div created="20170411005206005" creator="Yifan" modified="20170412030123100" modifier="Yifan" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
-<div created="20170407054919167" creator="Yifan" modified="20170415054138539" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20170407054919167" creator="Yifan" modified="20170419051054505" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
+<pre>$:/core/ui/SideBar/Tools</pre>
 </div>
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList [[Physics Resources]] [[Charmonium Readings]] [[Charmonium_Reading 1]] [[Charmonium Talks]]" title="$:/StoryList">
+<div list="ContentList [[Physics Resources]] [[Charmonium_Reading 2]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8586,14 +8599,14 @@ Set Font, Color:
 
 </pre>
 </div>
-<div created="20170418052439621" creator="Yifan" modified="20170418063906446" modifier="Yifan" title="Charmonium Readings">
+<div created="20170418052439621" creator="Yifan" modified="20170426040214751" modifier="Yifan" title="Charmonium Readings">
 <pre>#[ext[XYZ at BES3|./materials/documents/XYZ_BESIII_HIEPA.pdf]]: 2015
 #[ext[Issues and Opportunities in Exotic Hadrons|./materials/documents/WhitePaper.pdf]]: 2015
 #[[Measurement of Phase between strong and EM amplitudes in Jpsi decays|Charmonium_Reading 1]]: April 2017, a paper by Wang Yadi. Read and discussed at round table.
-
+#[[Search in ee to phipipi|Charmonium_Reading 2]]
 </pre>
 </div>
-<div created="20170410115822410" creator="Yifan" modified="20170412004755166" modifier="Yifan" title="Charmonium Talks">
+<div created="20170410115822410" creator="Yifan" modified="20170426040034720" modifier="Yifan" title="Charmonium Talks">
 <pre>----
 ! 2017
 
@@ -8603,10 +8616,16 @@ Set Font, Color:
 *[[Transitions of Charmonium-like States around 4.26 GeV|http://indico.ihep.ac.cn/event/6883/session/5/contribution/18/material/slides/0.pdf]]: by Qi ~Hongrong
 *[[Y(4220) Parameters|http://indico.ihep.ac.cn/event/6883/session/4/contribution/27/material/slides/0.pdf]]: by Shen Chenping, [[Arxiv|https://xxx.arxiv.org/pdf/1703.10351.pdf]]
 
+'' ''
+
+*[[My Talk on Luminosity 1|http://indico.ihep.ac.cn/event/6669/contribution/31/material/slides/0.pdf]]
+
 ----</pre>
 </div>
-<div created="20170418052841713" creator="Yifan" modified="20170418063841665" modifier="Yifan" title="Charmonium_Reading 1">
-<pre>[[Document|http://docbes3.ihep.ac.cn/cgi-bin/DocDB/ShowDocument?docid=506]]
+<div created="20170418052841713" creator="Yifan" modified="20170419041558930" modifier="Yifan" title="Charmonium_Reading 1">
+<pre>!!Measurement of Phase between strong and EM amplitudes in Jpsi decays
+
+[[Document|http://docbes3.ihep.ac.cn/cgi-bin/DocDB/ShowDocument?docid=506]]
 
 ----
 !!Abstract
@@ -8651,7 +8670,7 @@ Measured:
 *nGood=4, nCharge=0, nGam&gt;=2
 *|cos(theta)|&lt;0.93
 *PID(dE/dx + TOF): p(pi)&gt;p(k)
-*Egamma&gt;threshold(50/25 MeV)
+*Egamma&gt;threshold(50/25 ~MeV)
 *700ns, angle(photon, any track)&gt;10degree
 *vtxfit
 *4C kmfit, 找chisquare最小
@@ -8688,6 +8707,77 @@ Common to all energy points:
 一些理论计算
 
 </pre>
+</div>
+<div created="20170426040219506" creator="Yifan" modified="20170426053301836" modifier="Yifan" title="Charmonium_Reading 2">
+<pre>!!Search for the strangenoium-like state Zs in e^^+^^e^^−^^ → φππ
+
+[[Document|http://docbes3.ihep.ac.cn/DocDB/0005/000507/010/phipipi_draftv12.pdf]]
+
+----
+''Motivation''
+
+*Trying to find the counterpart of Zc(3900) in ss-bar. 
+*[13]: Phi(2170) → φππ预期两个结构
+*若能观察到这个道，说明这个态不受OZI压低影响，不是常规介子。
+
+''Data Sample'': 108/pb BES-3 data at 2.125 ~GeV
+
+''Event Selection''
+
+ee to phi pi+pi-, phi to K+K-
+
+*three or four charged tracks and no photon candidate
+*PID: TOF + dE/dx (p,pi,k)
+* 2 pion, 1+ kaon
+* other standard cuts
+* 1C: m(missing)-&gt;m(K), chisq&lt;10
+
+ee to phi pi0pi0, phi to K+K-, pi0 to gg
+
+*1+ kaon
+*1C: m(k4g)-&gt;m(K), chisq&lt;20
+* |M(gg) -mpi| &lt;0.02
+
+''Dalitz'': M(phi pi+) vs. M(phi pi-)
+
+Requiring M(KK) in phi range, to get rid of phi f,,0,,(980).
+
+''Assuming'' Zs around 1.4 ~GeV, check M(pi phi), found nothing.
+
+''non-phi Background'': estimate with phi sideband. Seen rho K+K-, omega K+K-, but no rho/omega -&gt; pi0pi0.
+
+''Upper Limit'': 
+
+*PWA to find the best possible description of data without Zs contribution, generated a MC sample accordingly.
+*Fit M(phi pi) with combination of PWA MC, non-phi bkg, fixed Zs contribution
+*Also searched in alternative mass/width.
+
+''Yields'': calculated with N^^UL^^
+
+''Systematic Uncertainties'':
+
+#MDC Tracking: study the same channel and pi+pi-pi0 at 2.125 ~GeV
+#Photon Detection: same as (1)
+#K/pi PID: same as (1)
+#KF fit: Correcting MC helix parameters with, use half the different before/after correction.
+#pi0 mass window: Difference on MC/data selection efficiency
+#Fitting range: try alternative value
+#Bkg shape: 2nd polynomial to 3rd Chebyshev
+#Branching fraction: quoted from PDG
+#Luminosity: quoted
+#Model: change f,,0,,(1370) to 0^^++^^
+
+''Final Result''
+
+Upper Limits on Yields:
+
+[img[./img/Reading/w2p1.png]]
+
+Cross Sections: 
+
+phi pi+pi-: 343.0+-5.1+-22.3 pb
+
+phi pi0pi0: 208.3+-7.6+-12.7 pb</pre>
 </div>
 <div created="20170411014736799" creator="Yifan" modified="20170411023203653" modifier="Yifan" title="Cling Interpreter">
 <pre>ROOT has a C++ interpreter called cling built in. 
@@ -9143,10 +9233,12 @@ https://en.wikipedia.org/wiki/Student%27s_t-distribution
 ----
 </pre>
 </div>
-<div created="20170410042910516" creator="Yifan" modified="20170415051553082" modifier="Yifan" title="Latex">
+<div created="20170410042910516" creator="Yifan" modified="20170419043116206" modifier="Yifan" title="Latex">
 <pre>----
 *[[Basics|Latex Basics]]
 *[[Useful Packages|Latex Packages]]
+*[[Fonts|Latex Fonts]]
+*[[Page Layout|Latex Page Layout]]
 *[[Beamer]]
 
 ----
@@ -9212,6 +9304,19 @@ text to be influenced
 \end{figure}
 ```</pre>
 </div>
+<div created="20170419042732679" creator="Yifan" modified="20170419042923143" modifier="Yifan" title="Latex Fonts">
+<pre>''Shapes'':
+
+[img[./img/latex/LatexFontShape.png]]
+
+''Size'':
+
+[img[./img/latex/LatexFontSize.png]]
+
+----
+[[An Online Font Library|http://www.tug.dk/FontCatalogue/]].
+</pre>
+</div>
 <div created="20170415051606598" creator="Yifan" modified="20170415053211421" modifier="Yifan" title="Latex Packages">
 <pre>[[wiki: Package Reference|https://en.wikibooks.org/wiki/LaTeX/Package_Reference]]
 
@@ -9263,6 +9368,32 @@ text to be influenced
 *`\hyperref[label_name]{''link text''}`
 *`\url{&lt;my_url&gt;}`
 *`\href{&lt;my_url&gt;}{&lt;description&gt;}`</pre>
+</div>
+<div created="20170419043122093" creator="Yifan" modified="20170419043737688" modifier="Yifan" title="Latex Page Layout">
+<pre>!!Two Sided Article:
+
+`\documentclass[twoside]{article}`
+
+----
+!!Page Dimensions:
+
+[img[./img/latex/PageLayout.png]]
+
+Print current details and layout shapes:
+
+```
+usepackage{layout} 
+
+... 
+
+\layout{}
+```
+
+Render a frame marking the margins of the current document:
+
+```
+\usepackage{showframe}
+```</pre>
 </div>
 <div created="20170411133533155" creator="Yifan" modified="20170411133618475" modifier="Yifan" title="Linux">
 <pre>#[[Linux Commands]]
@@ -9863,7 +9994,7 @@ RooGenericPdf g(“g”,”sqrt(abs(alpha*x))+0.1”,RooArgSet(x,alpha)) ;
 <div created="20170411132905454" creator="Yifan" modified="20170411132927508" modifier="Yifan" title="RooFit Simultaneous Fit">
 <pre>[[rf504_simwstool.C|https://root.cern.ch/root/htmldoc/tutorials/roofit/rf504_simwstool.C.html]]</pre>
 </div>
-<div created="20170407061511667" creator="Yifan" modified="20170412005314016" modifier="Yifan" title="ROOT">
+<div created="20170407061511667" creator="Yifan" modified="20170419051702567" modifier="Yifan" title="ROOT">
 <pre>----
 !Topics
 #[[Histograms|ROOT Histograms]]
@@ -9871,6 +10002,7 @@ RooGenericPdf g(“g”,”sqrt(abs(alpha*x))+0.1”,RooArgSet(x,alpha)) ;
 #[[ROOT C++]]: a quick reminder of C++ syntaxs
 #[[Cling Interpreter]]: ROOT's C++ Interpreter
 #[[Input/Output|ROOT I/O]]:gFile, TChain
+#[[Fit|ROOT Fit]]
 #[[RooFit]]
 #[[Example Scripts|ROOT Examples]]: Codes that may be quickly reused
 
@@ -9956,6 +10088,131 @@ Cling is ROOT's C++ Interpreter.</pre>
 <pre>#[[Reading MC CrossSections|root_example1]]: dealing with txt files
 #[[Superimpose 2 Hists|root_superimposehists]]
 #[[roofit 1|root_example2]]: basic roofit</pre>
+</div>
+<div created="20170419051707609" creator="Yifan" modified="20170419053733215" modifier="Yifan" title="ROOT Fit">
+<pre>*Alternatively, use [[RooFit]].
+
+----
+!!Basic Usage
+
+''Create a TF1 with Parameters''
+
+```
+root[] TF1 *f1 = new TF1(&quot;f1&quot;,&quot;[0]*x*sin([1]*x)&quot;,-3,3);
+root[] f1-&gt;SetParameter(0,10);
+root[] f1-&gt;SetParameter(1,5);
+```
+
+''Creating a TF1 with a User Function''
+
+```
+   // define a function with 3 parameters
+   Double_t fitf(Double_t *x,Double_t *par) {
+      Double_t arg = 0;
+      if (par[2]!=0) arg = (x[0] - par[1])/par[2];
+      Double_t fitval = par[0]*TMath::Exp(-0.5*arg*arg);
+      return fitval;
+   }
+```
+
+''Do the Fit with the Functions''
+
+```
+   // this function used fitf to fit a histogram
+   void fitexample() {
+
+      // open a file and get a histogram
+      TFile *f = new TFile(&quot;hsimple.root&quot;);
+      TH1F *hpx = (TH1F*)f-&gt;Get(&quot;hpx&quot;);
+
+      // Create a TF1 object using the function defined above.
+      // The last three parameters specify the number of parameters
+      // for the function.
+      TF1 *func = new TF1(&quot;fit&quot;,fitf,-3,3,3);
+      // set the parameters to the mean and RMS of the histogram
+      func-&gt;SetParameters(500,hpx-&gt;GetMean(),hpx-&gt;GetRMS());
+
+      // give the parameters meaningful names
+      func-&gt;SetParNames (&quot;Constant&quot;,&quot;Mean_value&quot;,&quot;Sigma&quot;);
+
+      // call TH1::Fit with the name of the TF1 object
+      hpx-&gt;Fit(&quot;func&quot;);
+   }
+```
+
+''Access the Results''
+
+Each fitting function is saved as a member of the histogram class. @@color:green;Unless you fitted with option &quot;+&quot;, the later fit function would overwrite the previous ones.@@
+
+```
+root[] TF1 *fit = hist-&gt;GetFunction(function_name);
+root[] Double_t chi2 = fit-&gt;GetChisquare();
+// value of the first parameter
+root[] Double_t p1 = fit-&gt;GetParameter(0);
+// error of the first parameter
+root[] Double_t e1 = fit-&gt;GetParError(0);
+```
+
+Fit statistics: Probabilities/Chisquare/Par Errors/Par Names &amp; Values
+
+`gStyle-&gt;SetOptFit(1011);`
+
+
+
+
+
+----
+!!Configure the Fit
+
+''Fixing and Setting Parameters’ Bounds''
+
+```
+   func-&gt;SetParLimits(0,-1,1);
+
+   //both commands fix the parameter to 10
+   func-&gt;SetParameter(4,10);
+   func-&gt;SetParLimits(4,10,10);
+
+   // but only this command fix the parameter to 0
+   func-&gt;FixParameter(4,0);
+```
+
+''Fitting Sub Ranges''
+
+```
+root[] TF1 *f1 = new TF1(&quot;f1&quot;,&quot;[0]*x*sin([1]*x)&quot;,-3,3);
+root[] hist-&gt;Fit(&quot;f1&quot;,&quot;R&quot;);
+
+root[] hist-&gt;Fit(&quot;f1&quot;,&quot;&quot;,&quot;&quot;,-2,2)
+```
+
+''Fitting Multiple Subranges''
+
+```
+   g1 = new TF1(&quot;m1&quot;,&quot;gaus&quot;,85,95);
+   g2 = new TF1(&quot;m2&quot;,&quot;gaus&quot;,98,108);
+   g3 = new TF1(&quot;m3&quot;,&quot;gaus&quot;,110,121);
+   // The total is the sum of the three, each has 3 parameters
+   total = new TF1(&quot;mstotal&quot;,&quot;gaus(0)+gaus(3)+gaus(6)&quot;,85,125);
+```
+
+```
+   // Fit each function and add it to the list of functions
+   h-&gt;Fit(g1,&quot;R&quot;);
+   h-&gt;Fit(g2,&quot;R+&quot;);
+   h-&gt;Fit(g3,&quot;R+&quot;);
+
+   // Get the parameters from the fit
+   g1-&gt;GetParameters(&amp;par[0]);
+   g2-&gt;GetParameters(&amp;par[3]);
+   g3-&gt;GetParameters(&amp;par[6]);
+
+   // Use the parameters on the sum
+   total-&gt;SetParameters(par);
+   h-&gt;Fit(total,&quot;R+&quot;);
+```
+
+</pre>
 </div>
 <div created="20170407105009632" creator="Yifan" modified="20170409114825685" modifier="Yifan" title="ROOT Histograms">
 <pre>*[[Basic 1|ROOT Histograms Basic 1]]: create, bins, fill, read/write
