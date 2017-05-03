@@ -251,6 +251,8 @@ Error message and password prompt
 
 <li>Luminosity Resources</li>
 
+<li>Observation of D0 to a0(980) e neutrino</li>
+
 <li>Particle Detectors</li>
 
 <li>Physics Resources</li>
@@ -8035,7 +8037,7 @@ Error message and password prompt
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList [[Work Log]] Worklog_gKsKpi Worklog_gKsKpi_3 Worklog_gKsKpi_4" title="$:/StoryList">
+<div list="ContentList [[Physics Resources]] [[Charmonium Readings]] [[Observation of D0 to a0(980) e neutrino]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8617,11 +8619,12 @@ Set Font, Color:
 
 </pre>
 </div>
-<div created="20170418052439621" creator="Yifan" modified="20170426040214751" modifier="Yifan" title="Charmonium Readings">
+<div created="20170418052439621" creator="Yifan" modified="20170503043838160" modifier="Yifan" title="Charmonium Readings">
 <pre>#[ext[XYZ at BES3|./materials/documents/XYZ_BESIII_HIEPA.pdf]]: 2015
 #[ext[Issues and Opportunities in Exotic Hadrons|./materials/documents/WhitePaper.pdf]]: 2015
 #[[Measurement of Phase between strong and EM amplitudes in Jpsi decays|Charmonium_Reading 1]]: April 2017, a paper by Wang Yadi. Read and discussed at round table.
-#[[Search in ee to phipipi|Charmonium_Reading 2]]
+#[[Search in ee to phipipi|Charmonium_Reading 2]]: April 2017, read and discussed at Round Table.
+#[[Observation of D0 to a0(980) e neutrino]]
 </pre>
 </div>
 <div created="20170410115822410" creator="Yifan" modified="20170426040034720" modifier="Yifan" title="Charmonium Talks">
@@ -9594,6 +9597,29 @@ Stream EDitor, used for modifying files in unix/linux.
 </div>
 <div created="20170410120928650" creator="Yifan" modified="20170413093157083" modifier="Yifan" title="Luminosity Resources">
 <pre>*[[GaoQing's Previous Work|http://hnbes3.ihep.ac.cn/HyperNews/get/paper110.html]]: memo</pre>
+</div>
+<div created="20170503043842122" creator="Yifan" modified="20170503053204673" modifier="Yifan" title="Observation of D0 to a0(980) e neutrino">
+<pre>[[Documents|http://docbes3.ihep.ac.cn/DocDB/0006/000627/002/draft_v6.5.pdf]]
+
+----
+!!Motivation
+
+*a,,0,,(980) has fairly uncertain mass and width;
+*The resonance may be a mixture of traditional quark-antiquark with a four-quark system.
+*The channel is good: pristine.
+
+!!Data Sets
+2.93 fb^^-1^^ at 3.773GeV
+
+!!Methods
+
+*Using Double Tag method.
+*ST D was reconstructed through various channels. Using ~DeltaE and M,,BC,, as determiners.
+*The signal channel is searched in the presence of ST D.
+*PID:for pion L(pi)&gt;L(k), for positron L(e)&gt;4(L(k)+L(pi)) and E/P&gt;0.8.
+*1C ~KmFit: pi0 mass.
+*Cos(decay angle)&lt;0.8
+</pre>
 </div>
 <div created="20170412115420240" creator="Yifan" modified="20170413055818880" modifier="Yifan" title="Particle Detectors">
 <pre>----
@@ -11061,8 +11087,14 @@ Default files:
 <pre>#[[Worklog_gKsKpi]]
 #[[Worklog_Luminosity]]</pre>
 </div>
-<div created="20170426123555284" creator="Yifan" modified="20170426124535728" modifier="Yifan" title="Work_Luminosity_part2">
-<pre>!!Systematic Uncertainties
+<div created="20170426123555284" creator="Yifan" modified="20170502022104792" modifier="Yifan" title="Work_Luminosity_part2">
+<pre>!!Results
+
+
+| ! | !4190 | !4200 | !4210 | !4220 | !4237 |
+| !Results(pb^^-1^^) | 521.9 | 523.7 | 511.2 | 508.2 | 528.9 |
+
+!!Systematic Uncertainties
 
 误差的组成：
 
@@ -11073,7 +11105,19 @@ Default files:
 #Energy Bias: same
 #Babayaga NLO: 0.1%
 #MC Statistics: 0.3% (1M MC)
-#Tracking: quoting ~GaoQing (ave 0.18 / max 0.39), @@color:green;placeholder@@</pre>
+#Tracking: quoting ~GaoQing (ave 0.18 / max 0.39), @@color:green;placeholder@@
+
+
+| ! | !4190 | !4200 | !4210 | !4220 | !4237 |
+| !On E Cuts(%) | 0.09 | 0.07 | 0.07 | 0.06 | 0.10 |
+| !On Cosθ Cuts(%) | 0.20 | 0.23 | 0.12 | 0.09 | 0.14 |
+| !On P Cuts(%) | 0.01 | 0.12 | 0.04 | 0.01 | 0.09 |
+| !On M(ee) Cuts(%) | 0 |&lt;|&lt;|&lt;|&lt;|
+| !Energy Bias(%) | 0.00 | 0.00 | 0.01 | 0.00 | 0.00 |
+| !Tracking Efficiency(%) | 0.39 |&lt;|&lt;|&lt;|&lt;|
+| !Babayaga NLO Generator(%) | 0.1 |&lt;|&lt;|&lt;|&lt;|
+| !MC Statistics(%) | 0.3 |&lt;|&lt;|&lt;|&lt;|
+| !Combined(%) | 0.55 | 0.57 | 0.52 | 0.51 | 0.54 |</pre>
 </div>
 <div created="20170407055652826" creator="Yifan" modified="20170407055725479" modifier="Yifan" title="Working with BOSS">
 <pre></pre>
@@ -11207,7 +11251,7 @@ Cut at 3 ~GeV to get rid of this
 ----
 #[[KsKpi Lineshape|Worklog_gKsKpi_4]]</pre>
 </div>
-<div created="20170426113640861" creator="Yifan" modified="20170426130557308" modifier="Yifan" title="Worklog_Luminosity">
+<div created="20170426113640861" creator="Yifan" modified="20170502021721856" modifier="Yifan" title="Worklog_Luminosity">
 <pre>----
 #[[Files|Worklog_Luminosity_Files]]
 
@@ -11216,7 +11260,7 @@ Cut at 3 ~GeV to get rid of this
 !!Sections of Works
 
 #[[Switching to Babayaga NLO|Worklog_Luminosity_part1]]
-#[[Systematic Uncertainties|Work_Luminosity_part2]]</pre>
+#[[Results &amp; Uncertainties|Work_Luminosity_part2]]</pre>
 </div>
 <div created="20170426114612566" creator="Yifan" modified="20170426130248990" modifier="Yifan" title="Worklog_Luminosity_Files">
 <pre>----
