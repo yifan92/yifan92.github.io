@@ -8039,7 +8039,7 @@ Error message and password prompt
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList" title="$:/StoryList">
+<div list="ContentList [[Physics Resources]] [[Charmonium Readings]] [[Charmonium Reading 4]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8646,10 +8646,57 @@ Set Font, Color:
 *Cos(decay angle)&lt;0.8
 </pre>
 </div>
-<div created="20170508114112928" creator="Yifan" modified="20170508114144054" modifier="Yifan" title="Charmonium Reading 4">
+<div created="20170508114112928" creator="Yifan" modified="20170509005332484" modifier="Yifan" title="Charmonium Reading 4">
 <pre>!!Observation of Psi(3686) to NNbar
 
-[[Documents|http://docbes3.ihep.ac.cn/DocDB/0002/000286/019/BESIII_draft_psip_NNbar_LNF_v8.pdf]]</pre>
+[[Documents|http://docbes3.ihep.ac.cn/DocDB/0002/000286/019/BESIII_draft_psip_NNbar_LNF_v8.pdf]]
+
+----
+!!Motivation
+
+#首次测量Psi(3686)-&gt;NNbar(N= neutron/proton)
+#验证理论上Jpsi/Psi(3686)关于衰变相位角的对称性
+#NNbar角分布，测量1+acos^^2^^theta中alpha的值
+#Check 12%规则(Branching  ratio of Psi(3686)比J/psi~=12.7%)
+
+----
+!!Event Selection
+#No Charged Track;
+#EMC: &gt;25MeV in Barrel, &gt;50Mev in End-caps; 2 ''Shower Groups''(barrel, E1,E2&gt;600,60 ~MeV);
+#MVA: Boosted Decision Tree
+#''theta,,open,,'' distribution (the angle between the directions of two SGs)
+
+!!Background 
+
+*ee-&gt;gg, MC says it's negligible.
+*Others: scaled continuum/InMC, dealt with in BDT.
+
+!!Efficiency Selection
+
+*MC/data efficiency corrected as a function of cos(theta).
+*Control Sample: Psi(3686) -&gt; p nbar pi-
+
+!!Obtaining Results
+Fit theta,,open,, distribution, to get n(events).
+Fit cos(theta,,n,,), cos(theta,,nbar,,) distributions to determine alpha value.
+
+----
+!!Systematic Uncertainties
+#Resolution of theta,,open,,: fit the data distribution with a GaussConved signal PDF; comparing with standard fit
+#Backgrounds: Change the scales of backgrounds, compare result
+#Neutral Tracking Efficiency: corrected in bins of cos(theta); redo the fit with fluctuated efficiencies
+#MVA and fit method: input/output check, generating different signal MC samples with different alpha. Take the average difference
+#Binning: vary the binning
+#Physics Model: signal efficiency depends on alpha, vary the alpha value by its standard deviation to see differences;
+#Trigger Efficiency: Quoting Arxiv:1011.2825
+#Number of Psi(3686) Events
+
+----
+!!Summary
+
+B(3686-&gt;nnbar) = (3.09+-0.06+-0.14)e-4, alpha,,nnbar,,=0.68+-0.12+-0.11; qqbar: (3.06+-0.02+-0.13)e-4, alpha=1.03+-0.06+-0.03
+
+B(3686-&gt;ppbar)/B(Jpsi-&gt;ppbar) = (14.4 +-0.6)%; nnbar: (14.8+-1.2)%</pre>
 </div>
 <div created="20170418052439621" creator="Yifan" modified="20170508114311977" modifier="Yifan" title="Charmonium Readings">
 <pre>#[ext[XYZ at BES3|./materials/documents/XYZ_BESIII_HIEPA.pdf]]: 2015
