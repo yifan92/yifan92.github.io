@@ -207,8 +207,6 @@ Error message and password prompt
 
 <li>ContentList</li>
 
-<li>Draft of 'Worklog_gKsKpi_5'</li>
-
 <li>Fortran</li>
 
 <li>Fortran Example 1</li>
@@ -8204,7 +8202,7 @@ Error message and password prompt
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList [[Physics Resources]] [[Charmonium Readings]] [[Charmonium Reading 5]] ROOT" title="$:/StoryList">
+<div list="ContentList [[Work Log]] Worklog_gKsKpi Worklog_gKsKpi_3 Worklog_gKsKpi_4 Worklog_gKsKpi_5" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9075,19 +9073,6 @@ void cernstaff() {
 #[[Communication Skills]]
 #[[Work Log]]
 #[[About Tiddlywiki]]</pre>
-</div>
-<div created="20170516024946041" creator="Yifan" draft.of="Worklog_gKsKpi_5" draft.title="Worklog_gKsKpi_5" modified="20170516025650294" modifier="Yifan" title="Draft of 'Worklog_gKsKpi_5'">
-<pre>!~KsKpipi0 Lineshape
-
-```
-ngood&gt;=4, ncharge=0, nGam&gt;=2
-nKs=1,
-1C: pi0-&gt;gg, if (chisq&lt;10): register candidate pair
-for (pi0 candidates) do 5C kmfit:
- find the combination with least chisq(5C+K_pid+pi_pid)
-chisq(5C)&lt;15 required 
-
-```</pre>
 </div>
 <div created="20170414094329770" creator="Yifan" modified="20170415053551654" modifier="Yifan" title="Fortran">
 <pre>Just a little fortran grammar to help with reading Fortran codes.
@@ -11495,13 +11480,13 @@ Cut at 3 ~GeV to get rid of this
 #[[KsKpi Lineshape|Worklog_gKsKpi_4]]
 #[[KsKpipi0 Lineshape|Worklog_gKsKpi_5]]</pre>
 </div>
-<div created="20170515130824469" creator="Yifan" modified="20170515143454236" modifier="Yifan" title="Worklog_gKsKpi_4">
+<div created="20170515130824469" creator="Yifan" modified="20170523050236652" modifier="Yifan" title="Worklog_gKsKpi_4">
 <pre>!~KsKpi Lineshape
 
 利用MC中的FSR和noFSR的成分的谱形，用gXc1来修正MC/data成分比例的偏差。
 
 
-Algorithm for FSR events:
+!!Algorithm for FSR events:
 
 ```
 ggKsKpi
@@ -11517,6 +11502,9 @@ Additional cut: M(gg) outside [0.1,0.155]
 
 gXc1 MC:
 
+*FSR Events: (mKsKpi, mKsKpigl) in ([3.35,3.48], [3.49 3.53])
+*noFSR Events: (mKsKpi, mKsKpigl) in ([3.49,3.53], [3.49,3.53])
+
 [img width=500 [./img/Worklog/gKsKpi/fsr/gXc1.png]]
 
 09data: 
@@ -11527,10 +11515,42 @@ gXc1 MC:
 
 [img width=500 [./img/Worklog/gKsKpi/fsr/09mc.png]]
 
-[img width=500 [./img/Worklog/gKsKpi/FSR_topology09mc.png]]</pre>
+[img width=500 [./img/Worklog/gKsKpi/FSR_topology09mc.png]]
+
+!!Encountered Problem:
+
+fsr带中的本底怎么处理。</pre>
 </div>
-<div created="20170516024946041" creator="Yifan" modified="20170516024958291" modifier="Yifan" title="Worklog_gKsKpi_5">
+<div created="20170516024946041" creator="Yifan" modified="20170523032353277" modifier="Yifan" title="Worklog_gKsKpi_5">
 <pre>!~KsKpipi0 Lineshape
+
+!!Algorithm
+
+```
+ngood&gt;=4, ncharge=0, nGam&gt;=2
+nKs=1,
+1C: pi0-&gt;gg, if (chisq&lt;10): register candidate pair
+for (pi0 candidates) do 5C kmfit:
+ find the combination with least chisq(5C+K_pid+pi_pid)
+chisq(5C)&lt;15 required 
+
+```
+
+!!Encountered Problem
+3C质量谱同时通过3C(gKsKpi)和5C(ggKsKpi)的kmfit的事例数太少
+
+data
+
+[img width=500 [./img/Worklog/gKsKpi/09data/5caf_metac2s.png]]
+
+5C质量谱：不同的kmfit会将m(~KsKpi)进行不同的shift，无法比较。
+
+data
+
+[img width=500 [./img/Worklog/gKsKpi/09data/5caf_m5c.png]]
+
+to do: 对于通过了ggKsKpi的筛选事例，进行一个很宽松的3C kmfit，来获取m(~KsKpi)_3c。并且证明m(~KsKpi)_3c_ggKsKpi和m(~KsKpi)_3c_gKsKpi的可比性。
+
 
 </pre>
 </div>
