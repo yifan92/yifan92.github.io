@@ -361,6 +361,8 @@ Error message and password prompt
 
 <li>Worklog_Luminosity_4</li>
 
+<li>Worklog_Luminosity_5</li>
+
 <li>Worklog_Luminosity_Files</li>
 
 <li>Worklog_Luminosity_part1</li>
@@ -8210,7 +8212,7 @@ Error message and password prompt
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList [[Work Log]] Worklog_gKsKpi Worklog_Luminosity_3 Worklog_Luminosity_4" title="$:/StoryList">
+<div list="ContentList" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -11855,7 +11857,7 @@ to do: 对于通过了ggKsKpi的筛选事例，进行一个很宽松的3C kmfit�
 *12data/12mc: Updated 5/15
 </pre>
 </div>
-<div created="20170426113640861" creator="Yifan" modified="20170606023930878" modifier="Yifan" title="Worklog_Luminosity">
+<div created="20170426113640861" creator="Yifan" modified="20170614034454110" modifier="Yifan" title="Worklog_Luminosity">
 <pre>----
 #[[Files|Worklog_Luminosity_Files]]
 #[[Luminosity Resources]]
@@ -11866,6 +11868,7 @@ to do: 对于通过了ggKsKpi的筛选事例，进行一个很宽松的3C kmfit�
 #[[Switching to Babayaga NLO|Worklog_Luminosity_part1]]
 #[[Results &amp; Uncertainties|Work_Luminosity_part2]]
 #[[Tracking Efficiency Problem|Worklog_Luminosity_3]]
+#[[tanggy Problem|Worklog_Luminosity_5]]
 
 ----
 !!Encountered Problems
@@ -11873,7 +11876,7 @@ to do: 对于通过了ggKsKpi的筛选事例，进行一个很宽松的3C kmfit�
 
 *@@color:green;Fixed@@ 版本问题：之前因为使用的~TestRelease Package是从lxslc5拷的，所以虽然版本号是对的，但是编译方式不对，导致了我在702环境下虽然可以ana但是不能sim/rec。,,之前尝试过用3686数据改Run号，发现结果基本不变，但这种证明是无效的。,, 变量的分布说明可能是导致探测器模拟的问题，因此检查出版本的问题。</pre>
 </div>
-<div created="20170510012219867" creator="Yifan" modified="20170606063443266" modifier="Yifan" title="Worklog_Luminosity_3">
+<div created="20170510012219867" creator="Yifan" modified="20170614034036336" modifier="Yifan" title="Worklog_Luminosity_3">
 <pre>!Tracking Efficiency Problem
 
 方法：比较EMC only和Standard Cut的结果差别。
@@ -11936,7 +11939,17 @@ if (pick Bhabha) then Cut: 5d&lt;fabs(delta_phi)&lt;40d
 ''Phi角差异， All Cuts, 左旧右新''
 
 [img width=400 [./img\Worklog\Luminosity\OldTracking\phi_diff.png]]
-[img width=400 [./img\Worklog\Luminosity\NewTracking\phi_diff.png]]</pre>
+[img width=400 [./img\Worklog\Luminosity\NewTracking\phi_diff.png]]
+
+----
+!!Version 0.4
+
+''Ideas to check'':
+
+*TOF Timing.
+*Allowing more than two tracks.
+*Finding how many events have tracks in Method(EMC only).
+</pre>
 </div>
 <div created="20170606055357367" creator="Yifan" modified="20170606062706099" modifier="Yifan" title="Worklog_Luminosity_4">
 <pre>!BOSS Version Problem
@@ -11961,6 +11974,16 @@ if (pick Bhabha) then Cut: 5d&lt;fabs(delta_phi)&lt;40d
 ----
 
 修正这项问题后，对于总结果的差异。亮度中心值改变了0.2%，Tracking Efficiency误差由0.64%增加到1.34%。</pre>
+</div>
+<div created="20170614034102896" creator="Yifan" modified="20170614034532222" modifier="Yifan" title="Worklog_Luminosity_5">
+<pre>!tanggy Problem
+
+唐光毅发现，在EMC中，存在一个晶体中间无读数，但周围八个晶体均有读数的情况。这应该是电子学的问题。
+
+该现象影响数据不影响MC，会造成bhabha截面测量误差。在4260处造成0.3%的误差，到4600造成约3%的误差。
+
+目前的解决方法，是通过拟合dE/dx信息，将这部分事例找出来。
+相关Code: /scratchfs/bes/tanggy/llvp4600/script/recover_0522</pre>
 </div>
 <div created="20170426114612566" creator="Yifan" modified="20170510011534514" modifier="Yifan" title="Worklog_Luminosity_Files">
 <pre>----
