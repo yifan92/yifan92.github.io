@@ -187,6 +187,8 @@ Error message and password prompt
 
 <li>BOSS</li>
 
+<li>BOSS CVS</li>
+
 <li>Charmonium Reading 3</li>
 
 <li>Charmonium Reading 4</li>
@@ -8220,7 +8222,7 @@ Error message and password prompt
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList [[Hadron Spectroscopy]]" title="$:/StoryList">
+<div list="ContentList BOSS [[BOSS CVS]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8735,15 +8737,73 @@ Set Font, Color:
 
 ```</pre>
 </div>
-<div created="20170412111817131" creator="Yifan" modified="20170415061553172" modifier="Yifan" title="BOSS">
+<div created="20170412111817131" creator="Yifan" modified="20170629050544553" modifier="Yifan" title="BOSS">
 <pre>BES-3 Offline Software System.
 
 *[[Offline Software Group Page|http://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Main_Page]]
 *[[Class Reference Documentation |http://bes3.to.infn.it/BESIII_Doxygen_Documentation.html]]
 ----
 *[[IHEP Condor]]
+*[[BOSS CVS]]
+
+</pre>
+</div>
+<div created="20170629050548861" creator="Yifan" modified="20170629064831823" modifier="Yifan" title="BOSS CVS">
+<pre>公共CVS账号：bes3/bes3charm
+
+Modify: cmthome/version/setupCVS.sh
 
 
+''checkout''
+
+```
+cmt cvstags &lt;Package&gt;
+```
+
+
+```
+cmt co  -r &lt;tag&gt; &lt;package&gt; 
+```
+
+''create a new package''
+
+```
+ cd &lt;dev area&gt;
+ cmt create &lt;packagename&gt; &lt;version&gt; 
+```
+
+*generating src/, cmt/ directories.
+*need to modify: cmt/requirement
+*can add: share/(independent configs), README, test/(files needed for testing)
+
+''build a package'':
+
+```
+&gt;cd cmt
+&gt;vi requirements
+&gt;cmt config
+&gt;source setup.sh
+&gt;gmake
+```
+
+''Import a new package''
+
+@@color:blue;need personal CVS account@@
+
+Remove unwanted files: unnecessary configs, &quot;x86-&quot; folder
+
+```
+cd &lt;package-name&gt;/&lt;version&gt;
+cvs import -m 'First import of &lt;package-name&gt;' BossCvs/&lt;package-name&gt; Bes &lt;version&gt;
+```
+
+''tag a package''
+
+create a new version folder
+
+```
+cvs tag &lt;new-version&gt;
+```
 </pre>
 </div>
 <div created="20170503043842122" creator="Yifan" modified="20170508114325759" modifier="Yifan" title="Charmonium Reading 3">
