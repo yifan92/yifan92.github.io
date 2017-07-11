@@ -159,6 +159,12 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla/options/sidebarlayout</li>
 
+<li>参数估计</li>
+
+<li>大数定理和中心极限定理</li>
+
+<li>子样及其分布</li>
+
 <li>About Tiddlywiki</li>
 
 <li>Bash Scripts</li>
@@ -363,23 +369,23 @@ Error message and password prompt
 
 <li>Worklog_Luminosity_3</li>
 
+<li>Worklog_Luminosity_3p1</li>
+
 <li>Worklog_Luminosity_4</li>
 
 <li>Worklog_Luminosity_5</li>
 
+<li>Worklog_Luminosity_BadMC</li>
+
 <li>Worklog_Luminosity_Files</li>
+
+<li>Worklog_Luminosity_Graphs_1</li>
 
 <li>Worklog_Luminosity_part1</li>
 
 <li>Writing</li>
 
 <li>Yifan</li>
-
-<li>参数估计</li>
-
-<li>大数定理和中心极限定理</li>
-
-<li>子样及其分布</li>
 
 </ul>
 </p>
@@ -8204,8 +8210,8 @@ Error message and password prompt
 <div created="20170407022611419" modified="20170407022612731" title="$:/SiteTitle">
 <pre>HEP Note</pre>
 </div>
-<div created="20170407022931231" modified="20170407022931231" title="$:/state/showeditpreview">
-<pre>yes</pre>
+<div created="20170407022931231" creator="Yifan" modified="20170711062201410" modifier="Yifan" title="$:/state/showeditpreview">
+<pre>no</pre>
 </div>
 <div created="20170407022746366" creator="Yifan" modified="20170615074834697" modifier="Yifan" title="$:/state/sidebar">
 <pre>yes</pre>
@@ -8222,7 +8228,7 @@ Error message and password prompt
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList BOSS [[BOSS CVS]]" title="$:/StoryList">
+<div list="ContentList [[Work Log]] Worklog_Luminosity Worklog_Luminosity_3 Worklog_Luminosity_BadMC" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8350,6 +8356,62 @@ Error message and password prompt
 </div>
 <div created="20170411005211261" creator="Yifan" modified="20170411005211261" modifier="Yifan" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
 <pre>fluid-fixed</pre>
+</div>
+<div created="20170414051712634" creator="Yifan" modified="20170414053759573" modifier="Yifan" title="参数估计">
+<pre>参数估计，估计量，估计值，似然函数（参数条件下，现象的概率）。
+
+*一致性：估计量依概率收敛到参数。
+*无偏性：估计量期望等于参数真值。
+*有效性：满足正规条件,且达到方差下界(MVB)。
+*充分性：包含了子样对于待估计参数的全部信息。
+
+
+区间估计，置信区间，置信概率，显著性，上下置信限，置信域
+
+----
+!!极大似然法
+
+极大似然估计量，似然方程。
+
+极大似然估计量的性质：参数变换不变，一致，无偏，充分，有效，唯一，渐近正态(lnL是参数的抛物线函数)。
+
+合并估计：`L(x,y|par)=L(x|par)*L(y|par)`
+
+</pre>
+</div>
+<div created="20170414045145343" creator="Yifan" modified="20170414051547060" modifier="Yifan" title="大数定理和中心极限定理">
+<pre>----
+
+!Law of large numbers(LLN)
+
+According to the law, the average of the results obtained from a large number of trials should be close to the expected value, and will tend to become closer as more trials are performed.
+
+!Central limit theorem(CLT)
+
+In more precise terms, given certain conditions, the arithmetic mean of a sufficiently large number of iterates of @@color:green;independent random variables@@, @@color:blue;each with a well-defined (finite) expected value@@ and @@color:orange;finite variance@@, will be approximately normally distributed, regardless of the underlying distribution.
+
+
+</pre>
+</div>
+<div created="20170414051520883" creator="Yifan" modified="20170414051525589" modifier="Yifan" title="子样及其分布">
+<pre>子样，总体，抽样，统计推断，简单随机抽样，子样观测值，子样空间。
+
+统计量，子样平均值，子样方差，子样标准差，子样k阶原点矩(Λ,,k,,)，子样k阶中心矩(M,,k,,)，子样偏度，子样峰度。子样协方差，子样相关系数。
+
+*子样平均值期望等于总体平均值期望
+*子样平均值方差等于总体方差的1/n
+*子样方差期望等于总体方差
+
+抽样分布：
+
+*泊松总体的子样均值服从泊松分布
+*正态分布总体的子样均值服从正态分布
+*当n很大时，任意总体子样平均值服从正态分布
+*两正态总体的子样平均值之差也是正态变量
+*标准正态分布的子样平方和服从卡方分布
+*正态总体的子样方差服从卡方分布
+*标准正态总体的平均值/方差分布服从t分布；
+*两标准正态总体的方差之商服从F分布</pre>
 </div>
 <div created="20170407035445794" creator="Yifan" modified="20170510052235110" modifier="Yifan" title="About Tiddlywiki">
 <pre>This note is stored as a Tiddlywiki file. Here are some more information about this helpful tool.
@@ -9682,7 +9744,7 @@ c  (missing part)
       end
 ```</pre>
 </div>
-<div created="20170621103427363" creator="Yifan" modified="20170621111453820" modifier="Yifan" title="Hadron Spectroscopy">
+<div created="20170621103427363" creator="Yifan" modified="20170707092543090" modifier="Yifan" title="Hadron Spectroscopy">
 <pre>by the lecture of Stephen Olsen
 
 ----
@@ -9712,7 +9774,32 @@ Cross Section Measurements, Landau-Yang Theorem, etc.
 *Angular correlation of products means uneven distribution of events.
 *Resonances should results in lines.
 
-----</pre>
+----
+
+!!Lesson 2
+
+''Dalitz Plot''：
+
+*从三体运动学相空间出发；
+*Line pattern -&gt; spin（衰变振幅 -&gt; 勒让德多项式；0=线，1=翅形，2=糖状）
+*跨线：干涉的相长相消(constructive/destructive interference)符号变化
+*Dalitz Plot Symmetry: 例$$p\bar{p} \rightarrow 3\pi^0 $$
+*Dalitz公式： cosTheta与质量的关系
+*Fermi Golden Rule?
+*Extract Resonances through ML over P=$$\frac{|M|^2*\epsilon}{\int |M|^2*\epsilon}$$
+
+
+bachelor particle, ~TGenPhaseSpace package
+
+8重态；10重态； 
+
+@@color:blue;SU2 can't mix, but SU3 can@@, $$\omega-\phi$$ mixing
+
+''OZI压低''
+
+----
+
+!!Lesson 3</pre>
 </div>
 <div created="20170413115846627" creator="Yifan" modified="20170413132407491" modifier="Yifan" title="IHEP Condor">
 <pre>----
@@ -12001,7 +12088,7 @@ to do: 对于通过了ggKsKpi的筛选事例，进行一个很宽松的3C kmfit�
 
 *@@color:green;Fixed@@ 版本问题：之前因为使用的~TestRelease Package是从lxslc5拷的，所以虽然版本号是对的，但是编译方式不对，导致了我在702环境下虽然可以ana但是不能sim/rec。,,之前尝试过用3686数据改Run号，发现结果基本不变，但这种证明是无效的。,, 变量的分布说明可能是导致探测器模拟的问题，因此检查出版本的问题。</pre>
 </div>
-<div created="20170510012219867" creator="Yifan" modified="20170620064837740" modifier="Yifan" title="Worklog_Luminosity_3">
+<div created="20170510012219867" creator="Yifan" modified="20170711061514853" modifier="Yifan" title="Worklog_Luminosity_3">
 <pre>!Tracking Efficiency Problem
 
 方法：比较EMC only和Standard Cut的结果差别。
@@ -12048,23 +12135,12 @@ if (pick Bhabha) then Cut: 5d&lt;fabs(delta_phi)&lt;40d
 !version .3
 [[改了版本|Worklog_Luminosity_4]]的问题。但是总结果差异加大了。
 
+
 *原：+0.64% (521.8 vs 524.3)
 *现：+1.34% (520.9 vs 527.9)
 
-''高能光子能量， All Cuts， 左旧右新''
+[[Related Graphs|Worklog_Luminosity_Graphs_1]]
 
-[img width=400 [./img\Worklog\Luminosity\Tracking\E1_old.png]]
-[img width=400 [./img\Worklog\Luminosity\Tracking\E1_new.png]]
-
-''低能光子能量， All Cuts， 左旧右新''
-
-[img width=400 [./img\Worklog\Luminosity\Tracking\E2_old.png]]
-[img width=400 [./img\Worklog\Luminosity\Tracking\E2_new.png]]
-
-''Phi角差异， All Cuts, 左旧右新''
-
-[img width=400 [./img\Worklog\Luminosity\OldTracking\phi_diff.png]]
-[img width=400 [./img\Worklog\Luminosity\NewTracking\phi_diff.png]]
 
 ----
 !!Version 0.4
@@ -12077,10 +12153,50 @@ if (pick Bhabha) then Cut: 5d&lt;fabs(delta_phi)&lt;40d
 
 ''Checks:''
 
-*Requiring TOF!=0: Strangely cuts down MC 2.4% events, but only about 0.2% in data. May suggest something is wrong with MC.
-*Allowing more than two tracks had negligible effects.
-*Requiring tracks in EMC-only method: results change by about 0.2%.
-*@@color:red;For some energy points(4190, 4200, 4210) 1%+ events can't pass the really rough check(two tracks that are EmcShowerValid info)@@</pre>
+''Requiring TOF!=0'': 
+
+Strangely cuts down MC 2.4% events, but only about 0.2% in data. May suggest something is wrong with MC. (@@color:green; can't reproduce this one@@)
+
+''Allowing More Than 2 Tracks'': 
+
+动量小于1GeV的MDC径迹忽略，不加入nGood和nCharge计数；结果可以忽略。
+
+''Requiring tracks in EMC-only method'': 
+
+results change by about 0.2%. Allowing more than two tracks here also had negligible effects
+
+''@@color:red;For some energy points 1%+ events can't pass the really rough check(two tracks that are ~EmcShowerValid info)@@
+''
+[[Bad EmcShowerValid|Worklog_Luminosity_3p1]]
+
+
+
+----
+!!Version 0.5
+
+认为结果的问题来自[[MC效率不对|Worklog_Luminosity_BadMC]]。</pre>
+</div>
+<div created="20170711061332494" creator="Yifan" modified="20170711061419680" modifier="Yifan" title="Worklog_Luminosity_3p1">
+<pre>!Bad MC ~EmcValidShower
+
+(4190:98.7%, 4200: 98.8%, 4270:98.96%, others: 99.8%) 
+
+重跑作业，数目稳定，排除服务器中断作业的原因；
+
+事例数与Run号比较，虽有少数Run号亮度模拟不一致(Online Lum=0或n(MC)=0情况皆有)，但这并非原因；
+
+@@color:magenta;左图：亮度vs MC事例数 差异；右图：MC选择前后事例数差异@@ 如图，该现象应该不是来自少数Run的贡献。
+
+[img width=400 [./img/Worklog/Luminosity/Tracking/Lum_vs_nRaw.png]]
+[img width=400 [ ./img/Worklog/Luminosity/Tracking/Selected_vs_nRaw.png]]
+
+@@color:magenta;左图：4190 bad MC events 分布 差异；右图：4237@@ 
+
+[img width=400 [./img/Worklog/Luminosity/Tracking/4190_bad_events.png]]
+[img width=400 [./img/Worklog/Luminosity/Tracking/4237_bad_events.png]]
+
+综上，说明在部分能量点MC模拟的EMC信息有问题。这不影响两方法效率比例，所以对Tracking Efficiency项的误差没贡献。
+</pre>
 </div>
 <div created="20170606055357367" creator="Yifan" modified="20170606062706099" modifier="Yifan" title="Worklog_Luminosity_4">
 <pre>!BOSS Version Problem
@@ -12115,6 +12231,33 @@ if (pick Bhabha) then Cut: 5d&lt;fabs(delta_phi)&lt;40d
 
 目前的解决方法，是通过拟合dE/dx信息，将这部分事例找出来。
 相关Code: /scratchfs/bes/tanggy/llvp4600/script/recover_0522</pre>
+</div>
+<div created="20170711050416310" creator="Yifan" modified="20170711063731247" modifier="Yifan" title="Worklog_Luminosity_BadMC" type="">
+<pre>''MC效率不对''
+
+| ! | !4190 | !4200 | !4210 | !4220 | !4237 | !4246 | !4270 | !4280 |
+| !Bhabha Luminosity(pb^^-1^^) | 521.0 | 525.3  | 517.4 | 516.3 | 533.1 | 538.0 | 533.0 | 175.9 |
+| !EMC-only Lum | 527.0 |  |  | 515.0 | 532.2 |  | 532.2 | 175.6 |
+
+| !Bhabha nGood=2(%) | @@color:green;75.30@@ | @@color:green;75.24@@ | 73.64 | 73.70 | 73.66 | 73.62 | 73.73 | 73.63 |
+| !Bhabha Total Effi(%) | @@color:green;17.02@@ | @@color:green;16.90@@ | 16.77 | 16.72 | 16.66 | 16.60 | 16.55 | 16.53 |
+
+| !&gt;=2 EMC Cluster | @@color:green;98.68@@ | @@color:green;98.78@@ | 99.83 | 99.83 | 99.84 | 99.84 | 99.83 | 99.83 |
+| !&gt;=2 EMC Cluster | 20.55 | 20.46 | 20.42 | 20.42 | 20.32 | 20.30 | 20.23 | 20.20 |
+
+| !两径迹TOF时间均!=0| MC损失2.4% | data几乎无损失 |
+
+[img width=200 [./img/Worklog/Luminosity/Tracking/4190_bad_events.png]]
+[img width=200 [./img/Worklog/Luminosity/Tracking/4200_bad_events.png]]
+[img width=200 [./img/Worklog/Luminosity/Tracking/4210_bad_events.png]]
+[img width=200 [./img/Worklog/Luminosity/Tracking/4220_bad_events.png]]
+
+[img width=200 [./img/Worklog/Luminosity/Tracking/4237_bad_events.png]]
+[img width=200 [./img/Worklog/Luminosity/Tracking/4246_bad_events.png]]
+[img width=200 [./img/Worklog/Luminosity/Tracking/4270_bad_events.png]]
+[img width=200 [./img/Worklog/Luminosity/Tracking/4280_bad_events.png]]
+
+----</pre>
 </div>
 <div created="20170426114612566" creator="Yifan" modified="20170510011534514" modifier="Yifan" title="Worklog_Luminosity_Files">
 <pre>----
@@ -12152,6 +12295,23 @@ if (pick Bhabha) then Cut: 5d&lt;fabs(delta_phi)&lt;40d
 *result.root: Modified NLO result
 *Digamma.root: Method2 on NLO MC
 *Digamma3.5.root: Method2 on Babayaga 3.5 MC
+</pre>
+</div>
+<div created="20170710075704619" creator="Yifan" modified="20170710075706338" modifier="Yifan" title="Worklog_Luminosity_Graphs_1">
+<pre>''高能光子能量， All Cuts， 左旧右新''
+
+[img width=400 [./img\Worklog\Luminosity\Tracking\E1_old.png]]
+[img width=400 [./img\Worklog\Luminosity\Tracking\E1_new.png]]
+
+''低能光子能量， All Cuts， 左旧右新''
+
+[img width=400 [./img\Worklog\Luminosity\Tracking\E2_old.png]]
+[img width=400 [./img\Worklog\Luminosity\Tracking\E2_new.png]]
+
+''Phi角差异， All Cuts, 左旧右新''
+
+[img width=400 [./img\Worklog\Luminosity\OldTracking\phi_diff.png]]
+[img width=400 [./img\Worklog\Luminosity\NewTracking\phi_diff.png]]
 </pre>
 </div>
 <div created="20170426114715649" creator="Yifan" modified="20170426125353165" modifier="Yifan" title="Worklog_Luminosity_part1">
@@ -12209,62 +12369,6 @@ Quoting 唐光毅，相当于用Babayaga NLO的接口更改了cuts，应该是�
 ----
 
 [img[./img/Yifan4.gif]]</pre>
-</div>
-<div created="20170414051712634" creator="Yifan" modified="20170414053759573" modifier="Yifan" title="参数估计">
-<pre>参数估计，估计量，估计值，似然函数（参数条件下，现象的概率）。
-
-*一致性：估计量依概率收敛到参数。
-*无偏性：估计量期望等于参数真值。
-*有效性：满足正规条件,且达到方差下界(MVB)。
-*充分性：包含了子样对于待估计参数的全部信息。
-
-
-区间估计，置信区间，置信概率，显著性，上下置信限，置信域
-
-----
-!!极大似然法
-
-极大似然估计量，似然方程。
-
-极大似然估计量的性质：参数变换不变，一致，无偏，充分，有效，唯一，渐近正态(lnL是参数的抛物线函数)。
-
-合并估计：`L(x,y|par)=L(x|par)*L(y|par)`
-
-</pre>
-</div>
-<div created="20170414045145343" creator="Yifan" modified="20170414051547060" modifier="Yifan" title="大数定理和中心极限定理">
-<pre>----
-
-!Law of large numbers(LLN)
-
-According to the law, the average of the results obtained from a large number of trials should be close to the expected value, and will tend to become closer as more trials are performed.
-
-!Central limit theorem(CLT)
-
-In more precise terms, given certain conditions, the arithmetic mean of a sufficiently large number of iterates of @@color:green;independent random variables@@, @@color:blue;each with a well-defined (finite) expected value@@ and @@color:orange;finite variance@@, will be approximately normally distributed, regardless of the underlying distribution.
-
-
-</pre>
-</div>
-<div created="20170414051520883" creator="Yifan" modified="20170414051525589" modifier="Yifan" title="子样及其分布">
-<pre>子样，总体，抽样，统计推断，简单随机抽样，子样观测值，子样空间。
-
-统计量，子样平均值，子样方差，子样标准差，子样k阶原点矩(Λ,,k,,)，子样k阶中心矩(M,,k,,)，子样偏度，子样峰度。子样协方差，子样相关系数。
-
-*子样平均值期望等于总体平均值期望
-*子样平均值方差等于总体方差的1/n
-*子样方差期望等于总体方差
-
-抽样分布：
-
-*泊松总体的子样均值服从泊松分布
-*正态分布总体的子样均值服从正态分布
-*当n很大时，任意总体子样平均值服从正态分布
-*两正态总体的子样平均值之差也是正态变量
-*标准正态分布的子样平方和服从卡方分布
-*正态总体的子样方差服从卡方分布
-*标准正态总体的平均值/方差分布服从t分布；
-*两标准正态总体的方差之商服从F分布</pre>
 </div>
 
 </div>
