@@ -255,11 +255,11 @@ Error message and password prompt
 
 <li>linux_cat</li>
 
-<li>linux_change_filenames</li>
-
 <li>linux_cut</li>
 
 <li>linux_find</li>
+
+<li>linux_for_command</li>
 
 <li>linux_grep</li>
 
@@ -8210,8 +8210,8 @@ Error message and password prompt
 <div created="20170407022611419" modified="20170407022612731" title="$:/SiteTitle">
 <pre>HEP Note</pre>
 </div>
-<div created="20170407022931231" creator="Yifan" modified="20170711062201410" modifier="Yifan" title="$:/state/showeditpreview">
-<pre>no</pre>
+<div created="20170407022931231" creator="Yifan" modified="20170711090347019" modifier="Yifan" title="$:/state/showeditpreview">
+<pre>yes</pre>
 </div>
 <div created="20170407022746366" creator="Yifan" modified="20170615074834697" modifier="Yifan" title="$:/state/sidebar">
 <pre>yes</pre>
@@ -8228,7 +8228,7 @@ Error message and password prompt
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList [[Work Log]] Worklog_Luminosity Worklog_Luminosity_3 Worklog_Luminosity_BadMC" title="$:/StoryList">
+<div list="ContentList [[Work Log]] Worklog_Luminosity Worklog_Luminosity_BadMC" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10149,7 +10149,7 @@ Render a frame marking the margins of the current document:
 #[[Bash Scripts]]
 #[[vim Editor]]</pre>
 </div>
-<div created="20170407022820254" creator="Yifan" modified="20170531012856980" modifier="Yifan" title="Linux Commands">
+<div created="20170407022820254" creator="Yifan" modified="20170711090306772" modifier="Yifan" title="Linux Commands">
 <pre>----
 !The Basics
 *`pwd`
@@ -10185,7 +10185,7 @@ Topics:
 *[[Using pipes|linux_pipes]]
 *[[Wildcards|linux_wildcards]]
 *[[Multiple commands|linux_multicommands]]
-*[[Change A Group of Filenames|linux_change_filenames]]
+*[[For Command|linux_for_command]]
 
 ----
 !Shell Scripts
@@ -10209,17 +10209,6 @@ cat means to concatenate. It can be used to combine text files.
 *`-b`: to number unblank lines.
 *`-n`: to number all lines.
 *`-s`: to squeeze adjacent blank lines</pre>
-</div>
-<div created="20170531012531182" creator="Yifan" modified="20170531012957684" modifier="Yifan" title="linux_change_filenames">
-<pre>!Change Filename Patterns for a Group of Files.
-
-Firstly, run this command to check if your setting is right.
-
-```
-for x in ./*; do echo $x === Will Become === `echo $x|sed 's/old_pat/new_pat/g'`; done
-```
-
-After the check, change `echo` to `mv`, and remove `=== Will Become ===`</pre>
 </div>
 <div created="20170413133305242" creator="Yifan" modified="20170413134328952" modifier="Yifan" title="linux_cut">
 <pre>!!cut
@@ -10245,6 +10234,23 @@ Find the files according to the filters.
 *`-atime`: last access time(day)
 *`-cmin -60`:changed within an hour
 *`-size`:parameters like `+50m`,`-1000k` </pre>
+</div>
+<div created="20170531012531182" creator="Yifan" modified="20170711090555850" modifier="Yifan" title="linux_for_command">
+<pre>!!Change Filename Patterns for a Group of Files.
+
+Firstly, run this command to check if your setting is right.
+
+```
+for x in ./*; do echo $x === Will Become === `echo $x|sed 's/old_pat/new_pat/g'`; done
+```
+
+After the check, change `echo` to `mv`, and remove `=== Will Become ===`
+
+!!Show if the log file succeeded
+
+```
+for x in ./*bosslog; do echo $x ...... `cat $x | tail -2 | head -1 `; done
+```</pre>
 </div>
 <div created="20170407034637006" creator="Yifan" modified="20170407034640465" modifier="Yifan" title="linux_grep">
 <pre>!!grep
@@ -12232,18 +12238,18 @@ results change by about 0.2%. Allowing more than two tracks here also had neglig
 目前的解决方法，是通过拟合dE/dx信息，将这部分事例找出来。
 相关Code: /scratchfs/bes/tanggy/llvp4600/script/recover_0522</pre>
 </div>
-<div created="20170711050416310" creator="Yifan" modified="20170711063731247" modifier="Yifan" title="Worklog_Luminosity_BadMC" type="">
+<div created="20170711050416310" creator="Yifan" modified="20170716064019875" modifier="Yifan" title="Worklog_Luminosity_BadMC" type="">
 <pre>''MC效率不对''
 
 | ! | !4190 | !4200 | !4210 | !4220 | !4237 | !4246 | !4270 | !4280 |
 | !Bhabha Luminosity(pb^^-1^^) | 521.0 | 525.3  | 517.4 | 516.3 | 533.1 | 538.0 | 533.0 | 175.9 |
-| !EMC-only Lum | 527.0 |  |  | 515.0 | 532.2 |  | 532.2 | 175.6 |
+| !EMC-only Lum | 527.0 | @@color:blue;528.9@@ |@@color:blue;520.41@@ | 515.0 | 532.2 | @@color:blue;536.01@@ | 532.2 | 175.6 |
 
 | !Bhabha nGood=2(%) | @@color:green;75.30@@ | @@color:green;75.24@@ | 73.64 | 73.70 | 73.66 | 73.62 | 73.73 | 73.63 |
 | !Bhabha Total Effi(%) | @@color:green;17.02@@ | @@color:green;16.90@@ | 16.77 | 16.72 | 16.66 | 16.60 | 16.55 | 16.53 |
 
 | !&gt;=2 EMC Cluster | @@color:green;98.68@@ | @@color:green;98.78@@ | 99.83 | 99.83 | 99.84 | 99.84 | 99.83 | 99.83 |
-| !&gt;=2 EMC Cluster | 20.55 | 20.46 | 20.42 | 20.42 | 20.32 | 20.30 | 20.23 | 20.20 |
+| !EMC-only overall Efficiency | 20.55 | 20.46 | 20.42 | 20.42 | 20.32 | 20.30 | 20.23 | 20.20 |
 
 | !两径迹TOF时间均!=0| MC损失2.4% | data几乎无损失 |
 
