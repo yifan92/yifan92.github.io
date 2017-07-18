@@ -383,6 +383,8 @@ Error message and password prompt
 
 <li>Worklog_Luminosity_part1</li>
 
+<li>Works_of_Others</li>
+
 <li>Writing</li>
 
 <li>Yifan</li>
@@ -8228,7 +8230,7 @@ Error message and password prompt
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList [[Work Log]] Worklog_Luminosity Worklog_Luminosity_BadMC" title="$:/StoryList">
+<div list="ContentList [[Physics Resources]] Works_of_Others [[Work Log]] Worklog_Luminosity_5 Worklog_Luminosity_3 Worklog_Luminosity_BadMC" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -10355,18 +10357,20 @@ Stream EDitor, used for modifying files in unix/linux.
 ----
 #[ext[Book by Grupen|./materials/books/Particle_Detectors_Grupen.pdf]]</pre>
 </div>
-<div created="20170410120718342" creator="Yifan" modified="20170418052435553" modifier="Yifan" title="Physics Resources">
+<div created="20170410120718342" creator="Yifan" modified="20170718054808271" modifier="Yifan" title="Physics Resources">
 <pre>----
 !!Charmonium
 
 #[[Charmonium Talks]]: Things that happen in the groups.
 #[[Reading Materials|Charmonium Readings]]
 #[[Luminosity Resources]]: Relating to my work of luminosity measurement.
-
+#[[What Has Other People Been Doing|Works_of_Others]]
 
 
 *[[Charmonium Group Page|http://docbes3.ihep.ac.cn/~charmoniumgroup/index.php/Main_Page]]
 *[[Charmonium Indico|http://indico.ihep.ac.cn/category/52/]]
+
+
 
 ----
 #[[PDG Webpage|http://pdglive.lbl.gov/Viewer.action]]</pre>
@@ -12238,7 +12242,7 @@ results change by about 0.2%. Allowing more than two tracks here also had neglig
 目前的解决方法，是通过拟合dE/dx信息，将这部分事例找出来。
 相关Code: /scratchfs/bes/tanggy/llvp4600/script/recover_0522</pre>
 </div>
-<div created="20170711050416310" creator="Yifan" modified="20170716064019875" modifier="Yifan" title="Worklog_Luminosity_BadMC" type="">
+<div created="20170711050416310" creator="Yifan" modified="20170718053305665" modifier="Yifan" title="Worklog_Luminosity_BadMC" type="">
 <pre>''MC效率不对''
 
 | ! | !4190 | !4200 | !4210 | !4220 | !4237 | !4246 | !4270 | !4280 |
@@ -12262,6 +12266,25 @@ results change by about 0.2%. Allowing more than two tracks here also had neglig
 [img width=200 [./img/Worklog/Luminosity/Tracking/4246_bad_events.png]]
 [img width=200 [./img/Worklog/Luminosity/Tracking/4270_bad_events.png]]
 [img width=200 [./img/Worklog/Luminosity/Tracking/4280_bad_events.png]]
+
+----
+
+!!MC Truth Comparison
+
+@@color:red;Bad events@@, @@color:blue;Good Events@@
+
+''4190''
+
+[img width=280 [./img/Worklog/Luminosity/T4190/lp_p.png]]
+[img width=280 [./img/Worklog/Luminosity/T4190/lp_ctheta.png]]
+[img width=280 [./img/Worklog/Luminosity/T4190/lp_phi.png]]
+
+
+''4237''
+
+[img width=280 [./img/Worklog/Luminosity/T4237/lp_p.png]]
+[img width=280 [./img/Worklog/Luminosity/T4237/lp_ctheta.png]]
+[img width=280 [./img/Worklog/Luminosity/T4237/lp_phi.png]]
 
 ----</pre>
 </div>
@@ -12355,6 +12378,32 @@ NLO产生子中加入cut，要求mee&gt;3.8
 Quoting 唐光毅，相当于用Babayaga NLO的接口更改了cuts，应该是允许的使用方式。Babayaga NLO的Readme中提到了用户可以加cut，只是不知道唐的程序实现是否合理。
 
 又或者根据作者的建议，可以试着修改emin，或者增加nsearch(会很慢)
+
+----</pre>
+</div>
+<div created="20170718054814836" creator="Yifan" modified="20170718055531206" modifier="Yifan" title="Works_of_Others">
+<pre>----
+
+An Ying
+
+$$J/\psi \rightarrow \omega \eta$$ 
+
+Motivation: Why 12% rule doesn't apply to VP; non-per QCD;
+
+---
+
+Song Jiaojiao
+
+$$e^+e^- \rightarrow \Lambda\Lambda^*$$ 
+
+----
+
+Li Longke
+
+#$$K_sKK$$
+#$$K\pi\pi^0$$
+#$$K_s\pi\eta$$
+#$$K\pi\eta$$
 
 ----</pre>
 </div>
