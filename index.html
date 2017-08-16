@@ -159,12 +159,6 @@ Error message and password prompt
 
 <li>$:/themes/tiddlywiki/vanilla/options/sidebarlayout</li>
 
-<li>参数估计</li>
-
-<li>大数定理和中心极限定理</li>
-
-<li>子样及其分布</li>
-
 <li>About Tiddlywiki</li>
 
 <li>Bash Scripts</li>
@@ -383,11 +377,19 @@ Error message and password prompt
 
 <li>Worklog_Luminosity_part1</li>
 
+<li>Worklog_Luminosity_part6</li>
+
 <li>Works_of_Others</li>
 
 <li>Writing</li>
 
 <li>Yifan</li>
+
+<li>参数估计</li>
+
+<li>大数定理和中心极限定理</li>
+
+<li>子样及其分布</li>
 
 </ul>
 </p>
@@ -8230,7 +8232,7 @@ Error message and password prompt
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList [[Physics Resources]] Works_of_Others [[Work Log]] Worklog_Luminosity_5 Worklog_Luminosity_3 Worklog_Luminosity_BadMC" title="$:/StoryList">
+<div list="ContentList [[Work Log]] Worklog_Luminosity Worklog_Luminosity_part6" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8358,62 +8360,6 @@ Error message and password prompt
 </div>
 <div created="20170411005211261" creator="Yifan" modified="20170411005211261" modifier="Yifan" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
 <pre>fluid-fixed</pre>
-</div>
-<div created="20170414051712634" creator="Yifan" modified="20170414053759573" modifier="Yifan" title="参数估计">
-<pre>参数估计，估计量，估计值，似然函数（参数条件下，现象的概率）。
-
-*一致性：估计量依概率收敛到参数。
-*无偏性：估计量期望等于参数真值。
-*有效性：满足正规条件,且达到方差下界(MVB)。
-*充分性：包含了子样对于待估计参数的全部信息。
-
-
-区间估计，置信区间，置信概率，显著性，上下置信限，置信域
-
-----
-!!极大似然法
-
-极大似然估计量，似然方程。
-
-极大似然估计量的性质：参数变换不变，一致，无偏，充分，有效，唯一，渐近正态(lnL是参数的抛物线函数)。
-
-合并估计：`L(x,y|par)=L(x|par)*L(y|par)`
-
-</pre>
-</div>
-<div created="20170414045145343" creator="Yifan" modified="20170414051547060" modifier="Yifan" title="大数定理和中心极限定理">
-<pre>----
-
-!Law of large numbers(LLN)
-
-According to the law, the average of the results obtained from a large number of trials should be close to the expected value, and will tend to become closer as more trials are performed.
-
-!Central limit theorem(CLT)
-
-In more precise terms, given certain conditions, the arithmetic mean of a sufficiently large number of iterates of @@color:green;independent random variables@@, @@color:blue;each with a well-defined (finite) expected value@@ and @@color:orange;finite variance@@, will be approximately normally distributed, regardless of the underlying distribution.
-
-
-</pre>
-</div>
-<div created="20170414051520883" creator="Yifan" modified="20170414051525589" modifier="Yifan" title="子样及其分布">
-<pre>子样，总体，抽样，统计推断，简单随机抽样，子样观测值，子样空间。
-
-统计量，子样平均值，子样方差，子样标准差，子样k阶原点矩(Λ,,k,,)，子样k阶中心矩(M,,k,,)，子样偏度，子样峰度。子样协方差，子样相关系数。
-
-*子样平均值期望等于总体平均值期望
-*子样平均值方差等于总体方差的1/n
-*子样方差期望等于总体方差
-
-抽样分布：
-
-*泊松总体的子样均值服从泊松分布
-*正态分布总体的子样均值服从正态分布
-*当n很大时，任意总体子样平均值服从正态分布
-*两正态总体的子样平均值之差也是正态变量
-*标准正态分布的子样平方和服从卡方分布
-*正态总体的子样方差服从卡方分布
-*标准正态总体的平均值/方差分布服从t分布；
-*两标准正态总体的方差之商服从F分布</pre>
 </div>
 <div created="20170407035445794" creator="Yifan" modified="20170510052235110" modifier="Yifan" title="About Tiddlywiki">
 <pre>This note is stored as a Tiddlywiki file. Here are some more information about this helpful tool.
@@ -10151,7 +10097,7 @@ Render a frame marking the margins of the current document:
 #[[Bash Scripts]]
 #[[vim Editor]]</pre>
 </div>
-<div created="20170407022820254" creator="Yifan" modified="20170711090306772" modifier="Yifan" title="Linux Commands">
+<div created="20170407022820254" creator="Yifan" modified="20170814150611733" modifier="Yifan" title="Linux Commands">
 <pre>----
 !The Basics
 *`pwd`
@@ -10168,6 +10114,7 @@ Render a frame marking the margins of the current document:
 *`head/tail -n file`: print the first/last n lines of a file.
 *`echo`
 *`touch`
+*`date`: print current time
 
 ----
 !More
@@ -11816,7 +11763,7 @@ Default files:
 <pre>#[[Worklog_gKsKpi]]
 #[[Worklog_Luminosity]]</pre>
 </div>
-<div created="20170426123555284" creator="Yifan" modified="20170531045250389" modifier="Yifan" title="Work_Luminosity_part2">
+<div created="20170426123555284" creator="Yifan" modified="20170816050215930" modifier="Yifan" title="Work_Luminosity_part2">
 <pre>!!Results
 
 
@@ -11834,6 +11781,27 @@ Default files:
 #Babayaga NLO: 0.1%
 #MC Statistics: 0.3% (1M MC)
 #Tracking: quoting ~GaoQing (ave 0.18 / max 0.39), @@color:green;placeholder@@
+
+
+
+| ! | !4190 | !4200 | !4210 | !4220 | !4237 | !4246 | !4270 | !4280 |
+| !Luminosity(pb^^-1^^) | 520.8 | 525.7 | 517.8 | 514.7 | 532.9 | 537.9 | 532.9 | 176.0 |
+| !Tanggy Effect(pb^^-1^^) | 1.3 | 1.5 | 1.6 | 1.4 | 1.9 | 1.8 | 2.1 | 0.7 |
+| !EMC-only Lum | 527.0 | @@color:blue;528.9@@ |@@color:blue;520.41@@ | 515.0 | 532.2 | @@color:blue;536.01@@ | 532.2 | 175.6 |
+| ! | !Uncertainties |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
+| !On E Cuts(%) | 0.13 | 0.12 | 0.16 | 0.10 | 0.11 | 0.14 | 0.10 | 0.13 |
+| !On Cosθ Cuts(%) | 0.08 | 0.23 | 0.29 | 0.37 | 0.24 | 0.47 | 0.24 | 0.46 |
+| !On P Cuts(%) | 0.2 | 0.31 | 0.26| 0.65 | 0.95 | 0.90 | 1.1 | 0.77 |
+| !On M(ee) Cuts(%) | 0 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
+| !Energy Bias(%) | 0.01 | 0.01 | 0.01 | 0.02 | 0.01 | 0.00 | 0.00 | 0.01 |
+| !Babayaga NLO Generator(%) | 0.1 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
+| !MC Statistics(%) | 0.3 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
+| !Combined(%) |  |  |  |  |  |  |  |  |
+
+@@color:green;更换了条件，将EMC depo cut取得太高，需重做@@
+
+----
+!!Backup: June 2017
 
 | ! | !4190 | !4200 | !4210 | !4220 | !4237 | !4246 | !4270 | !4280 |
 | !Luminosity(pb^^-1^^) | 521.9 | 523.7 | 511.2 | 508.2 | 528.9 | 532.7 | 529.3 | 174.5 |
@@ -12079,7 +12047,7 @@ to do: 对于通过了ggKsKpi的筛选事例，进行一个很宽松的3C kmfit�
 *12data/12mc: Updated 5/15
 </pre>
 </div>
-<div created="20170426113640861" creator="Yifan" modified="20170614034454110" modifier="Yifan" title="Worklog_Luminosity">
+<div created="20170426113640861" creator="Yifan" modified="20170816050620848" modifier="Yifan" title="Worklog_Luminosity">
 <pre>----
 #[[Files|Worklog_Luminosity_Files]]
 #[[Luminosity Resources]]
@@ -12088,6 +12056,7 @@ to do: 对于通过了ggKsKpi的筛选事例，进行一个很宽松的3C kmfit�
 !!Sections of Works
 
 #[[Switching to Babayaga NLO|Worklog_Luminosity_part1]]
+#[[MC/data Comparison|Worklog_Luminosity_part6]]
 #[[Results &amp; Uncertainties|Work_Luminosity_part2]]
 #[[Tracking Efficiency Problem|Worklog_Luminosity_3]]
 #[[tanggy Problem|Worklog_Luminosity_5]]
@@ -12232,7 +12201,7 @@ results change by about 0.2%. Allowing more than two tracks here also had neglig
 
 修正这项问题后，对于总结果的差异。亮度中心值改变了0.2%，Tracking Efficiency误差由0.64%增加到1.34%。</pre>
 </div>
-<div created="20170614034102896" creator="Yifan" modified="20170614034532222" modifier="Yifan" title="Worklog_Luminosity_5">
+<div created="20170614034102896" creator="Yifan" modified="20170814150305707" modifier="Yifan" title="Worklog_Luminosity_5">
 <pre>!tanggy Problem
 
 唐光毅发现，在EMC中，存在一个晶体中间无读数，但周围八个晶体均有读数的情况。这应该是电子学的问题。
@@ -12240,7 +12209,41 @@ results change by about 0.2%. Allowing more than two tracks here also had neglig
 该现象影响数据不影响MC，会造成bhabha截面测量误差。在4260处造成0.3%的误差，到4600造成约3%的误差。
 
 目前的解决方法，是通过拟合dE/dx信息，将这部分事例找出来。
-相关Code: /scratchfs/bes/tanggy/llvp4600/script/recover_0522</pre>
+相关Code: /scratchfs/bes/tanggy/llvp4600/script/recover_0522
+
+----
+
+''Tanggy的方法：''
+
+*''cut_ee'': emc cosTheta cut, emc deposition&gt;0.73*ebeam, momenta&gt;0.93*ebeam
+*''cut_mumu'': emc cosTheta cut, emc depo&lt;0.4, muc depth&gt;40, momenta&gt;0.93*ebeam
+*''cut_reduce'': emc cosTheta cut, one of emc depo&lt;0.73*ebeam, momenta&gt;0.93*ebeam
+*''Fit 2d hist of normPH_ep, normPH_em'': Events passing cut_reduce fit to pdf(uniform bkg + pdf_ee + pdf_mumu)
+
+----
+
+''我的方法：''
+
+''cut_ee:''
+
+*emc cosTheta cut, mdc momenta cut
+*emc depo &gt; (1.55/4.19) *ebeam
+
+''cut_reduce：''
+
+*emc cosTheta cut, mdc momenta cut
+*emc能量沉积：其中一个大于(1.55/4.19)*ebeam，另一个小于(0.8*1.55/4.19)*ebeam
+*(normPHp,normPHm)在(1,1)为心的圆圈内
+
+
+运行结果为MC中无事例通过cut_reduce，所以通过cut_reduce的数据事例认为都是满足tanggy效应的事例。
+
+也尝试过通过拟合(normPHp,normPHm)的方法，pdf为(const bkg + pdf_ee)。结果为本底几乎为0，基本所有事例都是pdf_ee事例。
+
+''@@color:#006080;normPH分布图@@''
+
+[img width=400 [./img/Worklog/Luminosity/tanggy/h2normph_standard.png]]
+[img width=400 [./img/Worklog/Luminosity/tanggy/h2normph_reduce.png]]</pre>
 </div>
 <div created="20170711050416310" creator="Yifan" modified="20170718053305665" modifier="Yifan" title="Worklog_Luminosity_BadMC" type="">
 <pre>''MC效率不对''
@@ -12381,6 +12384,23 @@ Quoting 唐光毅，相当于用Babayaga NLO的接口更改了cuts，应该是�
 
 ----</pre>
 </div>
+<div created="20170816050626096" creator="Yifan" modified="20170816051346534" modifier="Yifan" title="Worklog_Luminosity_part6">
+<pre>!!Graphs of MC/Data Comparison
+----
+[img width=400 [./img/Worklog/Luminosity/L4270/pp.png]]
+[img width=400 [./img/Worklog/Luminosity/L4270/pm.png]]
+
+[img width=400 [./img/Worklog/Luminosity/L4270/ep.png]]
+[img width=400 [./img/Worklog/Luminosity/L4270/em.png]]
+
+[img width=400 [./img/Worklog/Luminosity/L4270/ctp.png]]
+[img width=400 [./img/Worklog/Luminosity/L4270/ctm.png]]
+
+[img width=400 [./img/Worklog/Luminosity/L4270/EPratio.png]]
+[img width=400 [./img/Worklog/Luminosity/L4270/mee.png]]
+
+[img width=400 [./img/Worklog/Luminosity/L4270/deltaphi.png]]</pre>
+</div>
 <div created="20170718054814836" creator="Yifan" modified="20170718055531206" modifier="Yifan" title="Works_of_Others">
 <pre>----
 
@@ -12424,6 +12444,62 @@ Li Longke
 ----
 
 [img[./img/Yifan4.gif]]</pre>
+</div>
+<div created="20170414051712634" creator="Yifan" modified="20170414053759573" modifier="Yifan" title="参数估计">
+<pre>参数估计，估计量，估计值，似然函数（参数条件下，现象的概率）。
+
+*一致性：估计量依概率收敛到参数。
+*无偏性：估计量期望等于参数真值。
+*有效性：满足正规条件,且达到方差下界(MVB)。
+*充分性：包含了子样对于待估计参数的全部信息。
+
+
+区间估计，置信区间，置信概率，显著性，上下置信限，置信域
+
+----
+!!极大似然法
+
+极大似然估计量，似然方程。
+
+极大似然估计量的性质：参数变换不变，一致，无偏，充分，有效，唯一，渐近正态(lnL是参数的抛物线函数)。
+
+合并估计：`L(x,y|par)=L(x|par)*L(y|par)`
+
+</pre>
+</div>
+<div created="20170414045145343" creator="Yifan" modified="20170414051547060" modifier="Yifan" title="大数定理和中心极限定理">
+<pre>----
+
+!Law of large numbers(LLN)
+
+According to the law, the average of the results obtained from a large number of trials should be close to the expected value, and will tend to become closer as more trials are performed.
+
+!Central limit theorem(CLT)
+
+In more precise terms, given certain conditions, the arithmetic mean of a sufficiently large number of iterates of @@color:green;independent random variables@@, @@color:blue;each with a well-defined (finite) expected value@@ and @@color:orange;finite variance@@, will be approximately normally distributed, regardless of the underlying distribution.
+
+
+</pre>
+</div>
+<div created="20170414051520883" creator="Yifan" modified="20170414051525589" modifier="Yifan" title="子样及其分布">
+<pre>子样，总体，抽样，统计推断，简单随机抽样，子样观测值，子样空间。
+
+统计量，子样平均值，子样方差，子样标准差，子样k阶原点矩(Λ,,k,,)，子样k阶中心矩(M,,k,,)，子样偏度，子样峰度。子样协方差，子样相关系数。
+
+*子样平均值期望等于总体平均值期望
+*子样平均值方差等于总体方差的1/n
+*子样方差期望等于总体方差
+
+抽样分布：
+
+*泊松总体的子样均值服从泊松分布
+*正态分布总体的子样均值服从正态分布
+*当n很大时，任意总体子样平均值服从正态分布
+*两正态总体的子样平均值之差也是正态变量
+*标准正态分布的子样平方和服从卡方分布
+*正态总体的子样方差服从卡方分布
+*标准正态总体的平均值/方差分布服从t分布；
+*两标准正态总体的方差之商服从F分布</pre>
 </div>
 
 </div>
