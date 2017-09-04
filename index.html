@@ -371,6 +371,8 @@ Error message and password prompt
 
 <li>Worklog_Luminosity_5</li>
 
+<li>Worklog_Luminosity_7</li>
+
 <li>Worklog_Luminosity_BadMC</li>
 
 <li>Worklog_Luminosity_Files</li>
@@ -8060,10 +8062,15 @@ Error message and password prompt
 <div created="20170407022709350" modified="20170407022710831" title="$:/DefaultTiddlers">
 <pre>ContentList</pre>
 </div>
-<div status="complete" title="$:/Import">
-<pre>The following tiddlers were imported:
-
-# [[$:/plugins/tiddlywiki/katex]]</pre>
+<div plugin-type="import" status="pending" title="$:/Import" type="application/json">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;Untitled&quot;: {
+            &quot;text&quot;: &quot;&lt;br class=\&quot;Apple-interchange-newline\&quot;&gt;&lt;span style=\&quot;color: rgb(51, 51, 51); font-family: &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, &amp;quot;Lucida Grande&amp;quot;, &amp;quot;DejaVu Sans&amp;quot;, sans-serif; font-size: 15px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;\&quot;&gt;selecting gXc1g(FSR) events, to estimate how wrong MC is on FSR ratio.&lt;/span&gt;&quot;,
+            &quot;title&quot;: &quot;Untitled&quot;
+        }
+    }
+}</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -8234,7 +8241,7 @@ Error message and password prompt
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList [[Work Log]] Worklog_Luminosity Worklog_Luminosity_part6 Work_Luminosity_part2" title="$:/StoryList">
+<div list="ContentList Linux [[Linux Commands]] linux_sed [[Bash Scripts]] [[Work Log]] Worklog_Luminosity Worklog_Luminosity_7" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9164,7 +9171,7 @@ partial width ratio of (ee-&gt;psi3770)/(ee-&gt;psi3686): 0.10 theoretical, 0.12
 #[[Higher Charmonia|Charmonium Reading 7]]:June 2017
 #[[Measurements of Absolute Branching Fractions for Lambda_c to Ksi K|Charmonium Reading 8]]: August 2017</pre>
 </div>
-<div created="20170410115822410" creator="Yifan" modified="20170615075114825" modifier="Yifan" title="Charmonium Talks">
+<div created="20170410115822410" creator="Yifan" modified="20170830071355655" modifier="Yifan" title="Charmonium Talks">
 <pre>----
 ! 2017
 
@@ -9181,7 +9188,14 @@ partial width ratio of (ee-&gt;psi3770)/(ee-&gt;psi3686): 0.10 theoretical, 0.12
 !!June
 
 *[[CollaborationMeeting_201706]]
-</pre>
+
+!!August
+
+*[[Determination of Luminosity and Beam Energy of X(3872) Data|http://indico.ihep.ac.cn/event/7098/contribution/11/material/slides/0.pdf]]: Liang Yutie, Koch.
+
+mumu作为cross check，结果相差~4%；
+
+*[[pipiJpsi at 3872|http://indico.ihep.ac.cn/event/7098/contribution/12/material/slides/0.pdf]]: Koch.</pre>
 </div>
 <div created="20170418052841713" creator="Yifan" modified="20170419041558930" modifier="Yifan" title="Charmonium_Reading 1">
 <pre>!!Measurement of Phase between strong and EM amplitudes in Jpsi decays
@@ -9988,7 +10002,7 @@ $$m_{12}^{2} \, vs.  \, m_{23}^{2}$$. Can be used to check if $$|M'|^{2}$$ is co
 *[ext[BES3 Latex Convention|./materials/bes3latex.zip]]: zip file
 </pre>
 </div>
-<div created="20170412011126422" creator="Yifan" modified="20170415053814461" modifier="Yifan" title="Latex Basics">
+<div created="20170412011126422" creator="Yifan" modified="20170826133112356" modifier="Yifan" title="Latex Basics">
 <pre>```
 \documentclass{article}
 
@@ -10001,7 +10015,11 @@ Hello world!
 
 `//`: force breaking line.
 
-`# $ % ^ &amp; _ { } ~ \` &lt;===   `\# \$ \% \^{} \&amp; \_ \{ \} \~{} \textbackslash{} \backslash`
+`# $ % ^ &amp; _ { } ~ ` &lt;===   `\# \$ \% \^{} \&amp; \_ \{ \} \~{} \textbackslash{} \backslash `
+
+角度符号： `^\circ`
+
+点乘：`\times`
 
 ----
 
@@ -11807,7 +11825,7 @@ Default files:
 <pre>#[[Worklog_gKsKpi]]
 #[[Worklog_Luminosity]]</pre>
 </div>
-<div created="20170426123555284" creator="Yifan" modified="20170822063300593" modifier="Yifan" title="Work_Luminosity_part2">
+<div created="20170426123555284" creator="Yifan" modified="20170828083737752" modifier="Yifan" title="Work_Luminosity_part2">
 <pre>!!Results and Systematics
 
 ----
@@ -11826,29 +11844,44 @@ Default files:
 
 ----
 
+| ! | !4190 | !4200 | !4210 | !4220 | !4237 | !4246 | !4270 | !4280 |
+| !Tracking Efficiency | 0.65 | 0.46 | 0.25 | 0.12 | 0.38 | 0.56 | 0.45 | 0.05 |
+| !On E Cuts(%) | 0.15 | 0.14 | 0.13 | 0.10 | 0.11 | 0.14 | 0.11 | 0.13 |
+| !On Cosθ Cuts(%) | 0.08 | 0.07 | 0.21 | 0.35 | 0.27 | 0.37 | 0.23 | 0.40 |
+| !On P Cuts(%) | 0.06 | 0.04 | 0.07 | 0.09 | 0.09 | 0.01 | 0.12 | 0.08 |
+| !On M(ee) Cuts(%) | 0 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
+| !Energy Bias(%) | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 |
+| !Babayaga NLO Generator(%) | 0.1 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
+| !MC Statistics(%) | 0.3 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
+| !Combined(%) | 0.74 | 0.58 | 0.47 | 0.50 | 0.58 | 0.76 | 0.62 | 0.53 |
+
+
+----
+!!backup: former tracking result: Aug22
 
 | ! | !4190 | !4200 | !4210 | !4220 | !4237 | !4246 | !4270 | !4280 |
 | !Luminosity(pb^^-1^^) | 520.2 | 525.1 | 516.8 | 515.1 | 532.5 | 537.6 | 533.3 | 175.089 |
-| !@@color:green;EMC-only Lum@@ |  | 527.5 | 518.1 |  |  | |  |  |
+| !@@color:green;EMC-only Lum@@ | 523.6 | 527.5 | 518.1 | 514.5 | 530.5 | 534.6 | 530.9 | 175.2 |
 | !Tanggy Effect(pb^^-1^^) | 1.3 | 1.5 | 1.6 | 1.4 | 1.9 | 1.8 | 2.1 | 0.7 |
 | ! | !Signal Efficiencies |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
 | !Efficiencies(%) | 17.49 | 17.35 | 17.22 | 17.14 | 17.11 | 17.04 | 16.98 | 16.95 |
 | ! | !Uncertainties |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
 | !On E Cuts(%) | 0.15 | 0.14 | 0.13 | 0.10 | 0.11 | 0.14 | 0.11 | 0.13 |
-| !On Cosθ Cuts(%) | 0.08 | 0.07 | 0.29 | 0.35 | 0.27 | 0.37 | 0.23 | 0.40 |
+| !On Cosθ Cuts(%) | 0.08 | 0.07 | 0.21 | 0.35 | 0.27 | 0.37 | 0.23 | 0.40 |
 | !On P Cuts(%) | 0.06 | 0.04 | 0.07 | 0.09 | 0.09 | 0.01 | 0.12 | 0.08 |
 | !On M(ee) Cuts(%) | 0 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
-| !Energy Bias(%) | 0.01 | 0.00 | 0.00 | 0.01 | 0.01 | 0.00 | 0.00 | 0.01 |
+| !Energy Bias(%) | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 |
 | !Babayaga NLO Generator(%) | 0.1 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
 | !MC Statistics(%) | 0.3 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
-| !Combined(%) ,,w/o tracking,, | 0.36 | 0.36 | 0.45 | 0.49 | 0.44 | 0.51 | 0.42 | 0.53 |
+| !Combined(%) ,,w/o tracking,, | 0.36 | 0.36 | 0.40 | 0.49 | 0.44 | 0.51 | 0.42 | 0.53 |
 
 更新：
 
 新刻度常数；P cut from 2/4.26 to 1.95/4.19; E cut from 1.55/4.26 to 1.55/4.19;
 
+
 ----
-!!Backup: Former Tracking Result
+!!Backup: Former Tracking Result: 
 
 | ! | !4190 | !4200 | !4210 | !4220 | !4237 | !4246 | !4270 | !4280 |
 | !Bhabha Luminosity(pb^^-1^^) | 521.0 | 525.3  | 517.4 | 516.3 | 533.1 | 538.0 | 533.0 | 175.9 |
@@ -12011,11 +12044,17 @@ Cut at 3 ~GeV to get rid of this
 #[[KsKpi Lineshape|Worklog_gKsKpi_4]]
 #[[KsKpipi0 Lineshape|Worklog_gKsKpi_5]]</pre>
 </div>
-<div created="20170515130824469" creator="Yifan" modified="20170523053954797" modifier="Yifan" title="Worklog_gKsKpi_4">
+<div created="20170515130824469" creator="Yifan" modified="20170831060012604" modifier="Yifan" title="Worklog_gKsKpi_4">
 <pre>!~KsKpi Lineshape
 
 利用MC中的FSR和noFSR的成分的谱形，用gXc1来修正MC/data成分比例的偏差。
 
+根据data- Inc_MC_bkg与sig_MC的对比，得到data中FSR/noFSR相对于MC的修正系数1.165。
+
+MC中FSR:noFSR= 3:110。影响不大
+
+
+----
 
 !!Algorithm for FSR events:
 
@@ -12031,31 +12070,39 @@ Km Fit: (gammaH, gammaL, Ks, K, pi)
 Additional cut: M(gg) outside [0.1,0.155]
 ```
 
-gXc1 MC:
+----
+
+gXc1 MC:   FSR:noFSR = 527/1116  
 
 *FSR Events: (mKsKpi, mKsKpigl) in ([3.35,3.48], [3.49 3.53])
 *noFSR Events: (mKsKpi, mKsKpigl) in ([3.49,3.53], [3.49,3.53])
 
-527/1116
-
 [img width=500 [./img/Worklog/gKsKpi/fsr/gXc1.png]]
 
-09data: 
-
-62/61
+09data:  62/61
 
 [img width=500 [./img/Worklog/gKsKpi/fsr/09data.png]]
 
-09 mc
+09mc: 53/53
 
-53/53
+truth剔除signal之后的bkg事例：23/2
 
 [img width=500 [./img/Worklog/gKsKpi/fsr/09mc.png]]
 
-[img width=500 [./img/Worklog/gKsKpi/FSR_Topology09MC.png]]
-</pre>
+12data: 198/215
+
+[img width=500 [./img/Worklog/gKsKpi/fsr/12data.png]]
+
+12mc: 188/245  
+
+truth剔除signal之后的bkg事例：73/6
+
+[img width=500 [./img/Worklog/gKsKpi/fsr/12mc.png]]
+
+
+[img width=500 [./img/Worklog/gKsKpi/FSR_Topology09MC.png]]</pre>
 </div>
-<div created="20170516024946041" creator="Yifan" modified="20170606062246133" modifier="Yifan" title="Worklog_gKsKpi_5">
+<div created="20170516024946041" creator="Yifan" modified="20170831060414055" modifier="Yifan" title="Worklog_gKsKpi_5">
 <pre>!~KsKpipi0 Lineshape
 
 !!Algorithm
@@ -12086,10 +12133,10 @@ data
 to do: 对于通过了ggKsKpi的筛选事例，进行一个很宽松的3C kmfit，来获取m(~KsKpi)_3c。并且证明m(~KsKpi)_3c_ggKsKpi和m(~KsKpi)_3c_gKsKpi的可比性。
 
 ----
-将Data的m(KsKpi| picking pi0KsKpi)分布为pi0KsKpi MC赋权重，用Weighted MC来做Lineshape。
+将Data的m(~KsKpi| picking pi0KsKpi)分布为pi0KsKpi MC赋权重，用Weighted MC来做Lineshape。
 </pre>
 </div>
-<div created="20170509034540112" creator="Yifan" modified="20170515104652395" modifier="Yifan" title="Worklog_gKsKpi_Files">
+<div created="20170509034540112" creator="Yifan" modified="20170831065935305" modifier="Yifan" title="Worklog_gKsKpi_Files">
 <pre>''ROOT Files''
 
 *(Updated 5/9, after fixing using svtxfit info in kmfit)
@@ -12098,9 +12145,30 @@ to do: 对于通过了ggKsKpi的筛选事例，进行一个很宽松的3C kmfit�
 *gKsKs, ~JpsiNeutral, ~KsKpi, ~KsKpipi0: 1M events
 *09data/09mc: Updated 5/8
 *12data/12mc: Updated 5/15
-</pre>
+
+Have left things alone for a long time. And forgot to touch and lost data files. (8/31)
+
+*12data/12mc/12data_FSR/12mc_FSR are good
+
+----
+!!Algorithms
+
+''gKsKpi.C''
+
+*(test3C): analysis. 
+*(test4C): use 4C fit to calculate mass;
+*(5c_bkg): deal with ~KsKpipi background.
+
+''ggKsKpi.C''
+
+*selecting g(,,FSR,,)gXc1 events, to estimate how wrong MC is on FSR ratio.
+
+----
+!!Scripts
+
+''fsr.C'': deal with fsr events selected from ggKsKpi algorithm.</pre>
 </div>
-<div created="20170426113640861" creator="Yifan" modified="20170816050620848" modifier="Yifan" title="Worklog_Luminosity">
+<div created="20170426113640861" creator="Yifan" modified="20170904055718762" modifier="Yifan" title="Worklog_Luminosity">
 <pre>----
 #[[Files|Worklog_Luminosity_Files]]
 #[[Luminosity Resources]]
@@ -12113,9 +12181,12 @@ to do: 对于通过了ggKsKpi的筛选事例，进行一个很宽松的3C kmfit�
 #[[Results &amp; Uncertainties|Work_Luminosity_part2]]
 #[[Tracking Efficiency Problem|Worklog_Luminosity_3]]
 #[[tanggy Problem|Worklog_Luminosity_5]]
+#[[The Writing of Note|Worklog_Luminosity_7]]
 
 ----
 !!Encountered Problems
+''Dated''
+
 *Tracking Efficiency误差很大；@@color:green; ''fix1'': alg中的cut和script中的cut不等价。检查了形式，看不出区别。但是在script中重写cut会影响MC事例数，不影响data事例数。 ''fix 2'' 199/200MC文件@@ 在修正后，仍有0.64%
 
 *@@color:green;Fixed@@ 版本问题：之前因为使用的~TestRelease Package是从lxslc5拷的，所以虽然版本号是对的，但是编译方式不对，导致了我在702环境下虽然可以ana但是不能sim/rec。,,之前尝试过用3686数据改Run号，发现结果基本不变，但这种证明是无效的。,, 变量的分布说明可能是导致探测器模拟的问题，因此检查出版本的问题。</pre>
@@ -12297,6 +12368,14 @@ results change by about 0.2%. Allowing more than two tracks here also had neglig
 
 [img width=400 [./img/Worklog/Luminosity/tanggy/h2normph_standard.png]]
 [img width=400 [./img/Worklog/Luminosity/tanggy/h2normph_reduce.png]]</pre>
+</div>
+<div created="20170904055722339" creator="Yifan" modified="20170904060604850" modifier="Yifan" title="Worklog_Luminosity_7">
+<pre>!The Writing of Note
+
+#更新M(ee)的图；
+#更新能量带来的误差：龙洲的最新结果；根据线性拟合得到altered能量点的cross section和efficiency.
+#更新到7.0.3版本
+#对高清的memo做一个Tang Correction修正。</pre>
 </div>
 <div created="20170711050416310" creator="Yifan" modified="20170718053305665" modifier="Yifan" title="Worklog_Luminosity_BadMC" type="">
 <pre>''MC效率不对''
