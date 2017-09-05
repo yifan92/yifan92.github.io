@@ -8241,7 +8241,7 @@ Error message and password prompt
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList Linux [[Linux Commands]] linux_sed [[Bash Scripts]] [[Work Log]] Worklog_Luminosity Worklog_Luminosity_7" title="$:/StoryList">
+<div list="ContentList [[Work Log]] Worklog_gKsKpi Worklog_gKsKpi_3 Worklog_gKsKpi_5" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -12102,7 +12102,7 @@ truth剔除signal之后的bkg事例：73/6
 
 [img width=500 [./img/Worklog/gKsKpi/FSR_Topology09MC.png]]</pre>
 </div>
-<div created="20170516024946041" creator="Yifan" modified="20170831060414055" modifier="Yifan" title="Worklog_gKsKpi_5">
+<div created="20170516024946041" creator="Yifan" modified="20170905053429853" modifier="Yifan" title="Worklog_gKsKpi_5">
 <pre>!~KsKpipi0 Lineshape
 
 !!Algorithm
@@ -12116,8 +12116,10 @@ for (pi0 candidates) do 5C kmfit:
 chisq(5C)&lt;15 required 
 
 ```
+!!@@color:green;Version 0.1@@
 
-!!Encountered Problem
+''Encountered Problem''
+
 3C质量谱同时通过3C(gKsKpi)和5C(ggKsKpi)的kmfit的事例数太少
 
 data
@@ -12133,8 +12135,25 @@ data
 to do: 对于通过了ggKsKpi的筛选事例，进行一个很宽松的3C kmfit，来获取m(~KsKpi)_3c。并且证明m(~KsKpi)_3c_ggKsKpi和m(~KsKpi)_3c_gKsKpi的可比性。
 
 ----
+!! @@color:green;Version 0.2@@
+
 将Data的m(~KsKpi| picking pi0KsKpi)分布为pi0KsKpi MC赋权重，用Weighted MC来做Lineshape。
-</pre>
+
+''data''
+
+[img width=500 [./img/Worklog/gKsKpi/pi0KsKpi/m5c_data.png]]
+
+''mc''
+
+[img width=500 [./img/Worklog/gKsKpi/pi0KsKpi/m5c_mc.png]]
+
+''truth''
+
+*为了避免m5C的效率问题，使用了MC truth值作为scale的依据。
+*下图为通过其他所有cut后的最终分布。
+*因为数据中有J/psi峰，对应质量谱区域的MC事例不被采用
+
+[img width=500 [./img/Worklog/gKsKpi/pi0KsKpi/hm5c_truth.png]]</pre>
 </div>
 <div created="20170509034540112" creator="Yifan" modified="20170831065935305" modifier="Yifan" title="Worklog_gKsKpi_Files">
 <pre>''ROOT Files''
