@@ -237,6 +237,8 @@ Error message and password prompt
 
 <li>Latex Basics</li>
 
+<li>Latex Bibliography Management</li>
+
 <li>Latex Fonts</li>
 
 <li>Latex Packages</li>
@@ -330,6 +332,8 @@ Error message and password prompt
 <li>root_superimposehists</li>
 
 <li>Statistics</li>
+
+<li>Synonyms</li>
 
 <li>The Element of Style</li>
 
@@ -8226,7 +8230,7 @@ Error message and password prompt
 <div created="20170407022931231" creator="Yifan" modified="20170711090347019" modifier="Yifan" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20170407022746366" creator="Yifan" modified="20170615074834697" modifier="Yifan" title="$:/state/sidebar">
+<div created="20170407022746366" creator="Yifan" modified="20170926064413563" modifier="Yifan" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20170411005206925" creator="Yifan" modified="20170411005206925" modifier="Yifan" title="$:/state/tab--1963855381">
@@ -8235,13 +8239,13 @@ Error message and password prompt
 <div created="20170411005206005" creator="Yifan" modified="20170412030123100" modifier="Yifan" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
-<div created="20170407054919167" creator="Yifan" modified="20170822064234740" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
+<div created="20170407054919167" creator="Yifan" modified="20170926061700391" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList [[Work Log]] Worklog_gKsKpi Worklog_gKsKpi_3 Worklog_gKsKpi_5" title="$:/StoryList">
+<div list="ContentList [[Physics Resources]] [[Luminosity Resources]] [[Work Log]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9987,12 +9991,13 @@ $$m_{12}^{2} \, vs.  \, m_{23}^{2}$$. Can be used to check if $$|M'|^{2}$$ is co
 
 </pre>
 </div>
-<div created="20170410042910516" creator="Yifan" modified="20170419043116206" modifier="Yifan" title="Latex">
+<div created="20170410042910516" creator="Yifan" modified="20170919074544016" modifier="Yifan" title="Latex">
 <pre>----
 *[[Basics|Latex Basics]]
 *[[Useful Packages|Latex Packages]]
 *[[Fonts|Latex Fonts]]
 *[[Page Layout|Latex Page Layout]]
+*[[Bibliography Management|Latex Bibliography Management]]
 *[[Beamer]]
 
 ----
@@ -10061,6 +10066,33 @@ text to be influenced
 \caption{\label{fig:frog}This frog was uploaded via the project menu.}
 \end{figure}
 ```</pre>
+</div>
+<div created="20170919074551037" creator="Yifan" modified="20170919080300661" modifier="Yifan" title="Latex Bibliography Management">
+<pre>-----
+!!Basic Usage
+
+`\cite{cite_key1}`
+
+```
+
+\begin{thebibliography}{9}
+
+\bibitem{cite_key1}
+  Leslie Lamport,
+  \textit{\LaTeX: a document preparation system},
+  Addison Wesley, Massachusetts,
+  2nd edition,
+  1994.
+
+\end{thebibliography}
+```
+
+-----
+!!~BibTex
+
+建立专门的.bib文件来储存文献信息。
+
+https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management</pre>
 </div>
 <div created="20170419042732679" creator="Yifan" modified="20170419042923143" modifier="Yifan" title="Latex Fonts">
 <pre>''Shapes'':
@@ -10158,7 +10190,7 @@ Render a frame marking the margins of the current document:
 #[[Bash Scripts]]
 #[[vim Editor]]</pre>
 </div>
-<div created="20170407022820254" creator="Yifan" modified="20170814150611733" modifier="Yifan" title="Linux Commands">
+<div created="20170407022820254" creator="Yifan" modified="20170911134918506" modifier="Yifan" title="Linux Commands">
 <pre>----
 !The Basics
 *`pwd`
@@ -10168,6 +10200,7 @@ Render a frame marking the margins of the current document:
 *`mv`
 *`rm`:`-f` force removing,
 *`mkdir`
+*`du`: print used space, `-c` total space, `-m` use mb as unit.
 *`chmod`: `chmod g+x file`, `chmod 755 file`, 
 *`chown user file`: change the ownership of the file to the user.
 *`less`: view text files as well as standard output. E.g. `ls | less`.
@@ -10351,8 +10384,10 @@ Stream EDitor, used for modifying files in unix/linux.
 *https://en.wikipedia.org/wiki/Bonferroni_correction
 </pre>
 </div>
-<div created="20170410120928650" creator="Yifan" modified="20170413093157083" modifier="Yifan" title="Luminosity Resources">
-<pre>*[[GaoQing's Previous Work|http://hnbes3.ihep.ac.cn/HyperNews/get/paper110.html]]: memo</pre>
+<div created="20170410120928650" creator="Yifan" modified="20171011063322036" modifier="Yifan" title="Luminosity Resources">
+<pre>*[[Hypernews of GaoQing's Previous Work|http://hnbes3.ihep.ac.cn/HyperNews/get/paper110.html]]: 
+*[[Direct Link to GaoQing's Memo|http://hnbes3.ihep.ac.cn/HyperNews/get/AUX/2014/04/03/10.56-96431-luminosity_memo_v3.pdf]]
+*[[Beam Energy of Old Data|http://cpc-hepnp.ihep.ac.cn:8080/Jwk_cpc/EN/10.1088/1674-1137/40/6/063001#]]</pre>
 </div>
 <div created="20170615083918988" creator="Yifan" modified="20170615083922649" modifier="Yifan" title="Misc Math">
 <pre>#[[Deconvolution]]</pre>
@@ -11542,6 +11577,11 @@ void twoscales() {
 ----
 *[[Introduction to Statistical Issues in Particle Physics|http://www.slac.stanford.edu/econf/C030908/papers/MOAT002.pdf]]: The basic logic of doing analyses.</pre>
 </div>
+<div created="20170912134700959" creator="Yifan" modified="20170912134842442" modifier="Yifan" title="Synonyms">
+<pre>*small, minuscule(=very small)
+*while, whereas: showing contrast
+*make up, form</pre>
+</div>
 <div created="20170412013921473" creator="Yifan" modified="20170412024003753" modifier="Yifan" title="The Element of Style">
 <pre>[[Link to the Book|http://docbes3.ihep.ac.cn/~charmoniumgroup/images/0/00/The_Element_of_Style.pdf]]
 
@@ -11773,7 +11813,7 @@ I am reminded of the advice of my neighbor, &quot;Never worry about your heart t
 <pre>*[[Numpad Typing |http://www.typeonline.co.uk/number_pad_lesson1.html]]
 *[[Typeracer|http://play.typeracer.com]]: a typing game.</pre>
 </div>
-<div created="20170411133712979" creator="Yifan" modified="20170411140806844" modifier="Yifan" title="vim Editor">
+<div created="20170411133712979" creator="Yifan" modified="20170911135015233" modifier="Yifan" title="vim Editor">
 <pre>`gvim text_file &amp;`: open a window of graphic vi editor
 
 ''Insert Mode'': `a/A/i/I/o/O`
@@ -11798,6 +11838,13 @@ I am reminded of the advice of my neighbor, &quot;Never worry about your heart t
 *`U`: restore line
 *`J`: join next line to the current
 
+''Multiple Files''
+
+*`vi file_a file_b`: open two files, use `:bn` to move between multiple files
+*`vi -o/O file_a file_b`: open two files in (verticly) split mode
+*`:split/vsplit filename` (verticly) split screen
+* double tap `Ctrl+W`: move between tabs
+
 
 ''Search'': 
 
@@ -11821,11 +11868,16 @@ Default files:
 
 [[Config Example|http://vimconfig.com/]]</pre>
 </div>
-<div created="20170426113120964" creator="Yifan" modified="20170426113145050" modifier="Yifan" title="Work Log">
+<div created="20170426113120964" creator="Yifan" modified="20171011015531403" modifier="Yifan" title="Work Log">
 <pre>#[[Worklog_gKsKpi]]
-#[[Worklog_Luminosity]]</pre>
+#[[Worklog_Luminosity]]
+
+----
+Chronicle txt Files
+
+#[ext[Octomber 2017|./txtfiles/worklog_201710.txt]]</pre>
 </div>
-<div created="20170426123555284" creator="Yifan" modified="20170828083737752" modifier="Yifan" title="Work_Luminosity_part2">
+<div created="20170426123555284" creator="Yifan" modified="20170926062251103" modifier="Yifan" title="Work_Luminosity_part2">
 <pre>!!Results and Systematics
 
 ----
@@ -11844,16 +11896,33 @@ Default files:
 
 ----
 
+Uncertainty v703
+
 | ! | !4190 | !4200 | !4210 | !4220 | !4237 | !4246 | !4270 | !4280 |
-| !Tracking Efficiency | 0.65 | 0.46 | 0.25 | 0.12 | 0.38 | 0.56 | 0.45 | 0.05 |
-| !On E Cuts(%) | 0.15 | 0.14 | 0.13 | 0.10 | 0.11 | 0.14 | 0.11 | 0.13 |
-| !On Cosθ Cuts(%) | 0.08 | 0.07 | 0.21 | 0.35 | 0.27 | 0.37 | 0.23 | 0.40 |
-| !On P Cuts(%) | 0.06 | 0.04 | 0.07 | 0.09 | 0.09 | 0.01 | 0.12 | 0.08 |
+| !Tracking Efficiency | 0.54 | 0.32 | 0.02 | 0.10 | 0.06 | 0.15 | 0.05 | 0.20 |
+| !On E Cuts(%) | 0.12 | 0.11 | 0.12 | 0.14 | 0.09 | 0.12 | 0.13 | 0.10 |
+| !On Cosθ Cuts(%) | 0.24 | 0.22 | 0.21 | 0.22 | 0.32 |  0.37 | 0.43 | 0.39 |
+| !On P Cuts(%) | 0.14 | 0.08 | 0.01 | 0.00 | 0.17 | 0.06 | 0.09 | 0.01 |
 | !On M(ee) Cuts(%) | 0 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
-| !Energy Bias(%) | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 |
+| !Energy Bias(%) | 0.06 | 0.07 | 0.00 | 0.01 | 0.04 | 0.04 | 0.02 | 0.01 |
 | !Babayaga NLO Generator(%) | 0.1 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
 | !MC Statistics(%) | 0.3 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
-| !Combined(%) | 0.74 | 0.58 | 0.47 | 0.50 | 0.58 | 0.76 | 0.62 | 0.53 |
+| !Combined(%) | 0.70 | 0.52 | 0.40 | 0.42 | 0.46 | 0.49 | 0.56 | 0.55 |
+
+
+----
+Uncertainty v702p01
+
+| ! | !4190 | !4200 | !4210 | !4220 | !4237 | !4246 | !4270 | !4280 |
+| !Tracking Efficiency | 0.50 | 0.29 | 0.06 | 0.16 | 0.09 | 0.09 | 0.26 | 0.34 |
+| !On E Cuts(%) | 0.14 | 0.13| 0.12 | 0.14 | 0.11 | 0.14 | 0.11 | 0.11 |
+| !On Cosθ Cuts(%) | 0.08 | 0.13 | 0.29 | 0.24 | 0.27 | 0.37 | 0.32 | 0.36 |
+| !On P Cuts(%) | 0.01 | 0.08 | 0.04 | 0.08 | 0.12 | 0.13 | 0.09 | 0.02 |
+| !On M(ee) Cuts(%) | 0 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
+| !Energy Bias(%) | 0.06 | 0.07 | 0.00 | 0.01 | 0.04 | 0.04 | 0.02 | 0.01 |
+| !Babayaga NLO Generator(%) | 0.1 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
+| !MC Statistics(%) | 0.3 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
+| !Combined(%) | 0.62 | 0.48 | 0.45 | 0.46 | 0.46 | 0.53 | 0.54 | 0.60 |
 
 
 ----
@@ -12344,7 +12413,7 @@ results change by about 0.2%. Allowing more than two tracks here also had neglig
 
 修正这项问题后，对于总结果的差异。亮度中心值改变了0.2%，Tracking Efficiency误差由0.64%增加到1.34%。</pre>
 </div>
-<div created="20170614034102896" creator="Yifan" modified="20170814150305707" modifier="Yifan" title="Worklog_Luminosity_5">
+<div created="20170614034102896" creator="Yifan" modified="20170908030003273" modifier="Yifan" title="Worklog_Luminosity_5">
 <pre>!tanggy Problem
 
 唐光毅发现，在EMC中，存在一个晶体中间无读数，但周围八个晶体均有读数的情况。这应该是电子学的问题。
@@ -12386,7 +12455,23 @@ results change by about 0.2%. Allowing more than two tracks here also had neglig
 ''@@color:#006080;normPH分布图@@''
 
 [img width=400 [./img/Worklog/Luminosity/tanggy/h2normph_standard.png]]
-[img width=400 [./img/Worklog/Luminosity/tanggy/h2normph_reduce.png]]</pre>
+[img width=400 [./img/Worklog/Luminosity/tanggy/h2normph_reduce.png]]
+
+-----
+!!更新高清的数据
+
+苑老师让我把之前高清做了亮度的那批数据也拿出来更新一下，唐光毅效应的修正。
+
+看了一下，有十几个能量点，工作量稍大。除了4230,4260,4600三个大亮度的能量点外，其他能量点都是扫描的数据。
+
+更换版本664p03，和数据稍有不符。sim,rec,ana都在该版本下完成；因为root性能的原因，root的hadd和脚本分析在702p01下完成。
+
+所处理数据列表：
+
+| !Energy | !Run No. |
+| 4230 | 32239-33484 |
+| 4260 | 29677-30367, 31561-31981 |
+| 4360 | 30616-31279 |</pre>
 </div>
 <div created="20170904055722339" creator="Yifan" modified="20170904060604850" modifier="Yifan" title="Worklog_Luminosity_7">
 <pre>!The Writing of Note
@@ -12587,8 +12672,9 @@ Li Longke
 
 ----</pre>
 </div>
-<div created="20170412013714902" creator="Yifan" modified="20170413095025253" modifier="Yifan" title="Writing">
+<div created="20170412013714902" creator="Yifan" modified="20170912134613629" modifier="Yifan" title="Writing">
 <pre>*[[The Element of Style]]: a book referred to on Charmonium webpage.
+*[[Synonyms]]: 
 *[[Typing Practices]]
 *[[Latex]]</pre>
 </div>

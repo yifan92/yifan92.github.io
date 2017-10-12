@@ -1,0 +1,38 @@
+Worklog 201710	
+---------------------------------------------------------
+
+2017/10/11
+	产生好MC和data的root之后，发送给唐光毅
+		-check一下具体的储存条件
+		-8个变量名，p,e,cos,tof
+		
+		
+	修改Luminosity.C，兼容tanggy的mc		*改为写脚本跑tanggy MC的dst
+	*Luminosity.C中将ctp_mdc改为主要变量，ctm_mdc改为ics=8
+
+	直至下周二前的计划：
+		-检查与唐光毅的不一致
+			-询问tanggy的脚本使用方法
+			-变量的分布：	
+				TH1D: pp,pm,cos(theta)	of recover_events		
+				TH2D: (ep,em), (phi,cos) of recover_events
+				saving as hist.
+			-单事例检查：	
+				生成事例列表;
+				/besfs/groups/psip/bes3fsback/psip/lig/tanggy/llvp4420_4575/yangyf		37000
+		-更新新旧亮度
+			-检查一遍程序
+			-将cos(theta)从emc角度换成mdc角度						
+			-tanggy的tracking方法
+			-产生MC：
+					-200w / point, boss version 703
+					-放入精确beam能量
+					-唐光毅已有的MC 4009, 4360, 4420, 4260(1,2), 4230
+			-run程序
+		-写memo
+			-bes3 style
+			-分文件
+		-round table文章阅读
+		-touch														*done
+		
+	办公室放支笔
