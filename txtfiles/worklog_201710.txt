@@ -1,6 +1,121 @@
-Worklog 201710	
+Worklog 201710		
 ---------------------------------------------------------
+2017/11/1
+	做了个Luminosity报告，差了些内容：tanggy部分和以前的结果更新。
+	申请分布式计算的证书：遗失了之前的private key，重新发送网络申请：办公室电脑，火狐浏览器。
+	需要和唐光毅对照一下结果。
+		
 
+2017/10/31
+	4009MC因失误被删除
+	差dig scan4090 dst
+	产生了Digamma MC
+	产生了v665p01版本下的4470,4530,4575MC
+
+2017/10/30
+	mc有问题：4260,4360;重新产生中
+	hadd确认完好：Dig4190,4200,4210,4220,4237；	lum everything
+	遇到唐光毅曾经提到的问题：作业运行时log里是成功的，但是root保存不成功。解决方法是看hadd信息是否有recover；4246,4270有太多坏文件，需重跑，4280忘了看hadd; 
+	condor2的4230,4260,4360,4420,4600也可能有这个问题
+	
+	dig4246_110,142,210,216,240,224,236,251,265.root:	zombie；	问题文件太多了，需重跑4246,4270
+
+2017/10/24
+	round table上讲了文章第二段
+	检查了run37000的分布，主要差异是boost问题，需要再检查
+	debug了Luminosity.C
+
+2017/10/23
+
+	发唐光毅邮件：	4260,4600截面;
+
+	修改luminosity.C：	配合算法的修改。改为TChain；run,rec改为int;		还需更新能量和截面，更新了round10;	scan尚未更新
+	
+	需要找个机会学python
+	数据更新：4420补的文件没加；4600多了临时文件；均需要重跑
+
+	MC done: scan4230, 4360,4260,4090scan,scan4190,scan4210,scan4220,scan4245,scan4310,scan4390,	4420, 4470,4575,4530,	4390scan
+	to do sim: 4600,4230,
+	
+	
+2017/10/20
+	申请cagrid:		PIN = yangyf
+
+	读下周二的文章
+	需要做4009的mc,先检查下将阈值放到3.687 GeV后截面是否可以接受：		截面误差很小，可
+
+2017/10/18
+	mc done: all other than scan3810, scan3900
+	应唐光毅要求改程序(v703): 存储muc层数信息；减小root文件体积（删变量，加入pp,pm>1GeV的cut）
+	更改程序后重新跑数据
+	4190 as check
+	
+	之前不小心换到665p01版本做检查，导致4090mc和4230mc需重新产生；再加上100w个4270,4280mc:		rerunning
+	
+
+2017/10/17
+	mc done: 4090MC( 199.5w事例,	_255 sub失败),4190mc,
+
+	单事例检查：(run 37000)	(703,665p01基本没区别			XXX:	用旧版本跑了新版本dst;但改为旧dst后也不变)		
+	Yes Yang no Tang: 	1396 2795 11066 12829 14961 16346 16756 16866 17226 18080 19443 24298
+	Yes Tang no Yang:	7502 14660 (15016	665p01下yang有) 20008 21126 23596
+
+	准备下周二round table上和李龙科同讲文章的第二节：		周五晚上和李龙科讨论
+		olsen ppt obtained.
+		
+	http://docbes3.ihep.ac.cn/~charmoniumgroup/index.php/XYZ_incl703
+	分布式计算使用方法：
+		cagrid.ihep.ac.cn
+		request a user certificate，
+		安装证书到浏览器，导出；
+		Install Certificate on lxslc;
+		key权限400，usercert权限755;
+		加入BES VO: voms.ihep.ac.cn:8443/voms/bes/
+		setup software environment: 有冲突，先Source BOSS
+		
+		Ganga:	GRID作业批量管理
+
+	需使用该方法产生新数据的MC
+		
+2017/10/16
+	
+
+	calculating cross section: 3810,3900,4009,4090,4190
+	检查为什么算截面的脚本不能在condor运行		原因：/afs盘不能交condor作业；	将所有的截面计算脚本提交
+	mc done: 4190-4280,4530,4575, scan(3900,4190,4210,4220,4230,4245,4310,4390,4420	差4090)
+	doing ana:	4470mc,4420mc
+	doing sim: 4090
+	lum4230: 648,649,650因之前文件损坏，需重跑
+	
+2017/10/15
+	MC done:	4190-4246;
+	Tang MC in 4009,4230,4360,4420,4600
+	数据done:	4190-4280, scan(3900,4190,4210.4220,4230,4245,4310),4260,4470,4530,4575,4420,4600,4360
+	3810scan和4230的部分数据有问题
+		3810scan_23.txt.bosslog no JobInfoTree for file /besfs3/offline/data/703-1/xyz/round06/4260scan/3810/dst/130528/run_0033520_All_file008_SFO-1.dst
+		3810scan_34.txt.bosslog no JobInfoTree for file /besfs3/offline/data/703-1/xyz/round06/4260scan/3810/dst/130529/run_0033533_All_file006_SFO-1.dst
+
+	preparing: 4420mc,4470mc,4530MC,4360data,4390scan,4420scan
+		
+	4270, 4280 MC:	sim,rec改为 i=200->400，减少重复的机器时间;没存dst，需与之前的root合并
+	
+
+	将Luminosity.C的idx_energy由definement改为输入参数;修改对应作业脚本
+	
+	之前的root文件准备错了，跑出来是NoMDC.root，而不应是result.root:		round10: 4190-4220
+
+	
+2017/10/14
+	重新产生round06对应的root
+	检查了4230,4600补的文件：run 31351, 33463有问题	将在周一准备好并补入					
+		/besfs3/offline/data/703-1/xyz/round06/4230/dst/130tmp
+		/besfs3/offline/data/703-1/xyz/round07/4600/dst/140tmp
+	
+
+2017/10/13
+	root done:	4190MC, 4200MC, 4210MC, 4220MC；对应数据root的有效
+	ngood=2,ncharge=0是唯一return条件；变量名：tofp_t,tofp_toe,Ep_emc,pxp_mdc_cms,cthetap_mdc_cms
+	
 2017/10/11
 	产生好MC和data的root之后，发送给唐光毅
 		-check一下具体的储存条件
@@ -21,15 +136,15 @@ Worklog 201710
 				生成事例列表;
 				/besfs/groups/psip/bes3fsback/psip/lig/tanggy/llvp4420_4575/yangyf		37000
 		-更新新旧亮度
-			-检查一遍程序
-			-将cos(theta)从emc角度换成mdc角度						
+			-检查一遍程序										done
+			-将cos(theta)从emc角度换成mdc角度					done				
 			-tanggy的tracking方法
-			-产生MC：
+			-产生MC：											done
 					-200w / point, boss version 703
 					-放入精确beam能量
 					-唐光毅已有的MC 4009, 4360, 4420, 4260(1,2), 4230
 			-run程序
-		-写memo
+		-写memo													
 			-bes3 style
 			-分文件
 		-round table文章阅读
