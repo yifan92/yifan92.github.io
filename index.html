@@ -8251,7 +8251,7 @@ Error message and password prompt
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList [[Work Log]] 2017.11.14 Worklog_Luminosity Statistics" title="$:/StoryList">
+<div list="ContentList [[Work Log]] 2017.11.14 Statistics" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8383,8 +8383,8 @@ Error message and password prompt
 <div created="20170411005211261" creator="Yifan" modified="20170411005211261" modifier="Yifan" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
 <pre>fluid-fixed</pre>
 </div>
-<div created="20171114050959964" creator="Yifan" modified="20171114053857470" modifier="Yifan" title="2017.11.14">
-<pre>| !Energy Point | !Uncorrected Lum(pb^^-1^^)  | !Correction(pb^^-1^^) | !Gao Qing Lum(pb^^-1^^) | !EMC-only Lum uncorrected(pb^^-1^^) | !Tanggy Lum  |
+<div created="20171114050959964" creator="Yifan" modified="20171114060724448" modifier="Yifan" title="2017.11.14">
+<pre>| !Energy Point | !Uncorrected Lum(pb^^-1^^)  | !Correction(pb^^-1^^) | !Gao Qing Lum(pb^^-1^^) | !EMC-only Lum uncorrected(pb^^-1^^) | !Tanggy Lum (corrected/uncorrected) |
 | 4190 | 521.7 | +0.7 | - | @@color:orange;524.6@@ | 522.7/520.0 |
 | 4200 | 523.8 | +0.8 | - | @@color:orange;526.6@@ | 524.2/521.5 |
 | 4210 | 517.3 | +0.8 | - | 518.0 | 518.4/515.5 |
@@ -8396,11 +8396,11 @@ Error message and password prompt
 | !. | ! | ! | ! | ! | ! |
 | 4009 |  |  | 482.0 |  |  |
 | 4230 | 1053.5 | +2.9  | @@color:orange;1047.38@@ |  |  |
-| 4260 | 825.6 | +2.8 | 523.7+301.9 | 822.7 |  |
+| 4260 | 825.6 | +2.8 | 523.7+301.9 | @@color:orange;822.7@@ |  |
 | 4360 | 539.9 | +4.0 | 539.8 | 537.7 |  |
 | 4420 | 1031.2 | +12.3 | 1028.9 | 1035.0 |  |
 | 4470 | 109.22 | +1.87 | @@color:orange;109.94@@ |  | 111.0/108.8 |
-| 4530 | 109.52 | +2.61 | @@color:orange;109.98@@ | 110.8 | 112.2/109.1 |
+| 4530 | 109.52 | +2.61 | @@color:orange;109.98@@ | @@color:red;110.8@@ | 112.2/109.1 |
 | 4575 | 47.44 | +1.49 | @@color:orange;47.67@@ | @@color:red;48.23@@ | 48.99/47.27 |
 | 4600 | @@color:blue;566.7@@ | +19.9 | 566.9 | @@color:red;575.3@@ | 587.6/564.9 |
 | !. | ! | ! | ! | ! | ! |
@@ -8416,18 +8416,22 @@ Error message and password prompt
 | scan4390 | 55.04 | +0.52 | 55.18 | 54.88 |  |
 | scan4420 | 46.28 | +0.53 | @@color:red;44.67@@ | 46.11 | 46.83/46.11 |
 
-!!Discrepancy between Yang and Tang: 
+!!Discrepancy between Yangyf and Tanggy: 
 
 before-fix差别较大，但是fix后总量相近。
 
 误分类？差异相消？
 
 
-#same root files for both Data and MC, different scripts.
-#minor difference on cut of E, P:  ~0.05%
+#Same root files for both Data and MC, different scripts.
+#Minor difference on cut of E, P:  ~0.02%
 #Tang's requirement on TOF: ~0.05%
-#possible codes malfunctions?
+#Possible codes malfunction?
 
+
+''The MC/Data difference in the continuous tail of signal:'' up to 0.5%
+
+[img width=400 [./img/Worklog/Luminosity/tanggy/h2_e1e2.png]]
 
 !!Difference from Gao Qing
 
