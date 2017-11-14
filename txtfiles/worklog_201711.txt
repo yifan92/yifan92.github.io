@@ -1,0 +1,21 @@
+2017/11/14
+	
+
+2017/11/13
+	dig4009,lum4009需重新产生
+	
+
+2017/11/11
+	试产生5M 4230的MC，交到了dirac上。	->可运行，少量作业会fail；因硬盘不够，暂时删除
+
+2017/11/3
+	分布式计算：
+		将证书转化为了pem文件，存放于~/.globus;更新了VO membership。	yangyf		笔记本firefox浏览器上带有访问voms的证书
+		产生MC的相关信息： http://docbes3.ihep.ac.cn/~charmoniumgroup/index.php/XYZ_incl703
+
+	
+2017/11/1
+	做了个Luminosity报告，差了些内容：tanggy部分和以前的结果更新。
+	申请分布式计算的证书：遗失了之前的private key，重新发送网络申请：办公室电脑，火狐浏览器。
+	需要和唐光毅对照一下结果。
+		

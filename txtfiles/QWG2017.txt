@@ -1,0 +1,336 @@
+
+
+
+--------------------------------------------------------------------
+(production 6)
+
+Associated production of a quarkonium and a vector boson
+		Nodoka Yamanaka
+	motivation: pQCD/npQCD; charged Higgs; golden channel for color octet
+	conclusion: 
+		-ATLAS data significantly above the SPS and DPS can only account for a fraction of the data
+		-SPS underestimated? Not the solution.
+		-A solution to the puzzle: sig_eff shouled be smaller for quarkonia than for jets?
+				
+				
+Associated production of quarkonium in ATLAS 
+		Vato Kartvelishvili
+	DPS/SPS: single/double-parton scattering;
+	
+	Featured results:
+		-Jpsi + W
+		-Jpsi + Z0
+		-Jpsi + Jpsi
+	
+
+CMS Results on Upsilon Pair Production
+		Geng Chen
+	CMS performance:
+		-excellent muon/sillicon detectors for quarkonium
+	motivation:
+		-pair production quarkonium is important info for production mechanism(SPS or DPS *费曼图)
+	selection:
+		2012 data
+		four muons with 0 charge; 
+		in detector coverage, P_t and eta range
+		CMS soft muon identification criteria
+		4-muon system and dimuon system point to the same vertex
+	
+	SU: ~10.7%
+		main contribution Resonance shape(7.9), simulation(4.9) and Efficiency(3.7)
+		
+
+------------------------------------------------------
+Day 2 session 3(Decay 2)
+
+Radiative decays Xcj-> Vg
+		Nikolay Kivel
+	
+
+
+N2LO QCD corrections to the hadronic width of pseudoscalar quarkonium
+		Yu Jia
+	Problem: 
+		-NRQCD need NLO QCD, but NLO QCD corrections(radiative correction) are often large
+		-existing NNLO corrections are rather few; and bad perturbative convergence
+	Solution: 
+		-work on better NNLO predictions
+	
+	
+	
+Renormalons in Inclusive n_(c,b) decay
+		Hee Sok Chung
+	QCD calculation.
+	Performed resummation of perturbative corrections to
+	Color-octet contribution is neccesary to reduce theoretical uncertainties.
+	
+	
+Charmonium decays into light hadrons at BESIII
+		Liu Huanhuan
+	X(ppbar)
+		-Jpsi -> g ppbar
+	X(1835)
+		-Jpsi -> gKsKs eta
+				new decay model, and its Jpc determined as 0-+
+		-Jpsi -> g eta' pipi+-
+				anomalous eta'pipi line shape support the existence of a ppbar bound state or molecule-like state
+		-PWA of Jpsi -> gphiphi
+				resonance parameters for glueball search
+		-Xc1->etapi+pi-
+				a2(1700) in Xc1 decays and upper limits
+		-Psi(3686) -> (g)K Lambda Ksi+-	
+				observed two hyperons
+		
+		
+		
+		
+------------------------------------------------------
+Day 2 session 2(Decay 1)
+
+Study of Ds0*(2317) decay at BES3
+		Zhao Guang
+	motivation: 
+		-mass is 150 MeV lower than potential model calculation
+		-45 MeV below the DK threshold
+		-partial decay width (2317)- -> pi0Ds- differs from theory
+		
+	analysis stratgy
+		topology:	Ds*+ (2317)-; (2317)- ->pi0Ds-
+		-Tag Ds*+ with gDs+ ->gK+K-pi+
+		-search for (2317)- in the recoil mass of Ds*+; to get the # of (2317)-
+		-tag pi0 from (2317)- decay, to obtain the # of pi0Ds- event
+		-get the ratio
+
+	data @ 4.6 GeV	
+		
+	conclusion: 
+		-5.8 sigma, BF=1.00 +-0.14;
+		-small BF to gDs*- favors molecule picture
+
+		
+Decays of mesons at LHCb
+		Andrii Usachov
+	-Amplitude analysis of B+ -> J/psi phi K+
+	-observation of eta_c(2S)->ppbar and search for X(3872)->ppbar
+	-Study of charmonium production in b-hadron decays and first evidence for the decay Bs0->3phi
+	
+	*relation between LDME from HQSS?
+	
+
+------------------------------------------------------
+Day 2 session 1(spectroscopy 5)
+
+Search for charmonium-like states decay into light hadrons at BESIII
+		Li Ke
+	ee->pp pi
+	ee->3phi
+	ee->eta Y(2175)
+
+	Motivation:	
+		-Y(4260) only observed in charmonium transition, but not hadronic decays
+		-R value, what is the 6nb other than the 10nb for open-charm?
+		-Y(4260) could have sizeable charmless decay fraction in some models
+	
+	Conclusion:	
+		no obvious signal of any charmonium-like state.
+	
+Coupled-channel approach to spin partners of hadronic molecules
+		A.V. Nefediev
+	Heavy Quark Spin Symmetry(HQSS);
+	OPE(one pion exchange): more operative in the c-sector than in the b-sector
+	
+	Conclusion: 
+		-Proposed a systematic approach to hadronic molecules.
+		-for: line shape parametrisation; extract parameters of resonances directly from data; build chiral extrapolations; investicate various molecular candiates.
+
+Search for Zs in ee->phipipi at Ecms=2.125 @ BES3
+		Liu Fang
+	event selection:		
+		-phi(->KK)pi0pi0: 	3||4 tracks, PID two pion and >=1 K; 1C chisq<10
+		-pi0pi0: 1||2 tracks, at least 1 K, 4 photons, 1C chisq<20, pi0 recon min chis=(g3g4-mpi, g1g2-mpi)
+	K+K- mass spectra	
+	Dalitz Plot
+	PWA for background study -> dedicated MC sample
+	
+	upper limit: assume M=1.4GeV, Tau=0
+	systematic uncertainty: ~6.5%, dominated by MDC(4.5%) and PID(3%+2%)
+	
+	
+Charmonium resonances on the lattice
+		Stefano Piemonte
+	Calculation focus on 3770, full distillation method.
+	Conclusion: 
+		-energy level splitting are not significantly affected by the value of the charm quark mass.
+		-for the study on 0++ resonances, hidden strange sector and coupled channel analysis required
+		
+	
+
+--------------------------------------------------------
+Day 1 session 4
+
+Quarkonium Spectroscopy Prospects at Belle-II
+		Li Yiming
+	Belle 2: 
+		40 times more lum.	
+		phase 2 in 2018
+	Bottominium:
+		scan above Y(4S)
+		Zb in Y(6S)
+	Charmonium:
+		X(3915) in B->J omega Jpsi
+		Zc(4050), Zc(4250) in Kpi Xc1
+		B -> KDD_, KD*D_, KD*D*_
+		absolute BF: B -> KX
+		double charmonium production
+	
+
+Fine and hyperfine heavy hybrid splittings
+	
+
+Vector charmonium and charmoniumlike states at BESIII
+		zhou xiaorong
+	*
+
+
+Messages from Lineshapes of near threshold states
+		Christoph Hanhart
+	molecular picture for near threshold states is good.
+
+Energy scan results from Belle
+		Roman Mizuk
+	measured the ratio of cross sections: Bs*Bs*, BsBs*, BsBs_	= 7:0.85:0.64
+	energy dependence of Bs*Bs* cross section
+
+--------------------------------------------------------
+Day 1 session 3
+
+Searching for Beauty-fully Bound Tetraquarks Using Lattice NRQCD
+		Ciaran Hughes
+	how lattice QCD work?
+			feynmann path integral -> calculate two point correlator
+	A very good talk about a Lattice work.
+
+Results on Charmonium-like states on BELLE
+		Zhukova
+	measured ee->DD*, D*D*		951/fb data
+	observed an alternative Xc0(2P) candidate in ee -> J/psi DD
+		
+All-heavy tetraquarks 
+		Jean-Marc Richard
+	diquark-diquark approximation may fail when two heavy quarks or more?
+	
+
+Strong interaction stable doubly heavy tetraquarks
+		K. Maltman
+	"good light diquark": 
+		good I=J=0, C=3_ vs. bad: I=J=1, c=3_;	ud diquark	 
+		good F=3_,J=0,C=3_  vs. bad F=6,J=1,C=3_ us diquark
+	lattice simulation show clear evidence for deeply bound strong-interaction-stable 1+ udb_b_ and lsb_b_;
+	binding for doubly bottom states such that only weak decays possible.
+	
+	
+	
+
+
+Decays and Production of Hadronic Molecules
+		Guo Fengkun
+	hadronic molecules:	
+		once the same quantum number, always mix with other components
+	X(3872),Zc(3900),Y(4260)
+	
+	should go beyond spectrum, coupling strength contains important structure information -> decays and productions
+		
+		
+Hadron Spectroscopy Results from LHCb
+		Lucio Anderlini
+	3 domains of experiments: known/ new unknown/ production mechanism.
+	
+	Dalitz decay of Xcj->Jpsi mu mu
+	precision measurement on the Xc parameters
+	B_c**(2S)	-> B_c pipi:	upper limit
+	upcoming LHCb upgrade.
+		
+	
+	
+--------------------------------------------------------
+Day 1 session 2
+
+Exotic Quarkonium with NREFT
+	Matthias Berwein
+	
+
+Exotic Hadrons - A Diquarkonium Perspective
+		Ahmed Ali
+	establishing diquark as a building brick: color representation, spin representation.
+	important puzzle: Y_c, Y_b symmetry, in terms of decaying into piZ
+	
+
+Three perspectives on decoding charmonium-like states
+		Liu Xiang
+	XYZ states can be grouped into 5 categories, according to production mechanisms.
+	
+	Theoretical explanation:	resonant(conventional hadrons, charmonium, exotic states)/non-resonant(kinematic effect, cusp, opening of new threshold, final state interaction ...)
+	
+	learning from X(3872);
+	
+	Lambda(1405),Ds0(2317),X(3872):	common feature, couple-channel effects important;	XYZ states are correlated.
+	favoring Zc(3900) to be non-resonant
+	X(5568)?
+
+News on Zc States:
+		Pingrg
+	2013: found Zc(3900)
+	2014: found Zc(4020),Zc(4025)
+	Theoretical Investigation: tetraquark, hadronic molecule, meson loop, ISPE model.
+
+	Conclusion:
+		Used Amplitude analysis to determine that the Zc(3900) is favored to be 1+:			7 sigma significance over other assumptions
+		significance for ee->Zc(4020)pi,Zc(4020)->pipiJpsi is 3 sigma.
+		
+	Ongoing partial wave analyses:
+		ee->pi0pi0Jpsi.			-> J^p, xsection of 3900
+		ee->pi(DD_*)			-> J^p, xsection of 3885
+		ee->pipih_c				-> J^p, xsection of 4020
+		ee->pi(D*D_*)			-> J^p, xsection of 4025
+		
+--------------------------------------------------------
+Day 1 Session 1.
+
+Observation of a doubly charmed baryon at LHCb 
+		Daniel Vieira
+	dcc,ucc,scc.	predict mass of Ksi_cc++ are 3.5~3.7 GeV, theoretical lifetime 15-1550fs
+	LHCb:	3.0+3.5 /fb;	used 2016 data, 1.7/fb
+	result consistent with theoretical prediction, but not with SELEX measurement
+
+	
+The social life of heavy quarks:
+		Marek Kaliner
+	5 narrow exotic states close to meson-meson thresholds:	3872,3900,4020,10610,10650
+	4 evidence of molecule intepretation
+	4380,4450
+	narrow width as a problem for pentaquark intepretation.
+	(cc)q -> (bb)(ud) calculation		~10389 MeV
+	analog of ccq in b physics.
+	
+
+NLO Effects for Doubly Heavy Baryon in QCD
+		Wang Chenyu
+	QCD sum rule:	correlation function Pi(q^2) can be calculated in two different ways:	Kaellen-Lehmann spectral decomposition/Operator product expansion	-> equation
+	
+
+Heavy Quark-Diquark Symmetry: Doubly Heavy Baryons and Tetraquarks	
+		Thomas Mehen
+	heavy quark-diquark symmetry:	mq-> inf.	QQ is compact object in color 3-bar
+	heavy quark effective field:	hyperfine splitting~106MeV,
+	predicted stable doubly heavy tetraquark at 10389(bbud)
+	
+Results on baryon spectroscopy from LHCb
+		Daniel Vieira
+		
+Heavy Quark Symmetry and Stable Tetraquark 
+		Estia Eichten
+	the models: diquark-diantiquark, molecule, hadro-charmonium(u[cc]u), hybrid, cusp effect
+	LQCD approaches
+	HQS: m(QQqq)-m(QQq)=m(Qqq)-m(Qq)
+	generalizing results: perturbative QCD applies, bb(b_b_) not bound.
+	
