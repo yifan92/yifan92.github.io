@@ -279,6 +279,8 @@ Error message and password prompt
 
 <li>Luminosity Resources</li>
 
+<li>MC Production How-to</li>
+
 <li>Misc Math</li>
 
 <li>Particle Detectors</li>
@@ -8245,13 +8247,13 @@ Error message and password prompt
 <div created="20170411005206005" creator="Yifan" modified="20170412030123100" modifier="Yifan" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
-<div created="20170407054919167" creator="Yifan" modified="20171114043629689" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/Open</pre>
+<div created="20170407054919167" creator="Yifan" modified="20171117064340524" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList [[Work Log]] 2017.11.14 Statistics" title="$:/StoryList">
+<div list="[[MC Production How-to]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8383,7 +8385,7 @@ Error message and password prompt
 <div created="20170411005211261" creator="Yifan" modified="20170411005211261" modifier="Yifan" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
 <pre>fluid-fixed</pre>
 </div>
-<div created="20171114050959964" creator="Yifan" modified="20171114060724448" modifier="Yifan" title="2017.11.14">
+<div created="20171114050959964" creator="Yifan" modified="20171114100114018" modifier="Yifan" title="2017.11.14">
 <pre>| !Energy Point | !Uncorrected Lum(pb^^-1^^)  | !Correction(pb^^-1^^) | !Gao Qing Lum(pb^^-1^^) | !EMC-only Lum uncorrected(pb^^-1^^) | !Tanggy Lum (corrected/uncorrected) |
 | 4190 | 521.7 | +0.7 | - | @@color:orange;524.6@@ | 522.7/520.0 |
 | 4200 | 523.8 | +0.8 | - | @@color:orange;526.6@@ | 524.2/521.5 |
@@ -8440,7 +8442,22 @@ File Addition:
 #4230: 12955/12982 dst files
 #4420: 10899/10951 
 #4420scan: 466/480 
-#4600: 6953/6976</pre>
+#4600: 6953/6976
+
+
+v665p01:
+
+| 4470 |  lum=109.2 | ndata=6022548 | nmc=168356(1m) |
+| 4530 | lum=109.7 | ndata=5868549 | nmc=166700 |
+| 4575 | lum=47.10 | ndata=2472105 | nmc=165975 |
+
+v703
+
+| 4470 | 109.2 | 6021824 | 168392 |
+| 4530 | 109.52 | 5868370 | 166948 |
+| 4575 | 47.44 | 2490594 | 166030 |
+
+*nmc scaled to 1m MC events.</pre>
 </div>
 <div created="20170407035445794" creator="Yifan" modified="20170510052235110" modifier="Yifan" title="About Tiddlywiki">
 <pre>This note is stored as a Tiddlywiki file. Here are some more information about this helpful tool.
@@ -10458,6 +10475,64 @@ Stream EDitor, used for modifying files in unix/linux.
 *[[Direct Link to GaoQing's Memo|http://hnbes3.ihep.ac.cn/HyperNews/get/AUX/2014/04/03/10.56-96431-luminosity_memo_v3.pdf]]
 *[[Beam Energy of Old Data|http://cpc-hepnp.ihep.ac.cn:8080/Jwk_cpc/EN/10.1088/1674-1137/40/6/063001#]]</pre>
 </div>
+<div created="20171117061923292" creator="Yifan" modified="20171117070745091" modifier="Yifan" title="MC Production How-to">
+<pre>*相关Charmonium Wiki：http://docbes3.ihep.ac.cn/~charmoniumgroup/index.php/XYZ_incl703
+
+*分布式计算教程pdf：http://docbes3.ihep.ac.cn/~charmoniumgroup/images/9/9f/Bes3_distributed_computing_tutorial.pdf
+
+----
+!!Preparation:
+
+http://docbes3.ihep.ac.cn/~offlinesoftware/index.php/BESDIRAC_User_Tutorial
+
+1. ''Get Certificate, generate .pem files,  join BES VO.''
+
+2. ''Create gangadir,  make &quot;grid.sh&quot;''
+
+
+
+----
+
+!!Scripts and Job Submitting:
+
+1. ''Setting up environment:'' `source grid.sh`
+
+2. ''Make python script''
+
+[img[./img/Worklog/MCProduction/python_example.png]]
+
+jobGroup: 在dirac网页上分类用；
+
+outputDir: 用绝对路径，指向`/besfs/groups/psip/psipgroup/703-MC/4190/*`
+
+metadata: 用于产生的dst命名
+
+app: @@color:orange;强子需要用~BesEvtGen-00-02-93产生子@@，在此添加参数`use_custom_package=True`
+
+@@color:orange;产生子由`/besfs/groups/psip/psipgroup/public/bes3gen/workarea703/Generator/BesEvtGen/BesEvtGen-00-03-93`目录拷贝并make@@
+
+splitter:evtMaxPerJob&lt;=20000，否则作业失败率会很高；总数根据@@color:orange;截面和亮度@@计算
+
+Ecms, 强子截面，Run号，亮度： 见[[相关Wiki|http://docbes3.ihep.ac.cn/~charmoniumgroup/index.php/XYZ_incl703]] 
+
+@@color:orange;QED截面可以由试运行100k相应事例的抽样，读取log文件获得@@
+
+3. ''Make ~JobOption Files:''
+
+Copy from `/besfs/groups/psip/psipgroup/703-MC/doc`，更改能量点（@@color:orange;网页精确值@@）和Run号。
+
+
+4. ''Submit job to ganga:'' `ganga sim_dirac_by_event.py`
+
+----
+!!Job Monitering
+
+https://dirac.ihep.ac.cn/DIRAC/
+
+需浏览器拥有个人身份证书。
+
+根据status, Job Group, Time Span挑选出失败的作业，点击左上角Reschedule图标重交。</pre>
+</div>
 <div created="20170615083918988" creator="Yifan" modified="20170615083922649" modifier="Yifan" title="Misc Math">
 <pre>#[[Deconvolution]]</pre>
 </div>
@@ -11647,10 +11722,11 @@ void twoscales() {
 ----
 *[[Introduction to Statistical Issues in Particle Physics|http://www.slac.stanford.edu/econf/C030908/papers/MOAT002.pdf]]: The basic logic of doing analyses.</pre>
 </div>
-<div created="20170912134700959" creator="Yifan" modified="20170912134842442" modifier="Yifan" title="Synonyms">
+<div created="20170912134700959" creator="Yifan" modified="20171114081032946" modifier="Yifan" title="Synonyms">
 <pre>*small, minuscule(=very small)
 *while, whereas: showing contrast
-*make up, form</pre>
+*make up, form
+*manifest, obvious,apparent; (manifest as a verb: to make clear.)</pre>
 </div>
 <div created="20170412013921473" creator="Yifan" modified="20170412024003753" modifier="Yifan" title="The Element of Style">
 <pre>[[Link to the Book|http://docbes3.ihep.ac.cn/~charmoniumgroup/images/0/00/The_Element_of_Style.pdf]]
@@ -12760,8 +12836,10 @@ old
 [img width=400 [./img/Worklog/Luminosity/Tracking/E1_new.png]]
 [img width=400 [./img/Worklog/Luminosity/Tracking/E2_new.png]]</pre>
 </div>
-<div created="20171103074532438" creator="Yifan" modified="20171111071315800" modifier="Yifan" title="Worklog_MCProduction">
+<div created="20171103074532438" creator="Yifan" modified="20171117061919072" modifier="Yifan" title="Worklog_MCProduction">
 <pre>为BOSS v703的XYZ数据产生MC。
+
+[[MC Production How-to]]
 
 相关资料：http://docbes3.ihep.ac.cn/~charmoniumgroup/index.php/XYZ_incl703
 
@@ -12833,11 +12911,12 @@ Li Longke
 
 ----</pre>
 </div>
-<div created="20170412013714902" creator="Yifan" modified="20170912134613629" modifier="Yifan" title="Writing">
+<div created="20170412013714902" creator="Yifan" modified="20171114080832124" modifier="Yifan" title="Writing">
 <pre>*[[The Element of Style]]: a book referred to on Charmonium webpage.
 *[[Synonyms]]: 
 *[[Typing Practices]]
-*[[Latex]]</pre>
+*[[Latex]]
+*[[Common BES3 Paper Error Checklist|http://bes3.ihep.ac.cn/pub/CheckList_BESIII.htm]]</pre>
 </div>
 <div created="20170407131924789" creator="Yifan" modified="20170412004103833" modifier="Yifan" title="Yifan">
 <pre>Just want to put a few comics here.

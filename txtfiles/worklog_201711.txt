@@ -1,4 +1,14 @@
 2017/11/14
+	MC产生： 指定目录到psigroup;
+	failed job resubmit:	dirac网页上，列表点击图标
+	job group(网页管理)；metadata (数据文件命名)命名
+	Ebeam写liaolz精确值
+	均可见平老师邮件
+	MC 数据量精度不需要高
+
+	BESEvtGen使用 00-00-92版本：		解压log文件，script.log里	libBesEvtGenLib.so	libBesEvtGen.so;	检查$BESEVTGENROOT;		需要拷93版本的包（邮件）；	指定用户使用自己的软件包。
+	
+	检查
 	
 
 2017/11/13
