@@ -259,6 +259,8 @@ Error message and password prompt
 
 <li>linux_cut</li>
 
+<li>linux_diff</li>
+
 <li>linux_find</li>
 
 <li>linux_for_command</li>
@@ -8253,7 +8255,7 @@ Error message and password prompt
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="[[MC Production How-to]]" title="$:/StoryList">
+<div list="ContentList [[Hadron Spectroscopy]] [[Physics Resources]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9838,8 +9840,10 @@ c  (missing part)
       end
 ```</pre>
 </div>
-<div created="20170621103427363" creator="Yifan" modified="20170707092543090" modifier="Yifan" title="Hadron Spectroscopy">
+<div created="20170621103427363" creator="Yifan" modified="20171117100448978" modifier="Yifan" title="Hadron Spectroscopy">
 <pre>by the lecture of Stephen Olsen
+
+[ext[Lecture PDF|./materials/olsen.rar]]
 
 ----
 !!Lesson 1
@@ -10275,7 +10279,7 @@ Render a frame marking the margins of the current document:
 #[[Bash Scripts]]
 #[[vim Editor]]</pre>
 </div>
-<div created="20170407022820254" creator="Yifan" modified="20170911134918506" modifier="Yifan" title="Linux Commands">
+<div created="20170407022820254" creator="Yifan" modified="20171117074712027" modifier="Yifan" title="Linux Commands">
 <pre>----
 !The Basics
 *`pwd`
@@ -10306,6 +10310,7 @@ Single commands:
 *[[cat|linux_cat]]
 *[[cut|linux_cut]]
 *[[awk|linux_awk]]
+*[[vimdiff, diff|linux_diff]]
 
 Topics:
 
@@ -10346,6 +10351,10 @@ Remove sections from each line of a file.
 *`cut -c 4-10 filename`: characters in [4,10]; `4,10` means {4,10}, `10-` means [10,end]
 *`-s, --only-delimited`: Don't print lines without delimiter
 </pre>
+</div>
+<div created="20171117074729387" creator="Yifan" modified="20171117075000089" modifier="Yifan" title="linux_diff">
+<pre>*`diff file1 file2`: show difference of two files
+*`vimdiff file1 file2`: open vim and vsplit, showing difference of two files.</pre>
 </div>
 <div created="20170407034554481" creator="Yifan" modified="20170407034557753" modifier="Yifan" title="linux_find">
 <pre>!!find
@@ -10475,7 +10484,7 @@ Stream EDitor, used for modifying files in unix/linux.
 *[[Direct Link to GaoQing's Memo|http://hnbes3.ihep.ac.cn/HyperNews/get/AUX/2014/04/03/10.56-96431-luminosity_memo_v3.pdf]]
 *[[Beam Energy of Old Data|http://cpc-hepnp.ihep.ac.cn:8080/Jwk_cpc/EN/10.1088/1674-1137/40/6/063001#]]</pre>
 </div>
-<div created="20171117061923292" creator="Yifan" modified="20171117070745091" modifier="Yifan" title="MC Production How-to">
+<div created="20171117061923292" creator="Yifan" modified="20171117091817903" modifier="Yifan" title="MC Production How-to">
 <pre>*相关Charmonium Wiki：http://docbes3.ihep.ac.cn/~charmoniumgroup/index.php/XYZ_incl703
 
 *分布式计算教程pdf：http://docbes3.ihep.ac.cn/~charmoniumgroup/images/9/9f/Bes3_distributed_computing_tutorial.pdf
@@ -10507,7 +10516,7 @@ outputDir: 用绝对路径，指向`/besfs/groups/psip/psipgroup/703-MC/4190/*`
 
 metadata: 用于产生的dst命名
 
-app: @@color:orange;强子需要用~BesEvtGen-00-02-93产生子@@，在此添加参数`use_custom_package=True`
+app: @@color:orange;强子需要用~BesEvtGen-00-02-93产生子@@，在此添加参数`use_custom_package=True`。解压出script.log，有`libBesEvtGenLib.so`和`libBesEvtGen.so`，且`$BESEVTGENROOT`为93版本，说明版本正确。
 
 @@color:orange;产生子由`/besfs/groups/psip/psipgroup/public/bes3gen/workarea703/Generator/BesEvtGen/BesEvtGen-00-03-93`目录拷贝并make@@
 
@@ -10515,7 +10524,9 @@ splitter:evtMaxPerJob&lt;=20000，否则作业失败率会很高；总数根据@
 
 Ecms, 强子截面，Run号，亮度： 见[[相关Wiki|http://docbes3.ihep.ac.cn/~charmoniumgroup/index.php/XYZ_incl703]] 
 
-@@color:orange;QED截面可以由试运行100k相应事例的抽样，读取log文件获得@@
+@@color:orange;QED截面可以由试运行100k相应事例的抽样，读取log文件获得@@。
+
+@@color:green;5倍强子，0.1倍Bhabha事例，1倍di-mu(龙洲）,1倍di-gamma，5倍di-tau。@@
 
 3. ''Make ~JobOption Files:''
 
@@ -11959,7 +11970,7 @@ I am reminded of the advice of my neighbor, &quot;Never worry about your heart t
 <pre>*[[Numpad Typing |http://www.typeonline.co.uk/number_pad_lesson1.html]]
 *[[Typeracer|http://play.typeracer.com]]: a typing game.</pre>
 </div>
-<div created="20170411133712979" creator="Yifan" modified="20170911135015233" modifier="Yifan" title="vim Editor">
+<div created="20170411133712979" creator="Yifan" modified="20171117075101333" modifier="Yifan" title="vim Editor">
 <pre>`gvim text_file &amp;`: open a window of graphic vi editor
 
 ''Insert Mode'': `a/A/i/I/o/O`
@@ -12000,6 +12011,8 @@ I am reminded of the advice of my neighbor, &quot;Never worry about your heart t
 *`:1,5 /pat/d`: ''removes'' all lines containing pattern in [1,5], `!/pat/` to reverse select
 
 ''Block edit'': `v/Ctrl+v`
+
+''Switch syntax coloring'': `:syntax off/on`
 
 ----
 !!Setting
