@@ -8240,7 +8240,7 @@ Error message and password prompt
 <div created="20170407022931231" creator="Yifan" modified="20171114050842979" modifier="Yifan" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20170407022746366" creator="Yifan" modified="20171114053900881" modifier="Yifan" title="$:/state/sidebar">
+<div created="20170407022746366" creator="Yifan" modified="20171121064428564" modifier="Yifan" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20170411005206925" creator="Yifan" modified="20170411005206925" modifier="Yifan" title="$:/state/tab--1963855381">
@@ -8255,7 +8255,7 @@ Error message and password prompt
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList [[Hadron Spectroscopy]] [[Physics Resources]]" title="$:/StoryList">
+<div list="ContentList [[Work Log]] Worklog_MCProduction [[MC Production How-to]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8387,7 +8387,7 @@ Error message and password prompt
 <div created="20170411005211261" creator="Yifan" modified="20170411005211261" modifier="Yifan" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
 <pre>fluid-fixed</pre>
 </div>
-<div created="20171114050959964" creator="Yifan" modified="20171114100114018" modifier="Yifan" title="2017.11.14">
+<div created="20171114050959964" creator="Yifan" modified="20171121033856233" modifier="Yifan" title="2017.11.14">
 <pre>| !Energy Point | !Uncorrected Lum(pb^^-1^^)  | !Correction(pb^^-1^^) | !Gao Qing Lum(pb^^-1^^) | !EMC-only Lum uncorrected(pb^^-1^^) | !Tanggy Lum (corrected/uncorrected) |
 | 4190 | 521.7 | +0.7 | - | @@color:orange;524.6@@ | 522.7/520.0 |
 | 4200 | 523.8 | +0.8 | - | @@color:orange;526.6@@ | 524.2/521.5 |
@@ -8446,6 +8446,12 @@ File Addition:
 #4420scan: 466/480 
 #4600: 6953/6976
 
+| !Energy Point | !Num of dst Files |
+| 4230 | from 12955 to 12982 |
+| 4420 | from 10899 to 10925 |
+| 4420 Scan | from 466 to 480 |
+| 4600 | from 6953 to 6976 |
+| others | 34238 , unchanged |
 
 v665p01:
 
@@ -10279,11 +10285,11 @@ Render a frame marking the margins of the current document:
 #[[Bash Scripts]]
 #[[vim Editor]]</pre>
 </div>
-<div created="20170407022820254" creator="Yifan" modified="20171117074712027" modifier="Yifan" title="Linux Commands">
+<div created="20170407022820254" creator="Yifan" modified="20171121025849489" modifier="Yifan" title="Linux Commands">
 <pre>----
 !The Basics
 *`pwd`
-*`cd`: `cd -` to previous folder,
+*`cd`: `cd -` to previous folder, `cd ~username` change to user's home dir.
 *`ls`: `-l` list detailed info, `-a` show hidden files
 *`cp`
 *`mv`
@@ -10298,6 +10304,7 @@ Render a frame marking the margins of the current document:
 *`echo`
 *`touch`
 *`date`: print current time
+*`df`: display disk space usage for all
 
 ----
 !More
@@ -10325,11 +10332,20 @@ Topics:
 *[[Bash Scripts]]
 </pre>
 </div>
-<div created="20170417074652452" creator="Yifan" modified="20170417075537661" modifier="Yifan" title="linux_awk">
+<div created="20170417074652452" creator="Yifan" modified="20171121024245326" modifier="Yifan" title="linux_awk">
 <pre>`awk '/search_pattern/ { action_to_take_on_matches; another_action; }' file_to_parse`
 
 *default action = `print`
 *`{print $2}`: print the 2nd field; default field separater is blank space.
+
+
+Examples:
+
+*`awk -F':' '{ print $1 }' /etc/passwd`
+*`awk '$9 == 500 { print $0}' /var/log/httpd/access.log`
+*`awk &quot;NR==1{print;exit}&quot; /etc/resolv.conf`
+*`awk '{total += $1} END {print total}' earnings.txt`: simple arithmatic
+*`awk 'BEGIN {printf &quot;%.3f\n&quot;, 2005.50 / 3}'`: awk can calculate floating point number
 </pre>
 </div>
 <div created="20170407035807883" creator="Yifan" modified="20170407041048261" modifier="Yifan" title="linux_cat">
@@ -10372,8 +10388,17 @@ Find the files according to the filters.
 *`-cmin -60`:changed within an hour
 *`-size`:parameters like `+50m`,`-1000k` </pre>
 </div>
-<div created="20170531012531182" creator="Yifan" modified="20170711090555850" modifier="Yifan" title="linux_for_command">
-<pre>!!Change Filename Patterns for a Group of Files.
+<div created="20170531012531182" creator="Yifan" modified="20171121033113162" modifier="Yifan" title="linux_for_command">
+<pre>----
+
+```
+for i in `seq 1 10` 
+```
+`for ((i=1;i&lt;=10;i++))`
+
+----
+
+!!Change Filename Patterns for a Group of Files.
 
 Firstly, run this command to check if your setting is right.
 
@@ -10387,7 +10412,9 @@ After the check, change `echo` to `mv`, and remove `=== Will Become ===`
 
 ```
 for x in ./*bosslog; do echo $x ...... `cat $x | tail -2 | head -1 `; done
-```</pre>
+```
+
+</pre>
 </div>
 <div created="20170407034637006" creator="Yifan" modified="20170407034640465" modifier="Yifan" title="linux_grep">
 <pre>!!grep
@@ -10415,7 +10442,7 @@ Conditional running:
 
 `command1 | command2`: the output of command1 would be the input of command2. [[More about pipes|linux_pipes]]</pre>
 </div>
-<div created="20170407042916692" creator="Yifan" modified="20170407061251758" modifier="Yifan" title="linux_pipes">
+<div created="20170407042916692" creator="Yifan" modified="20171121025223133" modifier="Yifan" title="linux_pipes">
 <pre>*`&gt;`: overwrite the output to a file
 *`&gt;&gt;`: append the output to a file
 *`command1 | command2`: use the output of command1 as the input of command2
@@ -10426,7 +10453,8 @@ Commands that can use pipes
 
 *`... | head -n`: show the first n lines
 *`... | tail -n`: show the last n lines
-*`sort `: sort the order
+*`sort `: sort the order, `-r/n/f/b/R`: reverse/numeric/ignore case/ignore leading blanks/random sequence but grouped.
+*`uniq`: print unique lines in a ''sorted'' file.  `-u/d/c`: show unique/show repeated/count
 *`wc -l`: count the number of lines</pre>
 </div>
 <div created="20170407060618046" creator="Yifan" modified="20170407060942156" modifier="Yifan" title="linux_quotes">
@@ -10484,7 +10512,7 @@ Stream EDitor, used for modifying files in unix/linux.
 *[[Direct Link to GaoQing's Memo|http://hnbes3.ihep.ac.cn/HyperNews/get/AUX/2014/04/03/10.56-96431-luminosity_memo_v3.pdf]]
 *[[Beam Energy of Old Data|http://cpc-hepnp.ihep.ac.cn:8080/Jwk_cpc/EN/10.1088/1674-1137/40/6/063001#]]</pre>
 </div>
-<div created="20171117061923292" creator="Yifan" modified="20171117091817903" modifier="Yifan" title="MC Production How-to">
+<div created="20171117061923292" creator="Yifan" modified="20171121064910127" modifier="Yifan" title="MC Production How-to">
 <pre>*相关Charmonium Wiki：http://docbes3.ihep.ac.cn/~charmoniumgroup/index.php/XYZ_incl703
 
 *分布式计算教程pdf：http://docbes3.ihep.ac.cn/~charmoniumgroup/images/9/9f/Bes3_distributed_computing_tutorial.pdf
@@ -10524,7 +10552,7 @@ splitter:evtMaxPerJob&lt;=20000，否则作业失败率会很高；总数根据@
 
 Ecms, 强子截面，Run号，亮度： 见[[相关Wiki|http://docbes3.ihep.ac.cn/~charmoniumgroup/index.php/XYZ_incl703]] 
 
-@@color:orange;QED截面可以由试运行100k相应事例的抽样，读取log文件获得@@。
+@@color:orange;QED截面可以由试运行100k相应事例的抽样，读取log文件获得@@。ditau截面在kkmc_gen.log.
 
 @@color:green;5倍强子，0.1倍Bhabha事例，1倍di-mu(龙洲）,1倍di-gamma，5倍di-tau。@@
 
@@ -12849,7 +12877,7 @@ old
 [img width=400 [./img/Worklog/Luminosity/Tracking/E1_new.png]]
 [img width=400 [./img/Worklog/Luminosity/Tracking/E2_new.png]]</pre>
 </div>
-<div created="20171103074532438" creator="Yifan" modified="20171117061919072" modifier="Yifan" title="Worklog_MCProduction">
+<div created="20171103074532438" creator="Yifan" modified="20171119123012985" modifier="Yifan" title="Worklog_MCProduction">
 <pre>为BOSS v703的XYZ数据产生MC。
 
 [[MC Production How-to]]
@@ -12884,7 +12912,10 @@ data 5倍数据量。
 
 Babayaga 3.5算截面，旧工作的参数。全run号段，能量4226, running alpha on, FSR switch on.
 
- ----------------- OUTPUTS --------------------
+----
+
+!!Bhabha
+
 
   EVENT NUMBER       150000  OF       150000
 
@@ -12896,7 +12927,49 @@ Babayaga 3.5算截面，旧工作的参数。全run号段，能量4226, running 
   WEIGHTED CROSS SECTION
    415.6676658   +-     0.3446208 (nb)
 
-所以0.1倍数据就是45.35m事例。</pre>
+所以0.1倍数据就是45.35m事例。
+
+
+----
+
+!!Digamma
+
+
+  EVENT NUMBER       150000  OF       150000
+
+  Monte Carlo efficiency: 0.58385
+
+  UNWEIGHTED CROSS SECTION
+    19.7354635   +-     0.0328720 (nb)
+
+  WEIGHTED CROSS SECTION
+    19.7276839   +-     0.0236141 (nb)
+
+产生1倍MC：21.55m事例
+
+----
+
+!!Di-mu
+
+
+  EVENT NUMBER       150000  OF       150000
+
+  Monte Carlo efficiency: 0.35027
+
+  UNWEIGHTED CROSS SECTION
+     5.1805517   +-     0.0107820 (nb)
+
+  WEIGHTED CROSS SECTION
+     5.1779433   +-     0.0044641 (nb)
+
+产生1倍MC: 5.65m事例
+
+----
+!!Di-tau
+
+截面用相邻能量点差值：9.86nb
+
+5倍di-tau: 53.82m事例</pre>
 </div>
 <div created="20170718054814836" creator="Yifan" modified="20170718055531206" modifier="Yifan" title="Works_of_Others">
 <pre>----
