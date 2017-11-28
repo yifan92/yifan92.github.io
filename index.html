@@ -163,6 +163,8 @@ Error message and password prompt
 
 <li>2017.11.14</li>
 
+<li>2017.11.28</li>
+
 <li>About Tiddlywiki</li>
 
 <li>Bash Scripts</li>
@@ -288,6 +290,8 @@ Error message and password prompt
 <li>Particle Detectors</li>
 
 <li>Physics Resources</li>
+
+<li>Report Done</li>
 
 <li>RooFit</li>
 
@@ -8249,13 +8253,13 @@ Error message and password prompt
 <div created="20170411005206005" creator="Yifan" modified="20170412030123100" modifier="Yifan" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
-<div created="20170407054919167" creator="Yifan" modified="20171117064340524" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20170407054919167" creator="Yifan" modified="20171126150643231" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
+<pre>$:/core/ui/SideBar/Tools</pre>
 </div>
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList [[Work Log]] Worklog_MCProduction [[MC Production How-to]]" title="$:/StoryList">
+<div list="ContentList [[Physics Resources]] [[Luminosity Resources]] [[Work Log]] Worklog_Luminosity 2017.11.28" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8466,6 +8470,71 @@ v703
 | 4575 | 47.44 | 2490594 | 166030 |
 
 *nmc scaled to 1m MC events.</pre>
+</div>
+<div created="20171128051910943" creator="Yifan" modified="20171128065936007" modifier="Yifan" title="2017.11.28">
+<pre>!!The disagreement with Digamma Results
+
+Digamma和Bhabha总结果有2.5%左右误差。
+
+''按能量点分布''
+
+| | !Digamma | !Bhabha | !Diff(%) |
+| 4190 | 511.4 | 521.8 | 2.03 |
+| 4200 | 512.2 | 523.8 | 2.26 |
+| 4210 | 505.3 | 517.3 | 2.37 |
+| 4220 | 501.1 | 513.1 | 2.39 |
+| 4237 | 516.4 | 529.4 | 2.51 |
+| 4280 | 171.0 | 175.0 | 2.34 |
+
+
+
+''按run号分布：''
+
+500/nb -&gt; around 4000 digamma events, 30000 bhabha events. statistical error around 2%.
+
+统计误差内一致。
+
+[img[./img/Worklog/Luminosity/171128/lum4200_byrun.png]]
+[img[./img/Worklog/Luminosity/171128/trk4200_byrun.png]]
+
+''Bhabha事例有本底？''
+
+在原有EMC Energy, MDC Momentum, MDC Theta Angle的基础上，加入delta(Phi)在[5°,40°]的cut。亮度结果改变0.3%。
+
+----
+
+Digamma Energy depositions of bigger/smaller clusters with all other cuts.
+
+[img width=300 [./img/Worklog/Luminosity/171128/Trk/Ep_emc.png]]
+[img width=300 [./img/Worklog/Luminosity/171128/Trk/Em_emc.png]]
+
+[img width=300 [./img/Worklog/Luminosity/171128/Trk/phi_diff.png]]
+[img width=300 [./img/Worklog/Luminosity/171128/Trk/thetam_emc.png]]
+
+----
+
+[img width=300 [./img/Worklog/Luminosity/171128/Lum/ep.png]]
+[img width=300 [./img/Worklog/Luminosity/171128/Lum/pp.png]]
+
+[img width=300 [./img/Worklog/Luminosity/171128/Lum/ctp.png]]
+[img width=300 [./img/Worklog/Luminosity/171128/Lum/deltaphi.png]]
+
+----
+
+''MC 效率不对?''
+
+
+| My 4190 Babayaga@NLO | 17.35nb*46.61%, 511.4\pb |  |
+| My 4190 Babayagav3.5 | 20.15nb*40.02% | 差异0.28% |
+| ~GaoQing 4190scan | 19.99nb*40.83% | *old runs |
+
+| My 4530 Bhabha | 109.51/pb |
+| My 4530 digamma Babayaga@NLO | 15.47nb, 43.34%, 109.81/pb |
+| My 4530 digamma Babayaga v3.5 | 17.23nb,  38.19%, 111.89/pb (stat. err. +- 0.5%) |
+| ~GaoQing 4530 digamma v3.5 | 109.47/pb |
+| ~GaoQing Bhabha v3.5 | 109.81/pb |
+
+</pre>
 </div>
 <div created="20170407035445794" creator="Yifan" modified="20170510052235110" modifier="Yifan" title="About Tiddlywiki">
 <pre>This note is stored as a Tiddlywiki file. Here are some more information about this helpful tool.
@@ -10086,7 +10155,7 @@ $$m_{12}^{2} \, vs.  \, m_{23}^{2}$$. Can be used to check if $$|M'|^{2}$$ is co
 
 </pre>
 </div>
-<div created="20170410042910516" creator="Yifan" modified="20170919074544016" modifier="Yifan" title="Latex">
+<div created="20170410042910516" creator="Yifan" modified="20171126150859889" modifier="Yifan" title="Latex">
 <pre>----
 *[[Basics|Latex Basics]]
 *[[Useful Packages|Latex Packages]]
@@ -10100,6 +10169,7 @@ $$m_{12}^{2} \, vs.  \, m_{23}^{2}$$. Can be used to check if $$|M'|^{2}$$ is co
 *[[miktex|https://miktex.org/]]: for downloading.
 *[[Overleaf|https://www.overleaf.com]]: an online tex editor.
 *[ext[BES3 Latex Convention|./materials/bes3latex.zip]]: zip file
+*[ext[Longke's BUAA report|./materials/documents/SlidesByLatex_BUAA.pdf]]: 李龙科做的关于Latex用法的报告，2017年9月。
 </pre>
 </div>
 <div created="20170412011126422" creator="Yifan" modified="20170826133112356" modifier="Yifan" title="Latex Basics">
@@ -10602,6 +10672,14 @@ https://dirac.ihep.ac.cn/DIRAC/
 
 ----
 #[[PDG Webpage|http://pdglive.lbl.gov/Viewer.action]]</pre>
+</div>
+<div created="20171126145151893" creator="Yifan" modified="20171126145329719" modifier="Yifan" title="Report Done">
+<pre>和李龙科师兄合作的综述阅读报告：
+
+[ext[Chapter 1|./materials/yangyf/reading_chapter1.pptx]],
+[ext[Chapter 2|./materials/yangyf/reading_chapter2.pptx]]
+
+</pre>
 </div>
 <div created="20170411110616088" creator="Yifan" modified="20170411132901149" modifier="Yifan" title="RooFit">
 <pre>[[roofit User Manual|https://root.cern.ch/download/doc/RooFit_Users_Manual_2.91-33.pdf]]
@@ -11761,11 +11839,13 @@ void twoscales() {
 ----
 *[[Introduction to Statistical Issues in Particle Physics|http://www.slac.stanford.edu/econf/C030908/papers/MOAT002.pdf]]: The basic logic of doing analyses.</pre>
 </div>
-<div created="20170912134700959" creator="Yifan" modified="20171114081032946" modifier="Yifan" title="Synonyms">
+<div created="20170912134700959" creator="Yifan" modified="20171127085656677" modifier="Yifan" title="Synonyms">
 <pre>*small, minuscule(=very small)
 *while, whereas: showing contrast
 *make up, form
-*manifest, obvious,apparent; (manifest as a verb: to make clear.)</pre>
+*manifest, obvious,apparent; (manifest as a verb: to make clear.)
+*per mille, 0.1%.
+</pre>
 </div>
 <div created="20170412013921473" creator="Yifan" modified="20170412024003753" modifier="Yifan" title="The Element of Style">
 <pre>[[Link to the Book|http://docbes3.ihep.ac.cn/~charmoniumgroup/images/0/00/The_Element_of_Style.pdf]]
@@ -12055,15 +12135,17 @@ Default files:
 
 [[Config Example|http://vimconfig.com/]]</pre>
 </div>
-<div created="20170426113120964" creator="Yifan" modified="20171114050938111" modifier="Yifan" title="Work Log">
+<div created="20170426113120964" creator="Yifan" modified="20171128051900637" modifier="Yifan" title="Work Log">
 <pre>#[[Worklog_gKsKpi]]
 #[[Worklog_Luminosity]]
 #[[Worklog_MCProduction]]
+#[[Report Done]]
 
 ----
 !!Misc
 
 #[[2017.11.14]]
+#[[2017.11.28]]
 
 ----
 Chronicle txt Files
