@@ -1,3 +1,13 @@
+2017/11/29
+	和高清digamma比较：
+		-4420scan, 4360, 4210scan, 4220scan
+
+	rewrite Tracking.C:
+		-overload Tracking(), to allow settings of idx_energy,idx_channel
+		-better written initialization
+		-simultaneously handling different cutting sets
+		-write hist/graphs to root files
+
 2017/11/28
 	Dirac上有数十个作业反复重交failed，拟丢弃:		某个run的数据库random trigger有问题，相关人员正在解决。
 

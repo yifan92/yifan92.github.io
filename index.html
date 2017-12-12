@@ -291,6 +291,18 @@ Error message and password prompt
 
 <li>Physics Resources</li>
 
+<li>python</li>
+
+<li>Python Advanced</li>
+
+<li>Python and ROOT</li>
+
+<li>Python Basics</li>
+
+<li>Python Basics 2</li>
+
+<li>QWG</li>
+
 <li>Report Done</li>
 
 <li>RooFit</li>
@@ -326,6 +338,10 @@ Error message and password prompt
 <li>ROOT Histograms Basic 2</li>
 
 <li>ROOT I/O</li>
+
+<li>ROOT Misc</li>
+
+<li>ROOT SHELL Command</li>
 
 <li>root_example1</li>
 
@@ -404,6 +420,8 @@ Error message and password prompt
 <li>Works_of_Others</li>
 
 <li>Writing</li>
+
+<li>Writing a Scientific Paper in English</li>
 
 <li>Yifan</li>
 
@@ -8244,7 +8262,7 @@ Error message and password prompt
 <div created="20170407022931231" creator="Yifan" modified="20171114050842979" modifier="Yifan" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20170407022746366" creator="Yifan" modified="20171121064428564" modifier="Yifan" title="$:/state/sidebar">
+<div created="20170407022746366" creator="Yifan" modified="20171202084544295" modifier="Yifan" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20170411005206925" creator="Yifan" modified="20170411005206925" modifier="Yifan" title="$:/state/tab--1963855381">
@@ -8253,13 +8271,13 @@ Error message and password prompt
 <div created="20170411005206005" creator="Yifan" modified="20170412030123100" modifier="Yifan" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
-<div created="20170407054919167" creator="Yifan" modified="20171126150643231" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/Tools</pre>
+<div created="20170407054919167" creator="Yifan" modified="20171206075028967" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList [[Physics Resources]] [[Luminosity Resources]] [[Work Log]] Worklog_Luminosity 2017.11.28" title="$:/StoryList">
+<div list="ContentList [[Communication Skills]] Writing [[Writing a Scientific Paper in English]] QWG ROOT" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8276,7 +8294,7 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20171113120901230" creator="Yifan" modified="20171113120903763" modifier="Yifan" title="$:/temp/search">
+<div created="20171113120901230" creator="Yifan" modified="20171212065311779" modifier="Yifan" title="$:/temp/search">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.13">
@@ -9638,7 +9656,7 @@ On same channel.
 <pre>#[[Writing]]
 </pre>
 </div>
-<div created="20170407022748393" creator="Yifan" modified="20170621103421350" modifier="Yifan" title="ContentList">
+<div created="20170407022748393" creator="Yifan" modified="20171206061959648" modifier="Yifan" title="ContentList">
 <pre>#[[Resources|Physics Resources]]: talks, memos and papers
 
 ----
@@ -9659,6 +9677,7 @@ On same channel.
 #[[Latex]]
 #[[BOSS]]
 #[[Fortran]]
+#[[python]]
 
 ----
 !!Others
@@ -10486,16 +10505,17 @@ for x in ./*bosslog; do echo $x ...... `cat $x | tail -2 | head -1 `; done
 
 </pre>
 </div>
-<div created="20170407034637006" creator="Yifan" modified="20170407034640465" modifier="Yifan" title="linux_grep">
+<div created="20170407034637006" creator="Yifan" modified="20171207083922468" modifier="Yifan" title="linux_grep">
 <pre>!!grep
 
-Search for the text files, and print the lines that contains the pattern.
+Search for the text files, and print the lines that contains the pattern. 
 
 *`grep string filename` : print the lines that contains the string.
 *`-x`: exact  line match
 *`-v`: reverse match
 *`-i`: case insensitive
-*`-r`: search children folders</pre>
+*`-r`: search children folders
+*`-f`: use each line of the file as a pattern</pre>
 </div>
 <div created="20170407041854008" creator="Yifan" modified="20170407054227466" modifier="Yifan" title="linux_multicommands">
 <pre>!!Running Multiple Commands
@@ -10654,7 +10674,7 @@ https://dirac.ihep.ac.cn/DIRAC/
 ----
 #[ext[Book by Grupen|./materials/books/Particle_Detectors_Grupen.pdf]]</pre>
 </div>
-<div created="20170410120718342" creator="Yifan" modified="20171113121023374" modifier="Yifan" title="Physics Resources">
+<div created="20170410120718342" creator="Yifan" modified="20171212065308367" modifier="Yifan" title="Physics Resources">
 <pre>----
 !!Charmonium
 
@@ -10662,7 +10682,8 @@ https://dirac.ihep.ac.cn/DIRAC/
 #[[Reading Materials|Charmonium Readings]]
 #[[Luminosity Resources]]: Relating to my work of luminosity measurement.
 #[[What Has Other People Been Doing|Works_of_Others]]
-#[ext[Note on QWG2017|./txtfiles/QWG2017.txt]]
+#[[QWG]]
+
 
 
 
@@ -10672,6 +10693,652 @@ https://dirac.ihep.ac.cn/DIRAC/
 
 ----
 #[[PDG Webpage|http://pdglive.lbl.gov/Viewer.action]]</pre>
+</div>
+<div created="20171206062015398" creator="Yifan" modified="20171212060633004" modifier="Yifan" title="python">
+<pre>----
+#[[Python Basics]]: indentation, variables, lists, basic operators, string formatting, basic string operations, conditions, loops.
+#[[Python Basics 2]]: function, classes and objects, dictionaries, module and packages. 
+#[[Python Advanced]]: list comprehension, multiple function arguments, regular expression, exception handling, sets, serialization, partial functions
+#[[Python and ROOT]]
+#[[Simple Code Examples|https://wiki.python.org/moin/SimplePrograms]]</pre>
+</div>
+<div created="20171206080700965" creator="Yifan" modified="20171206091126827" modifier="Yifan" title="Python Advanced">
+<pre>----
+!!List Comprehension
+
+```
+sentence = &quot;the quick brown fox jumps over the lazy dog&quot;
+words = sentence.split()
+word_lengths = []
+for word in words:
+      if word != &quot;the&quot;:
+          word_lengths.append(len(word))
+print(word_lengths)
+```
+
+Equals to:
+
+```
+sentence = &quot;the quick brown fox jumps over the lazy dog&quot;
+words = sentence.split()
+word_lengths = [len(word) for word in words if word != &quot;the&quot;]
+print(word_lengths)
+```
+
+----
+!!Multiple Function Arguments
+
+''variable number of arguments''
+
+```
+def foo(first, second, third, *therest):
+    print(&quot;First: %s&quot; % first)
+    print(&quot;Second: %s&quot; % second)
+    print(&quot;Third: %s&quot; % third)
+    print(&quot;And all the rest... %s&quot; % list(therest))
+```
+
+''Using dictionaries as input''
+
+```
+def bar(first, second, third, **options):
+    if options.get(&quot;action&quot;) == &quot;sum&quot;:
+        print(&quot;The sum is: %d&quot; %(first + second + third))
+
+    if options.get(&quot;number&quot;) == &quot;first&quot;:
+        return first
+
+result = bar(1, 2, 3, action = &quot;sum&quot;, number = &quot;first&quot;)
+print(&quot;Result: %d&quot; %(result))
+```
+
+----
+!!Regular Expression
+
+```
+import re
+
+pattern = re.compile(r&quot;\[(on|off)\]&quot;)
+
+print(re.search(pattern, the_string))
+```
+
+----
+!!Exception Handling
+
+Don't want exception(error) to stop program, let it do something else.
+
+```
+for i in range(20):
+    try:
+        do_stuff_with_number(the_list[i])
+    except IndexError:     
+        do_stuff_with_number(0)
+```
+
+More detailed guide: https://docs.python.org/3/tutorial/errors.html#handling-exceptions
+
+----
+!!Sets
+
+Lists with no duplicate entries.
+
+```
+print(set(&quot;my name is Eric and Eric is my name&quot;.split()))
+```
+
+`intersection`,`symmetric_difference`
+
+```
+a = set([&quot;Jake&quot;, &quot;John&quot;, &quot;Eric&quot;])
+b = set([&quot;John&quot;, &quot;Jill&quot;])
+
+print(a.intersection(b))
+print(a.symmetric_difference(b)) #entries only in a or b
+print(a.difference(b))     #only in a, not in b
+```
+
+----
+!!Serialization
+
+Python provides built-in JSON libraries to encode and decode JSON.
+
+```
+import json
+```
+
+''Encoding a data structure to JSON''
+
+```
+json_string = json.dumps([1, 2, 3, &quot;a&quot;, &quot;b&quot;, &quot;c&quot;])
+print(json_string)
+```
+
+''Loading JSON back to a data structure'':
+
+```
+data = json.loads(json_string)
+```
+
+''pickle'': a Python proprietary data serialization method
+
+```
+import pickle
+pickled_string = pickle.dumps([1, 2, 3, &quot;a&quot;, &quot;b&quot;, &quot;c&quot;])
+print(pickle.loads(pickled_string))
+```
+
+----
+!!Partial Functions
+
+Deriving a function to another one with fewer parameters and fixed value sets.
+
+```
+from functools import partial
+```
+
+```
+def multiply(x,y):
+        return x * y
+
+dbl = partial(multiply,2)    # fixing the first parameter of multiply to 2
+print(dbl(4))               # output: 8
+```
+
+
+----
+!!Code Introspection
+
+```
+help()
+dir() 
+hasattr() 
+id() 
+type() 
+repr() 
+callable() 
+issubclass() 
+isinstance() 
+__doc__ 
+__name__
+```
+
+----
+
+!!Closure
+
+
+`nonlocal` keyword allows modifying variables outside the nest.
+
+```
+def print_msg(number):
+    def printer():
+        &quot;Here we are using the nonlocal keyword&quot;
+        nonlocal number
+        number=3
+        print(number)
+    printer()
+    print(number)
+
+print_msg(9)
+```
+
+Return the function object rather than calling the nested function within. @@color:green; Even functions are objects, it's python.@@
+
+```
+def transmit_to_space(message):
+  &quot;This is the enclosing function&quot;
+  def data_transmitter():
+      &quot;The nested function&quot;
+      print(message)
+  return data_transmitter
+
+fun2 = transmit_to_space(&quot;Burn the Sun!&quot;)
+fun2()
+```
+
+The message was preserved after the execution of nested  function. This is called @@color:blue;closure@@ in python.
+
+Advantage: avoid using global variables and provide some form of data hiding.
+
+----
+
+!!Decorators
+
+Definement
+
+```
+def repeater(old_function):
+    def new_function(*args, **kwds):
+        old_function(*args, **kwds) #we run the old function
+        old_function(*args, **kwds) #we do it twice
+    return new_function
+```
+
+Usage
+
+```
+@repeater
+def Multiply(num1, num2):
+    print(num1*num2)
+
+```
+
+Example: change input, change output, use as a check
+
+```
+
+def Double_In(old_function):
+    def new_function(arg): #only works if the old function has one argument
+        return old_function(arg*2) #modify the argument passed
+    return new_function
+
+def Multiply(multiplier):
+    def Multiply_Generator(old_function):
+        def new_function(*args, **kwds):
+            return multiplier*old_function(*args, **kwds)
+        return new_function
+    return Multiply_Generator #it returns the new generator
+
+def Check(old_function):
+    def new_function(arg):
+        if arg&lt;0: raise ValueError, &quot;Negative Argument&quot; #This causes an error, which is better than it doing the wrong thing
+        old_function(arg)
+    return new_function
+```
+</pre>
+</div>
+<div created="20171212060641657" creator="Yifan" modified="20171212060857394" modifier="Yifan" title="Python and ROOT">
+<pre>----
+
+https://root.cern.ch/python-and-root
+
+----
+
+The Python extension module ~PyROOT.
+
+```
+rom ROOT import TCanvas        # available at startup
+c = TCanvas()
+ 
+from ROOT import TLorentzVector # triggers auto-load of libPhysics
+l = TLorentzVector()
+ 
+from ROOT import std
+v = std.vector(int)()
+for i in range(0,10):
+    v.push_back(i)
+
+```
+
+```
+from ROOT import *  # global import, easy but NOT recommended
+print gDebug        # prints 0
+gROOT.ProcessLine( 'gDebug = 7;' )
+print gDebug        # prints 0 again
+gDebug = 5          # changed the local reference
+print gDebug        # now prints 5
+gROOT.ProcessLine( 'cout &amp;lt;&amp;lt; gDebug &amp;lt;&amp;lt; endl;' ) # prints 7
+ 
+import ROOT         # this is a much better way to access ROOT!
+print ROOT.gDebug   # prints 7
+ROOT.gDebug = 3
+gROOT.ProcessLine( 'cout &amp;lt;&amp;lt; gDebug &amp;lt;&amp;lt; endl;' ) # prints 3
+```</pre>
+</div>
+<div created="20171206063102353" creator="Yifan" modified="20171206072137881" modifier="Yifan" title="Python Basics">
+<pre>----
+
+''Two major Python versions'': Python 2 and Python 3, with some semantical differences.
+
+''print'': prints a line, auto `\n` in the end
+
+```
+print(&quot;This line will be printed.&quot;)
+```
+''indentation'': python uses indentation for blocks. tab or 4 spaces default.
+
+```
+x = 1
+if x == 1:
+    # indented four spaces
+    print(&quot;x is 1.&quot;)
+    print(&quot;x is indeed 1.&quot;)
+```
+
+----
+
+!!Variables and Types
+
+integer, floating point numbers, complex numbers, string
+
+Strings in python are defined either with a single quote or a double quotes. The difference is that you can use `'` is go with double quotes.
+
+```
+myint = 7
+print(myint)
+
+myfloat = 7.0
+print(myfloat)
+myfloat = float(7)
+print(myfloat)
+
+mystring = 'hello'    
+print(mystring)
+mystring = &quot;hello&quot;
+print(mystring)
+```
+
+
+
+
+variation of definement and simultaneous assignments.
+
+@@color:blue;Can't mix operators between numbers and strings.@@
+
+
+```
+one = 1
+two = 2
+three = one + two
+print(three)
+
+hello = &quot;hello&quot;
+world = &quot;world&quot;
+helloworld = hello + &quot; &quot; + world
+print(helloworld)
+
+a, b = 3, 4
+print(a,b)
+```
+
+----
+
+!!Lists
+
+```
+mylist = []
+mylist.append(1)
+mylist.append(2)
+mylist.append(3)
+print(mylist[0]) # prints 1
+print(mylist[1]) # prints 2
+print(mylist[2]) # prints 3
+
+# prints out 1,2,3
+for x in mylist:
+    print(x)
+```
+
+@@color:blue;Accessing an index which does not exist generates an exception (an error).@@
+
+----
+
+!!Basic Operators
+
+```
+number = 1 + 2 * 3 / 4.0
+remainder = 11 % 3
+helloworld = &quot;hello&quot; + &quot; &quot; + &quot;world&quot;
+lotsofhellos = &quot;hello&quot; * 10
+
+
+even_numbers = [2,4,6,8]
+odd_numbers = [1,3,5,7]
+all_numbers = odd_numbers + even_numbers
+print(all_numbers)
+
+print([1,2,3] * 3)
+```
+
+----
+!!String Formatting
+
+```
+# This prints out &quot;Hello, John!&quot;
+name = &quot;John&quot;
+print(&quot;Hello, %s!&quot; % name)
+
+
+# This prints out &quot;John is 23 years old.&quot;
+name = &quot;John&quot;
+age = 23
+print(&quot;%s is %d years old.&quot; % (name, age))
+
+
+# This prints out: A list: [1, 2, 3]
+mylist = [1,2,3]
+print(&quot;A list: %s&quot; % mylist)
+```
+
+----
+!!Basic String Operations
+
+
+
+```
+astring = &quot;Hello world!&quot;
+
+print(&quot;single quotes are ' '&quot;)
+print(len(astring))    #length
+print(astring.index(&quot;o&quot;))    # first occurrence location
+print(astring.count(&quot;l&quot;))
+print(astring[3:7])    # start from 3, end at 6 here
+print(astring[3:7:2])    #[start, stop, step]
+print(astring[::-1])    #reverse a string
+print(astring.upper())
+print(astring.lower())
+print(astring.startswith(&quot;Hello&quot;))    #return true or false
+print(astring.endswith(&quot;asdfasdfasdf&quot;))    
+
+afewwords = astring.split(&quot; &quot;)  #afewwords becomes a list of the strings
+```
+
+----
+!!Conditions
+
+*`elif` = else if.
+*`not`
+
+```
+x = 2
+print(x == 2) # prints out True
+print(x == 3) # prints out False
+print(x &lt; 3) # prints out True
+
+
+name = &quot;John&quot;
+age = 23
+if name == &quot;John&quot; and age == 23:
+    print(&quot;Your name is John, and you are also 23 years old.&quot;)
+
+if name == &quot;John&quot; or name == &quot;Rick&quot;:
+    print(&quot;Your name is either John or Rick.&quot;)
+
+name = &quot;John&quot;
+if name in [&quot;John&quot;, &quot;Rick&quot;]:
+    print(&quot;Your name is either John or Rick.&quot;)
+
+x = 2
+if x == 2:
+    print(&quot;x equals two!&quot;)
+else:
+    print(&quot;x does not equal to two.&quot;)
+```
+
+`is` vs. `==`:
+
+```
+x = [1,2,3]
+y = [1,2,3]
+print(x == y) # Prints out True
+print(x is y) # Prints out False
+```
+
+----
+!!Loops
+
+''for''
+
+```
+for x in range(5):
+    print(x)    # 0,1,2,3,4
+
+for x in range(3, 6):
+    print(x)    # 3,4,5
+
+for x in range(3, 8, 2):
+    print(x)    # 3,5,7
+```
+
+''while''
+
+```
+count = 0
+while count &lt; 5:
+    print(count)
+    count += 1  # This is the same as count = count + 1
+```
+
+''break'', ''continue''
+
+```
+count = 0
+while True:
+    print(count)
+    count += 1
+    if count &gt;= 5:
+        break
+
+# Prints out only odd numbers - 1,3,5,7,9
+for x in range(10):
+    # Check if x is even
+    if x % 2 == 0:
+        continue
+    print(x)
+```
+
+@@color:blue; else can be used for loop@@: To be executed when the `while` or `for` failed, can be skipped by `break` but not `continue`.</pre>
+</div>
+<div created="20171206072340325" creator="Yifan" modified="20171206074523229" modifier="Yifan" title="Python Basics 2">
+<pre>!!Functions
+
+```
+def my_function():
+    print(&quot;Hello From My Function!&quot;)
+
+
+def my_function_with_args(username, greeting):
+    print(&quot;Hello, %s , From My Function!, I wish you %s&quot;%(username, greeting))
+
+
+def sum_two_numbers(a, b):
+    return a + b
+```
+
+----
+
+!!Classes and Objects
+
+```
+class MyClass:
+    variable = &quot;blah&quot;
+
+    def function(self):
+        print(&quot;This is a message inside the class.&quot;)
+
+```
+
+''statement of the object''
+
+```
+myobjectx = MyClass()  
+```
+
+''accessing object variable and function''
+
+```
+myobjectx.variableobject variable
+myobjectx.function()
+```
+
+----
+!!Dictionary
+
+Similar to array, but use key and value instead of indexes.
+
+```
+phonebook = {}
+phonebook[&quot;John&quot;] = 938477566
+phonebook[&quot;Jack&quot;] = 938377264
+phonebook[&quot;Jill&quot;] = 947662781
+print(phonebook)
+```
+
+results here:
+
+```
+phonebook = {&quot;John&quot; : 938477566,&quot;Jack&quot; : 938377264,&quot;Jill&quot; : 947662781}
+```
+
+''Iterating''
+
+```
+for name, number in phonebook.items():
+    print(&quot;Phone number of %s is %d&quot; % (name, number))
+```
+
+''Adding''
+
+```
+phonebook[&quot;Jake&quot;] = 938273443
+```
+
+''Removing''
+
+```
+del phonebook[&quot;John&quot;]
+```
+or
+
+```
+phonebook.pop(&quot;John&quot;)
+```
+
+----
+
+!!Modules and Packages
+
+```
+# import the library
+import urllib
+
+# use it
+urllib.urlopen(...)
+```
+
+use `dir(package)` to get the list of functions supported by the package, and use `help(package.func)` to see its usage
+
+''Writing Modules'': simply create a new .py file with the module name and use the `import` command to use it in other files
+
+''Writing Packages'': Essentially directories. @@color:blue;Must contains a file called `_int_.py` to indicate that the folder is a python package.@@
+
+Two ways to import:
+
+```
+import pac.mod    # mod in namespace pac
+
+from pac import mod    # mod ported into current namespace
+```</pre>
+</div>
+<div created="20171212065213531" creator="Yifan" modified="20171212065304999" modifier="Yifan" title="QWG">
+<pre>----
+!!QWG 2017
+
+http://indico.ihep.ac.cn/event/6822/
+
+[ext[Note on QWG2017|./txtfiles/QWG2017.txt]]
+</pre>
 </div>
 <div created="20171126145151893" creator="Yifan" modified="20171126145329719" modifier="Yifan" title="Report Done">
 <pre>和李龙科师兄合作的综述阅读报告：
@@ -11074,7 +11741,7 @@ RooGenericPdf g(“g”,”sqrt(abs(alpha*x))+0.1”,RooArgSet(x,alpha)) ;
 <div created="20170411132905454" creator="Yifan" modified="20170411132927508" modifier="Yifan" title="RooFit Simultaneous Fit">
 <pre>[[rf504_simwstool.C|https://root.cern.ch/root/htmldoc/tutorials/roofit/rf504_simwstool.C.html]]</pre>
 </div>
-<div created="20170407061511667" creator="Yifan" modified="20170419051702567" modifier="Yifan" title="ROOT">
+<div created="20170407061511667" creator="Yifan" modified="20171212070100008" modifier="Yifan" title="ROOT">
 <pre>----
 !Topics
 #[[Histograms|ROOT Histograms]]
@@ -11084,13 +11751,16 @@ RooGenericPdf g(“g”,”sqrt(abs(alpha*x))+0.1”,RooArgSet(x,alpha)) ;
 #[[Input/Output|ROOT I/O]]:gFile, TChain
 #[[Fit|ROOT Fit]]
 #[[RooFit]]
+#[[Running SHELL Command|ROOT SHELL Command]]
+#[[Python and ROOT]]
 #[[Example Scripts|ROOT Examples]]: Codes that may be quickly reused
+#[[Misc|ROOT Misc]]
 
 ----
 *[[User Guide|https://root.cern.ch/root/htmldoc/guides/users-guide/ROOTUsersGuide.html]]
 *[[Reference Database|https://root.cern.ch/doc/master/index.html]]</pre>
 </div>
-<div created="20170411011622096" creator="Yifan" modified="20170411014827893" modifier="Yifan" title="ROOT C++">
+<div created="20170411011622096" creator="Yifan" modified="20171129095013367" modifier="Yifan" title="ROOT C++">
 <pre>Just a little C++ to help with better utilizing ROOT.
 
 ----
@@ -11144,6 +11814,16 @@ The private members can only be used by the methods of this class. @@color:green
 
 Data encapsulation means all data member of a class should be private. That's one of the greatest advantage of OOP. Using getter/setter functions allow programmer to change how things work internally without affecting users.
 
+!!Function Overloading
+
+Same function name, different parameter sets.
+
+```
+void Tracking();
+void Tracking(int idx_energy);
+void Tracking(int idx_energy, idx_channel);
+
+```
 
 ----
 !!@@color:green;Creating Objects on the Stack and Heap@@
@@ -11446,6 +12126,24 @@ ch.Add(&quot;f3.root&quot;);
 ch.Draw(&quot;x&quot;);
 ```</pre>
 </div>
+<div created="20171212070116113" creator="Yifan" modified="20171212070240437" modifier="Yifan" title="ROOT Misc">
+<pre>`tree-&gt;Draw(&quot;var1:var2&gt;&gt;hist2d&quot;,cut);`: drawing a graph from tree with a cut, store into a hist;
+
+`canvas-&gt;SaveAs(filename);`</pre>
+</div>
+<div created="20171129095153628" creator="Yifan" modified="20171129095858391" modifier="Yifan" title="ROOT SHELL Command">
+<pre>In Command line:
+
+`.! ls`, `.! rm the_folder`, `gSystem-&gt;Exec(&quot;ls&quot;)`
+
+----
+
+ROOT variable as input:
+
+```
+gSystem-&gt;GetFromPipe(Form(&quot;mkdir ~/%s&quot;,filename));
+```</pre>
+</div>
 <div created="20170407062104770" creator="Yifan" modified="20170407063312592" modifier="Yifan" title="root_example1">
 <pre>!!Reading MC ~CrossSections
 
@@ -11628,7 +12326,7 @@ void SetHistLineWidth(Width_t width = 1)
 !!Example Script
 *[[Read MC CrossSections|root_example1]]</pre>
 </div>
-<div created="20170407113650612" creator="Yifan" modified="20170409114906245" modifier="Yifan" title="root_histdrawing">
+<div created="20170407113650612" creator="Yifan" modified="20171212065755809" modifier="Yifan" title="root_histdrawing">
 <pre>!Drawing Hists
 ----
 When called for the first time, `Draw` method creates a `THistPainter` object and saves a pointer to it as a member of the hist.
@@ -11688,7 +12386,12 @@ For 2d histograms:
 
 
 ----
-*[[Superimposing Hists|root_superimposehists]]</pre>
+*[[Superimposing Hists|root_superimposehists]]
+
+----
+
+`tree-&gt;Draw(&quot;var1:var2&gt;&gt;hist2d&quot;,cut);`: drawing a graph from tree with a cut, store into a hist;
+</pre>
 </div>
 <div created="20170407123902264" creator="Yifan" modified="20170407124216903" modifier="Yifan" title="root_histstack">
 <pre>!!Histogram Stacks
@@ -12135,7 +12838,7 @@ Default files:
 
 [[Config Example|http://vimconfig.com/]]</pre>
 </div>
-<div created="20170426113120964" creator="Yifan" modified="20171128051900637" modifier="Yifan" title="Work Log">
+<div created="20170426113120964" creator="Yifan" modified="20171207085710639" modifier="Yifan" title="Work Log">
 <pre>#[[Worklog_gKsKpi]]
 #[[Worklog_Luminosity]]
 #[[Worklog_MCProduction]]
@@ -12151,9 +12854,10 @@ Default files:
 Chronicle txt Files
 
 #[ext[Octomber 2017|./txtfiles/worklog_201710.txt]]
-#[ext[November 2017|./txtfiles/worklog_201711.txt]]</pre>
+#[ext[November 2017|./txtfiles/worklog_201711.txt]]
+#[ext[December 2017|./txtfiles/worklog_201712.txt]]</pre>
 </div>
-<div created="20170426123555284" creator="Yifan" modified="20171114050852118" modifier="Yifan" title="Work_Luminosity_part2">
+<div created="20170426123555284" creator="Yifan" modified="20171202084542212" modifier="Yifan" title="Work_Luminosity_part2">
 <pre>!!Results and Systematics
 
 ----
@@ -12168,7 +12872,7 @@ Chronicle txt Files
 #Babayaga NLO: 0.1%
 #MC Statistics: 0.3% (1M MC)
 #Tracking: comparing with EMC-only method's result.
-#[[tanggy correction|Worklog_Luminosity_5]]
+#[[tanggy correction|Worklog_Luminosity_5]]: Difference from my method and tang method
 
 ----
 
@@ -12209,7 +12913,25 @@ Updated result(November 13)
 
 ----
 
+
+
+----
+
 Uncertainty v703
+
+
+| ! | !4360 | !4260 | !4600 | !4575 |  !4530 |
+| !E standard | 539.9 | 825.588 |  | 47.44 |  |
+| !E emc-only | 537.66 | 822.745 | 575.3 | 48.23 |
+| !Tracking Efficiency(%) | 0.42 | 0.34 |  |  |  |
+| !On E Cuts(%) | 0.13 | 0.13 | 0.28 | 0.24 | 0.10 |
+| !On P Cuts(%) | 0.16 | 0.23 | 0.29 | 0.19 | 0.20 |
+| !On CosTheta Cuts(%) | 0.06 | 0.06 | 0.04 | 0.02 | 0.14 |
+| !Energy Bias(%) | 0.07 |&lt;|
+| !Babayaga NLO Generator(%) | 0.1 |&lt;|
+| !MC Statistics(%) | 0.2 |&lt;|
+| !Correction to Missing EMC Readout(%)  | 0.15 |&lt;|
+| !Combined |  |
 
 | ! | !4190 | !4200 | !4210 | !4220 | !4237 | !4246 | !4270 | !4280 |
 | !Tracking Efficiency | 0.54 | 0.32 | 0.02 | 0.10 | 0.06 | 0.15 | 0.05 | 0.20 |
@@ -12219,8 +12941,9 @@ Uncertainty v703
 | !On M(ee) Cuts(%) | 0 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
 | !Energy Bias(%) | 0.06 | 0.07 | 0.00 | 0.01 | 0.04 | 0.04 | 0.02 | 0.01 |
 | !Babayaga NLO Generator(%) | 0.1 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
-| !MC Statistics(%) | 0.3 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
-| !Combined(%) | 0.70 | 0.52 | 0.40 | 0.42 | 0.46 | 0.49 | 0.56 | 0.55 |
+| !MC Statistics(%) | 0.2 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
+| !Correction to Missing EMC Readout  | 0.05 | 0.06 | 0.08 | 0.04 | 0.07 | 0.06 | 0.06 | 0.05 |
+| !Combined(%) | 0.66 | 0.48 | 0.34 | 0.36 | 0.45 | 0.48 | 0.52 | 0.50 |
 
 
 ----
@@ -13079,12 +13802,89 @@ Li Longke
 
 ----</pre>
 </div>
-<div created="20170412013714902" creator="Yifan" modified="20171114080832124" modifier="Yifan" title="Writing">
+<div created="20170412013714902" creator="Yifan" modified="20171212070604338" modifier="Yifan" title="Writing">
 <pre>*[[The Element of Style]]: a book referred to on Charmonium webpage.
+*[[Writing a Scientific Paper in English]]: A talk by a CPC editor
 *[[Synonyms]]: 
 *[[Typing Practices]]
 *[[Latex]]
 *[[Common BES3 Paper Error Checklist|http://bes3.ihep.ac.cn/pub/CheckList_BESIII.htm]]</pre>
+</div>
+<div created="20171212070613510" creator="Yifan" modified="20171212071752017" modifier="Yifan" title="Writing a Scientific Paper in English">
+<pre>''Four Major Questions:'' 
+
+why,how, what result, what meaning.
+
+''What order in writing?''
+
+*the data: prepare Tables/Figures/other results.
+*Methods, results, discussion.
+*conclusion
+*introduction
+*abstract
+
+''Refining Tables and Figures'':
+
+*clear axis labels with correct unit
+*suitable size of axis font
+*caption: clear and full explanation
+*color figure: journal's colour policy; understandable even if black and white(different dotting)
+*mark (a),(b)..., it's easier for editor/readers to refer
+*DON'T REFER to a figure explanation elsewhere, otherwise the figure doesn't stand on its own.
+*Re-using figures from previously published work can cause copyright issues, need permission.
+
+''Results'':
+
+*give summary of most important results, referring to figures
+*less important things go to supporting materials
+*compare results with other published work in the field
+*try to explain if the work disagree with others
+*be specific, using quantitative phrases
+
+''Conclusion''
+
+explain how it add to the field
+
+''Introduction'':
+
+explain motivation.
+
+Main parts:
+
+	*what we know already
+	*what we don't know
+	*the question to answer
+	*how you plan to answer
+
+Don't give result.
+
+As concise as possible.
+
+''Abstract'':
+
+Must cover: what you did, what result
+
+''Title'':
+
+	*short, precise
+	*clear idea of what the paper is about, be specific
+	*easily searchable
+
+''References'':
+
+references:
+
+	*format of the journal
+	*20-50 referrences
+	*most up-to-date references for the topic
+	*use journal references where possible, not arXiv numbers
+	*don't cite your own work.
+
+----
+''Resources''
+
+	*[[Clinical chemistry guide to scientific writing|https://www.aacc.org/publications/clinical-chemistry/clinical-chemistry%C2%A0guide-to-scientific-writing]]
+	*[[nature english communication for scientists|https://www.nature.com/scitable/ebooks/english-communication-for-scientists-14053993]]</pre>
 </div>
 <div created="20170407131924789" creator="Yifan" modified="20170412004103833" modifier="Yifan" title="Yifan">
 <pre>Just want to put a few comics here.

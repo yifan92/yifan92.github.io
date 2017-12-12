@@ -1,6 +1,3 @@
-
-
-
 --------------------------------------------------------------------
 (production 6)
 
@@ -41,11 +38,49 @@ CMS Results on Upsilon Pair Production
 		
 
 ------------------------------------------------------
-Day 2 session 3(Decay 2)
+Day 2 session 4: Decay 3		
+
+Radiative Transitions in ee collisions above 4 GeV
+		Bin Wang
+	first evidence of ee->g eta_c in 6 energy points
+
+
+Determination of electric dipole transitions in heavy quarkonia using potential non-relativistic QCD
+		Sebastian Steinbeisser
+
+Bottomonium Transitions from Belle
+		Xiaolong Wang
+	
+Charmonium Transitions at BES3
+		Wu Lianjin
+	
+	Higher-order multipole amplitudes in Psi'->g Xc12, Xcj-> g Jpsi
+	BR measurement of Psi'->g Xcj
+	Psi'-> eeXcj Xcj-> eeJpsi
+
+
+Charmonium rare decays at BES3
+		Cai Hao
+	Psi'-> Lambda_c+ pbar ee c.c.
+	Jpsi-> e tau, tau-> mu neutrinos
+	Jpsi-> mu tau, tau->e neutrinos
+	
+	FCNC process? GIM mechanism?
+	
+		
+------------------------------------------------------
+Day 2 session 3(Decay 2)	
+
 
 Radiative decays Xcj-> Vg
 		Nikolay Kivel
+	data sets: CLEO 2008 & BES3 2011
+	channels: gamma rho, gamma omega, gamma phi
 	
+	topics:
+		-color singlet/octet contribution
+		-Br(omega_par gamma)/Br(rho_par gamma)
+		-
 
 
 N2LO QCD corrections to the hadronic width of pseudoscalar quarkonium

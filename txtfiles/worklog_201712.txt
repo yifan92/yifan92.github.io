@@ -1,0 +1,27 @@
+2017/12/12
+	bad MC files:
+		4009 lum,nomdc,dig,NoMDC
+		4246,4270 nomdc:	fixing
+	
+	MC Production:
+		Try doing Bhabha/Digamma checks
+		
+
+2017/12/11
+	Luminosity:	
+		finish memo; 
+		doesn't deal with large deviance of digamma results for now.
+		checked whatif Delta(phi) close to 360: identical result. 
+		
+		
+	MC Production:
+		-强子作业分五份，没改sim_joboption里的随机数种子：检查了log文件，随机数种子是不同的；应该是被ganga自动分配了
+		-edited Charmonium Wiki page. 
+		-pending checks.	
+		-failed jobs still not dealt with.
+
+2017/12/7
+测量v703版本多出来的dst文件的亮度: 
+	-dig: new4230, new4420, new4600,new4420scan
+	-lum: lnew4230,lnew4420,lnew4600,lnew4420s
+	
