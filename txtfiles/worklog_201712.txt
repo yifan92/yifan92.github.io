@@ -1,3 +1,18 @@
+2017/12/18
+	v3.5检查：	rec的事例数有问题，导致MC事例数减半。4200的截面没放，重跑；
+	4009, scan3810, scan3900mc: run号错误，需重新产生。	txtfiles/Dec18对应结果可能需要更正
+	重新产生Dig files: 4470,4230,4009, all scan
+
+2017/12/17
+	产生完了低能量点，产生子换回3.8GeV下限。
+	误删4230 digamma MC的dst
+
+2017/12/16
+	mc production check:
+		ggmc: 	4230 digamma 的rtraw文件名有问题，导致recon未成功。
+				因为产生子改了，所以用找回rtraw的方式完成重建。
+				发现rtraw文件损坏，等低能量点产生好后，改回产生子，重新产生。
+
 2017/12/12
 	bad MC files:
 		4009 lum,nomdc,dig,NoMDC
