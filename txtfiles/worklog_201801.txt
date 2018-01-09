@@ -1,0 +1,10 @@
+2018/1/8:
+
+Difference:
+	4420: Digamma v3.5  compared with Digamma NLO											0.9985
+		  nevent(NLO no 3.8/NLO/3.5) 	878796//755592							 	cross: 17.437/16.077/18.05
+	4190: nevent(NLO no 3.8/NLO/3.5):	840657/929819/803700, 						cross: 19.29/17.374/20.04
+	4200:								838180/927292/802644						cross: 19.21/17.319/19.98
+	
+2018/1/3
+gamma Eta_c(2S)

@@ -165,6 +165,8 @@ Error message and password prompt
 
 <li>2017.11.28</li>
 
+<li>2018.1.9</li>
+
 <li>About Tiddlywiki</li>
 
 <li>Bash Scripts</li>
@@ -275,6 +277,8 @@ Error message and password prompt
 
 <li>linux_quotes</li>
 
+<li>linux_regex</li>
+
 <li>linux_sed</li>
 
 <li>linux_wildcards</li>
@@ -324,6 +328,8 @@ Error message and password prompt
 <li>RooFit Simultaneous Fit</li>
 
 <li>ROOT</li>
+
+<li>ROOT bes3plotstyle</li>
 
 <li>ROOT C++</li>
 
@@ -8262,7 +8268,7 @@ Error message and password prompt
 <div created="20170407022931231" creator="Yifan" modified="20171114050842979" modifier="Yifan" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20170407022746366" creator="Yifan" modified="20171202084544295" modifier="Yifan" title="$:/state/sidebar">
+<div created="20170407022746366" creator="Yifan" modified="20180109065735960" modifier="Yifan" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20170411005206925" creator="Yifan" modified="20170411005206925" modifier="Yifan" title="$:/state/tab--1963855381">
@@ -8277,7 +8283,7 @@ Error message and password prompt
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList python" title="$:/StoryList">
+<div list="ContentList [[Work Log]] 2018.1.9" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8553,6 +8559,34 @@ Digamma Energy depositions of bigger/smaller clusters with all other cuts.
 | ~GaoQing Bhabha v3.5 | 109.81/pb |
 
 </pre>
+</div>
+<div created="20180109062550622" creator="Yifan" modified="20180109065729119" modifier="Yifan" title="2018.1.9">
+<pre>不同Babayaga MC的结果是相近的：NLO, NLO no cut at 3.8 ~GeV, v3.5对结果的影响约为0.2%。
+
+之前的Bhabha EMC-only的结果是错的，实际结果与正常结果偏差也很大。
+
+[img width=800 [./img/Worklog/Luminosity/180109/mistake.png]]
+
+|  !Energy Point | !Bhabha EMC+MDC | !Bhabha EMC-only | !Digamma |
+| 4190 | 521.7 | 528.9 | 512.8 |
+| 4200 | 524.5 | 531.0 | 514.9 |
+| 4210 | 518.7 | 522.4 | 507.2 |
+| 4220 | 514.0 | 518.5 | 503.0 |
+| 4237 | 530.2 | 534.5 | 518.7 |
+| 4246 | 537.3 | 551.0 | 526.3 |
+| 4270 | 529.4 | 542.9 | 518.7 |
+| 4280 | 175.0 | 176.2 | 171.7 |
+|||||
+|||||
+|||||
+| Scan4190 | 43.21 | 43.70 | 43.19 |
+| Scan4210 | 54.81 | 55.28 | 54.54 |
+| Scan4245 | 55.78 | 56.15 | 55.51 |
+| Scan4310 | 44.82 | 45.00 | 44.86 |
+| Scan4390 | 55.04 | 55.33 | 54.99 |
+|  4470 | 109.2 | 110.9 | 109.7 |
+| 4090 | 52.72 |  53.38 | 54.45 |
+| 4230 | 1056 | 1063 | 1090 |</pre>
 </div>
 <div created="20170407035445794" creator="Yifan" modified="20170510052235110" modifier="Yifan" title="About Tiddlywiki">
 <pre>This note is stored as a Tiddlywiki file. Here are some more information about this helpful tool.
@@ -10374,7 +10408,7 @@ Render a frame marking the margins of the current document:
 #[[Bash Scripts]]
 #[[vim Editor]]</pre>
 </div>
-<div created="20170407022820254" creator="Yifan" modified="20171121025849489" modifier="Yifan" title="Linux Commands">
+<div created="20170407022820254" creator="Yifan" modified="20171219082942352" modifier="Yifan" title="Linux Commands">
 <pre>----
 !The Basics
 *`pwd`
@@ -10415,6 +10449,7 @@ Topics:
 *[[Wildcards|linux_wildcards]]
 *[[Multiple commands|linux_multicommands]]
 *[[For Command|linux_for_command]]
+*[[Regular Expressions|linux_regex]]
 
 ----
 !Shell Scripts
@@ -10553,6 +10588,32 @@ Commands that can use pipes
 *` &quot; &quot; `: Anything enclosed is removed the meaning of the characters (except \ and $).
 *` ' ' `: Even \ and $ are not affected.
 *`` ` ` ``:To execute the command.
+</pre>
+</div>
+<div created="20171219082922577" creator="Yifan" modified="20171219085402705" modifier="Yifan" title="linux_regex">
+<pre>!Regular Expression 
+A string matcher.
+
+!!Boolean &quot;Or&quot;
+*`gray|grey`
+
+!!Grouping
+*`(gray|grey)` = `gr(a|e)y`
+
+!!Anchor
+*`$`: end of line
+*`^`: beginning of line
+
+!!Wildcards
+
+* `.` matches any single character
+* `[characters]` matches any single character in the list
+* `[^characters]` matches any single characters not in the list
+*`[A-Z]`=`[[:upper:]]`
+*`[[:alpha:]]`
+* `*`: previous element appears for 0 to x times; c.f. [[linux_wildcards]]
+*`+`: previous element appears for 1 to x times, `ab+c` = abc, abbc, abbbc......
+*`{n}`,`{min,}`,`{min,max}`: repeating for n times as required
 </pre>
 </div>
 <div created="20170407034703801" creator="Yifan" modified="20170822033738407" modifier="Yifan" title="linux_sed">
@@ -10949,7 +11010,7 @@ def Check(old_function):
 ```
 </pre>
 </div>
-<div created="20171212060641657" creator="Yifan" modified="20171212060857394" modifier="Yifan" title="Python and ROOT">
+<div created="20171212060641657" creator="Yifan" modified="20171219085647148" modifier="Yifan" title="Python and ROOT">
 <pre>----
 
 https://root.cern.ch/python-and-root
@@ -10959,7 +11020,7 @@ https://root.cern.ch/python-and-root
 The Python extension module ~PyROOT.
 
 ```
-rom ROOT import TCanvas        # available at startup
+from ROOT import TCanvas        # available at startup
 c = TCanvas()
  
 from ROOT import TLorentzVector # triggers auto-load of libPhysics
@@ -11742,13 +11803,14 @@ RooGenericPdf g(“g”,”sqrt(abs(alpha*x))+0.1”,RooArgSet(x,alpha)) ;
 <div created="20170411132905454" creator="Yifan" modified="20170411132927508" modifier="Yifan" title="RooFit Simultaneous Fit">
 <pre>[[rf504_simwstool.C|https://root.cern.ch/root/htmldoc/tutorials/roofit/rf504_simwstool.C.html]]</pre>
 </div>
-<div created="20170407061511667" creator="Yifan" modified="20171212070100008" modifier="Yifan" title="ROOT">
+<div created="20170407061511667" creator="Yifan" modified="20171227073125022" modifier="Yifan" title="ROOT">
 <pre>----
 !Topics
 #[[Histograms|ROOT Histograms]]
 #[[Handling Strings|root_handlingstrings]]
 #[[ROOT C++]]: a quick reminder of C++ syntaxs
 #[[Cling Interpreter]]: ROOT's C++ Interpreter
+#[[ROOT bes3plotstyle]]
 #[[Input/Output|ROOT I/O]]:gFile, TChain
 #[[Fit|ROOT Fit]]
 #[[RooFit]]
@@ -11760,6 +11822,29 @@ RooGenericPdf g(“g”,”sqrt(abs(alpha*x))+0.1”,RooArgSet(x,alpha)) ;
 ----
 *[[User Guide|https://root.cern.ch/root/htmldoc/guides/users-guide/ROOTUsersGuide.html]]
 *[[Reference Database|https://root.cern.ch/doc/master/index.html]]</pre>
+</div>
+<div created="20171227073129960" creator="Yifan" modified="20171227074928219" modifier="Yifan" title="ROOT bes3plotstyle">
+<pre>`#include /afs/ihep.ac.cn/users/y/yangyf/.plotstyle/bes3plotstyle.C`
+
+*`FormatData(TH1 * datahist)`: format for data points;
+*`FormatData(TGraph * datahist)`:format for graph data points;
+*`FormatAxis(TAxis * axis)`
+*`NameAxes(TH1 * datahist, char * xname, char * yname)`
+*`FormatMC1(TH1/TGraph * mc1hist)`: Format for main MC (red line)
+*`FormatMC2(TH1/TGraph * mc2hist)`: 2nd MC(blue shaded area)
+*`FormatMC3(TH1/TGraph * mc3hist)`: blue line
+*`WriteBes3()`: Write &quot;BESIII&quot; in the upper right corner
+*`WriteBelle()`
+*`WritePreliminary()`: write preliminary, use together with `WriteBes3()`
+*`FormatArrow(TArrow *arr)`
+*`MakeLegend0(TH1 * mc1hist, char * mc1name, TH1 * mc2hist, char * mc2name,double xlow, double ylow, double xhi, double yhi)`: data, mc1, mc2, mc3; data, function name list;
+*`SetStyle()`: set general style
+*`SetPrelimStyle()`:no stat/fit box
+*`SetMeetingStyle()`: stat/fit box
+*`PlotDataMC(output_filename, *datahist, dataname, *mc1hist, mcname,bool prelim, xlow, ylow, xhi, yhi)`:output filename without extension
+*`PlotDataFit(  )`
+*`PlotScatter()`
+*`PlotMC()`: plot a mc plot</pre>
 </div>
 <div created="20170411011622096" creator="Yifan" modified="20171129095013367" modifier="Yifan" title="ROOT C++">
 <pre>Just a little C++ to help with better utilizing ROOT.
@@ -12839,7 +12924,7 @@ Default files:
 
 [[Config Example|http://vimconfig.com/]]</pre>
 </div>
-<div created="20170426113120964" creator="Yifan" modified="20171207085710639" modifier="Yifan" title="Work Log">
+<div created="20170426113120964" creator="Yifan" modified="20180109062514012" modifier="Yifan" title="Work Log">
 <pre>#[[Worklog_gKsKpi]]
 #[[Worklog_Luminosity]]
 #[[Worklog_MCProduction]]
@@ -12850,6 +12935,7 @@ Default files:
 
 #[[2017.11.14]]
 #[[2017.11.28]]
+#[[2018.1.9]]
 
 ----
 Chronicle txt Files

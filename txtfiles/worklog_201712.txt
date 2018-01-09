@@ -1,3 +1,25 @@
+2017/12/27
+	更新了wiki网页上的数据信息。
+	重新产生MC：4190,4200,4237,4260 okay; 
+
+2017/12/26
+	为了验证digamma的产生子modification的问题；	
+		之前生成了去除了m(ee)cut条件的mc；但是似乎忘记Make了。今天发现其实和原来的MC是一样的。
+		根据的结果是有10%的截面差别。
+	
+
+2017/12/25
+	memo：
+		-tanggy tracking efficiency
+		-digamma cross check 2%的差别。
+			重新产生了不带m(ee) cut的双光子事例，试试。
+			和Babayaga v3.5的结果有较大差别。
+
+2017/12/23
+	dig mc files other than scan all good;
+	dig4260 data not exist, 
+	4360 run no wrong
+
 2017/12/18
 	v3.5检查：	rec的事例数有问题，导致MC事例数减半。4200的截面没放，重跑；
 	4009, scan3810, scan3900mc: run号错误，需重新产生。	txtfiles/Dec18对应结果可能需要更正
