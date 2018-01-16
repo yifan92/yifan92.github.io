@@ -1,0 +1,246 @@
+{
+//=========Macro generated from canvas: c1/Canvas
+//=========  (Tue Jan 16 12:28:46 2018) by ROOT version5.34/09
+   TCanvas *c1 = new TCanvas("c1", "Canvas",30,32,800,800);
+   gStyle->SetOptStat(0);
+   c1->Range(0,0,1,1);
+   c1->SetFillColor(0);
+   c1->SetBorderMode(0);
+   c1->SetBorderSize(2);
+   c1->SetFrameBorderMode(0);
+  
+// ------------>Primitives in pad: pad1
+   TPad *pad1 = new TPad("pad1", "the pad with distributions",0.02,0.3,0.98,0.95);
+   pad1->Draw();
+   pad1->cd();
+   pad1->Range(-50,2.334373,50,5.28628);
+   pad1->SetFillColor(0);
+   pad1->SetBorderMode(0);
+   pad1->SetBorderSize(2);
+   pad1->SetLogy();
+   pad1->SetFrameBorderMode(0);
+   pad1->SetFrameBorderMode(0);
+   
+   TH1D *hdata_phidiff_bhabha = new TH1D("hdata_phidiff_bhabha","180-|#Delta(#phi)|",100,-40,40);
+   hdata_phidiff_bhabha->SetBinContent(38,21815);
+   hdata_phidiff_bhabha->SetBinContent(39,46334);
+   hdata_phidiff_bhabha->SetBinContent(40,29859);
+   hdata_phidiff_bhabha->SetBinContent(41,3649);
+   hdata_phidiff_bhabha->SetBinContent(42,1322);
+   hdata_phidiff_bhabha->SetBinContent(43,1306);
+   hdata_phidiff_bhabha->SetBinContent(44,882);
+   hdata_phidiff_bhabha->SetBinContent(57,887);
+   hdata_phidiff_bhabha->SetBinContent(58,1394);
+   hdata_phidiff_bhabha->SetBinContent(59,1507);
+   hdata_phidiff_bhabha->SetBinContent(60,2981);
+   hdata_phidiff_bhabha->SetBinContent(61,27341);
+   hdata_phidiff_bhabha->SetBinContent(62,51479);
+   hdata_phidiff_bhabha->SetBinContent(63,24998);
+   hdata_phidiff_bhabha->SetEntries(215754);
+
+   Int_t ci;   // for color index setting
+   ci = TColor::GetColor("#ff0000");
+   hdata_phidiff_bhabha->SetLineColor(ci);
+
+   ci = TColor::GetColor("#ff0000");
+   hdata_phidiff_bhabha->SetMarkerColor(ci);
+   hdata_phidiff_bhabha->SetMarkerStyle(4);
+   hdata_phidiff_bhabha->SetMarkerSize(0.5);
+   hdata_phidiff_bhabha->GetXaxis()->SetTitle("180^(#circ) - |#Delta(#phi)|");
+   hdata_phidiff_bhabha->GetXaxis()->SetLabelFont(42);
+   hdata_phidiff_bhabha->GetXaxis()->SetLabelSize(0.035);
+   hdata_phidiff_bhabha->GetXaxis()->SetTitleSize(0.035);
+   hdata_phidiff_bhabha->GetXaxis()->SetTitleFont(42);
+   hdata_phidiff_bhabha->GetYaxis()->SetTitle("NEvents");
+   hdata_phidiff_bhabha->GetYaxis()->SetLabelFont(42);
+   hdata_phidiff_bhabha->GetYaxis()->SetLabelSize(0.035);
+   hdata_phidiff_bhabha->GetYaxis()->SetTitleSize(0.035);
+   hdata_phidiff_bhabha->GetYaxis()->SetTitleFont(42);
+   hdata_phidiff_bhabha->GetZaxis()->SetLabelFont(42);
+   hdata_phidiff_bhabha->GetZaxis()->SetLabelSize(0.035);
+   hdata_phidiff_bhabha->GetZaxis()->SetTitleSize(0.035);
+   hdata_phidiff_bhabha->GetZaxis()->SetTitleFont(42);
+   hdata_phidiff_bhabha->Draw("EP");
+   
+   TH1D *hmc_phidiff_bhabha = new TH1D("hmc_phidiff_bhabha","180-|#Delta(#phi)|",100,-40,40);
+   hmc_phidiff_bhabha->SetBinContent(38,21732.78);
+   hmc_phidiff_bhabha->SetBinContent(39,46376.66);
+   hmc_phidiff_bhabha->SetBinContent(40,31001.36);
+   hmc_phidiff_bhabha->SetBinContent(41,3652.658);
+   hmc_phidiff_bhabha->SetBinContent(42,1093.663);
+   hmc_phidiff_bhabha->SetBinContent(43,812.6897);
+   hmc_phidiff_bhabha->SetBinContent(44,465.9184);
+   hmc_phidiff_bhabha->SetBinContent(57,471.2533);
+   hmc_phidiff_bhabha->SetBinContent(58,828.6945);
+   hmc_phidiff_bhabha->SetBinContent(59,1186.136);
+   hmc_phidiff_bhabha->SetBinContent(60,3016.021);
+   hmc_phidiff_bhabha->SetBinContent(61,27699.03);
+   hmc_phidiff_bhabha->SetBinContent(62,52102.83);
+   hmc_phidiff_bhabha->SetBinContent(63,25314.31);
+   hmc_phidiff_bhabha->SetEntries(121325);
+
+   ci = TColor::GetColor("#0000ff");
+   hmc_phidiff_bhabha->SetLineColor(ci);
+   hmc_phidiff_bhabha->GetXaxis()->SetLabelFont(42);
+   hmc_phidiff_bhabha->GetXaxis()->SetLabelSize(0.035);
+   hmc_phidiff_bhabha->GetXaxis()->SetTitleSize(0.035);
+   hmc_phidiff_bhabha->GetXaxis()->SetTitleFont(42);
+   hmc_phidiff_bhabha->GetYaxis()->SetLabelFont(42);
+   hmc_phidiff_bhabha->GetYaxis()->SetLabelSize(0.035);
+   hmc_phidiff_bhabha->GetYaxis()->SetTitleSize(0.035);
+   hmc_phidiff_bhabha->GetYaxis()->SetTitleFont(42);
+   hmc_phidiff_bhabha->GetZaxis()->SetLabelFont(42);
+   hmc_phidiff_bhabha->GetZaxis()->SetLabelSize(0.035);
+   hmc_phidiff_bhabha->GetZaxis()->SetTitleSize(0.035);
+   hmc_phidiff_bhabha->GetZaxis()->SetTitleFont(42);
+   hmc_phidiff_bhabha->Draw("EPsame");
+   
+   TH1D *hdata_phidiff_bhabha = new TH1D("hdata_phidiff_bhabha","180-|#Delta(#phi)|",100,-40,40);
+   hdata_phidiff_bhabha->SetBinContent(38,21815);
+   hdata_phidiff_bhabha->SetBinContent(39,46334);
+   hdata_phidiff_bhabha->SetBinContent(40,29859);
+   hdata_phidiff_bhabha->SetBinContent(41,3649);
+   hdata_phidiff_bhabha->SetBinContent(42,1322);
+   hdata_phidiff_bhabha->SetBinContent(43,1306);
+   hdata_phidiff_bhabha->SetBinContent(44,882);
+   hdata_phidiff_bhabha->SetBinContent(57,887);
+   hdata_phidiff_bhabha->SetBinContent(58,1394);
+   hdata_phidiff_bhabha->SetBinContent(59,1507);
+   hdata_phidiff_bhabha->SetBinContent(60,2981);
+   hdata_phidiff_bhabha->SetBinContent(61,27341);
+   hdata_phidiff_bhabha->SetBinContent(62,51479);
+   hdata_phidiff_bhabha->SetBinContent(63,24998);
+   hdata_phidiff_bhabha->SetEntries(215754);
+
+   ci = TColor::GetColor("#ff0000");
+   hdata_phidiff_bhabha->SetLineColor(ci);
+
+   ci = TColor::GetColor("#ff0000");
+   hdata_phidiff_bhabha->SetMarkerColor(ci);
+   hdata_phidiff_bhabha->SetMarkerStyle(4);
+   hdata_phidiff_bhabha->SetMarkerSize(0.5);
+   hdata_phidiff_bhabha->GetXaxis()->SetTitle("180^(#circ) - |#Delta(#phi)|");
+   hdata_phidiff_bhabha->GetXaxis()->SetLabelFont(42);
+   hdata_phidiff_bhabha->GetXaxis()->SetLabelSize(0.035);
+   hdata_phidiff_bhabha->GetXaxis()->SetTitleSize(0.035);
+   hdata_phidiff_bhabha->GetXaxis()->SetTitleFont(42);
+   hdata_phidiff_bhabha->GetYaxis()->SetTitle("NEvents");
+   hdata_phidiff_bhabha->GetYaxis()->SetLabelFont(42);
+   hdata_phidiff_bhabha->GetYaxis()->SetLabelSize(0.035);
+   hdata_phidiff_bhabha->GetYaxis()->SetTitleSize(0.035);
+   hdata_phidiff_bhabha->GetYaxis()->SetTitleFont(42);
+   hdata_phidiff_bhabha->GetZaxis()->SetLabelFont(42);
+   hdata_phidiff_bhabha->GetZaxis()->SetLabelSize(0.035);
+   hdata_phidiff_bhabha->GetZaxis()->SetTitleSize(0.035);
+   hdata_phidiff_bhabha->GetZaxis()->SetTitleFont(42);
+   hdata_phidiff_bhabha->Draw("EPsame");
+   
+   TLegend *leg = new TLegend(0.1,0.75,0.25,0.875,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(19);
+   leg->SetFillStyle(1001);
+   TLegendEntry *entry=leg->AddEntry("hdata_phidiff_bhabha","Data","l");
+
+   ci = TColor::GetColor("#ff0000");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry=leg->AddEntry("hmc_phidiff_bhabha","Babayaga NLO","l");
+
+   ci = TColor::GetColor("#0000ff");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   leg->Draw();
+   
+   TPaveText *pt = new TPaveText(0.4193342,0.9352152,0.5806658,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   TText *text = pt->AddText("180-|#Delta(#phi)|");
+   pt->Draw();
+   pad1->Modified();
+   c1->cd();
+  
+// ------------>Primitives in pad: pad2
+   pad2 = new TPad("pad2", "the pad with ratios",0.02,0.02,0.98,0.3);
+   pad2->Draw();
+   pad2->cd();
+   pad2->Range(-50,-25,50,25);
+   pad2->SetFillColor(0);
+   pad2->SetBorderMode(0);
+   pad2->SetBorderSize(2);
+   pad2->SetGridy();
+   pad2->SetFrameBorderMode(0);
+   pad2->SetFrameBorderMode(0);
+   
+   TH1D *hist_ratio6 = new TH1D("hist_ratio6","",100,-40,40);
+   hist_ratio6->SetBinContent(38,0.3783185);
+   hist_ratio6->SetBinContent(39,-0.09199108);
+   hist_ratio6->SetBinContent(40,-3.684856);
+   hist_ratio6->SetBinContent(41,-0.1001424);
+   hist_ratio6->SetBinContent(42,20.87795);
+   hist_ratio6->SetBinContent(43,60.70019);
+   hist_ratio6->SetBinContent(44,89.30162);
+   hist_ratio6->SetBinContent(57,88.21961);
+   hist_ratio6->SetBinContent(58,68.21556);
+   hist_ratio6->SetBinContent(59,27.051);
+   hist_ratio6->SetBinContent(60,-1.161172);
+   hist_ratio6->SetBinContent(61,-1.292557);
+   hist_ratio6->SetBinContent(62,-1.197314);
+   hist_ratio6->SetBinContent(63,-1.249515);
+   hist_ratio6->SetBinError(38,1.360512);
+   hist_ratio6->SetBinError(39,0.9280693);
+   hist_ratio6->SetBinError(40,1.104408);
+   hist_ratio6->SetBinError(41,3.306724);
+   hist_ratio6->SetBinError(42,6.97963);
+   hist_ratio6->SetBinError(43,10.08375);
+   hist_ratio6->SetBinError(44,15.14385);
+   hist_ratio6->SetBinError(57,14.98991);
+   hist_ratio6->SetBinError(58,10.34876);
+   hist_ratio6->SetBinError(59,6.961781);
+   hist_ratio6->SetBinError(60,3.610014);
+   hist_ratio6->SetBinError(61,1.190042);
+   hist_ratio6->SetBinError(62,0.8683159);
+   hist_ratio6->SetBinError(63,1.245241);
+   hist_ratio6->SetMinimum(-20);
+   hist_ratio6->SetMaximum(20);
+   hist_ratio6->SetEntries(100);
+   hist_ratio6->SetStats(0);
+
+   ci = TColor::GetColor("#000099");
+   hist_ratio6->SetLineColor(ci);
+   hist_ratio6->SetMarkerStyle(8);
+   hist_ratio6->SetMarkerSize(0.5);
+   hist_ratio6->GetXaxis()->SetLabelFont(42);
+   hist_ratio6->GetXaxis()->SetLabelSize(0.035);
+   hist_ratio6->GetXaxis()->SetTitleSize(0.035);
+   hist_ratio6->GetXaxis()->SetTitleFont(42);
+   hist_ratio6->GetYaxis()->SetTitle("N_{data}/N_{MC} (%)");
+   hist_ratio6->GetYaxis()->SetLabelFont(42);
+   hist_ratio6->GetYaxis()->SetLabelSize(0.035);
+   hist_ratio6->GetYaxis()->SetTitleSize(0.07);
+   hist_ratio6->GetYaxis()->SetTitleOffset(0.5);
+   hist_ratio6->GetYaxis()->SetTitleFont(42);
+   hist_ratio6->GetZaxis()->SetLabelFont(42);
+   hist_ratio6->GetZaxis()->SetLabelSize(0.035);
+   hist_ratio6->GetZaxis()->SetTitleSize(0.035);
+   hist_ratio6->GetZaxis()->SetTitleFont(42);
+   hist_ratio6->Draw("");
+   pad2->Modified();
+   c1->cd();
+   c1->Modified();
+   c1->cd();
+   c1->SetSelected(c1);
+}

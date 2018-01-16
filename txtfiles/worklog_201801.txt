@@ -1,3 +1,14 @@
+2018/1/16
+可能会对造成破坏性改动，所以将Tracking.C和Luminosity.C备份到bkp
+bhabha delta_phi 5~10度有异常
+
+2018/1/15
+4190: NoMDC.root, NoMDC0.root, NoMDC_babayaga.root
+
+Comparing 3.5,NLO,NLO no cut
+	new energy point: 4190, 4200
+	old energy point: 4530, 4210scan
+
 2018/1/8:
 
 Difference:
