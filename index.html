@@ -167,6 +167,8 @@ Error message and password prompt
 
 <li>2018.1.16</li>
 
+<li>2018.1.30</li>
+
 <li>2018.1.9</li>
 
 <li>About Tiddlywiki</li>
@@ -178,6 +180,8 @@ Error message and password prompt
 <li>bash_example1</li>
 
 <li>bash_example2</li>
+
+<li>bash_example3</li>
 
 <li>Bash_Functions</li>
 
@@ -8279,13 +8283,13 @@ Error message and password prompt
 <div created="20170411005206005" creator="Yifan" modified="20170412030123100" modifier="Yifan" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
-<div created="20170407054919167" creator="Yifan" modified="20180116062123378" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/Open</pre>
+<div created="20170407054919167" creator="Yifan" modified="20180130035242732" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList [[Work Log]] 2018.1.16" title="$:/StoryList">
+<div list="ContentList [[Work Log]] 2018.1.30" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8727,6 +8731,35 @@ same ~DeltaPhi shape with partial data
 [img width=400 [./img/Worklog/Luminosity/18Jan/Trk4190/dig_mee.png]]
 </pre>
 </div>
+<div created="20180130033055407" creator="Yifan" modified="20180130053056754" modifier="Yifan" title="2018.1.30">
+<pre>重写的Algorithm有bug，正在检查。
+
+----
+
+Output of Bhabha EMC-only.
+
+[img[./img/Worklog/Luminosity/180130/debug_logBhabha.png]]
+
+Output of Digamma.
+
+[img[./img/Worklog/Luminosity/180130/debug_logDigamma.png]]
+
+检查后发现，对应的事例双track信息相同。重复填写。
+
+----
+
+检查脚本应该没问题，问题应该在算法。
+
+[img[./img/Worklog/Luminosity/180130/debug_script0.png]]
+[img[./img/Worklog/Luminosity/180130/debug_script.png]]
+
+----
+
+尚未检查出算法问题。
+
+[img[./img/Worklog/Luminosity/180130/debug1.png]]
+[img[./img/Worklog/Luminosity/180130/debug2.png]]</pre>
+</div>
 <div created="20180109062550622" creator="Yifan" modified="20180109083013103" modifier="Yifan" title="2018.1.9">
 <pre>不同Babayaga MC的结果是相近的：NLO, NLO no cut at 3.8 ~GeV, v3.5对结果的影响约为0.5%。
 
@@ -8763,7 +8796,7 @@ same ~DeltaPhi shape with partial data
 #[[A Cheat Sheet|http://www.personal.psu.edu/kkm11/files/Tiddlywiki%20Guide.pdf]]
 #[[Katex|http://tiddlywiki.com/plugins/tiddlywiki/katex/]]: a plugin for latex math formats. Already integrated.</pre>
 </div>
-<div created="20170407044557916" creator="Yifan" modified="20170413135740290" modifier="Yifan" title="Bash Scripts">
+<div created="20170407044557916" creator="Yifan" modified="20180121073919600" modifier="Yifan" title="Bash Scripts">
 <pre>----
 !The Basics
 A bash script start with the header `#!/bin/bash `, then it can be as simple as a collection of [[linux command lines|Linux Commands]]. But there're more to it.
@@ -8796,7 +8829,8 @@ A bash script start with the header `#!/bin/bash `, then it can be as simple as 
 ----
 !Useful Codes
 *[[Delete Condor Jobs|bash_example1]]
-*[[Save/Load Paths|bash_example2]]</pre>
+*[[Save/Load Paths|bash_example2]]
+*[[Detect Failed Jobs from Log and re-submit|bash_example3]]</pre>
 </div>
 <div created="20170407051314544" creator="Yifan" modified="20170413133018667" modifier="Yifan" title="Bash_Conditions">
 <pre>!!Conditions
@@ -8888,6 +8922,13 @@ alias pd1='cat ~/scripts/.saved_dir1'
 alias pd2='cat ~/scripts/.saved_dir2'
 alias pd3='cat ~/scripts/.saved_dir3'
 alias pd='echo &quot;Print Saved Paths:&quot;; for i in `seq 1 9`; do  echo $i: `cat ~/scripts/.saved_dir$i`; done'
+```</pre>
+</div>
+<div created="20180121073924793" creator="Yifan" modified="20180121074005423" modifier="Yifan" title="bash_example3">
+<pre>Detect failed jobs from logfile, and re-submit the jobs.
+
+```
+for x in `cat logfiles/dig4210 | sed '/success/d' | awk -F'.' '{print $1}'`; do boss.condor $x.txt; done
 ```</pre>
 </div>
 <div created="20170407051401206" creator="Yifan" modified="20170407053656579" modifier="Yifan" title="Bash_Functions">
@@ -10902,7 +10943,7 @@ https://dirac.ihep.ac.cn/DIRAC/
 ----
 #[ext[Book by Grupen|./materials/books/Particle_Detectors_Grupen.pdf]]</pre>
 </div>
-<div created="20170410120718342" creator="Yifan" modified="20171212065308367" modifier="Yifan" title="Physics Resources">
+<div created="20170410120718342" creator="Yifan" modified="20180130035325166" modifier="Yifan" title="Physics Resources">
 <pre>----
 !!Charmonium
 
@@ -10917,6 +10958,8 @@ https://dirac.ihep.ac.cn/DIRAC/
 
 *[[Charmonium Group Page|http://docbes3.ihep.ac.cn/~charmoniumgroup/index.php/Main_Page]]
 *[[Charmonium Indico|http://indico.ihep.ac.cn/category/52/]]
+*[[Charmonium Round Table|http://indico.ihep.ac.cn/category/507/]]
+
 
 
 ----
@@ -13091,7 +13134,7 @@ Default files:
 
 [[Config Example|http://vimconfig.com/]]</pre>
 </div>
-<div created="20170426113120964" creator="Yifan" modified="20180116012902383" modifier="Yifan" title="Work Log">
+<div created="20170426113120964" creator="Yifan" modified="20180130033051025" modifier="Yifan" title="Work Log">
 <pre>#[[Worklog_gKsKpi]]
 #[[Worklog_Luminosity]]
 #[[Worklog_MCProduction]]
@@ -13104,6 +13147,7 @@ Default files:
 #[[2017.11.28]]
 #[[2018.1.9]]
 #[[2018.1.16]]
+#[[2018.1.30]]
 
 ----
 Chronicle txt Files

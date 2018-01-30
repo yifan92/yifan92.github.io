@@ -1,3 +1,17 @@
+2018/1/23
+-mtrk_mdc,mtrk_ext时引入了bug，对极少数的事例，track数可能极大（>100,>300），造成Segmentation Violation错误，中断程序运行。
+
+2018/1/20
+-上次电脑异常关机，导致我在notepad++未存的临时文件丢失了。以后应当注意，需要将会议记录保存下来。
+
+检查Digamma的亮度问题
+	-Luminosity Alg里需要存储EMC Shower是否为外推径迹的信息。
+		-对于Cluster large, 1%效率损失；
+		-对于Cluster small, 4%效率损失；
+	-另外需要增加粗选条件，以减小文件体积和script时间。
+	-如果能将digamma的文件体积压缩到足够小的话，应当统一两种mode产生的文件。	(需要改存储变量名，可能太繁琐了。算了吧。)
+	-MC需要更新吗？
+
 2018/1/16
 可能会对造成破坏性改动，所以将Tracking.C和Luminosity.C备份到bkp
 bhabha delta_phi 5~10度有异常
