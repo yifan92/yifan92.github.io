@@ -1,3 +1,28 @@
+2018/2/27
+周会：
+cluster 没有mdc信息 -> 说明是辐射光子 ->研究这部分事例
+
+-亮度
+	EMC-only, digamma和standard result间的差异的检查：
+		-EMC-only和standard result间的差异可以由deltaphi in [5,10]的事例来解释；应进一步检查相关分布
+		-再重新检查不同的产生子带来的影响。
+		-两种方法的1.5%结果差异在tracking.C的test的1m事例中已经显现；可以更改条件仔细研究
+			-1.5的差异可以认为是来自pp和pm的requirement。
+	
+		-突然前台跑事例数变慢了.		why?
+		
+
+-产生MC for run 33463:
+	-强子事例： 135750		
+	-Bhabha 55416			
+	-dimu 6900
+	-digamma 26330			
+	-ditau 65765
+	
+	经验证，无法在ganga上产生，但是可以在前台产生。可能说明ganga所调用的run信息库没有更新。
+	改用前台产生；但是hadrons事例前台跑phokhara不成功。其余事例成功放入对应文件夹
+	
+
 2018/2/5
 -4246: run 50721 has problem with data;
 -4190: mixed in the data files from previous runs;	generating again

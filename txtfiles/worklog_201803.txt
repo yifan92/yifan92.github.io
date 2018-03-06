@@ -1,0 +1,37 @@
+2018/3/5
+	Tracking.C运行时间仍然很长
+		-将Fill hists部分改写成函数，运行时间缩短
+		
+	分布图：
+		-deltaphi in [5,10] 的cos(theta)分布，在[0.6,0.8]区间data有明显的多出的事例
+		-这部分事例集中在 |E1 - E2|>0.1 GeV区域, Ep,Em偏低处
+		-要求事例同时通过MDC+EMC筛选，则pp,pm分布自然大于1.9 GeV?	
+			-是E>1.8的要求引起的？			confirmed, by looking at the distribution without E requirement
+
+2018/3/4:
+	检查脚本运行时间： (300k events, 1000 means 1s)
+		all code: 1080 -> 67340, 980->69030
+		stop before filling histograms: 970->64280, 1080->64310
+		stop before counting: 1160->61620, 1120->65050
+		empty iteration: 1060->1460 (2m events)
+		just get entries: 1170->1300
+		before iterating on criteria: 1190->1420
+		nmax_ics from 30 to 26: 1270->72780, 1170->73340
+		
+		commenting out codes of checking from (ics==20) to (ics==25): 1170->3960
+		commenting out codes of checking ics==25: 970->62610, 1280->73360
+		commenting out codes of checking from ics==23 to ics==25: 1280->69450
+			-seems that different combination determines whether the code is slow or not
+			-slow: (20,21,25), (20,21,22), (21,22)
+			-fast: (20,21), (20,22), (22), (21)
+			
+		不是代码局部的问题。似乎是这部分代码太长，导致解释器性能不足。	
+			
+	临时解决方案：comment out 几个不用的criteria
+		ics=10/11/12 		E cut 1.8/1.9/1.95
+		ics=4 				alternative cos
+		ics=5				alternative E
+		ics=13,14			delta phi in [5,10], [10,40]
+		
+2018/3/3:
+	redid sim/rec for all data points other than scans.
