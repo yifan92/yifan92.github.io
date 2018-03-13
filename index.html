@@ -173,6 +173,8 @@ Error message and password prompt
 
 <li>2018.2.6</li>
 
+<li>2018.3.13</li>
+
 <li>2018.3.6</li>
 
 <li>About Tiddlywiki</li>
@@ -186,6 +188,8 @@ Error message and password prompt
 <li>bash_example2</li>
 
 <li>bash_example3</li>
+
+<li>bash_example4</li>
 
 <li>Bash_Functions</li>
 
@@ -401,6 +405,8 @@ Error message and password prompt
 
 <li>Working with Condor</li>
 
+<li>worklog_180313_single_event_info</li>
+
 <li>Worklog_gKsKpi</li>
 
 <li>Worklog_gKsKpi_1</li>
@@ -438,6 +444,16 @@ Error message and password prompt
 <li>Worklog_Luminosity_part6</li>
 
 <li>Worklog_MCProduction</li>
+
+<li>worklog_picgroup_1</li>
+
+<li>worklog_picgroup_2</li>
+
+<li>worklog_picgroup_3</li>
+
+<li>worklog_picgroup_4</li>
+
+<li>worklog_picgroup_5</li>
 
 <li>Works_of_Others</li>
 
@@ -8299,7 +8315,7 @@ Error message and password prompt
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList [[Work Log]] 2018.3.6" title="$:/StoryList">
+<div list="2018.3.13 worklog_180313_single_event_info worklog_picgroup_5" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8816,7 +8832,59 @@ Output of Digamma.
 Distributions: [[2018.1.16]]
 </pre>
 </div>
-<div created="20180306032932963" creator="Yifan" modified="20180306071303484" modifier="Yifan" title="2018.3.6">
+<div created="20180313020018683" creator="Yifan" modified="20180313065030336" modifier="Yifan" title="2018.3.13">
+<pre>| !MC sample | ~BhabhaNLO No M(ee) cut |
+| !Using Info of MDC+EMC method | -  |
+| !Using Info of EMC-only method | standard cuts |
+
+[[graphs|worklog_picgroup_1]]
+
+----
+
+| !MC sample | ~BhabhaNLO with M(ee) cut |
+| !Using Info of MDC+EMC method | One of E in [0.5,1.8]  |
+| !Using Info of EMC-only method | standard cuts |
+
+[img width=300 [./img/Worklog/Luminosity/180306/ics0/bha_Ep_mdc.png]]
+
+[[graphs|worklog_picgroup_3]]
+
+[[single event info|worklog_180313_single_event_info]]
+
+----
+
+| !MC sample | ~BhabhaNLO with M(ee) cut |
+| !Using Info of MDC+EMC method | m(ee)&gt;3.8  |
+| !Using Info of EMC-only method | standard cuts |
+
+test lum: -1.5%
+
+[[graphs|worklog_picgroup_4]]
+
+
+
+
+
+----
+
+| !MC sample | ~BhabhaNLO No M(ee) cut |
+| !Using Info of MDC+EMC method | m(ee)&gt;3.8  |
+| !Using Info of EMC-only method | standard cuts |
+
+[[graphs|worklog_picgroup_5]]
+
+----
+
+
+| !MC sample | ~BhabhaNLO No M(ee) cut |
+| !Using Info of MDC+EMC method | One of p&lt;1.9  |
+| !Using Info of EMC-only method | standard cuts |
+
+[[graphs|worklog_picgroup_2]]
+
+----</pre>
+</div>
+<div created="20180306032932963" creator="Yifan" modified="20180313023118535" modifier="Yifan" title="2018.3.6">
 <pre>----
 
 !!Events Number
@@ -8833,7 +8901,11 @@ Distributions: [[2018.1.16]]
 ----
 !!Standard Distribution
 
-E1, E2, Cos(theta 1), Cos(theta 2), Delta(phi), 
+
+| !MC sample | ~BhabhaNLO with M(ee) cut |
+| !Using Info of MDC+EMC method | -  |
+| !Using Info of EMC-only method | standard cuts |
+
 
 [img width=300 [./img/Worklog/Luminosity/180306/ics0/bha_Ep_cut1.png]]
 [img width=300 [./img/Worklog/Luminosity/180306/ics0/bha_Em_cut1.png]]
@@ -8841,7 +8913,6 @@ E1, E2, Cos(theta 1), Cos(theta 2), Delta(phi),
 [img width=300 [./img/Worklog/Luminosity/180306/ics0/bha_ct2_cut1.png]]
 [img width=300 [./img/Worklog/Luminosity/180306/ics0/bha_phi_diff_cut1.png]]
 
-Cos(theta1)+Cos(theta2), (E1 - E2), pp, pm, mee
 
 [img width=300 [./img/Worklog/Luminosity/180306/ics0/bha_deltaCos.png]]
 [img width=300 [./img/Worklog/Luminosity/180306/ics0/bha_deltaE.png]]
@@ -8854,7 +8925,9 @@ Cos(theta1)+Cos(theta2), (E1 - E2), pp, pm, mee
 ----
 !!Less than 2 MDC Tracks
 
-E1, E2, Cos(theta 1), Cos(theta 2), Delta(phi), 
+| !MC sample | ~BhabhaNLO with M(ee) cut |
+| !Using Info of MDC+EMC method | -  |
+| !Using Info of EMC-only method | standard cuts; n(mdc trks)&lt;2 |
 
 [img width=300 [./img/Worklog/Luminosity/180306/ics19/bha_Ep_cut1.png]]
 [img width=300 [./img/Worklog/Luminosity/180306/ics19/bha_Em_cut1.png]]
@@ -8862,7 +8935,6 @@ E1, E2, Cos(theta 1), Cos(theta 2), Delta(phi),
 [img width=300 [./img/Worklog/Luminosity/180306/ics19/bha_ct2_cut1.png]]
 [img width=300 [./img/Worklog/Luminosity/180306/ics19/bha_phi_diff_cut1.png]]
 
-Cos(theta1)+Cos(theta2), (E1 - E2), pp, pm, mee
 
 [img width=300 [./img/Worklog/Luminosity/180306/ics19/bha_deltaCos.png]]
 [img width=300 [./img/Worklog/Luminosity/180306/ics19/bha_deltaE.png]]
@@ -8876,15 +8948,15 @@ Cos(theta1)+Cos(theta2), (E1 - E2), pp, pm, mee
 
 !!Delta(Phi) in [5,10]
 
-E1, E2, Cos(theta 1), Cos(theta 2), Delta(phi), 
+| !MC sample | ~BhabhaNLO with M(ee) cut |
+| !Using Info of MDC+EMC method | -  |
+| !Using Info of EMC-only method | E, cos(theta) cuts; deltaphi in [5,10] |
 
 [img width=300 [./img/Worklog/Luminosity/180306/ics13/bha_Ep_cut1.png]]
 [img width=300 [./img/Worklog/Luminosity/180306/ics13/bha_Em_cut1.png]]
 [img width=300 [./img/Worklog/Luminosity/180306/ics13/bha_ct1_cut1.png]]
 [img width=300 [./img/Worklog/Luminosity/180306/ics13/bha_ct2_cut1.png]]
 [img width=300 [./img/Worklog/Luminosity/180306/ics13/bha_phi_diff_cut1.png]]
-
-Cos(theta1)+Cos(theta2), (E1 - E2), pp, pm, mee
 
 [img width=300 [./img/Worklog/Luminosity/180306/ics13/bha_deltaCos.png]]
 [img width=300 [./img/Worklog/Luminosity/180306/ics13/bha_deltaE.png]]
@@ -8897,15 +8969,15 @@ Cos(theta1)+Cos(theta2), (E1 - E2), pp, pm, mee
 ----
 !!Delta(Phi) in [10,40]
 
-E1, E2, Cos(theta 1), Cos(theta 2), Delta(phi), 
+| !MC sample | ~BhabhaNLO with M(ee) cut |
+| !Using Info of MDC+EMC method | -  |
+| !Using Info of EMC-only method | E, cos(theta) cuts; deltaphi in [10,40] |
 
 [img width=300 [./img/Worklog/Luminosity/180306/ics14/bha_Ep_cut1.png]]
 [img width=300 [./img/Worklog/Luminosity/180306/ics14/bha_Em_cut1.png]]
 [img width=300 [./img/Worklog/Luminosity/180306/ics14/bha_ct1_cut1.png]]
 [img width=300 [./img/Worklog/Luminosity/180306/ics14/bha_ct2_cut1.png]]
 [img width=300 [./img/Worklog/Luminosity/180306/ics14/bha_phi_diff_cut1.png]]
-
-Cos(theta1)+Cos(theta2), (E1 - E2), pp, pm, mee
 
 [img width=300 [./img/Worklog/Luminosity/180306/ics14/bha_deltaCos.png]]
 [img width=300 [./img/Worklog/Luminosity/180306/ics14/bha_deltaE.png]]
@@ -8918,7 +8990,9 @@ Cos(theta1)+Cos(theta2), (E1 - E2), pp, pm, mee
 ----
 !!Extra cut on P, cos(theta) of MDC+EMC method
 
-E1, E2, Cos(theta 1), Cos(theta 2), Delta(phi), 
+| !MC sample | ~BhabhaNLO with M(ee) cut |
+| !Using Info of MDC+EMC method | P cut |
+| !Using Info of EMC-only method | standard cuts |
 
 [img width=300 [./img/Worklog/Luminosity/180306/ics20/bha_Ep_cut1.png]]
 [img width=300 [./img/Worklog/Luminosity/180306/ics20/bha_Em_cut1.png]]
@@ -8939,7 +9013,9 @@ Cos(theta1)+Cos(theta2), (E1 - E2), pp, pm, mee
 ----
 !!Failing P cut of MDC+EMC method
 
-E1, E2, Cos(theta 1), Cos(theta 2), Delta(phi), 
+| !MC sample | ~BhabhaNLO with M(ee) cut |
+| !Using Info of MDC+EMC method | one of P&lt;1.9 |
+| !Using Info of EMC-only method | standard cuts |
 
 [img width=300 [./img/Worklog/Luminosity/180306/ics21/bha_Ep_cut1.png]]
 [img width=300 [./img/Worklog/Luminosity/180306/ics21/bha_Em_cut1.png]]
@@ -8947,7 +9023,6 @@ E1, E2, Cos(theta 1), Cos(theta 2), Delta(phi),
 [img width=300 [./img/Worklog/Luminosity/180306/ics21/bha_ct2_cut1.png]]
 [img width=300 [./img/Worklog/Luminosity/180306/ics21/bha_phi_diff_cut1.png]]
 
-Cos(theta1)+Cos(theta2), (E1 - E2), pp, pm, mee
 
 [img width=300 [./img/Worklog/Luminosity/180306/ics21/bha_deltaCos.png]]
 [img width=300 [./img/Worklog/Luminosity/180306/ics21/bha_deltaE.png]]
@@ -8969,7 +9044,7 @@ Cos(theta1)+Cos(theta2), (E1 - E2), pp, pm, mee
 #[[A Cheat Sheet|http://www.personal.psu.edu/kkm11/files/Tiddlywiki%20Guide.pdf]]
 #[[Katex|http://tiddlywiki.com/plugins/tiddlywiki/katex/]]: a plugin for latex math formats. Already integrated.</pre>
 </div>
-<div created="20170407044557916" creator="Yifan" modified="20180121073919600" modifier="Yifan" title="Bash Scripts">
+<div created="20170407044557916" creator="Yifan" modified="20180312091005379" modifier="Yifan" title="Bash Scripts">
 <pre>----
 !The Basics
 A bash script start with the header `#!/bin/bash `, then it can be as simple as a collection of [[linux command lines|Linux Commands]]. But there're more to it.
@@ -9003,7 +9078,8 @@ A bash script start with the header `#!/bin/bash `, then it can be as simple as 
 !Useful Codes
 *[[Delete Condor Jobs|bash_example1]]
 *[[Save/Load Paths|bash_example2]]
-*[[Detect Failed Jobs from Log and re-submit|bash_example3]]</pre>
+*[[Detect Failed Jobs from Log and re-submit|bash_example3]]
+*[[Salvage partially corrupted data|bash_example4]]</pre>
 </div>
 <div created="20170407051314544" creator="Yifan" modified="20170413133018667" modifier="Yifan" title="Bash_Conditions">
 <pre>!!Conditions
@@ -9103,6 +9179,29 @@ alias pd='echo &quot;Print Saved Paths:&quot;; for i in `seq 1 9`; do  echo $i: 
 ```
 for x in `cat logfiles/dig4210 | sed '/success/d' | awk -F'.' '{print $1}'`; do boss.condor $x.txt; done
 ```</pre>
+</div>
+<div created="20180312091012297" creator="Yifan" modified="20180312091540545" modifier="Yifan" title="bash_example4">
+<pre>If part of the MC data failed to be generated, we randomly reused some other data to get the total number right.
+
+1. Get the number of bad files N
+
+```
+du MC_* | grep ^4 | wc -l   
+```
+
+2. Remove these bad files
+
+```
+rm `du MC_* | grep ^4 | awk '{print$2}'` 
+```
+
+3. Duplicate the first N good files, and `hadd`
+
+```
+for x in `ls MC_* | head -N`; do cp $x s$x; done
+hadd result.root MC_.*dst sMC_*.dst
+```
+</pre>
 </div>
 <div created="20170407051401206" creator="Yifan" modified="20170407053656579" modifier="Yifan" title="Bash_Functions">
 <pre>!Functions:
@@ -13422,7 +13521,7 @@ Default files:
 
 [[Config Example|http://vimconfig.com/]]</pre>
 </div>
-<div created="20170426113120964" creator="Yifan" modified="20180306032927802" modifier="Yifan" title="Work Log">
+<div created="20170426113120964" creator="Yifan" modified="20180313015953382" modifier="Yifan" title="Work Log">
 <pre>#[[Worklog_gKsKpi]]
 #[[Worklog_Luminosity]]
 #[[Worklog_MCProduction]]
@@ -13438,6 +13537,7 @@ Default files:
 #[[2018.1.30]]
 #[[2018.2.6]]
 #[[2018.3.6]]
+#[[2018.3.13]]
 
 ----
 Chronicle txt Files
@@ -13601,6 +13701,61 @@ Uncertainty v702p01
 </div>
 <div created="20170407055733031" creator="Yifan" modified="20170407055750919" modifier="Yifan" title="Working with Condor">
 <pre></pre>
+</div>
+<div created="20180313064637008" creator="Yifan" modified="20180313065105188" modifier="Yifan" title="worklog_180313_single_event_info">
+<pre>| !MC sample | ~BhabhaNLO with M(ee) cut |
+| !Using Info of MDC+EMC method | One of E in [0.5,1.8]  |
+| !Using Info of EMC-only method | standard cuts |
+
+```
+#data
+Event id:56185
+truth (ptrack): (0,0,0)   0
+truth (mtrack): (0,0,0)   0
+EMC+MDC: (ptrack) (-1.49735,-0.627117,1.29688)    2.07779    2.09881
+EMC+MDC: (mtrack) (0.617985,-0.0897225,0.126655)    0.637179    0.632628
+EMC-only: (track1) 2.09881    (-1.63095,0.0777362,1.3187)
+EMC-only: (track2) 2.0163    (-0.866285,-1.32385,-1.24997)
+
+
+#mc
+Event id:154489
+truth (ptrack): (-0.246933,-0.741232,-1.93938)   2.09083
+truth (mtrack): (0.292554,0.740128,1.93648)   2.09364
+EMC+MDC: (ptrack) (0.25517,0.683877,1.78399)    1.92754    1.99607
+EMC+MDC: (mtrack) (-0.281141,-0.778993,-2.04054)    2.2022    1.76097
+EMC-only: (track1) 2.10728    (-0.0204926,-1.30782,1.65222)
+EMC-only: (track2) 2.06651    (0.747085,1.14481,-1.54975)
+
+```
+
+----
+
+| !MC sample | ~BhabhaNLO with M(ee) cut |
+| !Using Info of MDC+EMC method | -  |
+| !Using Info of EMC-only method | standard cuts |
+
+```
+#data
+Event num:99
+truth (ptrack): (0,0,0)   0
+truth (mtrack): (0,0,0)   0
+EMC+MDC: (ptrack) (-1.28133,0.16169,1.63588)    2.08424    2.08069
+EMC+MDC: (mtrack) (1.27479,-0.156247,-1.62603)    2.07207    1.92404
+EMC-only: (track1) 2.08069    (-0.605821,-1.13053,1.63834)
+EMC-only: (track2) 1.92404    (-1.01348,0.636147,-1.50668)
+
+#mc
+Event num:9995
+truth (ptrack): (2.07927,0.107489,-0.387855)   2.11786
+truth (mtrack): (-2.03317,-0.107489,0.387855)   2.07263
+EMC+MDC: (ptrack) (-2.07417,-0.113011,0.398925)    2.1152    2.1311
+EMC+MDC: (mtrack) (2.0795,0.109418,-0.391673)    2.11889    2.05897
+EMC-only: (track1) 2.1311    (-0.777889,-1.94275,0.402766)
+EMC-only: (track2) 2.05897    (-1.93407,0.593931,-0.38206)
+
+
+```</pre>
 </div>
 <div created="20170427045918840" creator="Yifan" modified="20170515121333926" modifier="Yifan" title="Worklog_gKsKpi">
 <pre>[[Files|Worklog_gKsKpi_Files]]
@@ -14364,6 +14519,124 @@ Babayaga 3.5算截面，旧工作的参数。全run号段，能量4226, running 
 截面用相邻能量点差值：9.86nb
 
 5倍di-tau: 53.82m事例</pre>
+</div>
+<div created="20180313054552867" creator="Yifan" modified="20180313054557990" modifier="Yifan" title="worklog_picgroup_1">
+<pre>----
+
+| !MC sample | ~BhabhaNLO No M(ee) cut |
+| !Using Info of MDC+EMC method | -  |
+| !Using Info of EMC-only method | E, cos(theta), deltaphi cuts |
+
+[img width=300 [./img/Worklog/Luminosity/180313/ics0/bha_Ep_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics0/bha_Em_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics0/bha_ct1_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics0/bha_ct2_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics0/bha_phi_diff_cut1.png]]
+
+[img width=300 [./img/Worklog/Luminosity/180313/ics0/bha_deltaCos.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics0/bha_deltaE.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics0/bha_pp.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics0/bha_pm.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics0/bha_Ep_mdc.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics0/bha_Em_mdc.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics0/bha_mee.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics0/bha_mee_emc.png]]
+</pre>
+</div>
+<div created="20180313054704550" creator="Yifan" modified="20180313054706811" modifier="Yifan" title="worklog_picgroup_2">
+<pre>----
+
+| !MC sample | ~BhabhaNLO No M(ee) cut |
+| !Using Info of MDC+EMC method | One of p&lt;1.9  |
+| !Using Info of EMC-only method | E, cos(theta), deltaphi cuts |
+
+[img width=300 [./img/Worklog/Luminosity/180313/ics21/bha_Ep_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics21/bha_Em_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics21/bha_ct1_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics21/bha_ct2_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics21/bha_phi_diff_cut1.png]]
+
+[img width=300 [./img/Worklog/Luminosity/180313/ics21/bha_deltaCos.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics21/bha_deltaE.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics21/bha_pp.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics21/bha_pm.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics21/bha_Ep_mdc.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics21/bha_Em_mdc.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics21/bha_mee.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics21/bha_mee_emc.png]]
+</pre>
+</div>
+<div created="20180313055301617" creator="Yifan" modified="20180313055309120" modifier="Yifan" title="worklog_picgroup_3">
+<pre>----
+
+
+| !MC sample | ~BhabhaNLO with M(ee) cut |
+| !Using Info of MDC+EMC method | One of E in [0.5,1.8]  |
+| !Using Info of EMC-only method | standard cuts |
+
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics22/bha_Ep_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics22/bha_Em_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics22/bha_ct1_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics22/bha_ct2_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics22/bha_phi_diff_cut1.png]]
+
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics22/bha_deltaCos.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics22/bha_deltaE.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics22/bha_pp.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics22/bha_pm.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics22/bha_Ep_mdc.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics22/bha_Em_mdc.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics22/bha_mee.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics22/bha_mee_emc.png]]
+
+</pre>
+</div>
+<div created="20180313060427949" creator="Yifan" modified="20180313060434390" modifier="Yifan" title="worklog_picgroup_4">
+<pre>----
+
+| !MC sample | ~BhabhaNLO with M(ee) cut |
+| !Using Info of MDC+EMC method | m(ee)&gt;3.8  |
+| !Using Info of EMC-only method | standard cuts |
+
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics24/bha_Ep_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics24/bha_Em_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics24/bha_ct1_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics24/bha_ct2_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics24/bha_phi_diff_cut1.png]]
+
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics24/bha_deltaCos.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics24/bha_deltaE.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics24/bha_pp.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics24/bha_pm.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics24/bha_Ep_mdc.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics24/bha_Em_mdc.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics24/bha_mee.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics24/bha_mee_emc.png]]
+
+</pre>
+</div>
+<div created="20180313060555440" creator="Yifan" modified="20180313060558117" modifier="Yifan" title="worklog_picgroup_5">
+<pre>----
+
+
+| !MC sample | ~BhabhaNLO no M(ee) cut |
+| !Using Info of MDC+EMC method | m(ee)&gt;3.8  |
+| !Using Info of EMC-only method | standard cuts |
+
+[img width=300 [./img/Worklog/Luminosity/180313/ics24/bha_Ep_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics24/bha_Em_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics24/bha_ct1_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics24/bha_ct2_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics24/bha_phi_diff_cut1.png]]
+
+[img width=300 [./img/Worklog/Luminosity/180313/ics24/bha_deltaCos.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics24/bha_deltaE.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics24/bha_pp.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics24/bha_pm.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics24/bha_Ep_mdc.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics24/bha_Em_mdc.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics24/bha_mee.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/ics24/bha_mee_emc.png]]</pre>
 </div>
 <div created="20170718054814836" creator="Yifan" modified="20170718055531206" modifier="Yifan" title="Works_of_Others">
 <pre>----
