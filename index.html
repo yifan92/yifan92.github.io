@@ -455,6 +455,8 @@ Error message and password prompt
 
 <li>worklog_picgroup_5</li>
 
+<li>worklog_picgroup_6</li>
+
 <li>Works_of_Others</li>
 
 <li>Writing</li>
@@ -8315,7 +8317,7 @@ Error message and password prompt
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList [[Work Log]] 2018.3.13 worklog_180313_single_event_info" title="$:/StoryList">
+<div list="2018.3.13 ContentList" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8832,7 +8834,7 @@ Output of Digamma.
 Distributions: [[2018.1.16]]
 </pre>
 </div>
-<div created="20180313020018683" creator="Yifan" modified="20180313065030336" modifier="Yifan" title="2018.3.13">
+<div created="20180313020018683" creator="Yifan" modified="20180313073749686" modifier="Yifan" title="2018.3.13">
 <pre>| !MC sample | ~BhabhaNLO No M(ee) cut |
 | !Using Info of MDC+EMC method | -  |
 | !Using Info of EMC-only method | standard cuts |
@@ -8862,9 +8864,6 @@ test lum: -1.5%
 [[graphs|worklog_picgroup_4]]
 
 
-
-
-
 ----
 
 | !MC sample | ~BhabhaNLO No M(ee) cut |
@@ -8875,6 +8874,13 @@ test lum: -1.5%
 
 ----
 
+| !MC sample | ~BhabhaNLO with M(ee) cut |
+| !Using Info of MDC+EMC method | standard cuts |
+| !Using Info of EMC-only method | E2&gt;1.8 |
+
+[[graphs|worklog_picgroup_6]]
+
+----
 
 | !MC sample | ~BhabhaNLO No M(ee) cut |
 | !Using Info of MDC+EMC method | One of p&lt;1.9  |
@@ -8882,7 +8888,32 @@ test lum: -1.5%
 
 [[graphs|worklog_picgroup_2]]
 
-----</pre>
+
+----
+
+| !MC sample | ~BhabhaNLO with M(ee) cut |
+| !Using Info of MDC+EMC method | -  |
+| !Using Info of EMC-only method | standard cuts |
+
+```
+#p in cms
+ee(px1+px2,py1+py2,pz1+pz2, sqrt(m1*m1+p1*p1)+sqrt(m2*m2+p2*p2));
+ee.m();
+```
+
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics0/bha_mee.png]]
+
+(px,py,pz,e) use EMC info.
+
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics0/bha_mee_emc.png]]
+
+
+| !MC sample | ~BhabhaNLO with M(ee) cut |
+| !Using Info of MDC+EMC method | standard  |
+| !Using Info of EMC-only method | E1,E2&gt;1.8 |
+
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics23_0/bha_mee.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics23_0/bha_mee_emc.png]]</pre>
 </div>
 <div created="20180306032932963" creator="Yifan" modified="20180313023118535" modifier="Yifan" title="2018.3.6">
 <pre>----
@@ -14698,6 +14729,31 @@ Babayaga 3.5算截面，旧工作的参数。全run号段，能量4226, running 
 [img width=300 [./img/Worklog/Luminosity/180313/ics24/bha_Em_mdc.png]]
 [img width=300 [./img/Worklog/Luminosity/180313/ics24/bha_mee.png]]
 [img width=300 [./img/Worklog/Luminosity/180313/ics24/bha_mee_emc.png]]</pre>
+</div>
+<div created="20180313073130641" creator="Yifan" modified="20180313073141588" modifier="Yifan" title="worklog_picgroup_6">
+<pre>----
+
+
+| !MC sample | ~BhabhaNLO with M(ee) cut |
+| !Using Info of MDC+EMC method | standard cuts |
+| !Using Info of EMC-only method | E2&gt;1.8 |
+
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics23_0/bha_Ep_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics23_0/bha_Em_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics23_0/bha_ct1_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics23_0/bha_ct2_cut1.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics23_0/bha_phi_diff_cut1.png]]
+
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics23_0/bha_deltaCos.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics23_0/bha_deltaE.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics23_0/bha_pp.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics23_0/bha_pm.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics23_0/bha_Ep_mdc.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics23_0/bha_Em_mdc.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics23_0/bha_mee.png]]
+[img width=300 [./img/Worklog/Luminosity/180313/c_ics23_0/bha_mee_emc.png]]
+
+</pre>
 </div>
 <div created="20170718054814836" creator="Yifan" modified="20170718055531206" modifier="Yifan" title="Works_of_Others">
 <pre>----
