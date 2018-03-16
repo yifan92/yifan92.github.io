@@ -1,0 +1,173 @@
+-----------------------------------------------------------------------
+Day 2 Session 2
+
+Evidence of h_c->ee eta_c
+		by Yang Shuangli
+	
+
+
+MUC Efficiency Check
+		by Tang Guangyi
+	after high-purity di-muon selection, some events have MUC_Depth=-9.9 and there is a discrepancy between MC and data.
+	
+	feature of the events:
+		-t0 large
+		-dedx of these t0-large events is slightly smaller
+		-the number of the events relates to machine status
+	
+	conclusion: pending experts' checks
+
+
+Angular Distribution of Psi(2S)->OmegaOmega
+		by Song Jiaojiao
+	
+
+Measurement of sigma(ee->KsiKsi) above open charm threshold
+		-by Wang Xiongfei
+	Data Sets: all XYZ data; BOSS version 703
+	Event Selection:
+		good tracks;
+		PID
+		Lambda reconstruction
+		Ksi reconstruction: using SVTX recon
+		further:
+			mass window (ppi), (piLambda)
+			decay length Ksi/Lambda
+	plots:
+		M(piLambda) vs. M recoil
+	background study:
+		just sideband
+	detection efficiency:
+		iterating to get ISR correction
+	result:
+		confirmation of Ksi(1820)
+	Systematic Uncertainty:	
+		-ISR factor: the difference for second/third iteration
+		-total: 12.2%
+	
+		
+-----------------------------------------------------------------------
+Day 2 Session 1
+
+BEPC2 beyond 4.6 GeV
+	ee->Lambda_c Lambda_cbar
+	charmed Baryonium?	Y(4660)
+	Other FSI interpretation at threshold
+	Coulomb at threshold
+
+
+Search for ee->X(3872)
+		by Leonard Koch
+	
+Study of ee-> gamma Omega Jpsi at BES3
+		by Liu Zhiqing
+	Data Sets: round 11 4190-4280; in BOSS703
+	MC: PHSP; ISR by KKMC, FSR by PHOTOS; Background MC; 10x Inclusive MC
+	Event Selection:
+		good tracks and good photons; 
+		PID from p and EMC deposition;
+		5c kinematic fit:	chisq<100
+		
+	Background study:
+		pipiPsi(2S), pi0pi0Psi(2S):	veto mass window of pipiJpsi and M_recoil(pipi)
+		eta'Jpsi:	two dimensional cut on M(omega Jpsi) and M(gamma Omega)
+		veto M(ll)
+	
+	Look at spectrum of M(pi+pi-pi0):	sideband
+	...
+	summary:
+		-5 sigma 
+		-the relative ratio of (3872)->omegaJpsi/(3872)->pipiJpsi = 1.7
+	potential problem:
+		-compromised significance if alternative background
+
+	
+
+-----------------------------------------------------------------------
+Day 1 Session 4
+
+...
+
+-----------------------------------------------------------------------
+Day 1 Session 3
+Status and Proposal for Data Taking of Jpsi
+		by Dr. Beijiang Liu
+	
+Analysis of Jpsi->gamma 3pi0
+		by Zhou Qiao
+	
+PWA of Jpsi->K+K-eta
+		by Liu Huanhuan
+	
+PWA of Jpsi-> PKSigma
+	
+-----------------------------------------------------------------------
+Day 1 Session 2
+
+Plans of cloud-based open platform for BESIII analysis
+		by Mr.Mengyao
+	
+		
+BES 3 computing status
+		by Huang Qiulan
+	
+Status of CGEM Software
+		by Wang Liangliang
+	-first workable CgemBoss: CgemBoss665b
+	-improvements in progress
+
+Update of Event Display
+		by Shuhui Huang
+	-BesVis
+		
+
+
+-----------------------------------------------------------------------
+Day 1 Session 1
+
+Status of Software and Data Production
+		by Sun Shengsen
+	Data Reconstructed:
+		-jpsi: 2009, 2012(not completed), 2018 ( 2nd reconstruction this Sep)
+		-4180 data: round 09
+	MDC Data Performance:
+		-calibrating new data
+		-Hitmap and New Dead Channels: 
+			4 new dead cells
+		-spatial and momentum resolution: 
+			127 um, good alignment, sigma(p)=10.1MeV@1.548GeV
+			worse than data of last round, due to lower signal amplitude
+		-Gain and Resolution of dE/dx:	stable
+	TOF performance:
+		-Time Resolution of Barrel TOF: 
+			single end 137ps, single layer 92ps, double end 70ps.
+		-Efficiency of Barrel TOF: 93% for double layer;
+		-Time Resolution of Endcap MRPC TOF: 55ps combined;
+		-Efficiency of Endcap MRPC TOF: ~98%
+	EMC performance:	
+		-empty region due to crystal unglued
+		-2 hot channel and 2 dead channel.	(what's hot channel?)
+	Validation of BOSS 7.0.3
+		-obvious efficiency improvement and better data and MC consistency at low transverse momentum region
+		-the Tracking and PID efficiency correlation question put out by Song Jiaojiao in 2017.12?
+	CGEM softwares
+	Next Release BOSS Version
+		-geant 4 update: faster, performance check
+		-MRPC and cap TOF event display
+		-MDC low transverse momentum track calibration, dE/dx hadron calibration and MC tuning
+		
+		
+CGEM status:
+		by G.Cibinetto on behalf of the CGEM group
+	accident during CGEM construction:
+		-2nd layer; 2 month delays; installation postponed to 2019
+
+
+BEPC2 Performance:
+		by Yu Chenghui
+	-new RF cavity has been on for 3 months, good
+	-aging problem -> high failure rate
+	-upgrading to higher energy region
+	-upgrade of parasitic operation for both BSRF and BESIII. commissioning will begin in Octomber.
+	
+	

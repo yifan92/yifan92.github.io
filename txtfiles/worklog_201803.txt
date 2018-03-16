@@ -1,10 +1,20 @@
 2018/3/13
+	-EMC-only cut + m(ee)>3.8 可以得到正确的亮度。
+	-检查m(ee)<3.8的分布：将这个mdc cut变换到EMC-only方法中。
+		-the info of 3rd cluster?
+		-delta E?
+	-BabayagaNLO 对于大能量散射的计算缺陷?	
+	-slightly higher cut of m(ee)
+
+	test lum: 74821；~75100		： 0.5% difference
+	
+
 	-The impact of generator version:
 		-last time checked, it's about 0.5% for lower energy points; but strange result at 4420, need to check again.
 	-on the Babayaga:
 		Actually, the original formulation of BabaYaga is based on a QED Parton Shower (PS) approach 
-		for the treatment of leading logarithmic (LL) QED corrections and, as such, it
-		lacks the effect of O (α) non-log contributions, which are important to achieve
+		for the treatment of leading logarithmic(LL) QED corrections and, as such, it
+		lacks the effect of O(α) non-log contributions, which are important to achieve
 		a precision at the per mille level. 
 
 	-no cut MC效率没有准备好；
