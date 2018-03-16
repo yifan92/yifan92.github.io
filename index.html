@@ -123,6 +123,12 @@ Error message and password prompt
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
 
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-tiddler</li>
+
+<li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/edit</li>
+
+<li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/more-tiddler-actions</li>
+
 <li>$:/core</li>
 
 <li>$:/DefaultTiddlers</li>
@@ -130,6 +136,8 @@ Error message and password prompt
 <li>$:/Import</li>
 
 <li>$:/isEncrypted</li>
+
+<li>$:/Manage</li>
 
 <li>$:/plugins/tiddlywiki/katex</li>
 
@@ -141,15 +149,21 @@ Error message and password prompt
 
 <li>$:/state/sidebar</li>
 
-<li>$:/state/tab/sidebar--1835078512</li>
+<li>$:/state/tab--1498284803</li>
+
+<li>$:/state/tab--1963855381</li>
 
 <li>$:/state/tab-1749438307</li>
 
-<li>$:/state/tab--1963855381</li>
+<li>$:/state/tab/sidebar--1835078512</li>
 
 <li>$:/status/UserName</li>
 
 <li>$:/StoryList</li>
+
+<li>$:/Style.css</li>
+
+<li>$:/temp/advancedsearch</li>
 
 <li>$:/temp/info-plugin</li>
 
@@ -489,6 +503,15 @@ Error message and password prompt
 <pre>250</pre>
 </div>
 <div created="20170419051059457" creator="Yifan" modified="20170419051631336" modifier="Yifan" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
+<pre>hide</pre>
+</div>
+<div created="20180316120959299" creator="Yifan" modified="20180316120959299" modifier="Yifan" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-tiddler">
+<pre>hide</pre>
+</div>
+<div created="20180316121114733" creator="Yifan" modified="20180316121613205" modifier="Yifan" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/edit">
+<pre>hide</pre>
+</div>
+<div created="20180316121120953" creator="Yifan" modified="20180316121120953" modifier="Yifan" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/more-tiddler-actions">
 <pre>hide</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.13">
@@ -8155,6 +8178,23 @@ Error message and password prompt
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
+<div created="20180316113432757" creator="Yifan" modified="20180316121538702" modifier="Yifan" title="$:/Manage">
+<pre>*$:/core/ui/Buttons/save-wiki
+*$:/AdvancedSearch
+*$:/core/ui/SideBar/Tools
+*$:/ControlPanel
+*&lt;$button&gt;
+&lt;$action-setfield $tiddler=&quot;$:/state/sidebar&quot; text=&quot;no&quot;/&gt;
+close sidebar
+&lt;/$button&gt;
+*&lt;$button&gt;
+&lt;$action-setfield $tiddler=&quot;$:/state/sidebar&quot; text=&quot;yes&quot;/&gt;
+open sidebar
+&lt;/$button&gt;
+*&lt;$checkbox tiddler=&quot;$:/Style.css&quot; tag=&quot;$:/tags/Stylesheet&quot;&gt; Style mod&lt;/$checkbox&gt;
+*$:/Style.css
+</pre>
+</div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="KaTeX: mathematical typography" list="readme usage" plugin-type="plugin" title="$:/plugins/tiddlywiki/katex" type="application/json" version="5.1.14">
 <pre>{
     &quot;tiddlers&quot;: {
@@ -8306,22 +8346,126 @@ Error message and password prompt
 <div created="20170407022931231" creator="Yifan" modified="20171114050842979" modifier="Yifan" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20170407022746366" creator="Yifan" modified="20180313070916327" modifier="Yifan" title="$:/state/sidebar">
-<pre>yes</pre>
+<div created="20170407022746366" creator="Yifan" modified="20180316121710412" modifier="Yifan" title="$:/state/sidebar">
+<pre>no</pre>
 </div>
-<div created="20170407054919167" creator="Yifan" modified="20180130035242732" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20180316112029962" creator="Yifan" modified="20180316121646072" modifier="Yifan" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Standard</pre>
 </div>
-<div created="20170411005206005" creator="Yifan" modified="20170412030123100" modifier="Yifan" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Info</pre>
+<div created="20170411005206925" creator="Yifan" modified="20180316121110495" modifier="Yifan" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/Toolbars</pre>
 </div>
-<div created="20170411005206925" creator="Yifan" modified="20170411005206925" modifier="Yifan" title="$:/state/tab--1963855381">
-<pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
+<div created="20170411005206005" creator="Yifan" modified="20180316121058340" modifier="Yifan" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Appearance</pre>
+</div>
+<div created="20170407054919167" creator="Yifan" modified="20180316113720280" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
+<pre>$:/core/ui/SideBar/Tools</pre>
 </div>
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList python [[Misc Math]] Statistics" title="$:/StoryList">
+<div list="ContentList $:/AdvancedSearch $:/Manage $:/core/ui/Buttons/save-wiki" title="$:/StoryList">
+<pre></pre>
+</div>
+<div created="20180316112035263" creator="Yifan" modified="20180316121651648" modifier="Yifan" tags="$:/tags/Stylesheet" title="$:/Style.css">
+<pre>\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline macrocallblock
+
+/* 目录 */
+.tc-table-of-contents li li li a {
+    font-weight: normal;
+}
+
+/* 隐藏侧边栏按钮 */
+.tc-topbar-right {
+    display: none;
+}
+
+/* 隐藏条目按钮 
+.tc-tiddler-controls {
+    display: none;
+}*/
+.tc-image-down-arrow, .tc-image-edit-button, .tc-image-close-button {
+    `display: none;
+}
+/* 隐藏条目副标题 */
+.tc-subtitle {
+    display: none;
+}
+/* 隐藏条目标签 */
+.tc-tags-wrapper {
+    display: none;
+}
+
+/* 页眉 */
+.tc-header {
+
+}
+.tc-header-left {
+    display: inline-block;
+}
+.tc-header-right {
+    display: inline-block;
+}
+
+/* 页脚 */
+.tc-footer {
+    text-align: center;
+}
+.tc-footer a {
+    text-decoration: none;
+    color: #5778d8;
+}
+.tc-footer a:hover {
+    text-decoration: underline;
+}
+
+/* 调整内边距 */
+.tc-story-river {
+  padding: 0.5em 2em 0.5em 2em;
+  `width: 100%;
+}
+
+/* 调整宽度 */
+@media (min-width: 980px) {
+    .tc-tiddler-frame {
+        padding: 28px 16% 42px 16%;
+    }
+}
+.tc-modal {
+    position: fixed;
+    top: 5%;
+    left: 10%;
+    width: 80%;
+}
+.tc-modal-body {
+    position: relative;
+    max-height: 80vh;
+}
+
+/* 自定义样式 */
+.style-box-light {
+    border: 1px solid #ebefcd;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+    background: #fcfdf3;
+    `font-size: 0.8em;
+    line-height: 1.2;
+}
+
+.style-icon-inline {
+    display: inline-block;
+    height: 1.2em;
+    width: 1.2em;
+    margin: 0 0.25em;
+}
+.style-icon-inline svg {
+    vertical-align: middle;
+}
+
+
+</pre>
+</div>
+<div created="20180316112029961" creator="Yifan" modified="20180316121649170" modifier="Yifan" title="$:/temp/advancedsearch">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9071,13 +9215,14 @@ Cos(theta1)+Cos(theta2), (E1 - E2), pp, pm, mee
 
 </pre>
 </div>
-<div created="20170407035445794" creator="Yifan" modified="20170510052235110" modifier="Yifan" title="About Tiddlywiki">
+<div created="20170407035445794" creator="Yifan" modified="20180316115944901" modifier="Yifan" title="About Tiddlywiki">
 <pre>This note is stored as a Tiddlywiki file. Here are some more information about this helpful tool.
 
 #[[HelloThere|http://tiddlywiki.com/]]
 #[[Detailed Info about WikiText|http://tiddlywiki.com/static/WikiText.html]]
 #[[A Cheat Sheet|http://www.personal.psu.edu/kkm11/files/Tiddlywiki%20Guide.pdf]]
-#[[Katex|http://tiddlywiki.com/plugins/tiddlywiki/katex/]]: a plugin for latex math formats. Already integrated.</pre>
+#[[Katex|http://tiddlywiki.com/plugins/tiddlywiki/katex/]]: a plugin for latex math formats. Already integrated.
+</pre>
 </div>
 <div created="20170407044557916" creator="Yifan" modified="20180312091005379" modifier="Yifan" title="Bash Scripts">
 <pre>----
@@ -10215,8 +10360,9 @@ On same channel.
 <pre>#[[Writing]]
 </pre>
 </div>
-<div created="20170407022748393" creator="Yifan" modified="20171206061959648" modifier="Yifan" title="ContentList">
-<pre>#[[Resources|Physics Resources]]: talks, memos and papers
+<div created="20170407022748393" creator="Yifan" modified="20180316120045678" modifier="Yifan" title="ContentList">
+<pre>#[[Advanced Search|$:/AdvancedSearch]]
+#[[Resources|Physics Resources]]: talks, memos and papers
 
 ----
 !!Physics
@@ -10242,7 +10388,8 @@ On same channel.
 !!Others
 #[[Communication Skills]]
 #[[Work Log]]
-#[[About Tiddlywiki]]</pre>
+#[[About Tiddlywiki]]
+</pre>
 </div>
 <div created="20170615083202238" creator="Yifan" modified="20170615083828594" modifier="Yifan" title="Deconvolution">
 <pre>Deconvolution is an algorithm-based process to reverse the effect of convolution.
@@ -14880,18 +15027,24 @@ references:
 	*[[Clinical chemistry guide to scientific writing|https://www.aacc.org/publications/clinical-chemistry/clinical-chemistry%C2%A0guide-to-scientific-writing]]
 	*[[nature english communication for scientists|https://www.nature.com/scitable/ebooks/english-communication-for-scientists-14053993]]</pre>
 </div>
-<div created="20170407131924789" creator="Yifan" modified="20170412004103833" modifier="Yifan" title="Yifan">
+<div created="20170407131924789" creator="Yifan" modified="20180316115313616" modifier="Yifan" title="Yifan">
 <pre>Just want to put a few comics here.
 
 ----
 
 [img[./img/Yifan3.gif]]
+
 [img[./img/Yifan2.gif]]
+
 [img[./img/Yifan.gif]]
 
 ----
 
-[img[./img/Yifan4.gif]]</pre>
+[img[./img/Yifan4.gif]]
+
+----
+[[mod|$:/Manage]]
+</pre>
 </div>
 <div created="20170414051712634" creator="Yifan" modified="20170414053759573" modifier="Yifan" title="参数估计">
 <pre>参数估计，估计量，估计值，似然函数（参数条件下，现象的概率）。
