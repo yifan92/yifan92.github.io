@@ -1,4 +1,24 @@
+
+2018/3/27
+	-rewriting script to python:
+		-功能完备；可执行
+		-需要补全相关dict，扩展energy_points,mctypes,selection criteria
+
+	-learning python:
+		-logging package
+		-PyROOT
+
+2018/3/26
+	-3.5 Bhabha MC done
+	
+	-Bhabha MDC: m(ee)<3.8的事例？
+		-可以换算为EMC-only中要求 E2_emc>1.9的条件；损失效率10%
+	-用python重写Luminosity脚本：
+		-程序耗时略久
+		-代码的灵活度提高很多,而且写代码快
+	
 2018/3/13
+	-What's wrong with Digamma?
 	-EMC-only cut + m(ee)>3.8 可以得到正确的亮度。
 	-检查m(ee)<3.8的分布：将这个mdc cut变换到EMC-only方法中。
 		-the info of 3rd cluster?

@@ -149,13 +149,15 @@ Error message and password prompt
 
 <li>$:/state/sidebar</li>
 
-<li>$:/state/tab--1498284803</li>
+<li>$:/state/tab/sidebar--1835078512</li>
 
-<li>$:/state/tab--1963855381</li>
+<li>$:/state/tab--1498284803</li>
 
 <li>$:/state/tab-1749438307</li>
 
-<li>$:/state/tab/sidebar--1835078512</li>
+<li>$:/state/tab--1963855381</li>
+
+<li>$:/state/toc/title-575949</li>
 
 <li>$:/status/UserName</li>
 
@@ -192,6 +194,8 @@ Error message and password prompt
 <li>2018.3.6</li>
 
 <li>About Tiddlywiki</li>
+
+<li>Advanced WikiText</li>
 
 <li>Bash Scripts</li>
 
@@ -250,6 +254,8 @@ Error message and password prompt
 <li>Charmonium_Reading 2</li>
 
 <li>Cling Interpreter</li>
+
+<li>code</li>
 
 <li>CollaborationMeeting_201706</li>
 
@@ -319,6 +325,8 @@ Error message and password prompt
 
 <li>Luminosity Resources</li>
 
+<li>Macros</li>
+
 <li>MC Production How-to</li>
 
 <li>Misc Math</li>
@@ -339,7 +347,13 @@ Error message and password prompt
 
 <li>Python Basics 2</li>
 
-<li>Python Packages</li>
+<li>Python I/O</li>
+
+<li>Python Packages 1</li>
+
+<li>Python Packages 2</li>
+
+<li>Python Performance Tips</li>
 
 <li>QWG</li>
 
@@ -403,15 +417,23 @@ Error message and password prompt
 
 <li>root_superimposehists</li>
 
+<li>slider</li>
+
 <li>Statistics</li>
 
 <li>Synonyms</li>
 
 <li>The Element of Style</li>
 
+<li>Tiddlywiki Macros</li>
+
 <li>Tips on Making Slides</li>
 
+<li>Tool Programs</li>
+
 <li>Typing Practices</li>
+
+<li>Vidyo</li>
 
 <li>vim Editor</li>
 
@@ -508,8 +530,8 @@ Error message and password prompt
 <div created="20180316120959299" creator="Yifan" modified="20180316120959299" modifier="Yifan" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-tiddler">
 <pre>hide</pre>
 </div>
-<div created="20180316121114733" creator="Yifan" modified="20180316121613205" modifier="Yifan" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/edit">
-<pre>hide</pre>
+<div created="20180316121114733" creator="Yifan" modified="20180326035233906" modifier="Yifan" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/edit">
+<pre>show</pre>
 </div>
 <div created="20180316121120953" creator="Yifan" modified="20180316121120953" modifier="Yifan" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/more-tiddler-actions">
 <pre>hide</pre>
@@ -8178,11 +8200,13 @@ Error message and password prompt
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20180316113432757" creator="Yifan" modified="20180316121538702" modifier="Yifan" title="$:/Manage">
+<div created="20180316113432757" creator="Yifan" modified="20180316122341844" modifier="Yifan" title="$:/Manage">
 <pre>*$:/core/ui/Buttons/save-wiki
 *$:/AdvancedSearch
 *$:/core/ui/SideBar/Tools
 *$:/ControlPanel
+----
+
 *&lt;$button&gt;
 &lt;$action-setfield $tiddler=&quot;$:/state/sidebar&quot; text=&quot;no&quot;/&gt;
 close sidebar
@@ -8193,6 +8217,19 @@ open sidebar
 &lt;/$button&gt;
 *&lt;$checkbox tiddler=&quot;$:/Style.css&quot; tag=&quot;$:/tags/Stylesheet&quot;&gt; Style mod&lt;/$checkbox&gt;
 *$:/Style.css
+
+----
+
+*&lt;$button&gt;
+&lt;$action-setfield $tiddler=&quot;$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/edit&quot; text=&quot;hide&quot;/&gt;
+disallow edit
+&lt;/$button&gt;
+*&lt;$button&gt;
+&lt;$action-setfield $tiddler=&quot;$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/edit&quot; text=&quot;show&quot;/&gt;
+allow edit&lt;/$button&gt;
+----
+
+
 </pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="KaTeX: mathematical typography" list="readme usage" plugin-type="plugin" title="$:/plugins/tiddlywiki/katex" type="application/json" version="5.1.14">
@@ -8346,28 +8383,31 @@ open sidebar
 <div created="20170407022931231" creator="Yifan" modified="20171114050842979" modifier="Yifan" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20170407022746366" creator="Yifan" modified="20180316121710412" modifier="Yifan" title="$:/state/sidebar">
+<div created="20170407022746366" creator="Yifan" modified="20180327033600817" modifier="Yifan" title="$:/state/sidebar">
 <pre>no</pre>
 </div>
-<div created="20180316112029962" creator="Yifan" modified="20180316121646072" modifier="Yifan" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Standard</pre>
+<div created="20170407054919167" creator="Yifan" modified="20180317162721394" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
+<pre>$:/core/ui/SideBar/Tools</pre>
 </div>
-<div created="20170411005206925" creator="Yifan" modified="20180316121110495" modifier="Yifan" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/Toolbars</pre>
+<div created="20180316112029962" creator="Yifan" modified="20180317110756647" modifier="Yifan" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Standard</pre>
 </div>
 <div created="20170411005206005" creator="Yifan" modified="20180316121058340" modifier="Yifan" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
-<div created="20170407054919167" creator="Yifan" modified="20180316113720280" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/Tools</pre>
+<div created="20170411005206925" creator="Yifan" modified="20180316121110495" modifier="Yifan" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/Toolbars</pre>
+</div>
+<div created="20180317154845831" creator="Yifan" modified="20180317154846823" modifier="Yifan" title="$:/state/toc/title-575949">
+<pre>hide</pre>
 </div>
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList $:/AdvancedSearch $:/Manage $:/core/ui/Buttons/save-wiki" title="$:/StoryList">
+<div list="ContentList [[Python I/O]] Yifan [[Python and ROOT]] [[Python Packages 2]] $:/Manage $:/core/ui/Buttons/save-wiki" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20180316112035263" creator="Yifan" modified="20180316121651648" modifier="Yifan" tags="$:/tags/Stylesheet" title="$:/Style.css">
+<div created="20180316112035263" creator="Yifan" modified="20180327033617374" modifier="Yifan" tags="$:/tags/Stylesheet" title="$:/Style.css">
 <pre>\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline macrocallblock
 
 /* 目录 */
@@ -8465,7 +8505,7 @@ open sidebar
 
 </pre>
 </div>
-<div created="20180316112029961" creator="Yifan" modified="20180316121649170" modifier="Yifan" title="$:/temp/advancedsearch">
+<div created="20180316112029961" creator="Yifan" modified="20180317110824088" modifier="Yifan" title="$:/temp/advancedsearch">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8482,7 +8522,7 @@ open sidebar
     }
 }</pre>
 </div>
-<div created="20171113120901230" creator="Yifan" modified="20171212065311779" modifier="Yifan" title="$:/temp/search">
+<div created="20171113120901230" creator="Yifan" modified="20180317162530921" modifier="Yifan" title="$:/temp/search">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.13">
@@ -9215,13 +9255,45 @@ Cos(theta1)+Cos(theta2), (E1 - E2), pp, pm, mee
 
 </pre>
 </div>
-<div created="20170407035445794" creator="Yifan" modified="20180316115944901" modifier="Yifan" title="About Tiddlywiki">
+<div created="20170407035445794" creator="Yifan" modified="20180317161400613" modifier="Yifan" title="About Tiddlywiki">
 <pre>This note is stored as a Tiddlywiki file. Here are some more information about this helpful tool.
+
 
 #[[HelloThere|http://tiddlywiki.com/]]
 #[[Detailed Info about WikiText|http://tiddlywiki.com/static/WikiText.html]]
-#[[A Cheat Sheet|http://www.personal.psu.edu/kkm11/files/Tiddlywiki%20Guide.pdf]]
+#[[A Cheat Sheet|http://www.personal.psu.edu/kkm11/files/Tiddlywiki%20Guide.pdf]]: the basics of using tiddlywiki
+#[[Advanced WikiText]]
 #[[Katex|http://tiddlywiki.com/plugins/tiddlywiki/katex/]]: a plugin for latex math formats. Already integrated.
+#[[ATWiki|https://lamusia.github.io/#ATWiki]]: a desktop app for Tiddlywiki
+</pre>
+</div>
+<div created="20180317153321644" creator="Yifan" modified="20180317162014504" modifier="Yifan" title="Advanced WikiText">
+<pre>----
+!!Tiddler Fields
+
+https://tiddlywiki.com/#TiddlerFields:TiddlerFields
+
+----
+!!Macros
+https://tiddlywiki.com/#Macros:Macros
+
+[[Tiddlywiki Macros]]
+----
+!!Transclusion
+
+''simple transclusion''
+
+```
+This is the content of TiddlerA: {{TiddlerA}}
+and you can decide the field: {{TiddlerA!!field_name}}
+```
+
+''transclusion with templates''
+
+```
+{{&lt;target&gt;|&lt;template&gt;}}
+```
+
 </pre>
 </div>
 <div created="20170407044557916" creator="Yifan" modified="20180312091005379" modifier="Yifan" title="Bash Scripts">
@@ -10290,6 +10362,9 @@ void cernstaff() {
    }
 ```</pre>
 </div>
+<div created="20180317162726584" creator="Yifan" modified="20180317162744247" modifier="Yifan" tags="template" title="code">
+<pre>&lt;pre&gt;&lt;$view field=&quot;text&quot;/&gt;&lt;/pre&gt;</pre>
+</div>
 <div created="20170615075137449" creator="Yifan" modified="20170615093223368" modifier="Yifan" title="CollaborationMeeting_201706">
 <pre>----
 !Charmonium Parallel Session
@@ -10360,7 +10435,7 @@ On same channel.
 <pre>#[[Writing]]
 </pre>
 </div>
-<div created="20170407022748393" creator="Yifan" modified="20180316120045678" modifier="Yifan" title="ContentList">
+<div created="20170407022748393" creator="Yifan" modified="20180317150548104" modifier="Yifan" title="ContentList">
 <pre>#[[Advanced Search|$:/AdvancedSearch]]
 #[[Resources|Physics Resources]]: talks, memos and papers
 
@@ -10383,7 +10458,7 @@ On same channel.
 #[[BOSS]]
 #[[Fortran]]
 #[[python]]
-
+#[[Tool Programs]]
 ----
 !!Others
 #[[Communication Skills]]
@@ -11335,6 +11410,46 @@ Stream EDitor, used for modifying files in unix/linux.
 *[[Direct Link to GaoQing's Memo|http://hnbes3.ihep.ac.cn/HyperNews/get/AUX/2014/04/03/10.56-96431-luminosity_memo_v3.pdf]]
 *[[Beam Energy of Old Data|http://cpc-hepnp.ihep.ac.cn:8080/Jwk_cpc/EN/10.1088/1674-1137/40/6/063001#]]</pre>
 </div>
+<div created="20180317154557854" creator="Yifan" modified="20180317154820421" modifier="Yifan" tags="$:/tags/Macro" title="Macros">
+<pre>\define collapse(caption,body)
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/state/toc/$caption$&quot;&gt;&gt; text=&quot;show&quot;&gt;
+&lt;$button set=&lt;&lt;qualify &quot;$:/state/toc/$caption$&quot;&gt;&gt; setTo=&quot;show&quot; class=&quot;tc-btn-invisible&quot;&gt;
+
+!! {{$:/core/images/right-arrow}} $caption$
+&lt;/$button&gt;
+&lt;/$reveal&gt;
+&lt;$reveal type=&quot;match&quot; state=&lt;&lt;qualify &quot;$:/state/toc/$caption$&quot;&gt;&gt; text=&quot;show&quot;&gt;
+&lt;$button set=&lt;&lt;qualify &quot;$:/state/toc/$caption$&quot;&gt;&gt; setTo=&quot;hide&quot; class=&quot;tc-btn-invisible&quot;&gt;
+
+!! {{$:/core/images/down-arrow}} $caption$
+&lt;/$button&gt;
+&lt;/$reveal&gt;
+&lt;$reveal type=&quot;match&quot; state=&lt;&lt;qualify &quot;$:/state/toc/$caption$&quot;&gt;&gt; text=&quot;show&quot; retain=&quot;yes&quot; animate=&quot;yes&quot;&gt;
+
+$body$
+
+&lt;/$reveal&gt;
+\end
+
+
+
+\define gallery(images)
+&lt;style&gt;
+.style-gallery button{
+  width: 40%;
+  margin: 2%;
+}
+&lt;/style&gt;
+&lt;div class=&quot;style-gallery&quot;&gt;
+&lt;$list filter=&quot;$images$&quot;&gt;
+&lt;$button class=&quot;tc-btn-invisible&quot;&gt;
+&lt;$action-sendmessage $message=&quot;tm-modal&quot; $param=&quot;$:/ModalImage&quot; Images=&quot;$images$&quot; Image=&lt;&lt;currentTiddler&gt;&gt; /&gt;
+&lt;$transclude tiddler={{!!title}} /&gt;
+&lt;/$button&gt;
+&lt;/$list&gt;
+&lt;/div&gt;
+\end</pre>
+</div>
 <div created="20171117061923292" creator="Yifan" modified="20171121064910127" modifier="Yifan" title="MC Production How-to">
 <pre>*相关Charmonium Wiki：http://docbes3.ihep.ac.cn/~charmoniumgroup/index.php/XYZ_incl703
 
@@ -11430,27 +11545,37 @@ https://dirac.ihep.ac.cn/DIRAC/
 ----
 #[[PDG Webpage|http://pdglive.lbl.gov/Viewer.action]]</pre>
 </div>
-<div created="20171206062015398" creator="Yifan" modified="20180316095608618" modifier="Yifan" title="python">
+<div created="20171206062015398" creator="Yifan" modified="20180327033148974" modifier="Yifan" tags="python" title="python">
 <pre>----
 #[[Python Basics]]: indentation, variables, lists, basic operators, string formatting, basic string operations, conditions, loops.
-#[[Python Basics 2]]: function, classes and objects, dictionaries, module and packages. 
+#[[Python Basics 2]]: function, classes and objects, dictionaries, module and packages, file and OS
 #[[Python Advanced]]: list comprehension, multiple function arguments, regular expression, exception handling, sets, serialization, partial functions
 #[[Python and ROOT]]
 #[[Python and Notepad++]]: connecting the notepad++ to python
-#[[Python Packages]]
+#[[Python Performance Tips]]
+#[[Python Packages 1]]: math, cmath, datetime, sys, itertools
+#[[Python Packages 2]]: os, logging
+#[[Python I/O]]
 
 ----
 !!Python Resources
 
 #[[https://www.python.org/doc/]]
-#[[A Tutorial|https://www.tutorialspoint.com/python/python_basic_syntax.htm]]
+#[[A Simple Tutorial|https://www.tutorialspoint.com/python/python_basic_syntax.htm]]
+#https://en.wikibooks.org/wiki/Think_Python: a python tutorial book
 #[[Exercises|https://w3resource.com/python-exercises/]]
 #[[Simple Code Examples|https://wiki.python.org/moin/SimplePrograms]]
-#[[Python Performance Tips|http://gawron.sdsu.edu/compling/course_core/python_intro/intro_lecture_files/fastpython.html]]</pre>
+#[[Python Performance Tips|http://gawron.sdsu.edu/compling/course_core/python_intro/intro_lecture_files/fastpython.html]]
+#[[https://keras.io/]]: a python deep learning library
+</pre>
 </div>
-<div created="20171206080700965" creator="Yifan" modified="20171206091126827" modifier="Yifan" title="Python Advanced">
+<div created="20171206080700965" creator="Yifan" modified="20180327012823781" modifier="Yifan" tags="python" title="Python Advanced">
 <pre>----
 !!List Comprehension
+
+*`list_comp = [expr for val in collection if condition]`
+*`set_comp = {expr for val in collection if condition}`
+*`dict_comp = {key-expr: val-expr for value in collection if condition}`
 
 ```
 sentence = &quot;the quick brown fox jumps over the lazy dog&quot;
@@ -11471,6 +11596,15 @@ word_lengths = [len(word) for word in words if word != &quot;the&quot;]
 print(word_lengths)
 ```
 
+''examples''
+
+```
+loc_mapping = {val: index for index, val in enumerate(strings)}
+
+some_tuples=[(1,2,3),(4,5,6),(7,8,9)]
+flattened= [x for tup in some_tuples for x in tup]   # 从前到后对应多重循环从外到内
+```
+
 ----
 !!Multiple Function Arguments
 
@@ -11484,7 +11618,7 @@ def foo(first, second, third, *therest):
     print(&quot;And all the rest... %s&quot; % list(therest))
 ```
 
-''Using dictionaries as input''
+''Using dictionaries as input'': positional arguments and keyword arguments; keywords arguments can come in any order
 
 ```
 def bar(first, second, third, **options):
@@ -11513,6 +11647,8 @@ print(re.search(pattern, the_string))
 !!Exception Handling
 
 Don't want exception(error) to stop program, let it do something else.
+
+可以指定错误类型，也可以不指定。
 
 ```
 for i in range(20):
@@ -11692,20 +11828,52 @@ def Check(old_function):
         old_function(arg)
     return new_function
 ```
-</pre>
+
+----
+!!Generator
+
+a function with `yield` instead of `return`. It returns one value in a list every time it's called.
+
+```
+def make_change(amount, coins=[1,5,10,25], hand=None):
+    hand = [] if hand is None else hand
+    if amount == 0:
+        yield hand
+    for coin in coins:
+        if coin &gt; amount or (len(hand)&gt;0 and hand[-1] &lt; coin):
+            continue
+        for result in make_change(amount - coin, coins = coins, hand = hand + [coin]):
+            yield result
+```
+
+```
+gen = (x**2 for x in xrange(100))
+```
+
+@@color:blue; itertools package@@</pre>
 </div>
-<div created="20180217032515816" creator="Yifan" modified="20180217032635233" modifier="Yifan" title="Python and Notepad++">
+<div created="20180217032515816" creator="Yifan" modified="20180327012921303" modifier="Yifan" tags="python" title="Python and Notepad++">
 <pre>In the Run Menu of NotePad++, choose Run
 
 then put in
 
 ```
-&quot;D:\Program Files (x86)\Python2\python.exe&quot;  &quot;$(FULL_CURRENT_PATH)&quot;
+&quot;D:\Python2\python.exe&quot;  &quot;$(FULL_CURRENT_PATH)&quot;
 ```
 
-this command will let the python exe run the current active file tab.</pre>
+or
+
+```
+cmd \k python &quot;$(FULL_CURRENT_PATH)&quot;
+```
+
+`\k`说明将之后的路径作为参数传给cmd
+
+this command will let the python exe run the current active file tab.
+
+Save command if it works.</pre>
 </div>
-<div created="20171212060641657" creator="Yifan" modified="20171219085647148" modifier="Yifan" title="Python and ROOT">
+<div created="20171212060641657" creator="Yifan" modified="20180327014039173" modifier="Yifan" tags="python" title="Python and ROOT">
 <pre>----
 
 https://root.cern.ch/python-and-root
@@ -11741,9 +11909,45 @@ import ROOT         # this is a much better way to access ROOT!
 print ROOT.gDebug   # prints 7
 ROOT.gDebug = 3
 gROOT.ProcessLine( 'cout &amp;lt;&amp;lt; gDebug &amp;lt;&amp;lt; endl;' ) # prints 3
+```
+
+----
+
+Or more directly:
+
+```
+import ROOT
+canvas1=ROOT.TCanvas(constructor parameters)
+hist1=ROOT.TH1D(constructor parameters)
+...
+
+```
+
+@@color:blue;Note that the way to access the trees are different:@@
+
+```
+class PyListOfLeaves(dict) :
+    pass
+```
+```
+        leaves = tree.GetListOfLeaves()
+        pyl = PyListOfLeaves()
+        for i in range(0,leaves.GetEntries() ) :
+                leaf = leaves.At(i)
+                name = leaf.GetName()
+                # add dynamically attribute to my class 
+                pyl.__setattr__(name,leaf)
+
+```
+
+```
+tree.GetEntry(count)
+
+var1=pyl.leaf_name1.GetValue()
+...
 ```</pre>
 </div>
-<div created="20171206063102353" creator="Yifan" modified="20171206072137881" modifier="Yifan" title="Python Basics">
+<div created="20171206063102353" creator="Yifan" modified="20180327012757022" modifier="Yifan" tags="python" title="Python Basics">
 <pre>----
 
 ''Two major Python versions'': Python 2 and Python 3, with some semantical differences.
@@ -11769,7 +11973,7 @@ if x == 1:
 
 integer, floating point numbers, complex numbers, string
 
-Strings in python are defined either with a single quote or a double quotes. The difference is that you can use `'` is go with double quotes.
+Strings in python are defined either with a single quote or a double quotes. The difference is that you can use `'` is go with double quotes, or `'''` / `&quot;&quot;&quot;` for strings containing `\n`
 
 ```
 myint = 7
@@ -11784,9 +11988,26 @@ mystring = 'hello'
 print(mystring)
 mystring = &quot;hello&quot;
 print(mystring)
+
+
+str1=r'a\b'    # r表示不转义
+str2='''
+line1
+line2
+'''
 ```
 
+`None` is the NULL of python. It's a unique object of the ~NoneType.
 
+
+''mutable and immutable objects''
+
+mutable对象可以被修改，而immutable对象不行。即使修改成功了，也只是创建了一个新对象，并将其引用赋值给了原对象而已，原对象内存中数据不被更改。
+
+```
+a=[1,'str',[2,3]]    #mutable
+a=(2,3)  # immutable
+```
 
 
 variation of definement and simultaneous assignments.
@@ -11809,25 +12030,112 @@ a, b = 3, 4
 print(a,b)
 ```
 
+变量名是对对象的引用；因此，函数可以修改参数的值
+
+```
+a=[1,2,3]
+b=a
+a.append(4)
+print b
+```
+
 ----
 
-!!Lists
+!!Tuples, Lists, Dicts and Sets
+
+''tuples'': 1 dimensional, constant size, immutable
+
+```
+tup=4,5,6
+nested_tup=(4,5,6),(7,8)
+tup3=tuple([1,2,3])
+tup4=tuple('string')
+
+a,b,c=tup;    #a=4, b=5, c=6
+b,a=a,b    # swap
+
+tup.count(4)   # number of the elements with the value
+```
+
+
+''lists''
 
 ```
 mylist = []
 mylist.append(1)
 mylist.append(2)
-mylist.append(3)
-print(mylist[0]) # prints 1
+mylist.append('str')   # mylist =[1,2,'str']
 print(mylist[1]) # prints 2
-print(mylist[2]) # prints 3
 
-# prints out 1,2,3
 for x in mylist:
     print(x)
+
+mylist.insert(position,value)
+mylist.pop(position)    #return the value and remove it from the list
+mylist.remove(value)    #remove the first occurance
+value in list    # boolean
+list2=list0+list1    #combine lists
+list0.extend(list1)    # list1=list0+list1, but quicker
+list.sort()
+list.sort(key=len)
+
+import bisect    # doesn't check if the list is sorted yet
+bisect.bisect(c,value)    #return the position in which the value can be inserted, to maintain the order
+bisect.insort(c,value)    #insert the value
+list[start:stop:step]    # start/stop/step can be default
+
+#enumerate
+for i,value in enumerate(collection):    #basic usage
+mapping = dict((v,i) for i, v in enumerate(some_list))    # generating dict from list
+
+sorted_list=sorted(list)
+list2=set(list)    # every different elements
+
+zip(seq1,seq2)   # list of (seq1[i],seq2[i]); can zip any number of lists, final length depending on the shortest parent
+for i, (a,b) in enumerate(zip(seq1,seq2)):    # zip + enumerate
+seq1,seq2 = zip(*zipped_seqs)    # unzip
+
 ```
 
+
 @@color:blue;Accessing an index which does not exist generates an exception (an error).@@
+
+''dict'': hash map of keys and values
+
+```
+d1={'a':'some_value','b':[1,2,3,4]}
+d1[1]='value2'    # adding a new element, key is 1
+value in d1    # boolean
+d1.pop(key1)
+d1.update({new_key1:value1, new_key2:value2})
+
+mapping = dict(zip(seq_key,seq_value))    # generating dict from two lists
+
+value = some_dict.get(key, default_value)
+value = some_dict.get(key)    # default_value is None
+dict.set_default[key, default_value]    # if the key was not defined, give it default_value; return the value
+```
+
+@@color:blue; The keys of the dict must be immutable objects@@
+
+''set'':  unique elements, unsorted; equivalent to dict only keys but not values
+
+```
+set1= set(list1)
+set1={1,2,3}
+
+{1,2,3} == {3,2,1}   # true
+
+set1.add(element)
+set1.remove(element)
+set1.union(set2)    #  a | b
+set1.intersection(set2)    # a &amp; b
+set1.difference(set2)   # a - b
+set1.symmetric_difference(b)  # a ^ b
+a.issubset(b)
+a.issuperset(b)
+a.isdisjoint(b)
+```
 
 ----
 
@@ -11838,7 +12146,7 @@ number = 1 + 2 * 3 / 4.0
 remainder = 11 % 3
 helloworld = &quot;hello&quot; + &quot; &quot; + &quot;world&quot;
 lotsofhellos = &quot;hello&quot; * 10
-
+3/2    # 在python2中3/2=1；在python3中3/2=1.5, 3//2=1
 
 even_numbers = [2,4,6,8]
 odd_numbers = [1,3,5,7]
@@ -11846,6 +12154,8 @@ all_numbers = odd_numbers + even_numbers
 print(all_numbers)
 
 print([1,2,3] * 3)
+
+complex_number=1+1j  #更复杂的处理使用cmath
 ```
 
 ----
@@ -11892,7 +12202,15 @@ afewwords = astring.split(&quot; &quot;)  #afewwords becomes a list of the strin
 ```
 
 ----
-!!Conditions
+!!Booleans and Conditions
+
+Many Objects bear the notion of True/False, can check with `bool(object)`. For example, an empty array means false, while a non-empty one means true.
+
+```
+1 and 2  #  =2
+1 or 2    #   =1
+a&gt;b&lt;c    # equivalent to:  (a&gt;b) and (b&lt;c)
+```
 
 *`elif` = else if.
 *`not`
@@ -11923,7 +12241,7 @@ else:
     print(&quot;x does not equal to two.&quot;)
 ```
 
-`is` vs. `==`:
+`is` vs. `==`: `is`表示指向同一个对象，`==`表示值相等
 
 ```
 x = [1,2,3]
@@ -11975,9 +12293,18 @@ for x in range(10):
     print(x)
 ```
 
-@@color:blue; else can be used for loop@@: To be executed when the `while` or `for` failed, can be skipped by `break` but not `continue`.</pre>
+@@color:blue; else can be used for loop@@: To be executed when the `while` or `for` failed, can be skipped by `break` but not `continue`.
+
+''pass'': 空操作
+
+----
+!!Ternary Expressions
+
+```
+value = true_expr if condition else false_expr
+```</pre>
 </div>
-<div created="20171206072340325" creator="Yifan" modified="20171206074523229" modifier="Yifan" title="Python Basics 2">
+<div created="20171206072340325" creator="Yifan" modified="20180327012808903" modifier="Yifan" tags="python" title="Python Basics 2">
 <pre>!!Functions
 
 ```
@@ -11991,6 +12318,49 @@ def my_function_with_args(username, greeting):
 
 def sum_two_numbers(a, b):
     return a + b
+```
+
+''functions can return multiple variables; or even a dict.''
+
+```
+def f():
+    a = 1
+    b = 2
+    c = 3
+    return a,b,c
+
+a,b,c=f()
+```
+
+''function as an object''
+
+```
+def remove_punctuation(value):
+    return re.sub('[!#?]', '', value)
+
+clean_ops = [str.strip, remove_punctuation, sub.title]
+
+def clean_strings(strings,ops):
+    result = []
+    for value in strings:
+        for function in ops:
+            value = function(value)
+        result.append(value)
+    return result
+
+```
+
+''function as argument'':
+
+```
+map(func, iterable)
+```
+
+''lambda  function''
+
+```
+func1=lambda x: x**2
+func1(3)    # return 9    
 ```
 
 ----
@@ -12086,9 +12456,80 @@ Two ways to import:
 import pac.mod    # mod in namespace pac
 
 from pac import mod    # mod ported into current namespace
+```
+
+----
+
+!! File and OS
+
+```
+path = './foo1/file1.txt'
+f=open(path)    # 'r' mode by default
+for line in f:
+    pass
+
+f = open(path, mode)    # r, w, a, r+, b, U
+f.read([size])
+f.readlines([size])
+f.write(str)
+f.close()
+f.flush()    # clear I/O buffer and write to disk
+f.seek(pos)    #move cursor to pos
+f.tell()    # return current cursor position
+f.closed()     # boolean
 ```</pre>
 </div>
-<div created="20180217031737023" creator="Yifan" modified="20180217035615092" modifier="Yifan" title="Python Packages">
+<div created="20180327033156018" creator="Yifan" modified="20180327033453046" modifier="Yifan" tags="python" title="Python I/O">
+<pre>!!Script taking Parameters from Command Lines
+''Basic''
+
+```
+python script.py arg1 arg2
+```
+
+```
+import sys
+
+print sys.argv
+```
+
+''Custom''
+
+```
+usage: test.py -i &lt;inputfile&gt; -o &lt;outputfile&gt;
+```
+```
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
+import sys, getopt
+
+def main(argv):
+   inputfile = ''
+   outputfile = ''
+   try:
+      opts, args = getopt.getopt(argv,&quot;hi:o:&quot;,[&quot;ifile=&quot;,&quot;ofile=&quot;])
+   except getopt.GetoptError:
+      print 'test.py -i &lt;inputfile&gt; -o &lt;outputfile&gt;'
+      sys.exit(2)
+   for opt, arg in opts:
+      if opt == '-h':
+         print 'test.py -i &lt;inputfile&gt; -o &lt;outputfile&gt;'
+         sys.exit()
+      elif opt in (&quot;-i&quot;, &quot;--ifile&quot;):
+         inputfile = arg
+      elif opt in (&quot;-o&quot;, &quot;--ofile&quot;):
+         outputfile = arg
+   print 'Input File: ', inputfile
+   print 'Output File: ', outputfile
+
+if __name__ == &quot;__main__&quot;:
+   main(sys.argv[1:])
+```
+
+----</pre>
+</div>
+<div created="20180217031737023" creator="Yifan" modified="20180327012933605" modifier="Yifan" tags="python" title="Python Packages 1">
 <pre>----
 !!math
 
@@ -12128,6 +12569,21 @@ math.e
 
 ```
 
+cmath
+
+https://docs.python.org/2/library/cmath.html
+
+```
+z=1+1j
+z==z.real+z.imag*1j
+
+cmath.polar(x)
+cmath.rect(r,phi)
+cmath.phase(x)
+
+#trigonometric, hyperbolic, power and logarithmic
+```
+
 ----
 !!datetime
 
@@ -12165,6 +12621,57 @@ sys.path # a list of search paths
 sys.version # the version number of the python interpreter
 
 
+```
+
+----
+!!itertools
+
+https://docs.python.org/2/library/itertools.html
+
+This module implements a number of iterator building blocks inspired by constructs from APL, Haskell, and SML. Each has been recast in a form suitable for Python.
+
+```
+itertools.chain()
+itertools.compress()
+itertools.groupby()
+itertools.ifilter()
+itertools.imap()
+itertools.combinations(iterable,k)
+itertools.permutation(iterable,k)
+...
+```</pre>
+</div>
+<div created="20180327012736249" creator="Yifan" modified="20180327013503222" modifier="Yifan" tags="python" title="Python Packages 2">
+<pre>----
+!!OS
+
+https://docs.python.org/2/library/os.html
+
+Allowing using unix commands.
+
+```
+import os
+
+os.mkdir(path)
+os.rm(path)
+
+import shutil
+def rm_r(path):
+    if os.path.isdir(path) and not os.path.islink(path):
+        shutil.rmtree(path)
+    elif os.path.exists(path):
+        os.remove(path)
+
+```
+
+----
+</pre>
+</div>
+<div created="20180326110241680" creator="Yifan" modified="20180327012950122" modifier="Yifan" tags="python" title="Python Performance Tips">
+<pre>*Use ''timeit'' package to see what codes run fast and what run slow
+
+```
+timeit.timeit('text.find(char)', setup='text = &quot;sample string&quot;; char = &quot;g&quot;',number=1000000)
 ```</pre>
 </div>
 <div created="20171212065213531" creator="Yifan" modified="20171212065304999" modifier="Yifan" title="QWG">
@@ -13408,6 +13915,16 @@ void twoscales() {
 }
 ```</pre>
 </div>
+<div created="20180317163340554" creator="Yifan" modified="20180317163351209" modifier="Yifan" tags="template" title="slider">
+<pre>\define slider(label)
+&lt;$button popup=&quot;$:/state/$label$&quot; class=&quot;btn-invisible tw-slider&quot;&gt;&lt;$reveal type=&quot;match&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;&amp;#x229E;&lt;/$reveal&gt;&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot;&gt;&amp;#x229F;&lt;/$reveal&gt; {{$label$||unwikified}}&lt;/$button&gt;
+&lt;$reveal type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot; state=&quot;$:/state/$label$&quot; animate=&quot;yes&quot;&gt;
+&lt;$transclude/&gt;
+&lt;/$reveal&gt;
+\end
+
+&lt;$macrocall $name=&quot;slider&quot; label={{!!title}}/&gt;</pre>
+</div>
 <div created="20170412032224446" creator="Yifan" modified="20170414051700651" modifier="Yifan" title="Statistics">
 <pre>#[[Important Distributions]]
 #[[大数定理和中心极限定理]]
@@ -13629,6 +14146,55 @@ I am reminded of the advice of my neighbor, &quot;Never worry about your heart t
 &quot;The Fish,&quot; &quot;Poetry,&quot; and &quot;The Monkeys&quot; are in Marianne Moore's Selected Poems. 
 ```</pre>
 </div>
+<div created="20180317153825922" creator="Yifan" modified="20180317155645105" modifier="Yifan" title="Tiddlywiki Macros">
+<pre>!!Core Macros
+https://tiddlywiki.com/#:%5B%5BCore%20Macros%5D%5D%20%5B%5Bcolour%20Macro%5D%5D
+
+----
+!!Collapse
+
+```
+\define collapse(caption,body)
+&lt;$reveal type=&quot;nomatch&quot; state=&lt;&lt;qualify &quot;$:/state/toc/$caption$&quot;&gt;&gt; text=&quot;show&quot;&gt;
+&lt;$button set=&lt;&lt;qualify &quot;$:/state/toc/$caption$&quot;&gt;&gt; setTo=&quot;show&quot; class=&quot;tc-btn-invisible&quot;&gt;
+
+!! {{$:/core/images/right-arrow}} $caption$
+&lt;/$button&gt;
+&lt;/$reveal&gt;
+&lt;$reveal type=&quot;match&quot; state=&lt;&lt;qualify &quot;$:/state/toc/$caption$&quot;&gt;&gt; text=&quot;show&quot;&gt;
+&lt;$button set=&lt;&lt;qualify &quot;$:/state/toc/$caption$&quot;&gt;&gt; setTo=&quot;hide&quot; class=&quot;tc-btn-invisible&quot;&gt;
+
+!! {{$:/core/images/down-arrow}} $caption$
+&lt;/$button&gt;
+&lt;/$reveal&gt;
+&lt;$reveal type=&quot;match&quot; state=&lt;&lt;qualify &quot;$:/state/toc/$caption$&quot;&gt;&gt; text=&quot;show&quot; retain=&quot;yes&quot; animate=&quot;yes&quot;&gt;
+
+$body$
+
+&lt;/$reveal&gt;
+\end
+```
+
+!!Gallery
+```
+\define gallery(images)
+&lt;style&gt;
+.style-gallery button{
+  width: 40%;
+  margin: 2%;
+}
+&lt;/style&gt;
+&lt;div class=&quot;style-gallery&quot;&gt;
+&lt;$list filter=&quot;$images$&quot;&gt;
+&lt;$button class=&quot;tc-btn-invisible&quot;&gt;
+&lt;$action-sendmessage $message=&quot;tm-modal&quot; $param=&quot;$:/ModalImage&quot; Images=&quot;$images$&quot; Image=&lt;&lt;currentTiddler&gt;&gt; /&gt;
+&lt;$transclude tiddler={{!!title}} /&gt;
+&lt;/$button&gt;
+&lt;/$list&gt;
+&lt;/div&gt;
+\end
+```</pre>
+</div>
 <div created="20170410051320041" creator="Yifan" modified="20170410052524649" modifier="Yifan" title="Tips on Making Slides">
 <pre>!!How Much Can I Put On a Frame?
 *Better too little than too much. Usually should be between 20 and 40 words, 80 words at most.
@@ -13653,9 +14219,23 @@ I am reminded of the advice of my neighbor, &quot;Never worry about your heart t
 *Don't use a smaller font size to “fit more on a frame.” 
 </pre>
 </div>
+<div created="20180317145547583" creator="Yifan" modified="20180317150738157" modifier="Yifan" title="Tool Programs">
+<pre>#[[Tiddlywiki|About Tiddlywiki]]: the wiki-like notebook.
+#[[Vidyo]]: online conference
+#[[Notepad++|https://notepad-plus-plus.org/]]:text editor
+#[[Lingoes|http://www.lingoes.net/]]: dictionary.
+#[[github|http://github.com]]:version control service
+#XShell: Shell.</pre>
+</div>
 <div created="20170413095123511" creator="Yifan" modified="20170415054627898" modifier="Yifan" title="Typing Practices">
 <pre>*[[Numpad Typing |http://www.typeonline.co.uk/number_pad_lesson1.html]]
 *[[Typeracer|http://play.typeracer.com]]: a typing game.</pre>
+</div>
+<div created="20180317145756214" creator="Yifan" modified="20180317150318047" modifier="Yifan" title="Vidyo">
+<pre>---
+#Downloading Vidyo just by clicking the links in the IHEP indico.
+#Clicking links and enter PIN code to join room.
+#Remember to remove microphone and camera.</pre>
 </div>
 <div created="20170411133712979" creator="Yifan" modified="20171117075101333" modifier="Yifan" title="vim Editor">
 <pre>`gvim text_file &amp;`: open a window of graphic vi editor
