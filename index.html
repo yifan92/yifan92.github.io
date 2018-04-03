@@ -149,13 +149,13 @@ Error message and password prompt
 
 <li>$:/state/sidebar</li>
 
-<li>$:/state/tab/sidebar--1835078512</li>
-
 <li>$:/state/tab--1498284803</li>
+
+<li>$:/state/tab--1963855381</li>
 
 <li>$:/state/tab-1749438307</li>
 
-<li>$:/state/tab--1963855381</li>
+<li>$:/state/tab/sidebar--1835078512</li>
 
 <li>$:/state/toc/title-575949</li>
 
@@ -192,6 +192,8 @@ Error message and password prompt
 <li>2018.3.13</li>
 
 <li>2018.3.6</li>
+
+<li>2018.4.3</li>
 
 <li>About Tiddlywiki</li>
 
@@ -8383,20 +8385,20 @@ allow edit&lt;/$button&gt;
 <div created="20170407022931231" creator="Yifan" modified="20171114050842979" modifier="Yifan" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20170407022746366" creator="Yifan" modified="20180327033600817" modifier="Yifan" title="$:/state/sidebar">
+<div created="20170407022746366" creator="Yifan" modified="20180403070052372" modifier="Yifan" title="$:/state/sidebar">
 <pre>no</pre>
 </div>
-<div created="20170407054919167" creator="Yifan" modified="20180317162721394" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/Tools</pre>
+<div created="20180316112029962" creator="Yifan" modified="20180328070953479" modifier="Yifan" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
-<div created="20180316112029962" creator="Yifan" modified="20180317110756647" modifier="Yifan" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Standard</pre>
+<div created="20170411005206925" creator="Yifan" modified="20180316121110495" modifier="Yifan" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/Toolbars</pre>
 </div>
 <div created="20170411005206005" creator="Yifan" modified="20180316121058340" modifier="Yifan" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Appearance</pre>
 </div>
-<div created="20170411005206925" creator="Yifan" modified="20180316121110495" modifier="Yifan" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/Toolbars</pre>
+<div created="20170407054919167" creator="Yifan" modified="20180317162721394" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
+<pre>$:/core/ui/SideBar/Tools</pre>
 </div>
 <div created="20180317154845831" creator="Yifan" modified="20180317154846823" modifier="Yifan" title="$:/state/toc/title-575949">
 <pre>hide</pre>
@@ -8404,10 +8406,10 @@ allow edit&lt;/$button&gt;
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList [[Python I/O]] Yifan [[Python and ROOT]] [[Python Packages 2]] $:/Manage $:/core/ui/Buttons/save-wiki" title="$:/StoryList">
+<div list="ContentList $:/AdvancedSearch $:/Manage $:/core/ui/Buttons/save-wiki [[Work Log]] 2018.3.13 2018.4.3" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20180316112035263" creator="Yifan" modified="20180327033617374" modifier="Yifan" tags="$:/tags/Stylesheet" title="$:/Style.css">
+<div created="20180316112035263" creator="Yifan" modified="20180403070054561" modifier="Yifan" tags="$:/tags/Stylesheet" title="$:/Style.css">
 <pre>\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline macrocallblock
 
 /* 目录 */
@@ -8423,18 +8425,21 @@ allow edit&lt;/$button&gt;
 /* 隐藏条目按钮 
 .tc-tiddler-controls {
     display: none;
-}*/
+}
+
 .tc-image-down-arrow, .tc-image-edit-button, .tc-image-close-button {
     `display: none;
-}
-/* 隐藏条目副标题 */
+}*/
+
+/* 隐藏条目副标题*/
 .tc-subtitle {
     display: none;
 }
-/* 隐藏条目标签 */
+
+/* 隐藏条目标签 
 .tc-tags-wrapper {
     display: none;
-}
+}*/
 
 /* 页眉 */
 .tc-header {
@@ -8505,8 +8510,8 @@ allow edit&lt;/$button&gt;
 
 </pre>
 </div>
-<div created="20180316112029961" creator="Yifan" modified="20180317110824088" modifier="Yifan" title="$:/temp/advancedsearch">
-<pre></pre>
+<div created="20180316112029961" creator="Yifan" modified="20180328070958210" modifier="Yifan" title="$:/temp/advancedsearch">
+<pre>Manage</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -9255,6 +9260,74 @@ Cos(theta1)+Cos(theta2), (E1 - E2), pp, pm, mee
 
 </pre>
 </div>
+<div created="20180403024142588" creator="Yifan" modified="20180403070008843" modifier="Yifan" title="2018.4.3">
+<pre>!!Discrepancy between Bhabha EMC-only and Bhabha EMC+MDC
+
+Former Cut:
+
+| !MC sample | ~BhabhaNLO M(ee) cut |
+| !Using Info of MDC+EMC method | m(ee)&gt;3.8  |
+| !Using Info of EMC-only method | standard cuts |
+
+''events of m(ee)&lt;3.8'':
+
+[img width=400 [./img/Worklog/Luminosity/180403/mdccut_e1.png]]
+[img width=400 [./img/Worklog/Luminosity/180403/mdccut_e2.png]]
+
+Equivalent cut:
+
+| !MC sample | ~BhabhaNLO M(ee) cut |
+| !Using Info of MDC+EMC method |   |
+| !Using Info of EMC-only method | E&gt;1.9@4190; standard $$\Delta(\phi)$$, cos$$\theta$$ cuts |
+
+[img width=600 [./img/Worklog/Luminosity/180403/BhabhaLum.jpg]]
+
+----
+
+!!Disagreement of Digamma Results 
+
+| !MC sample | Digamma NLO/3.5 |
+| !Using Info of MDC+EMC method |   |
+| !Using Info of EMC-only method | E&gt;1.8@4190 |
+|~| $$\Delta(\phi)$$&lt;0.8 |
+|~| $$|Cos\theta|&lt;0.8 $$ |
+
+*Digamma result 2% smaller
+*Babayaga 3.5 and Babayaga NLO difference: 15% relative difference in cross section, 0.2% difference in Lum result. (@4190, @4200)
+*The result stays nearly the same when 
+**moving $$Cos\theta$$ cut 
+**moving $$\Delta\phi$$ cut 
+**adding $$|E_1 - E_2|$$ cut 
+**adding |$$Cos\theta_1+Cos\theta_2$$| cut 
+*If stricter E cut, the difference would be even larger.
+
+[img width=400 [./img/Worklog/Luminosity/180403/Test/Digamma_NLO_e1_20.png]]
+[img width=400 [./img/Worklog/Luminosity/180403/Test/Digamma_NLO_e2_20.png]]
+
+[img width=400 [./img/Worklog/Luminosity/180403/Test/Digamma_NLO_ct1_20.png]]
+[img width=400 [./img/Worklog/Luminosity/180403/Test/Digamma_NLO_ct2_20.png]]
+
+[img width=400 [./img/Worklog/Luminosity/180403/Test/Digamma_NLO_phidiff_33.png]]
+
+
+[img width=400 [./img/Worklog/Luminosity/180403/Test/Digamma_NLO_deltact_20.png]]
+[img width=400 [./img/Worklog/Luminosity/180403/Test/Digamma_NLO_deltaE_20.png]]
+
+''data events have mdc info'': means background
+
+[img width=400[./img/Worklog/Luminosity/180403/Test/Digamma_NLO_pp_20.png]]
+
+
+''Possible Causes:''
+
+*Wrong MC cross section should be unlikely.
+*MC falied to describe data? 
+**Unknown energy lost in data?
+
+
+
+</pre>
+</div>
 <div created="20170407035445794" creator="Yifan" modified="20180317161400613" modifier="Yifan" title="About Tiddlywiki">
 <pre>This note is stored as a Tiddlywiki file. Here are some more information about this helpful tool.
 
@@ -9432,7 +9505,7 @@ alias pd='echo &quot;Print Saved Paths:&quot;; for i in `seq 1 9`; do  echo $i: 
 for x in `cat logfiles/dig4210 | sed '/success/d' | awk -F'.' '{print $1}'`; do boss.condor $x.txt; done
 ```</pre>
 </div>
-<div created="20180312091012297" creator="Yifan" modified="20180312091540545" modifier="Yifan" title="bash_example4">
+<div created="20180312091012297" creator="Yifan" modified="20180402132522363" modifier="Yifan" title="bash_example4">
 <pre>If part of the MC data failed to be generated, we randomly reused some other data to get the total number right.
 
 1. Get the number of bad files N
@@ -9447,11 +9520,38 @@ du MC_* | grep ^4 | wc -l
 rm `du MC_* | grep ^4 | awk '{print$2}'` 
 ```
 
-3. Duplicate the first N good files, and `hadd`
+or remove bad dst according to logfile
+
+```
+for x in `cat ../logfile | sed '/Finalize/d' | awk -F'.' '{print $1}' | awk -F'_' '{print $2}'`; do rm *$x*; done
+```
+
+3. Duplicate the first N good root files, and `hadd`
 
 ```
 for x in `ls MC_* | head -N`; do cp $x s$x; done
-hadd result.root MC_.*dst sMC_*.dst
+hadd result.root MC_*.root sMC_*.root
+```
+
+or duplicate the dst files:
+
+```
+for x in `seq -w 200`; do
+if [[ `ls *$x* | wc -l` == 0 ]]; then
+	idx=`echo $x |sed 's/^00//' | sed 's/^0//'`
+
+	idx2=$(($idx -1))
+	if [[ ${#idx2} -le 1 ]]; then
+		idx2=`echo 0$idx2`
+	fi
+	if [[ ${#idx2} -le 2 ]]; then
+		idx2=`echo 0$idx2`
+	fi
+	echo $idx2, $x
+	cp MC_$idx2.dst MC_$x.dst
+fi
+done
+
 ```
 </pre>
 </div>
@@ -11155,7 +11255,7 @@ Render a frame marking the margins of the current document:
 #[[Bash Scripts]]
 #[[vim Editor]]</pre>
 </div>
-<div created="20170407022820254" creator="Yifan" modified="20171219082942352" modifier="Yifan" title="Linux Commands">
+<div created="20170407022820254" creator="Yifan" modified="20180402071209972" modifier="Yifan" title="Linux Commands">
 <pre>----
 !The Basics
 *`pwd`
@@ -11175,6 +11275,7 @@ Render a frame marking the margins of the current document:
 *`touch`
 *`date`: print current time
 *`df`: display disk space usage for all
+*`seq 1 100`: print a sequence; `-w` to put 0s in front
 
 ----
 !More
@@ -11545,7 +11646,7 @@ https://dirac.ihep.ac.cn/DIRAC/
 ----
 #[[PDG Webpage|http://pdglive.lbl.gov/Viewer.action]]</pre>
 </div>
-<div created="20171206062015398" creator="Yifan" modified="20180327033148974" modifier="Yifan" tags="python" title="python">
+<div created="20171206062015398" creator="Yifan" modified="20180328053317533" modifier="Yifan" tags="python" title="python">
 <pre>----
 #[[Python Basics]]: indentation, variables, lists, basic operators, string formatting, basic string operations, conditions, loops.
 #[[Python Basics 2]]: function, classes and objects, dictionaries, module and packages, file and OS
@@ -11554,7 +11655,7 @@ https://dirac.ihep.ac.cn/DIRAC/
 #[[Python and Notepad++]]: connecting the notepad++ to python
 #[[Python Performance Tips]]
 #[[Python Packages 1]]: math, cmath, datetime, sys, itertools
-#[[Python Packages 2]]: os, logging
+#[[Python Packages 2]]: os, logging, getopt
 #[[Python I/O]]
 
 ----
@@ -12479,55 +12580,60 @@ f.tell()    # return current cursor position
 f.closed()     # boolean
 ```</pre>
 </div>
-<div created="20180327033156018" creator="Yifan" modified="20180327033453046" modifier="Yifan" tags="python" title="Python I/O">
-<pre>!!Script taking Parameters from Command Lines
-''Basic''
+<div created="20180327033156018" creator="Yifan" modified="20180328075702782" modifier="Yifan" tags="python" title="Python I/O">
+<pre>!!Output to File
 
-```
-python script.py arg1 arg2
-```
+#Use logging package.
+#change `sys.stdout`
+
+''Print to both screen and File''
 
 ```
 import sys
+class MyWriter:
 
+    def __init__(self, stdout, filename):
+        self.stdout = stdout
+        self.logfile = file(filename, 'a')
+
+    def write(self, text):
+        self.stdout.write(text)
+        self.logfile.write(text)
+
+    def close(self):
+        self.stdout.close()
+        self.logfile.close()
+
+writer = MyWriter(sys.stdout, 'log.txt')
+sys.stdout = writer
+
+print 'test' 
+```
+
+or for python 3.3 and above
+
+```
+level = logging.INFO
+format = ' %(message)s'
+handlers = [logging.FileHandler('filename.log'), logging.StreamHandler()]
+logging.basicConfig(level = level, format = format, handlers = handlers)
+logging.info('Hey, this is working!')
+```
+
+----
+
+!!Script taking Parameters from Command Lines
+
+''basic''
+
+```
+import sys
 print sys.argv
 ```
 
-''Custom''
+''advanced'': use getopt package. 
 
-```
-usage: test.py -i &lt;inputfile&gt; -o &lt;outputfile&gt;
-```
-```
-#!/usr/bin/python
-# -*- coding: UTF-8 -*-
-
-import sys, getopt
-
-def main(argv):
-   inputfile = ''
-   outputfile = ''
-   try:
-      opts, args = getopt.getopt(argv,&quot;hi:o:&quot;,[&quot;ifile=&quot;,&quot;ofile=&quot;])
-   except getopt.GetoptError:
-      print 'test.py -i &lt;inputfile&gt; -o &lt;outputfile&gt;'
-      sys.exit(2)
-   for opt, arg in opts:
-      if opt == '-h':
-         print 'test.py -i &lt;inputfile&gt; -o &lt;outputfile&gt;'
-         sys.exit()
-      elif opt in (&quot;-i&quot;, &quot;--ifile&quot;):
-         inputfile = arg
-      elif opt in (&quot;-o&quot;, &quot;--ofile&quot;):
-         outputfile = arg
-   print 'Input File: ', inputfile
-   print 'Output File: ', outputfile
-
-if __name__ == &quot;__main__&quot;:
-   main(sys.argv[1:])
-```
-
-----</pre>
+</pre>
 </div>
 <div created="20180217031737023" creator="Yifan" modified="20180327012933605" modifier="Yifan" tags="python" title="Python Packages 1">
 <pre>----
@@ -12641,7 +12747,7 @@ itertools.permutation(iterable,k)
 ...
 ```</pre>
 </div>
-<div created="20180327012736249" creator="Yifan" modified="20180327013503222" modifier="Yifan" tags="python" title="Python Packages 2">
+<div created="20180327012736249" creator="Yifan" modified="20180328071907787" modifier="Yifan" tags="python" title="Python Packages 2">
 <pre>----
 !!OS
 
@@ -12665,6 +12771,75 @@ def rm_r(path):
 ```
 
 ----
+!!Logging
+
+''basic usage''
+
+```
+import logging
+
+logging.basicConfig(level = logging.INFO,format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+logger.info(&quot;Start print log&quot;)
+logger.debug(&quot;Do something&quot;)
+logger.warning(&quot;Something maybe fail.&quot;)
+logger.info(&quot;Finish&quot;)
+```
+
+''logging config'': 
+
+*filename
+*filemode
+*format
+*datefmt
+*level: critical&gt; error&gt;warning&gt;info&gt;debug&gt;notset
+*stream
+
+''parameters'' in format
+
+```
+%(levelno)s：打印日志级别的数值
+%(levelname)s：打印日志级别的名称
+%(pathname)s：打印当前执行程序的路径，其实就是sys.argv[0]
+%(filename)s：打印当前执行程序名
+%(funcName)s：打印日志的当前函数
+%(lineno)d：打印日志的当前行号
+%(asctime)s：打印日志的时间
+%(thread)d：打印线程ID
+%(threadName)s：打印线程名称
+%(process)d：打印进程ID
+%(message)s：打印日志信息
+```
+
+----
+!!getopt
+
+''usage example''
+
+```
+try:
+        opts,args=getopt.getopt(sys.argv[1:],'c:e:m:',['channel=','sample=','energy_point=','mctype=','ndata=','nmc='])
+except:
+        print &quot;Error with Parameters&quot;
+        sys.exit(2)
+for o,a in opts:
+        if o in (&quot;--channel&quot;,&quot;-c&quot;):
+                channel=a
+        if o in (&quot;--mctype&quot;,&quot;-m&quot;):
+                mctype_raw=a
+        if o in (&quot;--energy_point&quot;,&quot;-e&quot;,&quot;--sample&quot;):
+                energy_point=a
+        if o in (&quot;--ndata&quot;):
+                nmax_data=a
+        if o in (&quot;--nmc&quot;):
+                nmax_mc=a
+```
+
+''getopt.getopt(arg lists，short options，long option list)''
+
+*short option: one char, &quot;:&quot; means can take parameters
+*long option: one word
 </pre>
 </div>
 <div created="20180326110241680" creator="Yifan" modified="20180327012950122" modifier="Yifan" tags="python" title="Python Performance Tips">
@@ -14219,13 +14394,13 @@ $body$
 *Don't use a smaller font size to “fit more on a frame.” 
 </pre>
 </div>
-<div created="20180317145547583" creator="Yifan" modified="20180317150738157" modifier="Yifan" title="Tool Programs">
+<div created="20180317145547583" creator="Yifan" modified="20180328071041805" modifier="Yifan" title="Tool Programs">
 <pre>#[[Tiddlywiki|About Tiddlywiki]]: the wiki-like notebook.
 #[[Vidyo]]: online conference
 #[[Notepad++|https://notepad-plus-plus.org/]]:text editor
 #[[Lingoes|http://www.lingoes.net/]]: dictionary.
 #[[github|http://github.com]]:version control service
-#XShell: Shell.</pre>
+#XShell: unix shell.</pre>
 </div>
 <div created="20170413095123511" creator="Yifan" modified="20170415054627898" modifier="Yifan" title="Typing Practices">
 <pre>*[[Numpad Typing |http://www.typeonline.co.uk/number_pad_lesson1.html]]
@@ -14294,7 +14469,7 @@ Default files:
 
 [[Config Example|http://vimconfig.com/]]</pre>
 </div>
-<div created="20170426113120964" creator="Yifan" modified="20180313015953382" modifier="Yifan" title="Work Log">
+<div created="20170426113120964" creator="Yifan" modified="20180403024136948" modifier="Yifan" title="Work Log">
 <pre>#[[Worklog_gKsKpi]]
 #[[Worklog_Luminosity]]
 #[[Worklog_MCProduction]]
@@ -14311,13 +14486,18 @@ Default files:
 #[[2018.2.6]]
 #[[2018.3.6]]
 #[[2018.3.13]]
+#[[2018.4.3]]
 
 ----
 Chronicle txt Files
 
 #[ext[Octomber 2017|./txtfiles/worklog_201710.txt]]
 #[ext[November 2017|./txtfiles/worklog_201711.txt]]
-#[ext[December 2017|./txtfiles/worklog_201712.txt]]</pre>
+#[ext[December 2017|./txtfiles/worklog_201712.txt]]
+#[ext[January2018|./txtfiles/worklog_201801.txt]]
+#[ext[Febrary 2018|./txtfiles/worklog_201802.txt]]
+#[ext[March 2018|./txtfiles/worklog_201803.txt]]
+#[ext[April 2018|./txtfiles/worklog_201804.txt]]</pre>
 </div>
 <div created="20170426123555284" creator="Yifan" modified="20171202084542212" modifier="Yifan" title="Work_Luminosity_part2">
 <pre>!!Results and Systematics

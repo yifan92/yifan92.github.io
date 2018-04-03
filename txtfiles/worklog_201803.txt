@@ -1,4 +1,17 @@
-
+2018/3/30	
+	-4246 data:	差一个_394，从dst列表中删除损坏的run 50721后可运行
+	-ScanMC gg_nocut MC generated:	all good as checked
+	
+	-Luminosity.py:	added configuration for old samples;	lacking some files
+		-data root of the {all scan,4420,4470,4530,4575} not prepared
+	
+2018/3/28
+	Zhu Kai: Energy and Resolution impact for Cross Section
+	
+	-running:4246 data
+	-calculating gg_nocut xsections
+	
+	
 2018/3/27
 	-rewriting script to python:
 		-功能完备；可执行
@@ -43,7 +56,7 @@
 
 2018/3/12
 	-可能bhabha0未产生完；log文件已删除无法查询，可能4280,4270能量点有问题
-		-这几天服务器故障，坏作业率很高(49~109/200成功)；需重新产生
+	-这几天服务器故障，坏作业率很高(49~109/200成功)；需重新产生
 	-4200,4210 MC dst残留 bha0文件夹，冗余文件，作为bkp暂时保留
 	-4230 bhabha0 因脚本错误，产生失败	
 

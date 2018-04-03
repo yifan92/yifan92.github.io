@@ -1,0 +1,47 @@
+
+
+
+
+2018/4/3
+	GaoQing 4260 Digamma:	19.34*40.597 825.68
+	Me:		
+
+	-程序有bug
+		-count+=2 ...
+		-threshold 0.75 
+	-新增补的文件，不确定Data4600.root是否整合。
+		-其他能量点经验证没问题
+		-可能是dstlist不小心mv了。暂时认为没问题
+
+	-why the 2% difference between Digamma result and Bhabha result?
+		-MC/Data discrepancy:
+			-move E1 cut to 1.9
+				-lum even smaller
+		-4210 Digamma 是唯一对的上的；
+			-root有问题？
+				
+				
+	-4190 digamma 3.5 and 4200 digamma 3.5 has large discrepancy
+		-checking root file:	
+			-4190 的 digamma 因未能补损坏文件，而导致MC事例数少，亮度不准确。
+			-结论是3.5和NLO结果一致。
+			-pending copy 4190 Digamma3.5.root to 4190MC/root/, after the Luminosity.py finish		
+				-done
+	-Luminosity.py didn't save graphs distringuishing NLO/3.5
+		-fixed and rerunning
+	
+
+2018/4/2
+	-Booked BES-3 shift:	June 11-14:	8:00-16:00
+	-some jobs failed because of excessive running time.
+	-4270, 4280 Bhabha0:	
+		4280	succeesful;	duplicated from 161/200 files
+		4270	successful; duplicated from 178/200 files
+	-lost 4280	Bhabha.root, Digamma.root:	误删
+		-重新产生时， bhabha 和bhabha0 恰好有相同编号的三个作业失败，problem？
+			-ana.txt指定的目录有问题
+		-successfully recovered
+		
+	missing 3.5 Digamma MC for many energy points
+		-using existing points to identify whether NLO is good enough?
+
