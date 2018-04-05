@@ -1,6 +1,21 @@
+2018/4/5:
+	4190scan没有Babayaga 3.5的MC；
+	4210scan没有Babayaga NLO的MC;
 
-
-
+2018/4/4:
+	明天给苑老师发报告；整理digamma的问题，画图并解说。
+	应该研究一下画图的问题，如何在带Ratio的图上加入Bes3PlotStyle
+	
+	transporting bes3plotstyle.C to bes3plotstyle.py:
+		-can't use .Draw method in the function defined in the module
+		-make a limited version instead
+	Check 4190scan and 4260:
+		-4190scan data file not ready yet
+		-finish 
+	cleared all root files left for Tanggy
+	
+	
+	
 
 2018/4/3
 	4190:

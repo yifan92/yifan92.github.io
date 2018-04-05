@@ -145,6 +145,8 @@ Error message and password prompt
 
 <li>$:/SiteTitle</li>
 
+<li>$:/state/HideMode</li>
+
 <li>$:/state/showeditpreview</li>
 
 <li>$:/state/sidebar</li>
@@ -265,7 +267,11 @@ Error message and password prompt
 
 <li>ContentList</li>
 
+<li>Creating Python Library</li>
+
 <li>Deconvolution</li>
+
+<li>Digamma Problem</li>
 
 <li>Fortran</li>
 
@@ -357,9 +363,11 @@ Error message and password prompt
 
 <li>Python Performance Tips</li>
 
+<li>Pythonic Coding</li>
+
 <li>QWG</li>
 
-<li>Report Done</li>
+<li>Reports Done</li>
 
 <li>Riemann Surface</li>
 
@@ -8202,7 +8210,7 @@ Error message and password prompt
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div created="20180316113432757" creator="Yifan" modified="20180316122341844" modifier="Yifan" title="$:/Manage">
+<div created="20180316113432757" creator="Yifan" modified="20180405034345282" modifier="Yifan" title="$:/Manage">
 <pre>*$:/core/ui/Buttons/save-wiki
 *$:/AdvancedSearch
 *$:/core/ui/SideBar/Tools
@@ -8230,7 +8238,8 @@ disallow edit
 &lt;$action-setfield $tiddler=&quot;$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/edit&quot; text=&quot;show&quot;/&gt;
 allow edit&lt;/$button&gt;
 ----
-
+*&lt;$button set=&quot;$:/state/HideMode&quot; setTo=&quot;show&quot;&gt;Hide Mode Off&lt;/$button&gt;
+*&lt;$button set=&quot;$:/state/HideMode&quot; setTo=&quot;hide&quot;&gt;Hide Mode&lt;/$button&gt;
 
 </pre>
 </div>
@@ -8382,13 +8391,16 @@ allow edit&lt;/$button&gt;
 <div created="20170407022611419" modified="20170407022612731" title="$:/SiteTitle">
 <pre>HEP Note</pre>
 </div>
+<div created="20180405034305799" creator="Yifan" modified="20180405034309481" modifier="Yifan" title="$:/state/HideMode">
+<pre>hide</pre>
+</div>
 <div created="20170407022931231" creator="Yifan" modified="20171114050842979" modifier="Yifan" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
 <div created="20170407022746366" creator="Yifan" modified="20180403070052372" modifier="Yifan" title="$:/state/sidebar">
 <pre>no</pre>
 </div>
-<div created="20180316112029962" creator="Yifan" modified="20180328070953479" modifier="Yifan" title="$:/state/tab--1498284803">
+<div created="20180316112029962" creator="Yifan" modified="20180405034149324" modifier="Yifan" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/System</pre>
 </div>
 <div created="20170411005206925" creator="Yifan" modified="20180316121110495" modifier="Yifan" title="$:/state/tab--1963855381">
@@ -8406,7 +8418,7 @@ allow edit&lt;/$button&gt;
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList $:/AdvancedSearch $:/Manage $:/core/ui/Buttons/save-wiki [[Work Log]] 2018.4.3" title="$:/StoryList">
+<div list="ContentList $:/AdvancedSearch $:/Manage $:/core/ui/Buttons/save-wiki [[Work Log]] 2018.4.3 [[Digamma Problem]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180316112035263" creator="Yifan" modified="20180403070054561" modifier="Yifan" tags="$:/tags/Stylesheet" title="$:/Style.css">
@@ -8510,7 +8522,7 @@ allow edit&lt;/$button&gt;
 
 </pre>
 </div>
-<div created="20180316112029961" creator="Yifan" modified="20180328070958210" modifier="Yifan" title="$:/temp/advancedsearch">
+<div created="20180316112029961" creator="Yifan" modified="20180405034138006" modifier="Yifan" title="$:/temp/advancedsearch">
 <pre>Manage</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9260,7 +9272,7 @@ Cos(theta1)+Cos(theta2), (E1 - E2), pp, pm, mee
 
 </pre>
 </div>
-<div created="20180403024142588" creator="Yifan" modified="20180403075624275" modifier="Yifan" title="2018.4.3">
+<div created="20180403024142588" creator="Yifan" modified="20180405034357626" modifier="Yifan" title="2018.4.3">
 <pre>!!Discrepancy between Bhabha EMC-only and Bhabha EMC+MDC
 
 Former Cut:
@@ -10573,12 +10585,97 @@ On same channel.
 #[[About Tiddlywiki]]
 </pre>
 </div>
+<div created="20180404051247884" creator="Yifan" modified="20180404051719102" modifier="Yifan" tags="python" title="Creating Python Library">
+<pre>Simply create a file with the extension .py. ''Make sure the file must be created within the directory where the python searches for module''.
+
+```
+import sys
+
+sys.path.append(your_path)
+```
+
+To permanently change the path, should change the environment variable ''$PYTHONPATH''.</pre>
+</div>
 <div created="20170615083202238" creator="Yifan" modified="20170615083828594" modifier="Yifan" title="Deconvolution">
 <pre>Deconvolution is an algorithm-based process to reverse the effect of convolution.
 
 Basically it is to find the solution of a convolution equation ''f*g = h''. Or if there exists noise, ''f*g + $$\epsilon$$ = h''.
 
 Deconvolution can be achieved in Fourier Transformed form.</pre>
+</div>
+<div created="20180405034600310" creator="Yifan" modified="20180405050253357" modifier="Yifan" title="Digamma Problem">
+<pre>A discrepancy of 2% between the luminosity measured from Digamma process and that of Bhabha process.
+
+----
+!!Comparisons
+
+| !4190 | !Cross Section(nb) | !MC Efficiency | !nEvent | !Luminosity($$pb^{-1}$$) |
+| !Bhabha MDC+EMC | 354.82 | 17.55% | 32.63m | 523.9 |
+| !Bhabha EMC-only | 354.82 | 18.28% | 34.04m | 524.6 |
+| !$$\gamma\gamma$$ NLO MC | 17.374 | 46.44% | 4.14m | 512.8 |
+| !$$\gamma\gamma$$ Babayaga3.5 MC | 20.05 | 40.14% | 4.14m | 514.4 |
+
+| !4260 | !Cross Section(nb) | !MC Efficiency | !nEvent | !Luminosity($$pb^{-1}$$) |
+| !Bhabha MDC+EMC | 348.88 | 17.34% | 50082481  | 827.84 |
+| !$$\gamma\gamma$$ | 16.99 | 45.88% | 6301410 | 808.37 |
+| !~GaoQing  $$\gamma\gamma$$ | 19.34 | 40.60% | 6482776 | 825.67 |
+
+| !4190scan | !Cross Section(nb) | !MC Efficiency | !nEvent | !Luminosity($$pb^{-1}$$) |
+| !Bhabha MDC+EMC | 354.84 | 17.67% | 2709697 | 43.21 |
+| !Bhabha EMC-only | 354.84 | 18.34% | 2795271 | 42.96 |
+| !$$\gamma\gamma$$ | 17.372 | 46.34% | 342547 | 42.54 |
+| !~GaoQing  $$\gamma\gamma$$ | 19.99 | 40.83% | 351618 | 43.08 |
+
+----
+
+| !Cuts of EMC-only method for $$\gamma\gamma$$ | E&gt;1.8@4190 |
+|~| $$\Delta(\phi) &lt; 0.8^o$$ |
+|~| $$|Cos\theta|&lt;0.8 $$ |
+
+| !Cuts of EMC-only method for Bhabha | E&gt;1.8@4190 |
+|~| $$\Delta(\phi) &lt; 0.8^o$$ |
+|~| $$|Cos\theta|&lt;0.8 $$ |
+
+| !Cuts of MDC+EMC method for Bhabha | E&gt;1.55@4190 |
+|~| p&gt;1.95@4190 |
+|~| $$|Cos\theta|&lt;0.8 $$ |
+|~| m(ee)&gt;3.85 |
+
+----
+!!Relevant Graphs of $$\gamma\gamma$$ process
+
+All but the $$\Delta\phi$$ graph were drawn in complete cuts for $$\gamma\gamma$$, while the $$\Delta\phi$$ graph showed the distribution of the variable in larger area.
+
+[img width=400 [./img/Worklog/Luminosity/180403/Test/Digamma_NLO_e1_20.png]]
+[img width=400 [./img/Worklog/Luminosity/180403/Test/Digamma_NLO_e2_20.png]]
+
+[img width=400 [./img/Worklog/Luminosity/180403/Test/Digamma_NLO_ct1_20.png]]
+[img width=400 [./img/Worklog/Luminosity/180403/Test/Digamma_NLO_ct2_20.png]]
+
+[img width=400 [./img/Worklog/Luminosity/180403/Test/Digamma_NLO_phidiff_33.png]]
+
+
+[img width=400 [./img/Worklog/Luminosity/180403/Test/Digamma_NLO_deltact_20.png]]
+[img width=400 [./img/Worklog/Luminosity/180403/Test/Digamma_NLO_deltaE_20.png]]
+
+----
+*Should be the same cuts as ~GaoQing's, but 3% less events in nEvents in data, and 1% larger factor of (MC_efficiency * ~CrossSection).
+*Babayaga NLO and Babayaga 3.5 showed same result.
+*The result stays nearly the same when 
+**moving $$Cos\theta$$ cut 
+**moving $$\Delta\phi$$ cut 
+**adding $$|E_1 - E_2|$$ cut 
+**adding |$$Cos\theta_1+Cos\theta_2$$| cut 
+
+''Conclusion'':
+
+#The luminosity measured from two Bhabha methods agree with each other pretty well, and it's in concordance with ~GaoQing's previous results. So it's assumed to be correct.
+#Can't explain why there're 3% less events than in ~GaoQing's analysis.
+#Problem is not caused by missing partial data files since the Bhabha and Digamma events share the same root files.
+#It's unlikely to be caused by algorithm errors, because it shares the codes with the EMC-only method of Bhabha except for the $$\Delta\phi$$ requirement.
+#Unlikely to be caused by MC generator, as Babayaga 3.5 result agree with Babayaga NLO one.
+#Nothing strange noticed in the graphs.
+</pre>
 </div>
 <div created="20170414094329770" creator="Yifan" modified="20170415053551654" modifier="Yifan" title="Fortran">
 <pre>Just a little fortran grammar to help with reading Fortran codes.
@@ -11653,17 +11750,20 @@ https://dirac.ihep.ac.cn/DIRAC/
 ----
 #[[PDG Webpage|http://pdglive.lbl.gov/Viewer.action]]</pre>
 </div>
-<div created="20171206062015398" creator="Yifan" modified="20180328053317533" modifier="Yifan" tags="python" title="python">
+<div created="20171206062015398" creator="Yifan" modified="20180404135156027" modifier="Yifan" tags="python" title="python">
 <pre>----
 #[[Python Basics]]: indentation, variables, lists, basic operators, string formatting, basic string operations, conditions, loops.
 #[[Python Basics 2]]: function, classes and objects, dictionaries, module and packages, file and OS
 #[[Python Advanced]]: list comprehension, multiple function arguments, regular expression, exception handling, sets, serialization, partial functions
+#[[Pythonic Coding]]: how to write codes in python style
 #[[Python and ROOT]]
 #[[Python and Notepad++]]: connecting the notepad++ to python
 #[[Python Performance Tips]]
 #[[Python Packages 1]]: math, cmath, datetime, sys, itertools
 #[[Python Packages 2]]: os, logging, getopt
 #[[Python I/O]]
+#[[Creating Python Library]]
+
 
 ----
 !!Python Resources
@@ -11672,6 +11772,7 @@ https://dirac.ihep.ac.cn/DIRAC/
 #[[A Simple Tutorial|https://www.tutorialspoint.com/python/python_basic_syntax.htm]]
 #https://en.wikibooks.org/wiki/Think_Python: a python tutorial book
 #[[Exercises|https://w3resource.com/python-exercises/]]
+#[[Python Visualizer|http://www.pythontutor.com/visualize.html#mode=display]]: showing what's happening in python
 #[[Simple Code Examples|https://wiki.python.org/moin/SimplePrograms]]
 #[[Python Performance Tips|http://gawron.sdsu.edu/compling/course_core/python_intro/intro_lecture_files/fastpython.html]]
 #[[https://keras.io/]]: a python deep learning library
@@ -12856,6 +12957,152 @@ for o,a in opts:
 timeit.timeit('text.find(char)', setup='text = &quot;sample string&quot;; char = &quot;g&quot;',number=1000000)
 ```</pre>
 </div>
+<div created="20180404094128306" creator="Yifan" modified="20180404100618252" modifier="Yifan" tags="python" title="Pythonic Coding">
+<pre>!!Python Enhancement Proposals
+*[[PEP 20|http://artifex.org/~hblanks/talks/2011/pep20_by_example.pdf]]: zen of python
+*[[PEP 8|https://www.python.org/dev/peps/pep-0008/]]: a style guide
+----
+
+!!Unpacking
+```
+for index, item in enumerate(some_list):
+    # do something with index and item
+```
+
+swapping
+
+```
+a, b = b, a
+```
+
+nested unpacking:
+
+```
+a, (b, c) = 1, (2, 3)
+```
+
+@@color:blue;in python 3@@:
+
+```
+a, *rest = [1, 2, 3]
+# a = 1, rest = [2, 3]
+a, *middle, c = [1, 2, 3, 4]
+# a = 1, middle = [2, 3], c = 4
+```
+
+!!Creating Ignored Variable
+
+use `__` if you need to assign something but doesn't need the variable
+
+```
+filename = 'foobar.txt'
+basename, __, ext = filename.rpartition('.')
+```
+
+!!Create a length-N list of the same thing
+
+`*` operator of the list
+
+```
+four_nones = [None] * 4
+```
+
+!!Create a length-N list of lists
+
+```
+four_lists = [[] for __ in xrange(4)]    # range(4) instead, in python 3
+```
+
+!!Create a string from a list
+use `str.join()` on an empty string
+
+```
+letters = ['s', 'p', 'a', 'm']
+word = ''.join(letters)
+```
+
+!!Searching for an item in a collection
+Looking up in a set is much faster than looking up in a list.
+
+----
+!Conventions
+''Follow the rules to make the codes easier to read'':
+
+!!Check if variable equals a constant
+
+```
+# Just check the value
+if attr:
+    print 'attr is truthy!'
+
+# or check for the opposite
+if not attr:
+    print 'attr is falsey!'
+
+# or, since None is considered false, explicitly check for it
+if attr is None:
+    print 'attr is None!'
+```
+
+!!Access a Dictionary Element
+
+```
+d = {'hello': 'world'}
+
+print d.get('hello', 'default_value') # prints 'world'
+print d.get('thingy', 'default_value') # prints 'default_value'
+
+# Or:
+if 'hello' in d:
+    print d['hello']
+```
+
+!!Short Ways to Manipulate Lists
+```
+a = [3, 4, 5]
+b = [i for i in a if i &gt; 4]
+# Or:
+b = filter(lambda x: x &gt; 4, a)
+```
+```
+a = [3, 4, 5]
+a = [i + 3 for i in a]
+# Or:
+a = map(lambda i: i + 3, a)
+```
+```
+a = [3, 4, 5]
+for i, item in enumerate(a):
+    print i, item
+# prints
+# 0 3
+# 1 4
+# 2 5
+```
+
+!!Read From a File
+`with open` ensures that you always close the file. 
+
+```
+with open('file.txt') as f:
+    for line in f:
+        print line
+```
+
+!!Line Continuation
+Don't use `\` as it's vulnerable.
+
+```
+my_very_big_string = (
+    &quot;For a long time I used to go to bed early. Sometimes, &quot;
+    &quot;when I had put out my candle, my eyes would close so quickly &quot;
+    &quot;that I had not even time to say “I’m going to sleep.”&quot;
+)
+
+from some.deep.module.inside.a.module import (
+    a_nice_function, another_nice_function, yet_another_nice_function)
+```</pre>
+</div>
 <div created="20171212065213531" creator="Yifan" modified="20171212065304999" modifier="Yifan" title="QWG">
 <pre>----
 !!QWG 2017
@@ -12865,7 +13112,7 @@ http://indico.ihep.ac.cn/event/6822/
 [ext[Note on QWG2017|./txtfiles/QWG2017.txt]]
 </pre>
 </div>
-<div created="20171126145151893" creator="Yifan" modified="20171126145329719" modifier="Yifan" title="Report Done">
+<div created="20171126145151893" creator="Yifan" modified="20180405034431398" modifier="Yifan" title="Reports Done">
 <pre>和李龙科师兄合作的综述阅读报告：
 
 [ext[Chapter 1|./materials/yangyf/reading_chapter1.pptx]],
@@ -14476,11 +14723,11 @@ Default files:
 
 [[Config Example|http://vimconfig.com/]]</pre>
 </div>
-<div created="20170426113120964" creator="Yifan" modified="20180403024136948" modifier="Yifan" title="Work Log">
+<div created="20170426113120964" creator="Yifan" modified="20180405034437875" modifier="Yifan" title="Work Log">
 <pre>#[[Worklog_gKsKpi]]
 #[[Worklog_Luminosity]]
 #[[Worklog_MCProduction]]
-#[[Report Done]]
+#[[Reports Done]]
 
 ----
 !!Misc
@@ -14494,8 +14741,12 @@ Default files:
 #[[2018.3.6]]
 #[[2018.3.13]]
 #[[2018.4.3]]
+#[[Digamma Problem]]
+
 
 ----
+&lt;$reveal type=&quot;match&quot; state=&quot;$:/state/HideMode&quot; text=&quot;show&quot;&gt;
+
 Chronicle txt Files
 
 #[ext[Octomber 2017|./txtfiles/worklog_201710.txt]]
@@ -14504,7 +14755,11 @@ Chronicle txt Files
 #[ext[January2018|./txtfiles/worklog_201801.txt]]
 #[ext[Febrary 2018|./txtfiles/worklog_201802.txt]]
 #[ext[March 2018|./txtfiles/worklog_201803.txt]]
-#[ext[April 2018|./txtfiles/worklog_201804.txt]]</pre>
+#[ext[April 2018|./txtfiles/worklog_201804.txt]]
+
+&lt;/$reveal&gt;
+
+</pre>
 </div>
 <div created="20170426123555284" creator="Yifan" modified="20171202084542212" modifier="Yifan" title="Work_Luminosity_part2">
 <pre>!!Results and Systematics
