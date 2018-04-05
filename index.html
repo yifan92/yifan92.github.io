@@ -10603,7 +10603,7 @@ Basically it is to find the solution of a convolution equation ''f*g = h''. Or i
 
 Deconvolution can be achieved in Fourier Transformed form.</pre>
 </div>
-<div created="20180405034600310" creator="Yifan" modified="20180405051217276" modifier="Yifan" title="Digamma Problem">
+<div created="20180405034600310" creator="Yifan" modified="20180405051334929" modifier="Yifan" title="Digamma Problem">
 <pre>A discrepancy of 2% between the luminosity measured from Digamma process and that of Bhabha process.
 
 ----
@@ -10625,6 +10625,14 @@ Deconvolution can be achieved in Fourier Transformed form.</pre>
 | !Bhabha EMC-only | 354.84 | 18.34% | 2795271 | 42.96 |
 | !$$\gamma\gamma$$ | 17.372 | 46.34% | 342547 | 42.54 |
 | !~GaoQing  $$\gamma\gamma$$ | 19.99 | 40.83% | 351618 | 43.08 |
+
+*Should be the same cuts as ~GaoQing's, but 3% less events in nEvents in data, and 1% larger factor of (MC_efficiency * ~CrossSection).
+*Babayaga NLO and Babayaga 3.5 showed same result.
+*The result stays nearly the same when 
+**moving $$Cos\theta$$ cut 
+**moving $$\Delta\phi$$ cut 
+**adding $$|E_1 - E_2|$$ cut 
+**adding |$$Cos\theta_1+Cos\theta_2$$| cut 
 
 ----
 
@@ -10659,13 +10667,6 @@ All but the $$\Delta\phi$$ graph were drawn in complete cuts for $$\gamma\gamma$
 [img width=400 [./img/Worklog/Luminosity/180403/Test/Digamma_NLO_deltaE_20.png]]
 
 ----
-*Should be the same cuts as ~GaoQing's, but 3% less events in nEvents in data, and 1% larger factor of (MC_efficiency * ~CrossSection).
-*Babayaga NLO and Babayaga 3.5 showed same result.
-*The result stays nearly the same when 
-**moving $$Cos\theta$$ cut 
-**moving $$\Delta\phi$$ cut 
-**adding $$|E_1 - E_2|$$ cut 
-**adding |$$Cos\theta_1+Cos\theta_2$$| cut 
 
 ''Conclusion'':
 
