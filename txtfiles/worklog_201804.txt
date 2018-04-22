@@ -1,6 +1,172 @@
+2018/4/21
+	-checked v664p01 4260 3.5 bhabha
+	-switched back to v664p03
+	
+
+2018/4/20
+	-successfully got v664p01 4260 3.5 digamma mc and data;
+	-generating v664p01 4260 3.5 bhabha.
+	
+
+2018/4/18
+	Luminosity:
+		-v664p01_4260: generate MC; ran data
+		-更新了v664p01下的Luminosity Algorithm
+	
+		-checked root: 4600data, 4360data, 4230data 
+		-应该做一下background研究。
+	
+	GammaEtac2S python script:
+		-没法读取6C_xxx的属性
+		-就用旧版的程序吧
+			-print options;
+	
+
+
+2018/4/17
+	rewrite GammaEtac2S script in python
+
+	generate dst:
+		gKKpi0	-kkpipi
+				
+		gKsKpi	-12signal
+	checked dst:
+		gKsKpi	-KsKpipi0
+				-gKsKs
+				-gXc2:	3 bad files; duplicated
+		gKKpi0	-kkpipi
+				
+	generated root:
+		gKKpi0	-Xc1,Xc2
+				-kkpipi
+		ggKsKpi	-kskpipi0
+				-gXc1,gXc2
+		gKsKpi	-kskpipi0
+				-gKsKs
+		
+	checked root:
+		gKKpi0	-09signal,12signal
+				-09mc
+				-gXc1,gXc2
+				-KKpi0
+				-wKK
+				
+				
+		gKsKpi:	-12mc
+				-09data	-	still fail
+				-gXc1,gXc2 	
+		ggKsKpi:	-09data,
+					-18 jobs resubmitted
+					
+		
+
+2018/4/16
+	Luminosity Algorithm可能有bug：
+		-因为一个execute并列处理两种情况，可能导致部分m_var跨事例未清零
+		-会影响digamma事例中MDC+EMC method有不正确信息；
+		-不可能导致通过MDC+EMC粗筛的事例EMC-only count增加；因为EMC-only更新是EMC+MDC更新的必要条件
+		-通过在python脚本中加入相邻事例查重来检查这个Bug的影响
+			-对于最后的事例数结果似乎没影响
+			-只会使digamma的mee，Ep图不对。
+			
+
+	改了苑老师之前对我memo修改意见中的遗漏项：图的说明，对两个问题的解释
+	回复了唐光毅关于我的digamma亮度问题的邮件	
+
+	
+	checked root:
+		gKsKpi 	09data -resubmit 8 files
+				12data - all success;
+		gKKpi0	09data - all success
+				12data - all success
+				09mc	- all failed; submitted in 7.0.3;	redo
+				12mc	- all failed; redo
+	run root:
+		gKsKpi	MC_gXc2,MC_gXc1,09signal,09mc,12mc
+		gKKpi0	wKK, KKpi0
+	dst:
+		gKsKpi	KsKpipi0
+				gKsKs
+	checked dst:			
+		gKKpi0	wKK
+				gXc1 	1 resubmit
+				gXc2	3 resubmit
+				KKpi0	
+				
+				
+	checked ggKsKpi algorithm:
+		-nGam>=1 -> nGam>=2
+		-TOF TDC cut 
+		-toggle right
+	
+		
+		
+2018/4/14
+	redo the gKKpi/gKsKpi analysis
+		-check the setup:
+			-BOSS v664p03 done
+			-Check Alg:	
+				-GammaEta2S
+					-added EMC time cut
+					-checked logic
+					-checked and compiled in 664p03
+					
+				-gKsKpi:
+					-roughly checked logic; didn't examine thoroughly how the variables are handled
+					-compiled in 664p03
+					
+					
+		-make root files ready:
+			-gKKpi0
+				-ran 09data,12data,09mc, 12mc:
+					-开关 test 4c=1, test5c=1,test6c=1
+				-generate: 09Exclusive MC, 12Exclusive MC, KKpi0,Xc1,Xc2(09 run), 
+	
+			-gKsKpi:
+				-ran 09data,12data(seems 1 bad root; 475?)
+	
+	
+	Todo: Check Wulj's Python Codes:				
+		/besfs/users/wulj/PythonMyFun/Grocery				
+
+	-should have run the codes since earlier.
+		
+		
+2018/4/9:
+	updating Memo:
+		-drawing graphs with 
+			4190 for ics=10, 4200 for ics=11, 4210 for ics=12
+
+2018/4/8:
+	checked phi angle of digamma to answer Prof. Yuan's reply
+	
+
 2018/4/5:
 	4190scan没有Babayaga 3.5的MC；
 	4210scan没有Babayaga NLO的MC;
+	4210scan 3.5 dig -> done
+	给苑老师发了报告
+	
+	4260的EMC-only Bhabha data事例数太少, why?
+		-rerunning 4260 data:	
+			results are different;	
+			maybe it's related to the bugs that haunted me a few months ago
+		-4230,4360,4600 may also be corrupted
+			-rerunning
+
+	
+	to do:	
+		-Tiddlywiki root graph styles.
+		更新亮度Memo；
+			-BES3 memo style
+			-更新图：bigger axis names
+				-refined script, to draw graphs better
+				-rerun python scripts to generate better graphs		
+				-graphs I need:
+					E_mdc+,E_mdc-(all E regions),
+					P+,P-(all P regions),
+					theta+,theta-(all theta regions),
+					
 
 2018/4/4:
 	明天给苑老师发报告；整理digamma的问题，画图并解说。
