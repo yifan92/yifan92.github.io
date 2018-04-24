@@ -279,6 +279,8 @@ Error message and password prompt
 
 <li>Execution of Backslash</li>
 
+<li>Figure of Merit</li>
+
 <li>Fortran</li>
 
 <li>Fortran Example 1</li>
@@ -290,6 +292,10 @@ Error message and password prompt
 <li>gKKpi0 Algorithm</li>
 
 <li>gKKpi0 Files</li>
+
+<li>gKKpi0 misc log</li>
+
+<li>gKKpi0 strategy</li>
 
 <li>gKsKpi Algorithm</li>
 
@@ -414,6 +420,8 @@ Error message and password prompt
 <li>ROOT bes3plotstyle</li>
 
 <li>ROOT C++</li>
+
+<li>ROOT Classes</li>
 
 <li>ROOT Examples</li>
 
@@ -8425,7 +8433,7 @@ allow edit&lt;/$button&gt;
 <div created="20170407054919167" creator="Yifan" modified="20180317162721394" modifier="Yifan" title="$:/state/tab/sidebar--1835078512">
 <pre>$:/core/ui/SideBar/Tools</pre>
 </div>
-<div created="20180316112029962" creator="Yifan" modified="20180411060800547" modifier="Yifan" title="$:/state/tab--1498284803">
+<div created="20180316112029962" creator="Yifan" modified="20180423074158792" modifier="Yifan" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/Standard</pre>
 </div>
 <div created="20170411005206005" creator="Yifan" modified="20180316121058340" modifier="Yifan" title="$:/state/tab-1749438307">
@@ -8440,7 +8448,7 @@ allow edit&lt;/$button&gt;
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList python [[Python Performance Tips]]" title="$:/StoryList">
+<div list="ContentList [[Work Log]] [[Digamma Problem]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180316112035263" creator="Yifan" modified="20180403070054561" modifier="Yifan" tags="$:/tags/Stylesheet" title="$:/Style.css">
@@ -8544,8 +8552,8 @@ allow edit&lt;/$button&gt;
 
 </pre>
 </div>
-<div created="20180316112029961" creator="Yifan" modified="20180411071313512" modifier="Yifan" title="$:/temp/advancedsearch">
-<pre></pre>
+<div created="20180316112029961" creator="Yifan" modified="20180423081624991" modifier="Yifan" title="$:/temp/advancedsearch">
+<pre>gStyle</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -10660,7 +10668,7 @@ Basically it is to find the solution of a convolution equation ''f*g = h''. Or i
 
 Deconvolution can be achieved in Fourier Transformed form.</pre>
 </div>
-<div created="20180405034600310" creator="Yifan" modified="20180421071942664" modifier="Yifan" title="Digamma Problem">
+<div created="20180405034600310" creator="Yifan" modified="20180424054547169" modifier="Yifan" title="Digamma Problem">
 <pre>A discrepancy of 2% between the luminosity measured from Digamma process and that of Bhabha process.
 
 ----
@@ -10674,9 +10682,10 @@ Deconvolution can be achieved in Fourier Transformed form.</pre>
 
 | !4260 | !Cross Section(nb) | !MC Efficiency | !nEvent | !Luminosity($$pb^{-1}$$) |
 | !Bhabha MDC+EMC | 348.88 | 17.34% | 50082481  | 827.84 |
-| !$$\gamma\gamma$$ | 16.99 | 45.88% | 6301410 | 808.37 |
+| !$$\gamma\gamma$$ | 16.99 | 45.88% | 6313482 | 809.92 |
+| !$$\gamma\gamma(cut1.77)$$ | 16.99 | 46.70% | 6452916 | 813.20 |
 | !~GaoQing  $$\gamma\gamma$$ | 19.34 | 40.60% | 6482776 | 825.67 |
-| !v664p01 3.5 $$\gamma\gamma$$ | 19.34 | 40.99% | 6498109 | 827.6 |
+| !v664p01 3.5 $$\gamma\gamma$$ | 19.37 | 40.99% | 6498109 | 818.4 |
 
 | !4190scan | !Cross Section(nb) | !MC Efficiency | !nEvent | !Luminosity($$pb^{-1}$$) |
 | !Bhabha MDC+EMC | 354.84 | 17.67% | 2709697 | 43.21 |
@@ -10749,6 +10758,9 @@ All but the $$\Delta\phi$$ graph were drawn in complete cuts for $$\gamma\gamma$
 *\v vertical tab
 *\0NNN octal value with 1 to 3 digits
 *\xHH byte with hexadecimal value</pre>
+</div>
+<div created="20180423122849070" creator="Yifan" modified="20180423122902003" modifier="Yifan" tags="statistics" title="Figure of Merit">
+<pre>https://en.wikipedia.org/wiki/Figure_of_merit</pre>
 </div>
 <div created="20170414094329770" creator="Yifan" modified="20180418081201946" modifier="Yifan" tags="[[Computer Skill]]" title="Fortran">
 <pre>Just a little fortran grammar to help with reading Fortran codes.
@@ -11085,11 +11097,21 @@ if (m_test6C):{
 
 </pre>
 </div>
-<div created="20180416091242897" creator="Yifan" modified="20180418080418268" modifier="Yifan" tags="gKKpi0" title="gKKpi0 Files">
+<div created="20180416091242897" creator="Yifan" modified="20180423135800547" modifier="Yifan" tags="gKKpi0" title="gKKpi0 Files">
 <pre>''Script'':
 
 *gKKpi0.py: 不能读取6C_开头的leaves；弃用 180418
 *gKKpi0.C:筛选并产生root文件和打印事例数。
+*~DrawMC1.C:画MC Comparison of Eta_c(2S) MC和Xcj MC； input: rootfiles/condition2/ 
+*~DrawMass.C：input: rootfiles/condition3/ 画mKKpi和signal的m4c和m5c。
+*~DrawMumu.C: input rootfiles/condition4/; 画Data, Signal和~JpsiNeutral的mmumu图
+*~FoM.C: input, result.root of data/12signal; 根据~FoM来决定chisq的cut设置。
+*~DrawM3gg.C:input rootfiles/condition5; 证明根据m3gg区间排除omegakk本底的图。
+
+''roofit''
+
+*~FSRnoFSR.C: mix FSR events with noFSR events, with a ratio.
+*fit_KKpi0.root: Get KKpi0 shape from fnf.root
 
 ''MC dst'':
 
@@ -11115,6 +11137,88 @@ if (m_test6C):{
 *gXc1: 180417, all success, hadd
 *gXc2: 180417, all success, hadd
 
+</pre>
+</div>
+<div created="20180423134622575" creator="Yifan" modified="20180423135721660" modifier="Yifan" title="gKKpi0 misc log">
+<pre>''date180423: ''
+
+For creating fnf.root 
+
+```
+
+chisq_threshold = 30
+cut_mumu = 1
+mass_shift = 0
+filter_fsr = 0
+filter_4c = 1
+filter_6c = 0
+filter_signal = 0
+filter_omega = 3
+mKKpi region: [3.45,3.7]
+
+nEvent  = 117744
+chi2 Cut  = 40624
+mpi Cut  = 39422
+mmumu Cut  = 26455
+omega Cut  = 26455
+mKKpi in region  = 26115
+
+
+--------------------------------
+
+chisq_threshold = 30
+cut_mumu = 1
+mass_shift = 0
+filter_fsr = 1
+filter_4c = 1
+filter_6c = 0
+filter_signal = 0
+filter_omega = 3
+mKKpi region: [3.45,3.7]
+
+nEvent  = 117744
+chi2 Cut  = 6378
+mpi Cut  = 6195
+mmumu Cut  = 5052
+omega Cut  = 5052
+mKKpi in region  = 2790
+
+
+```
+
+</pre>
+</div>
+<div created="20180423063753495" creator="Yifan" modified="20180423073447598" modifier="Yifan" tags="gKKpi0" title="gKKpi0 strategy">
+<pre>''Event Selection:''
+
+* 2 good charged tracks with net charge zero.
+* deposited energy &gt;40 ~MeV for photons
+* TDC in [0,14] for photons
+*Vertex Fit
+*~KmFit
+*PID
+
+graph:
+
+*chisq of signal MC, Xcj
+*p(K) of Xcj and signal MC
+*m(KK)
+*nGood photons
+
+----
+''optimizing strategy:''
+
+graph:
+
+*4c; m(4c) vs m(5c) for KKpi0 background and signal.
+
+----
+''background'': 
+
+graphs:
+
+*Jpsi + Neutral: invariant mass of two tracks assuming as mumu. for data and for signal MC (&gt;2.9)
+*graph omegaKK. (lineshape of omega KK: mKKpi0 of events in omega [0.74, 0.82] region)
 </pre>
 </div>
 <div created="20180416064119874" creator="Yifan" modified="20180416064131864" modifier="Yifan" tags="gKsKpi" title="gKsKpi Algorithm">
@@ -13845,7 +13949,7 @@ RooGenericPdf g(“g”,”sqrt(abs(alpha*x))+0.1”,RooArgSet(x,alpha)) ;
 <div created="20170411132905454" creator="Yifan" modified="20170411132927508" modifier="Yifan" title="RooFit Simultaneous Fit">
 <pre>[[rf504_simwstool.C|https://root.cern.ch/root/htmldoc/tutorials/roofit/rf504_simwstool.C.html]]</pre>
 </div>
-<div created="20170407061511667" creator="Yifan" modified="20180418081139728" modifier="Yifan" tags="[[Computer Skill]]" title="ROOT">
+<div created="20170407061511667" creator="Yifan" modified="20180423072908757" modifier="Yifan" tags="[[Computer Skill]]" title="ROOT">
 <pre>----
 !Topics
 #[[Histograms|ROOT Histograms]]
@@ -13860,13 +13964,15 @@ RooGenericPdf g(“g”,”sqrt(abs(alpha*x))+0.1”,RooArgSet(x,alpha)) ;
 #[[Python and ROOT]]
 #[[Example Scripts|ROOT Examples]]: Codes that may be quickly reused
 #[[Misc|ROOT Misc]]
+#[[ROOT Classes]]
+
 
 ----
 *[[User Guide|https://root.cern.ch/root/htmldoc/guides/users-guide/ROOTUsersGuide.html]]
 *[[Reference Database|https://root.cern.ch/doc/master/index.html]]</pre>
 </div>
-<div created="20171227073129960" creator="Yifan" modified="20171227074928219" modifier="Yifan" title="ROOT bes3plotstyle">
-<pre>`#include /afs/ihep.ac.cn/users/y/yangyf/.plotstyle/bes3plotstyle.C`
+<div created="20171227073129960" creator="Yifan" modified="20180423080401875" modifier="Yifan" tags="ROOT BES3" title="ROOT bes3plotstyle">
+<pre>`#include &quot;/afs/ihep.ac.cn/users/y/yangyf/.plotstyle/bes3plotstyle.C&quot;`
 
 *`FormatData(TH1 * datahist)`: format for data points;
 *`FormatData(TGraph * datahist)`:format for graph data points;
@@ -13971,6 +14077,11 @@ But after this command, pointer would be on the stack, while the object on heap,
 ----
 !![[Cling Interpreter]]
 Cling is ROOT's C++ Interpreter.</pre>
+</div>
+<div created="20180423072902178" creator="Yifan" modified="20180423072936265" modifier="Yifan" tags="ROOT" title="ROOT Classes">
+<pre>''~TLorentzVector''
+
+http://root.cern.ch/root/html/TLorentzVector.html</pre>
 </div>
 <div created="20170411031736270" creator="Yifan" modified="20180409093514343" modifier="Yifan" tags="ROOT" title="ROOT Examples">
 <pre>#[[Reading MC CrossSections|root_example1]]: dealing with txt files
@@ -14400,7 +14511,7 @@ sum.plotOn(mesframe) ;
 sum.plotOn(mesframe,Components(argus),LineStyle(kDashed)) ; 
 ```</pre>
 </div>
-<div created="20170407121512042" creator="Yifan" modified="20170409115519948" modifier="Yifan" title="root_gStyle">
+<div created="20170407121512042" creator="Yifan" modified="20180423122838229" modifier="Yifan" tags="ROOT" title="root_gStyle">
 <pre>gStyle is a global variable handling the style of drawing. It can deal with:
 
 *Canvas
@@ -14721,12 +14832,13 @@ Topics:
 
 &lt;$macrocall $name=&quot;slider&quot; label={{!!title}}/&gt;</pre>
 </div>
-<div created="20170412032224446" creator="Yifan" modified="20170414051700651" modifier="Yifan" title="Statistics">
+<div created="20170412032224446" creator="Yifan" modified="20180423122829185" modifier="Yifan" tags="math" title="Statistics">
 <pre>#[[Important Distributions]]
 #[[大数定理和中心极限定理]]
 #[[子样及其分布]]
 #[[参数估计]]
 #[[Look-elsewhere Effect]]
+#[[Figure of Merit]]
 
 ----
 *[[Introduction to Statistical Issues in Particle Physics|http://www.slac.stanford.edu/econf/C030908/papers/MOAT002.pdf]]: The basic logic of doing analyses.</pre>
@@ -15417,11 +15529,12 @@ EMC-only: (track2) 2.05897    (-1.93407,0.593931,-0.38206)
 
 ```</pre>
 </div>
-<div created="20180414061818646" creator="Yifan" modified="20180416091231257" modifier="Yifan" tags="Worklog" title="Worklog_gKKpi0">
+<div created="20180414061818646" creator="Yifan" modified="20180423134617642" modifier="Yifan" tags="Worklog" title="Worklog_gKKpi0">
 <pre>----
 #[[gKKpi0 Algorithm]]
 #[[gKKpi0 Files]]
-</pre>
+#[[gKKpi0 strategy]]
+#[[gKKpi0 misc log]]</pre>
 </div>
 <div created="20170427045918840" creator="Yifan" modified="20180416091022396" modifier="Yifan" tags="Worklog" title="Worklog_gKsKpi">
 <pre>----

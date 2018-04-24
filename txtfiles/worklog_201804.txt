@@ -1,3 +1,21 @@
+2018/4/24
+	
+
+2018/4/23
+	gKKpi0
+		changing gKKpi0.C
+		generated MC1 graphs.
+		generated m4c/m5c graphs
+		generated mmumu graphs.
+		generated FoM
+		generated m3gg
+		
+	Luminosity:
+		boost的取值可能有问题;	之前以为Ecms是无效参数就使用了不严谨的值。
+			检查4190scan	4000 vs 4190
+		data4260 data在v664p01重新产生；换了Ecms参数
+		4190scan data换了Ecms参数重新alg
+
 2018/4/21
 	-checked v664p01 4260 3.5 bhabha
 	-switched back to v664p03
