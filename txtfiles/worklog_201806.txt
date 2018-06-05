@@ -1,3 +1,16 @@
+2018/6/5:
+	Luminosity:
+		-todo: 检查Zhouxr提出的重建问题；
+		-检查boost:		不影响
+		
+
+	gKKpi0:
+		damping function:
+			needs to read about how CLEO got it.
+
+	gKsKpi:
+		KsKpi和pi0KsKpi的处理比较麻烦，需要更详细的规划一下。
+
 2018/6/4:
 	和苑老师商谈了研究生规划的事情。
 	to do: 根据苑老师的意见修改draft。
