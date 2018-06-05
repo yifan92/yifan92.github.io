@@ -1,0 +1,110 @@
+2018/5/28
+	gKsKpi:
+		-脚本需要修改：
+			检查变量，输出图片格式，输入配置信息自动化
+
+2018/5/26
+	-switched to /scratchfs2.
+	gKKpi0
+		-continuum事例太多，需要检查。
+		-调整KKpipi成分的gauss mean参数之后，拟合上了；-0.5 -> 0 (+-8.8)。
+		-更新了signal shape的宽度。
+
+2018/5/24
+	整理ppt:
+		-更严的mpi0 mass cut: [0.115,0.15]->[0.127,0.141]
+			-重新run一遍数据；cut flow几乎无影响
+		-continuum bkg
+		-KKpi, wKK, KKpipi background
+
+2018/5/21
+	短期目标：月底前做完gKKpi0+gKsKpi的工作，整理好报告；和苑老师商谈下一步的计划。
+		-整理ppt
+		
+
+2018/5/17/
+	刘晶译答辩:
+		X(3872)辐射衰变的研究以及ee->DD截面的测量
+		 
+
+	吴连近答辩：
+		psi', psi'' -> ppbar eta' 和 h_c强子衰变研究
+		语音语调；卡顿
+		中文术语
+		直观解释
+		文献引用应该如何描述？ 时间？文献号？
+		
+		问题：
+			dalitz->统计量低
+			论文中缺图
+			论文中图的分Bin:不统一
+			motivation指向具体的文章
+			12%规则的破缺：rhopi是量级破缺
+			其他工作：值班
+		
+
+2018/5/13
+	Usman PhoneNumber:
+		+92 333 5695168
+	
+
+2018/5/11
+
+	改Luminosity draft:
+		-如果要加入新data的话，逻辑完全不一样了。
+		-改为照着高清的文章写，写了前两部分。
+		-maybe ref this: https://www.sciencedirect.com/science/article/pii/S2405601416000286
+
+2018/5/9
+	关于E1_emc和E2_emc的问题：
+		-认为是能量的测量和角分布是有关联的；在晶体的边缘的事例倾向于丢失能量，所以被判别为低能量径迹，所以分布谱形不同。
+		
+
+	吴连近答辩预讲：
+		problem from my PoV:
+			-ppt不好看：
+				-每页ppt所属的section，应当标明
+				-图的文字说明：讲了太多的细节，都没有反映到文字上。
+					-p50:	sources 1~5
+					
+			-详略不当：
+				-例：对于误差的解释
+				
+			
+				
+
+2018/5/8
+	draft of Luminosity needs to change:
+		need to add the luminosity of new data sets
+		cease to talk about the BOSS versions
+		don't talk about why the number of files are recovered
+		唐光毅关于EMC问题的描述
+	
+	memo of Luminosity:
+		answered most questions by Zhukai, but one puzzle:
+			-why the fluctuation in E1_emc, and the absence of it in E2_emc?
+			
+
+2018/5/7
+	prepare the draft:
+		-did a first version, sent to Tang Guangyi
+
+2018/5/2:
+	meeting to attend:
+		-周四 14:00 A511	郭如盼答辩
+		-周五 9:00	A418	硕士答辩*2
+		-周五 10:00	B223	刘兆答辩	前端电子学
+		
+	Prepare a draft for the Luminosity Update:
+		-mimic this work: 	
+			https://arxiv.org/pdf/hep-ex/0308008.pdf
+		-structure:
+			-introduction:
+				-why to update: what problem, how much error, what data sets are wrong.
+			-not much detail needed:
+				-focus on the result
+				-difference from previous result
+				-boss version
+			
+				
+				

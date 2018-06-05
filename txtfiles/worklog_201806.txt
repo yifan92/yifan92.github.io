@@ -1,0 +1,37 @@
+2018/6/4:
+	和苑老师商谈了研究生规划的事情。
+	to do: 根据苑老师的意见修改draft。
+	关于Luminosity Memo的事，催了Ryan。
+	
+	gKsKpi:
+		-Jpsi Neutral background
+		-gKsKs background
+		-chisq优化图
+		-requiring chi>1e-6 may prove to be an useful cut.
+
+2018/6/3:
+	画图的模板有问题：
+		边缘，axisTitle的位置。
+		FormatData的没设置好。FormatMC2倒可以
+		
+	gKsKpi:	
+		KsKpi:	not generated properly.
+		
+		画了svtx, vtx的图，更新cut.
+	
+		KsMass cut changed from 15 MeV to 7 MeV
+		画Ks：
+			-需专门产生result.root for 09signal.
+				-changed Alg. Changed back after it.
+				-done
+			-Decay Length, KsMass, FoM drawn.
+2018/6/2:
+	作业失败的原因是qsub脚本里未将文件夹改为scratchfs2；已改
+
+2018/6/1:
+	gKsKpi:
+		-修改gKsKpi脚本：
+			-不画图；
+			-输出outtree：	
+	MC_12exclusive:
+		-didn't have Decay.DEC, generate again.

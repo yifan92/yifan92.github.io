@@ -1,5 +1,26 @@
+2018/4/28
+	Luminosity:
+		-sent memo to Charmonium Group
+		-todo: prepare a draft
+		
+
+2018/4/25
+	Luminosity:
+		todo:	检查后给Ryan和Zhu Kai发邮件
+	gKKpi0
+		-truthdifference is wrong.
+		-gKKpi0.C:
+			-changed mpi0 cut.
+				-need to rerun some events.
+			-need a mpi0 mass cut.
+		-ggKKpi0:
+			
+
 2018/4/24
-	
+	gKKpi0
+		pi0KK本底的处理可能有问题，需重新产生
+			-done
+		
 
 2018/4/23
 	gKKpi0
