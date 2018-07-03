@@ -1,0 +1,286 @@
+2018/6/30
+BESIII Summer Collaboration Meeting: memo approval of XYZ Luminosity.
+******************************************************
+
+
+today I'm giving a talk on the integrated luminosity of the XYZ data.
+
+This is supposed to be a talk in the memo approval session in this afternoon, but it's switched to the last talk this morning before lunch.
+Hopefully I will be quick.
+
+----
+Here is an outline.
+Aside from the introduction and the summary, my talk consists of two parts.
+The first part is the measurement of luminosity of the XYZ data taken last year.
+I will talk about the data sets, the event selection, 
+then I will describe a problem we discovered about EMC, and our correction to its effect on the luminosity.
+after that, I will talk about the systematic uncertainty and the final results.
+
+The second part is the update on the luminosity of the older XYZ data.
+Since the procedure of the analysis is the same as the first part, this is going to be a brief showcase of the results.
+
+----
+
+So, the introduction.
+
+----
+
+Last year, BESIII has taken an XYZ data set of around 3.7 
+inverse femtobar at 8 energy points stretching from 4190 to 4280.
+The precise knowledge of the integrated luminosity of the data is important 
+because it's a building brick for the precise measurement of productive cross sections, 
+which will help us better understand the XYZ states and the relevant underlying physics.
+
+Also, we recently discovered that the published luminosity of the XYZ data taken in 2011-2014 is incorrect. 
+Because we found out that, for large tracks, some crystals in EMC can occasionally give out 0 readout.
+The problem already existed in the old data, but the old analysis were carried out without the knowledge of it.
+So it was an underestimation.
+
+Therefore, this work presents a high precision result on the luminosity of the data taken 
+last year as well as an update on the luminosity of older xyz data.
+
+----
+
+So, Let's move on the first part: 
+The integrated luminosity of 2017 data.
+
+----
+The BOSS version used in the analysis is 703.
+The relevant data sets consist of eight energy points, the information of which are summarized in the table below.
+
+----
+
+To measure the luminosity, we choose the Bhabha process. because it's easy to get rid of background and it has large cross section.
+The selection criterion is as following:
+firstly, we require that there should be 2 opposite charged good tracks; the definition of "good track" here is pretty standard.
+Then we put on a requirement on the deposited energy in the EMC for the two tracks,
+a requirement on the cosine of the polar angle measured by the main drift chamber
+a requirement on the momentum of the two tracks.
+
+And finally, we put on a cut on the invariant mass of the electron-positron pair.
+This final cut is put here because we have a corresponding cut in our MC generator.
+
+As for the MC samples:
+2 million Bhabha events were generated for each energy point.
+The event generator we used is BABAYAGA@NLO package. 
+And we put in a user cut requiring that the invariant mass of the electron-positron pair to be larger than 3.8 GeV.
+This cut is put here because the algorithm of BABAYAGA@NLO has some computational difficulty 
+when sampling over narrow resonances like J/psi and Psi prime.
+The sampling efficiency would be so low that it's impossible to get accurate 
+result with practical amount of computational resources a BESIII user can expect to have.
+Therefore we cut out this part of the phasespace in the generator, 
+and put in a even more strict cut in the event selection, to make sure the event selection effciency is correct.
+
+----
+
+The relevant distribution of the variables used in the cuts are shown in these plots. 
+Including the deposited energy of EMC, the momentum in MDC, the cosine of the polar angle in MDC,
+and the invariant mass of the electron-positron pair.
+The red dots are for the data, and the blue ones are for the MC events.
+The yellow lines are the standard cuts, while the green dashed lines are for the alternative cuts, which are to be used for estimating the systematic uncertainty.
+The first three graphs show the distribution for the positive tracks, while the negative tracks follow exactly the same distributions.
+
+As you can see in these graphs, the Mc can describe the data well.
+And the cuts are set in reasonable positions.
+
+----
+
+After the selection, we can immediately get the luminosity.
+For each but the last one energy point, there are around 30 mil. Bhabha events in data, 
+the selection efficiency is around 17%, and the lum. result is around 500 inverse picobar.
+
+However, this result is only preliminary, because it still needs to use a correction to an EMC problem which I will talk about next.
+
+----
+
+So, this is the emc readout problem I talked about.
+we found out that, that for tracks above 2 GeV, the crystals in the EMC would occasionally give 0 readout. 
+Just like shown in the graphs below.
+
+As you can see here, the graphs show the mapping of energy deposition in EMC for a normal track and its comparison with a problematic track. 
+Obviously, the problematic track is characterized by a strange 0 readout in the center crystal, where one would expect major energy deposition.
+There is no way that this is an natrual event, it must be that somehow the detector lost the data.
+
+While we suspect that this is a problem of the BESIII electronics, the exact cause of this problem is still unknown to us. 
+
+And it's also unknown to the MC simulation.
+So the phenomenon that some events can escape our selection criterion is not accounted, and it leads to an understimation of the luminosity.
+
+
+----
+
+We estimated the scale of impact of this readout problem and its angular distribution. 
+
+The left graph here is actually the final result of the correction amount to the luminosity.
+I put it here because i feel it's illustrative, and I will explain the algorithm with which the corrections are obtained in the next part.
+As you can see here, the scale grows exponentially as the energy increases; it can be as large as more than 3 percent at 4600. 
+There seems to be a linear relationship between the energy and the logarithm of the frequency among old and new data respectively.
+
+
+The right graphs show the distribution of the events in the the theta and phi angles.
+it's the energy deposition versus cos theta or phi; for bhabha process and for di-gamma process.
+It seems that this problem mainly exists in a certain area of the detector, as circled out .
+
+----
+
+Although we don't know the cause of the problem, we know how to offset its influence.
+The idea is to find out the tracks with contradictory MDC and EMC information.
+
+So we require that the costheta, and the momentum of the tracks must satisfy the same requirement as in the standard event selection for Bhabha.
+As for the deposited energy of the tracks, one track should satisfy the standard requirement, while the other's energy should be below the 0.4 times the threshold.
+Here we suppose that the rare events in which both tracks has wrong EMC readout are negligible.
+
+In other words, we are picking out the events where the energy distribution fall into the orange box, 
+while the momentum distribution are in the top-right area in the right graph.
+
+Manifestly, no normal physics events should be able to pass such criterion. 
+So we take all such events as the Bhabha events that could have passed our standard selection, and add this number on top of that of the signal events.
+
+----
+
+An alternative method is to fit the ionization energy lost of the two tracks.
+Same as in the previous criterion, we put on exactly the same requirement on the costheta, momenta, and the invariant mass of the electron-positron pair.
+But it allows one or two tracks to have insufficient energy deposition.
+
+And then, we build a model to describe the 2-dimensional hists of the normalized pulse height of the two track and fit it to the data events passing this selection.
+The model uses the Bhabha shape, the dimuon shape, and a background of uniform distribution.
+
+----
+
+The result of the two correction methods agree with each other well.
+So, we use the result of the first method as the mean value of the correction, and use its difference with the 2nd method for the estimation of systematic error.
+
+As you can see in the table below, the correction to the result 4190 to 4280 is less than 0.3%.
+
+----
+
+Then we move on to the estimation of the systematic uncertainties.
+The following 10 sources of the systematic uncertainties are considered.
+First is the track efficiency of the mdc. 
+It's estimated by using an alternative criterion that only uses the EMC information.
+
+Second is the energy bias. According to the measurement of the center-of-mass energy conducted by Liao Longzhou, 
+the systematic uncertainty of the beam energy is no more than than 0.3 MeV.
+So we estimate its contribution to the error of luminosity by letting the script analyse the same data, 
+but let the script think that it's actually the data of an energy of 0.6 MeV higher of lower. 
+The mc efficiency and the cross sections are not calculated by generating new MC samples, but were linearly extrapolatedly from existing values.
+This is because we want to avoid reintroduction of the error of MC statistics, whose impact is larger.
+
+The requirement of the E cut, momentum cut, the costheta cut, and the invariant mass cut were estimated by comparing with the results obtained from alternative cuts.
+
+The contribution from MC generator is 1 per mille, quoting the authors of the software.
+
+The systematic uncertainty from MC statistics are 0.2%. Because it's 2 mil. events and 17% efficiency for each energy point.
+
+Finally, the error of the correction is measured by comparing two correction methods.
+
+----
+
+Here are a few words of elaboration on the alternative selection criterion for the uncertainty of tracking efficiency.
+It's required that there should be at least 2 emc clusters.
+If there are more than 2, the most energetic one is marked as the cluster 1, while the 2nd most energetic one is marked as the cluster 2.
+Then the two clusters must pass a rigid requirement on the energy. The threshold is higher here because with the absence of MDC information, it's easier to get background.
+
+Additionally, we get a cut on the costheta, of the clusters in EMC.
+And a requirement on the difference of the azimuthal angles of the two tracks.
+
+The luminosity result measured by this method is summarized in the table below. 
+They agree well with the standard results.
+
+----
+
+These graphs show the relevant distribution used in the criterion.
+The energy of the largest cluster and the 2nd cluster, the costheta, and the delta phi.
+
+Again, MC sample describe the data well.
+
+----
+
+This table shows the summary of the uncertainty contributions.
+The overall systematic uncertainties are below 0.6%, and the biggest source are the requirement on the cuts.
+It's a high precision with not much room to improve.
+
+----
+
+And finally, this table gives the final luminosity results of the 2017 xyz data.
+The first term is the statistical uncertainty ,while the 2nd term being the systematic uncertainty.
+
+----
+
+Now, let's move on to the second part of my talk, the updated on the luminosity of the old xyz data.
+
+----
+
+The motivation consists of two parts.
+Firstly, it's the EMC readout problem that I have talked about in the previous section.
+For the 2017 XYZ data, the correction was merely 0.2% to 0.3%.
+But for some data points in the old xyz data, this correction can be 2 or 3%.
+
+The 2nd motivation is that there are slightly more data files in the data sets BOSSv703.
+The files failed to be reconstructed in the data sets of the older boss versions due to computer errors, but were successfully recovered in BOSSv703.
+
+The data sets of older xyz data are listed in the right table.
+
+
+the analysis is conducted in the same way as the 2017 data.
+the event selection, the generation of the MC samples, and the estimation of the systematic uncertainties are all the same as the in the analysis of 2017 xyz data.
+There is no need for more words.
+
+One thing to note is that the luminosity of the lowest 3 energy points are not updated. 
+This is because the energy of the data points are so low that we can't use our BABAYAGA@NLO with the user cut.
+Anyway, the energy points are not affected by change of data files or EMC readout problems. So it's fine to use the original luminosities.
+
+----
+This table show the luminosity of xyz data sets in BOSS ver 703.
+The percentage of the correction to EMC readout problem, the new result of our analysis, and the comparison with the previous published results are summarized in the table.
+For the last 6 energy points, the differences are above 1%.
+
+
+----
+
+
+Considering that some analysis still use the XYZ data in older BOSS version, we also provides a luminosity for it.
+We decided that the luminosity should not change with the BOSS version, so we can measure the luminosity of BOSSv664 by doing the analysis in BOSSv703.
+The measurement is conducted by throwing away the data files exclusive to the BOSSv703.
+
+Only 4 energy points have different data lists, and the corresponding luminosities are listed in the table below.
+
+----
+
+This table shows the contribution of each source of the systematic uncertainties.
+For each term, the maximum value across all energy points are used, to make sure that this is never an underestimation.
+The total systematic uncertainty is 0.66%.
+
+For the lowest 3 energy points, we quote the previous analysis, and their total uncertainty should be 0.97%.
+
+-----
+
+Finally, the overall results of luminosities of the 2011-2014 XYZ data are summarized in this table.
+
+
+-----
+
+This all for the 2nd part of the analysis. And it's time to move to the summary.
+
+-----
+
+At the end of this talk, I would like to draw your attention to the EMC readout problem again.
+
+This is important because we have no understanding of this problem.
+If BESIII is to operate on higher energy regions, this problem can grow to be severe. 
+If you extend this line to 4800 hundred for example, you can expect more than 10% of the Bhabha events to be affected there.
+And more physics channels beyond Bhabha might be affected.
+If we are to upgrade BESIII energy region before this problem is solved, I can imagine the trustworthiness of BESIII results to be undermined.
+
+Luckily, the linear relationship here looks too regular to be caused by something compound and complicated.
+So it might just be a simple problem to fix, if only we can figure out what it is.
+
+----
+
+Finally, the summary.
+
+In this work, we observed the emc readout problem and corrected its impact on luminosity.
+We measured the luminosity of 2017 xyz data with a precision higher than 0.6%.
+And updated the luminosity of 2011-2014 xyz data.
+
+That concludes my talk. Thank you all for the audience.

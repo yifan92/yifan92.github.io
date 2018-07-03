@@ -1,12 +1,184 @@
+2018/6/30：
+	Luminosity:
+		作了报告
+		
+
+2018/6/29:
+	Luminosity：
+		准备了报告的ppt还有练习了演讲
+
+2018/6/28:
+	gKsKpi:
+		-goodness of fit?
+		-pi0KsKpi MC:
+			backup 1 mil. file, created 10 mil. file		
+		
+	Luminosity:
+		-preparing the sliders for the presentation.
+		-unmatched di-gamma cross check:
+			it's not caused by the absence of TDC cut on photons, as the lum-digamma is smaller than expected.
+			
+
+2018/6/26:
+	gKsKpi:
+		pi0KsKpi background:
+			-submitted 10 mil. events
+			-consider using: Novosibirsk func
+			-created ggKsKpi.C: 
+				-get the 2d hist of (m3c,m5c)
+				-the cutting threshold needs to be adjusted
+				
+				
+			
+			
+2018/6/25:
+	gKsKpi:
+		KsKpi background:
+			-submited fsr ana for MC_Xc1_KsKpi
+				-all success
+			
+			-method to get R_fsr:
+				-ggKsKpi alg, 3c kmfit(discard softer photon);
+				-get rid of ggKsKpi bkg:	pi0 mass veto [0.1, 0.155] 
+				-(mKsKpi, mgKsKpi) in region to get FSR, noFSR events
+				-mc truth from inc. to get rid of bkg; assuming same nevts in data/InMC
+				
+			-updated fsr.C:
+				-saved img, got numbers;,
+					-09/12 numbers has inconsistency;
+						-redo the ana
+					
+				
+2018/6/24:
+	gKKpi0:
+		KKpipi本底: 尝试用矩阵变换的方法完成hist_5c到hist_6c的变换
+			-10 mil. KKpipi MC得到了 h2(5c,6c)
+			-因为Xc1,Xc2的(m5c,m6c)分布也在KKpipi的带子上，认为m6c->m5c的拉伸效应对于不同道的差异可以忽略
+				更正：认为 gKKpi Alg中的Xcj本底的m5c质量谱和KKpipi Alg中的Xcj本底的m5c质量谱一致。
+			-变换公式：（矩阵乘法）
+				new_hist(i)= sigma j: Matrix_Trans(i,j)*old_hist(j)
+			-修改了fit_KKpipi.C，旧版本存在bkp180624文件夹
+			-修改了ggKKpi0.C，改了hist的边界；存储了未修改定义的m6c
+				-重跑了，发现cut flow不对；旧版本没有pi0质量cut?
+		
+			-修改完成；效果似乎略有提升；	但是Xcj本底体现不出来;
+
+			-拟合谱形，高斯变为(高斯-常数)		行不通
+				高斯参数：frac 1.65394e-1, frac_xcj 0.5, mean -1e-3, sigma 4.6e-1 
+				
+				折线？不知如何实现。
+			
+2018/6/21
+
+	Luminosity:
+		zhouxr problem:
+			-4190bha ana: 39 files failed, copied to make 200.
+				-updated
+			-4190dig: resubmit
+				-identical failure list???
+					改了随机数，重新交作业，作为检查
+				
+2018/6/15:
+	gKsKpi:
+		-10 mil. MC_Xc1_KsKpi all success
+	gKKpi0:
+		-10 mil. KKpipi MC all success.
+			-but overwritten the original 1 mil.
+				-copied back
+	Luminosity:
+		zhouxr problem:
+			-4190dig bad file比较多，未hadd
+			-4190 bha 重交；
+			-ana success: 4190v3.5 bha,
+			-ana submit: 4190scan dig		-success
+
+2018/6/12:
+	gKKpi0:
+		-generating 10 mil. KKpipi MC
+			-log location: temp folder in scratchfs.
+			
+	gKsKpi:
+		-
+
+2018/6/11:
+	gKKpi0:
+		-KKpipi本底的处理：
+			-多产生MC，然后画 m5c-m6c关系图，由变换矩阵得到m5c谱
+
+2018/6/10:
+	gKsKpi:
+		-generating a MC of 10 mil. events to analyze KsKpi background:  MC_Xc1_KsKpi
+
+	Luminosity:
+		-zhouxr problem check:
+			-sub success: 	4190dig (X), 4260bha/dig, 4190v3.5 dig/bha, 4260v3.5 bha, 4190scan bha;
+			-backup dst, sub_ana
+			-new sub: 4190bha, 4190scan dig, 4260v3.5 dig
+	
+		-modified tanggy graph.
+		-check read
+		-Uploaded draft and memo to docbes3
+
+2018/6/9:
+	Luminosity:
+		-finished modifying draft graphs
+
+2018/6/8:
+	Luminosity:
+		-memo和draft改图：
+			-采用统一的能量点
+			-Legend位置
+			-加上TLatex图号		
+			-划线
+			-MDC角标
+
+2018/6/7:
+	learn vim:
+		-to do: vim recording?
+
+	Luminosity:
+		-zhouxr问题的检查：
+			-因磁盘不稳定，昨晚重交的作业一半失败；今天再次重交
+			-passed check: 4260 digamma, 4190 v3.5 digamma
+		-修改draft：	
+			-除了需要更新图，基本修改完毕。	
+				-to check
+			-准备上传memo和draft到BES3 documentation
+2018/6/6:
+	scratchfs2->scratchfs:
+		修改了脚本中相应路径
+
+	Luminosity:
+		-将703版本下的rec.txt中MDC Rec软件包替换为Hough Finder
+		-重新产生4190,4190scan,4260(NLO with cut) and 4190,4260 (Babayaga 3.5)作为检查：
+			-digamma, bhabha;需切换模式重新产生
+				-服务器路径从scratchfs2切换到scratchfs，需重新产生
+			
+		draft修改：	
+			-to do: 改cut条件图，加图编号。
+
+		memo修改：	
+			-to do: 将draft中的修改意见套用
+				-引用文章的格式
+				-()前带<space>
+			-将memo发到doc bes3上。
+		
 2018/6/5:
 	Luminosity:
 		-todo: 检查Zhouxr提出的重建问题；
 		-检查boost:		不影响
 		
+		memo修改：
+			-改了前三章
+			-to do:	2007年XYZ used MRPC and time resolution ~60 ps.
+			-to do:	EMC problem的图,用相同的x,y scale，让晶体分布差不多
+			-to do:	small capital BOSS? 
 
 	gKKpi0:
 		damping function:
-			needs to read about how CLEO got it.
+			needs to read about how CLEO got it.	-
+				-unknown;
+			
 
 	gKsKpi:
 		KsKpi和pi0KsKpi的处理比较麻烦，需要更详细的规划一下。
