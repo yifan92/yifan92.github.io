@@ -1,3 +1,44 @@
+2018/7/22:
+	gKsKpi:
+		-pi0KsKpi MC: 因为不确定10 mil.的root是否ana完毕，重新ana得到result.root和fsr.root
+		-
+
+	Luminosity:
+		-4270 digamma v3.5的option错误，重新产生
+		-4270 digamma NLO 产生完好；
+
+2018/7/21:
+	Luminosity:
+		-因为没有考虑zhouxr的版本更新问题，所以删除了所有的dst
+		-应唐光毅的要求，产生4270 digamma的MC：NLO, 3.5
+
+2018/7/16:
+	gKsKpi:
+		-KsKpi background:
+			-the FSR, noFSR events are sensitive to the cuts;
+			-研究这个比例是否对cuts敏感
+			
+			-chi!=0 条件~100% efficiency
+
+2018/7/12:
+	Luminosity:
+		回答问题：更改了memo中的叙述，强调了data/MC比较图，并说明0.1%的误差来自文献；
+		
+
+2018/7/9:
+	回答问题：
+		data, mc 比较图：电子能量，散射角，Acollinearity（双电子角度）
+			
+
+2018/7/3：
+	to read: https://arxiv.org/abs/1807.00183
+
+
+	charmonium meeting:
+		-a working group specially dedicated to PWA
+		-data taking plan: 5fb^-1 to 3fb^-1
+		
+	
 2018/7/2:
 	-Luminosity 报告：
 		-彭海平的问题，在memo里放入产生子比较的内容。
