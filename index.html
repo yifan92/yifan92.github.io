@@ -159,6 +159,8 @@ Error message and password prompt
 
 <li>$:/state/tab--1963855381</li>
 
+<li>$:/state/toc/Before 180724-90275329</li>
+
 <li>$:/state/toc/old results (before 2018/06)-138723447</li>
 
 <li>$:/state/toc/old results (before 2018/06)--1836212793</li>
@@ -8495,7 +8497,7 @@ allow edit&lt;/$button&gt;
 <div created="20170407022611419" modified="20170407022612731" title="$:/SiteTitle">
 <pre>HEP Note</pre>
 </div>
-<div created="20180405034305799" creator="Yifan" modified="20180405034309481" modifier="Yifan" title="$:/state/HideMode">
+<div created="20180405034305799" creator="Yifan" modified="20180814051430947" modifier="Yifan" title="$:/state/HideMode">
 <pre>hide</pre>
 </div>
 <div created="20170407022931231" creator="Yifan" modified="20171114050842979" modifier="Yifan" title="$:/state/showeditpreview">
@@ -8515,6 +8517,9 @@ allow edit&lt;/$button&gt;
 </div>
 <div created="20170411005206925" creator="Yifan" modified="20180316121110495" modifier="Yifan" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Toolbars</pre>
+</div>
+<div created="20180814053109576" creator="Yifan" modified="20180814054212612" modifier="Yifan" title="$:/state/toc/Before 180724-90275329">
+<pre>hide</pre>
 </div>
 <div created="20180625093401089" creator="Yifan" modified="20180625093550602" modifier="Yifan" title="$:/state/toc/old results (before 2018/06)-138723447">
 <pre>hide</pre>
@@ -8543,7 +8548,7 @@ allow edit&lt;/$button&gt;
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList Latex Beamer [[Work Log]] Worklog_gKsKpi" title="$:/StoryList">
+<div list="ContentList $:/AdvancedSearch [[Work Log]] [[Tuesday Group Meeting]] [[Digamma Problem]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180316112035263" creator="Yifan" modified="20180625093128014" modifier="Yifan" tags="$:/tags/Stylesheet" title="$:/Style.css">
@@ -8647,8 +8652,8 @@ allow edit&lt;/$button&gt;
 
 </pre>
 </div>
-<div created="20180316112029961" creator="Yifan" modified="20180625091948664" modifier="Yifan" title="$:/temp/advancedsearch">
-<pre>Yifan</pre>
+<div created="20180316112029961" creator="Yifan" modified="20180814052950112" modifier="Yifan" title="$:/temp/advancedsearch">
+<pre>Collap</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -9949,8 +9954,7 @@ Contents
 ```</pre>
 </div>
 <div created="20180722124838295" creator="Yifan" modified="20180722125018323" modifier="Yifan" title="Beamer Notes">
-<pre>
-Can set the color of every element:
+<pre>Can set the color of every element:
 `\setbeamercolor{frametitle}{bg=green!20}`</pre>
 </div>
 <div created="20170410043517900" creator="Yifan" modified="20170410053220921" modifier="Yifan" title="Beamer Theme">
@@ -10818,10 +10822,30 @@ Basically it is to find the solution of a convolution equation ''f*g = h''. Or i
 
 Deconvolution can be achieved in Fourier Transformed form.</pre>
 </div>
-<div created="20180405034600310" creator="Yifan" modified="20180611134116576" modifier="Yifan" title="Digamma Problem">
+<div created="20180405034600310" creator="Yifan" modified="20180814053446128" modifier="Yifan" title="Digamma Problem">
 <pre>A discrepancy of 2% between the luminosity measured from Digamma process and that of Bhabha process.
 
 ----
+
+
+''tanggy 180724''
+
+| !Data Set | !Cross Section(nb) | !MC Efficiency | !nEvent | !Luminosity($$pb^{-1}$$) | !Note |
+| !4190scan | 20.02 | 40.646 | 348k | 42.806 | Babayaga v3.5 |
+| !4260 | 19.36 | 40.57 | 6.415m | 816.734 | 519.06+297.68 |
+| !4270 NLO  | 16.919 | 46.573 | 4.104m | 520.854 |  |
+| !4270 v3.5 | 19.265 | 40.759 | - | 522.675 | |
+| !4270 bhabha bkg | 174 / 2 mil. |||||
+
+''gaoq lum''
+
+| 4190scan | 43.08 |
+| 4260 | 524.57+301.11=825.68 |
+
+----
+
+&lt;&lt;collapse &quot;Before 180724&quot; &quot;
+
 !!Comparisons
 
 @@color:green;1.77 means 1.77/4.19 times E,,CM,,.@@
@@ -10841,13 +10865,14 @@ Deconvolution can be achieved in Fourier Transformed form.</pre>
 | !Tanggy(1.77) | 19.36 | 40.30(phi), 40.21(cos), 40.21(both) |  6.358m, 6.344m, 6.346m | 814.9$$\pm$$0.1 |
 
 
-| !4190scan | !Cross Section(nb) | !MC Efficiency | !nEvent | !Luminosity($$pb^{-1}$$) |
-| !Bhabha MDC+EMC | 354.84 | 17.67% | 2709697 | 43.21 |
-| !Bhabha EMC-only | 354.84 | 18.34% | 2795271 | 42.96 |
-| !$$\gamma\gamma$$ | 17.372 | 46.34% | 342547 | 42.54 |
-| !$$\gamma\gamma$$(cut1.77) | 17.372 | 47.07% | 350064 | 42.81 |
-| !~GaoQing  $$\gamma\gamma$$(1.77) | 19.99 | 40.83%(1.77 cut) | 351618 | 43.08 |
-| !Tanggy(1.77) | 20.02 | 40.37(phi质心系), 40.27(cos), 40.27(both) | 345k, 344k,344k | $$42.69\pm0.02$$ |
+| !4190scan | !Cross Section(nb) | !MC Efficiency | !nEvent | !Luminosity($$pb^{-1}$$) | !Note |
+| !Bhabha MDC+EMC | 354.84 | 17.67% | 2709697 | 43.21 ||
+| !Bhabha EMC-only | 354.84 | 18.34% | 2795271 | 42.96 ||
+| !$$\gamma\gamma$$ | 17.372 | 46.34% | 342547 | 42.54 ||
+| !$$\gamma\gamma$$(cut1.77) | 17.372 | 47.07% | 350064 | 42.81 ||
+| !~GaoQing  $$\gamma\gamma$$(1.77) | 19.99 | 40.83%(1.77 cut) | 351618 | 43.08 ||
+| !Tanggy(1.77) | 20.02 | 40.37(phi质心系), 40.27(cos), 40.27(both) | 345k, 344k,344k | $$42.69\pm0.02$$ ||
+
 
 *Should be the same cuts as ~GaoQing's, but 3% less events in nEvents in data, and 1% larger factor of (MC_efficiency * ~CrossSection).
 *Babayaga NLO and Babayaga 3.5 showed same result.
@@ -10899,6 +10924,8 @@ All but the $$\Delta\phi$$ graph were drawn in complete cuts for $$\gamma\gamma$
 #It's unlikely to be caused by algorithm errors, because it shares the codes with the EMC-only method of Bhabha except for the $$\Delta\phi$$ requirement.
 #Unlikely to be caused by MC generator, as Babayaga 3.5 result agree with Babayaga NLO one.
 #Nothing strange noticed in the graphs.
+
+&quot;&gt;&gt;
 </pre>
 </div>
 <div created="20180605032005179" creator="Yifan" modified="20180611024758599" modifier="Yifan" title="English">
@@ -12287,12 +12314,14 @@ if (5C_bkg):
 
 Naming Convention: 1-&gt;Kspi+, 2-&gt;Kspi-, 3-&gt;Otherpi, 4-&gt;Otherk</pre>
 </div>
-<div created="20180416091043736" creator="Yifan" modified="20180716092138992" modifier="Yifan" tags="gKsKpi" title="gKsKpi Files">
+<div created="20180416091043736" creator="Yifan" modified="20180812074709162" modifier="Yifan" tags="gKsKpi" title="gKsKpi Files">
 <pre>!!Scripts
 
 *fsr.C: input root file of ggKsKpi alg, output 2d hist of (mkskpi, mgkskpi)
 *ggKsKpi.C: input root file of gKsKpi alg, output 2d hist of (m3c,m5c)
 *gKsKpi.C: standard script.
+*fsr/pi0KsKpi_shape.C: fake m5c method to obtain pi0KsKpi shape. Failed to work(180812)
+*fsr/fit_ggKsKpi.C: 
 
 ----
 
@@ -12412,7 +12441,7 @@ bachelor particle, ~TGenPhaseSpace package
 
 !!Lesson 3</pre>
 </div>
-<div created="20180605031541603" creator="Yifan" modified="20180621074302999" modifier="Yifan" title="HEP Experiments">
+<div created="20180605031541603" creator="Yifan" modified="20180812063939280" modifier="Yifan" title="HEP Experiments">
 <pre>!!CLEO
 
 Cornell Electron Storage Ring
@@ -12425,6 +12454,8 @@ Cornell Electron Storage Ring
 Design Luminosity: $$1\times 10^{33} cm^{-2}s^{-1}$$
 
 224m circumference, 93 electron/positron bunches spaced by 8 ns. Energy spread: $$5.16 \times 10^{-4}$$
+
+[[Author Page|http://english.ihep.cas.cn/bes/doc/2799.html]]: The procedures; and useful templates.
 
 ----
 
@@ -16415,7 +16446,7 @@ $body$
 #[[github|http://github.com]]:version control service
 #XShell: unix shell.</pre>
 </div>
-<div created="20180722120123493" creator="Yifan" modified="20180722120127619" modifier="Yifan" tags="Worklog" title="Tuesday Group Meeting">
+<div created="20180722120123493" creator="Yifan" modified="20180814054408257" modifier="Yifan" tags="Worklog" title="Tuesday Group Meeting">
 <pre>#[[2017.11.14]]
 #[[2017.11.28]]
 #[[2018.1.9]]
@@ -16426,7 +16457,7 @@ $body$
 #[[2018.3.13]]
 #[[2018.4.3]]
 #[[Digamma Problem]]
-#[ext[2018.6.5|./materials/yangyf/gKKpi0_gKsKpi.pdf]]</pre>
+#[ext[gam Etac(2S)|./materials/yangyf/gKKpi0_gKsKpi.pdf]]</pre>
 </div>
 <div created="20170413095123511" creator="Yifan" modified="20180608015147955" modifier="Yifan" tags="Writing" title="Typing Practices">
 <pre>*[[Numpad Typing |http://www.typeonline.co.uk/number_pad_lesson1.html]]
@@ -16564,7 +16595,7 @@ mapping is recursive by default. otherwise use `*noremap`
 the test group is combined every time. use `autocmd!` inside to clear group.
 </pre>
 </div>
-<div created="20170426113120964" creator="Yifan" modified="20180722120159025" modifier="Yifan" title="Work Log">
+<div created="20170426113120964" creator="Yifan" modified="20180814051424827" modifier="Yifan" title="Work Log">
 <pre>#[[Worklog_gKsKpi]]
 #[[Worklog_Luminosity]]
 #[[Worklog_gKKpi0]]
@@ -16574,6 +16605,7 @@ the test group is combined every time. use `autocmd!` inside to clear group.
 
 
 &lt;$reveal type=&quot;match&quot; state=&quot;$:/state/HideMode&quot; text=&quot;show&quot;&gt;
+
 ----
 !!Misc
 

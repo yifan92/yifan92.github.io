@@ -1,0 +1,19 @@
+2018/8/14:
+	gKsKpi:	
+		-finished roofit/fit_ggKsKpi.C
+		-rewriting fit_result.C
+			-changed input/output
+			-changed ggKsKpi shape
+			-
+
+2018/8/12:
+	gKsKpi:
+		-pi0KsKpi MC checked and hadd. fsr.root and result.root both. 
+		-写roofit/fit_ggKsKpi.C:
+			-需要修改gKsKpi.C画出data中通过ggKsKpi筛选的事例，存储m5c;
+				-done		
+			-
+	
+	gKKpi0:
+		- fit_KKpipi 疑似bug:  data使用mKKpi5
+			- proved not a bug, just a bad name that is outdated; mKKpi5 was replaced by m6c.
