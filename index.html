@@ -299,6 +299,8 @@ Error message and password prompt
 
 <li>Digamma Problem</li>
 
+<li>Digamma_before180724</li>
+
 <li>English</li>
 
 <li>Execution of Backslash</li>
@@ -598,6 +600,8 @@ Error message and password prompt
 <li>Worklog_Luminosity_part1</li>
 
 <li>Worklog_Luminosity_part6</li>
+
+<li>Worklog_Luminosity_Reply</li>
 
 <li>Worklog_MCProduction</li>
 
@@ -8518,8 +8522,8 @@ allow edit&lt;/$button&gt;
 <div created="20170411005206925" creator="Yifan" modified="20180316121110495" modifier="Yifan" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Toolbars</pre>
 </div>
-<div created="20180814053109576" creator="Yifan" modified="20180814054212612" modifier="Yifan" title="$:/state/toc/Before 180724-90275329">
-<pre>hide</pre>
+<div created="20180814053109576" creator="Yifan" modified="20180814064444848" modifier="Yifan" title="$:/state/toc/Before 180724-90275329">
+<pre>show</pre>
 </div>
 <div created="20180625093401089" creator="Yifan" modified="20180625093550602" modifier="Yifan" title="$:/state/toc/old results (before 2018/06)-138723447">
 <pre>hide</pre>
@@ -8548,7 +8552,7 @@ allow edit&lt;/$button&gt;
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList $:/AdvancedSearch [[Work Log]] [[Tuesday Group Meeting]] [[Digamma Problem]]" title="$:/StoryList">
+<div list="ContentList ROOT RooFit [[RooFit Simultaneous Fit]] [[Work Log]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180316112035263" creator="Yifan" modified="20180625093128014" modifier="Yifan" tags="$:/tags/Stylesheet" title="$:/Style.css">
@@ -8652,8 +8656,8 @@ allow edit&lt;/$button&gt;
 
 </pre>
 </div>
-<div created="20180316112029961" creator="Yifan" modified="20180814052950112" modifier="Yifan" title="$:/temp/advancedsearch">
-<pre>Collap</pre>
+<div created="20180316112029961" creator="Yifan" modified="20180817082932229" modifier="Yifan" title="$:/temp/advancedsearch">
+<pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -9997,11 +10001,15 @@ Done:
 **The list of event information to display
 *@@color:green;The construction of the BESIII experiment@@</pre>
 </div>
-<div created="20170412111817131" creator="Yifan" modified="20180709091554261" modifier="Yifan" tags="[[Computer Skill]]" title="BOSS">
+<div created="20170412111817131" creator="Yifan" modified="20180818061244455" modifier="Yifan" tags="[[Computer Skill]]" title="BOSS">
 <pre>BES-3 Offline Software System.
 
 *[[Offline Software Group Page|http://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Main_Page]]
 *[[Class Reference Documentation |http://bes3.to.infn.it/BESIII_Doxygen_Documentation.html]]: generated from source code by Doxygen
+*[[CLHEP doxygen|http://psi.phys.wits.ac.za/public/Doxygen/CLHEP_1.9.2.2/]] and [[ROOT Class Reference|https://root.cern.ch/root/html/ClassIndex.html]] may also be useful here.
+
+*[[Introduction to Gaudi Framework|https://www.cern.ch/.../Frameworks/Gaudi/Tutorial/1_Introduction.ppt]]: basic concepts
+
 ----
 *[[IHEP Condor]]
 *[[BOSS CVS]]
@@ -10822,7 +10830,7 @@ Basically it is to find the solution of a convolution equation ''f*g = h''. Or i
 
 Deconvolution can be achieved in Fourier Transformed form.</pre>
 </div>
-<div created="20180405034600310" creator="Yifan" modified="20180814053446128" modifier="Yifan" title="Digamma Problem">
+<div created="20180405034600310" creator="Yifan" modified="20180814064826507" modifier="Yifan" title="Digamma Problem">
 <pre>A discrepancy of 2% between the luminosity measured from Digamma process and that of Bhabha process.
 
 ----
@@ -10844,9 +10852,14 @@ Deconvolution can be achieved in Fourier Transformed form.</pre>
 
 ----
 
-&lt;&lt;collapse &quot;Before 180724&quot; &quot;
+[[Digamma_before180724]]
 
-!!Comparisons
+
+
+</pre>
+</div>
+<div created="20180814064822334" creator="Yifan" modified="20180814064823781" modifier="Yifan" title="Digamma_before180724">
+<pre>!!Comparisons
 
 @@color:green;1.77 means 1.77/4.19 times E,,CM,,.@@
 
@@ -10924,8 +10937,6 @@ All but the $$\Delta\phi$$ graph were drawn in complete cuts for $$\gamma\gamma$
 #It's unlikely to be caused by algorithm errors, because it shares the codes with the EMC-only method of Bhabha except for the $$\Delta\phi$$ requirement.
 #Unlikely to be caused by MC generator, as Babayaga 3.5 result agree with Babayaga NLO one.
 #Nothing strange noticed in the graphs.
-
-&quot;&gt;&gt;
 </pre>
 </div>
 <div created="20180605032005179" creator="Yifan" modified="20180611024758599" modifier="Yifan" title="English">
@@ -15251,8 +15262,9 @@ RooGenericPdf g(“g”,”sqrt(abs(alpha*x))+0.1”,RooArgSet(x,alpha)) ;
 @@color:purple;to add@@
 </pre>
 </div>
-<div created="20170411132905454" creator="Yifan" modified="20170411132927508" modifier="Yifan" title="RooFit Simultaneous Fit">
-<pre>[[rf504_simwstool.C|https://root.cern.ch/root/htmldoc/tutorials/roofit/rf504_simwstool.C.html]]</pre>
+<div created="20170411132905454" creator="Yifan" modified="20180827071706966" modifier="Yifan" title="RooFit Simultaneous Fit">
+<pre>#[[rf501|https://root.cern.ch/root/html/tutorials/roofit/rf501_simultaneouspdf.C.html]]: basic
+#[[rf504_simwstool.C|https://root.cern.ch/root/htmldoc/tutorials/roofit/rf504_simwstool.C.html]]: using ~RooSimWSTool to construct a simultaneous pdf that is built of variations of an input pdf.</pre>
 </div>
 <div created="20170407061511667" creator="Yifan" modified="20180423072908757" modifier="Yifan" tags="[[Computer Skill]]" title="ROOT">
 <pre>----
@@ -16623,7 +16635,7 @@ Chronicle txt Files
 
 </pre>
 </div>
-<div created="20170426123555284" creator="Yifan" modified="20180409082841378" modifier="Yifan" title="Work_Luminosity_part2">
+<div created="20170426123555284" creator="Yifan" modified="20180822100845088" modifier="Yifan" title="Work_Luminosity_part2">
 <pre>!!Results and Systematics
 
 ----
@@ -16639,6 +16651,28 @@ Chronicle txt Files
 #MC Statistics: 0.3% (1M MC)
 #Tracking: comparing with EMC-only method's result.
 #[[tanggy correction|Worklog_Luminosity_5]]: Difference from my method and tang method
+#@@color:green;Trigger Efficiency@@
+
+----
+
+180822: added Trigger Efficiency. Some calculation was wrong.
+
+| ! | !4190 | !4200 | !4210 | !4220 | !4237 | !4246 | !4270 | !4280 |
+| !Tracking Efficiency | 0.13 | 0.17 | 0.05 | 0.08 | 0.24 | 0.15 | 0.30 | 0.29 |
+| !On E Cuts(%) | 0.12 | 0.11 | 0.12 | 0.14 | 0.09 | 0.12 | 0.13 | 0.10 |
+| !On Cosθ Cuts(%) | 0.24 | 0.22 | 0.21 | 0.22 | 0.32 |  0.37 | 0.43 | 0.39 |
+| !On P Cuts(%) | 0.14 | 0.08 | 0.01 | 0.00 | 0.17 | 0.06 | 0.09 | 0.01 |
+| !On M(ee) Cuts(%) | 0 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
+| !Energy Bias(%) | 0.06 | 0.07 | 0.00 | 0.01 | 0.04 | 0.04 | 0.02 | 0.01 |
+| !Babayaga NLO Generator(%) | 0.1 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
+| !Trigger Efficiency(%) | 0.1 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
+| !MC Statistics(%) | 0.2 |&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|&lt;|
+| !Correction to Missing EMC Readout  | 0.05 | 0.06 | 0.08 | 0.04 | 0.07 | 0.06 | 0.06 | 0.05 |
+| !Combined(%) | 0.42 | 0.41 | 0.36 | 0.37 | 0.51 | 0.49 | 0.60 | 0.56 |
+
+
+----
+
 
 ----
 
@@ -17268,7 +17302,7 @@ to do: 对于通过了ggKsKpi的筛选事例，进行一个很宽松的3C kmfit�
 
 &quot;&gt;&gt;</pre>
 </div>
-<div created="20170426113640861" creator="Yifan" modified="20180414061839639" modifier="Yifan" tags="Worklog" title="Worklog_Luminosity">
+<div created="20170426113640861" creator="Yifan" modified="20180822064116365" modifier="Yifan" tags="Worklog" title="Worklog_Luminosity">
 <pre>----
 #[[Files|Worklog_Luminosity_Files]]
 #[[Luminosity Resources]]
@@ -17282,6 +17316,7 @@ to do: 对于通过了ggKsKpi的筛选事例，进行一个很宽松的3C kmfit�
 #[[Tracking Efficiency Problem|Worklog_Luminosity_3]]
 #[[tanggy Problem|Worklog_Luminosity_5]]
 #[[The Writing of Note|Worklog_Luminosity_7]]
+#[[Answering Questions|Worklog_Luminosity_Reply]]
 
 ----
 !!Encountered Problems
@@ -17658,6 +17693,38 @@ old
 
 [img width=400 [./img/Worklog/Luminosity/Tracking/E1_new.png]]
 [img width=400 [./img/Worklog/Luminosity/Tracking/E2_new.png]]</pre>
+</div>
+<div created="20180822064134173" creator="Yifan" modified="20180827065931685" modifier="Yifan" title="Worklog_Luminosity_Reply">
+<pre>1) Corrected the format of the L in the formula.
+
+2) The foot note are merely used to separate two data sets at the same CM energy. The two data sets are defined by their run number lists. The memo is modified to better convey this message.
+
+3) I added a Table of BABAYAGA@NLO's options and put the description in the text.
+
+4) Fixed.
+
+5) I have enlarged the markers of the MC components as well as in the ratio graphs to make the graphs a bit easier to read.
+
+6) We have now expanded the background section in memo to include the details of background estimation in Gao Qing's previous study. And we decide that the same conclusion should be valid in our analysis since there is no critical difference.
+
+7) The selection criteria for the events to be recovered are fully described in the earlier part of section 4.2. As described in the memo, we simply add the number of these recovered events to the number of signal events to get the corrected luminosity.
+
+We recognize that &quot;correction factor&quot; is a perplexing phrase, so it's now renamed to &quot;percentage of contribution to luminosity of such events&quot; in the text. 
+
+8) We now include two graphs showing the distribution of the fitting result.
+
+9) For the lowest 3 energy points, the configuration of the event generator would fail to work because the energies are too low for a cut at 3.8 GeV for the invariant mass. We decided that inventing a workaround here is not worth it, so we instead argue that the original results were already good enough and continue using them.
+
+The 4420_1 and 4420_2 are simply two data sets, whose corresponding run number lists were defined in Table 2. The 4420_1 data set may also be known as 4420_scan.
+
+The big difference for 4420_1 and 4420_2 are explained by the addition of the dst files. These files were not included in the data sets in BOSS v6.6.x but are in the BOSS version 7.0.3, and that's why the new luminosities are larger. The luminosity of the BOSS v6.6.x were dealt with in section 5.2.
+
+10) We failed to consider the uncertainty from Trigger Efficiency. It is now added in the new table now, and the results are re-calculated accordingly.
+
+The measurement employs a cut-and-count procedure, and fitting is not involved in obtaining the result. Fitting was only used as a check in the number of events to recover from EMC readout error, and its output was used in estimating systematic uncertainty of the EMC correction. Therefore, there is no term of its contribution from in the table of systematic uncertainties.
+
+11)  The data-MC comparison graphs of the Method I and Method II are added for every other data set.
+</pre>
 </div>
 <div created="20171103074532438" creator="Yifan" modified="20180414061856172" modifier="Yifan" tags="Worklog" title="Worklog_MCProduction">
 <pre>为BOSS v703的XYZ数据产生MC。

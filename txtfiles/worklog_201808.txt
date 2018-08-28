@@ -1,10 +1,148 @@
+2018/8/28:
+	-gEtacpri:
+		-simultaneous fit:
+			-working
+			-making it more adaptable
+			-I/O check
+	-Luminosity:
+		-tanggy checking Digamma:
+			-the influence of time cut.
+			-energy deposition being time dependent
+			
+			
+2018/8/27:
+	-gEtacpri:
+		-simultaneous fit:
+			-get simultaneous model:
+				get two models, name them gKsKpi and gKKpi0
+				-共用变量
+			-get combined data set:
+				import gKsKpi
+				import gKKpi0
+			-simPdf.fitTo(combData)
+			-plot
+			
+		-need to rename the mKKpi variable in the outroot of gKKpi0.C
+			-updated roots in Standard/ and fnf.root: added a copy, naming metac2s
+			
+	-Luminosity:
+		-改了charmonium的网页
+		-批量产生图片失败；FormatMC2需要改动
+			-重新产生
+		-memo改动完毕
+
+2018/8/26：
+	-Luminosity:
+		-g12 4210的图缺失；
+		-changed Ep etc. graphs
+			-still needs to finish E1 etc. graphs
+		-
+
+2018/8/25:
+	-Luminosity:
+		-4420scan sim,ana finished
+		-
+2018/8/23:
+	MobaXterm.
+	-Luminosity:
+		-仅new 8 + 4190scan + 4260画图成功。
+		-改了画图style:
+			-pull distribution 的marker size增加
+			-
+		-其他能量点：root文件陈旧，脚本运行不成功。
+			-preparing dst files again:
+				-4360 sim	
+					-wrong sim options
+						-resubmit
+					-ana finished
+				-4420 ana finished
+				-4470 sim finished.
+					  ana finished
+				-4530 sim
+					  ana finished
+				-4575 sim
+					-wrong run IDs
+						-resubmit
+						-54~71 resubmitted
+					-ana
+				-4600 sim
+					-wrong run IDs
+						-resubmit
+					-ana finished
+				-4090scan ana finished 
+				-4230scan ana finished.
+				-4190scan good enough
+				-4210scan sim finished
+						  ana finished
+				-4245scan ana finished
+				-4310scan ana finished
+				-4390scan ana finished
+				-4230	ana
+				-4220scan 
+	
+	-找工作
+
+2018/8/22:
+	Luminosity:
+		-回答zhang bingxin老师的问题
+			-background study
+			-其他点的图放到backup中
+				-P_pm: cuts 10, E_pm: cuts 11, theta_pm: cuts 12, mee: cuts 0.
+				-E_1,2: cut 20, theta_1,2: 20, deltaphi:25
+				
+				Error in <TFile::TFile>: file /scratchfs/bes/yangyf/Luminosity/ScanMC/4090MC/root/Bhabha.root does not exist
+						-doing ana
+							-checked.
+				Error in <TFile::TFile>: file /scratchfs/bes/yangyf/Luminosity/ScanMC/4210MC/root/Bhabha.root does not exist
+						-doing sim.
+							-all failed;	resubmit
+							
+				Error in <TFile::TFile>: file /scratchfs/bes/yangyf/Luminosity/ScanMC/4230MC/root/Bhabha.root does not exist
+						-doing ana.
+							-checked
+				Error in <TFile::TFile>: file /scratchfs/bes/yangyf/Luminosity/4230MC/root/Bhabha.root does not exist
+						-doing sim.
+							-checked
+						-submitted ana.
+							-redoing
+				Error in <TFile::TFile>: file /scratchfs/bes/yangyf/Luminosity/4420MC/root/Bhabha.root does not exist
+						-doing ana.			
+							???	need to check again
+				Error in <TFile::TFile>: file /scratchfs/bes/yangyf/Luminosity/ScanMC/4210MC/root/Digamma.root does not exist
+						-waiting for Bhabha to finish.
+				Error in <TFile::TFile>: file /scratchfs/bes/yangyf/Luminosity/4270MC/root/Digamma.root does not exist
+						-doing ana
+							-checked.
+				
+		-
+
+2018/8/20：
+	gKsKpi:
+		-应该合并note和beamer用图的文件夹？
+
+2018/8/18:
+	讲了rhopi
+
+2018/8/17:
+	准备讲rhopi
+
 2018/8/14:
+	Tuesday Meeting:
+		-gKsKpi: kskpi background
+			-not N_fsr/N_nofsr; but N_fsr/total.
+				-efficiency?
+	
+	Luminosity:
+		-checked tang's mail
+		-4270 NLO, v3.5  Digamma
+			-file checked and ana
+	
 	gKsKpi:	
 		-finished roofit/fit_ggKsKpi.C
 		-rewriting fit_result.C
 			-changed input/output
 			-changed ggKsKpi shape
-			-
+	
 
 2018/8/12:
 	gKsKpi:
