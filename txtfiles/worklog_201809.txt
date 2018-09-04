@@ -1,0 +1,21 @@
+2018/9/3:
+	gEtacpri:
+		-谱形check：
+			-I/O check
+			-检查Inclusive MC区间内事例是什么
+				-check algorithms:
+					gKsKpi & gKKpi0: MC truth info saved standard form;
+				-script:
+					use Li Longke's topology package
+						-got ready
+						-need drawing script.
+					renamed the leaves of the outtree in scripts
+						-no need, changed back.
+					
+		-写memo
+
+	Luminosity:
+		改图：
+			-之前跑的图有bug，没跑对。
+			-4190 图有问题，因为开了test mode。不过应该不影响。
+			

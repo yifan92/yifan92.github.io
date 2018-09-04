@@ -1,9 +1,27 @@
+2018/8/29:
+	Luminosity:
+		-改图，修正mee的范围
+	
+	-wednesday meeting:
+		-yuancz:关于误差
+		
+	-writing memo:
+		-should not use X3c when deciding the passing of events, since it's inferior to X4c.
+		-X_total with X4c cut at 50.
+			-need to update the work.
+		-need to put in the topology graphs.
+
 2018/8/28:
 	-gEtacpri:
 		-simultaneous fit:
 			-working
 			-making it more adaptable
 			-I/O check
+		-meeting questions:
+			-E^3 shape already in MC?
+			-the gaussian width?
+			
+			
 	-Luminosity:
 		-tanggy checking Digamma:
 			-the influence of time cut.

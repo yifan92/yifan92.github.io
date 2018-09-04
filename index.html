@@ -453,6 +453,8 @@ Error message and password prompt
 
 <li>Python I/O</li>
 
+<li>Python IDE</li>
+
 <li>Python Packages 1</li>
 
 <li>Python Packages 2</li>
@@ -544,6 +546,8 @@ Error message and password prompt
 <li>Tips on Making Slides</li>
 
 <li>Tool Programs</li>
+
+<li>Topology Package</li>
 
 <li>Tuesday Group Meeting</li>
 
@@ -8552,7 +8556,7 @@ allow edit&lt;/$button&gt;
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList ROOT RooFit [[RooFit Simultaneous Fit]] [[Work Log]]" title="$:/StoryList">
+<div list="ContentList Latex Beamer [[Beamer Theme]] [[Tuesday Group Meeting]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180316112035263" creator="Yifan" modified="20180625093128014" modifier="Yifan" tags="$:/tags/Stylesheet" title="$:/Style.css">
@@ -10001,7 +10005,7 @@ Done:
 **The list of event information to display
 *@@color:green;The construction of the BESIII experiment@@</pre>
 </div>
-<div created="20170412111817131" creator="Yifan" modified="20180818061244455" modifier="Yifan" tags="[[Computer Skill]]" title="BOSS">
+<div created="20170412111817131" creator="Yifan" modified="20180904023347445" modifier="Yifan" tags="[[Computer Skill]]" title="BOSS">
 <pre>BES-3 Offline Software System.
 
 *[[Offline Software Group Page|http://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Main_Page]]
@@ -10013,10 +10017,10 @@ Done:
 ----
 *[[IHEP Condor]]
 *[[BOSS CVS]]
-
+*[[Topology Package]]
 </pre>
 </div>
-<div created="20170629050548861" creator="Yifan" modified="20170629064831823" modifier="Yifan" title="BOSS CVS">
+<div created="20170629050548861" creator="Yifan" modified="20180904023410307" modifier="Yifan" tags="BOSS" title="BOSS CVS">
 <pre>公共CVS账号：bes3/bes3charm
 
 Modify: cmthome/version/setupCVS.sh
@@ -12509,7 +12513,7 @@ Design Luminosity: $$1\times 10^{33} cm^{-2}s^{-1}$$
 * Tracks must be within 10 cm along z and 1 cm radially from the interaction region ''at their closest approach''
 * the ''opening angle'' of two tracks</pre>
 </div>
-<div created="20170413115846627" creator="Yifan" modified="20170413132407491" modifier="Yifan" title="IHEP Condor">
+<div created="20170413115846627" creator="Yifan" modified="20180904023401836" modifier="Yifan" tags="BOSS" title="IHEP Condor">
 <pre>----
 !!基本操作
 
@@ -13337,7 +13341,7 @@ Michel has visited China many times and played a special role in providing his a
 ----
 #[[PDG Webpage|http://pdglive.lbl.gov/Viewer.action]]</pre>
 </div>
-<div created="20171206062015398" creator="Yifan" modified="20180418081116772" modifier="Yifan" tags="[[Computer Skill]]" title="python">
+<div created="20171206062015398" creator="Yifan" modified="20180901081608830" modifier="Yifan" tags="[[Computer Skill]]" title="python">
 <pre>----
 #[[Python Basics]]: indentation, variables, lists, basic operators, string formatting, basic string operations, conditions, loops, Ternary Expression, 类型转换.
 #[[Python Basics 2]]: function, classes and objects, dictionaries, module and packages, file and OS
@@ -13351,6 +13355,7 @@ Michel has visited China many times and played a special role in providing his a
 #[[Python I/O]]
 #[[Creating Python Library]]
 #[[Python Errors]]
+#[[Python IDE]]: integrated development environment
 
 ----
 !!Python Resources
@@ -14383,6 +14388,9 @@ print sys.argv
 ''advanced'': use getopt package. 
 
 </pre>
+</div>
+<div created="20180901081627775" creator="Yifan" modified="20180901081634543" modifier="Yifan" tags="python" title="Python IDE">
+<pre>#[[PyCharm|https://www.jetbrains.com/help/pycharm/meet-pycharm.html]]</pre>
 </div>
 <div created="20180217031737023" creator="Yifan" modified="20180411072911436" modifier="Yifan" tags="python" title="Python Packages 1">
 <pre>----
@@ -15682,10 +15690,39 @@ ch.Add(&quot;f3.root&quot;);
 ch.Draw(&quot;x&quot;);
 ```</pre>
 </div>
-<div created="20171212070116113" creator="Yifan" modified="20180409093501000" modifier="Yifan" tags="ROOT" title="ROOT Misc">
+<div created="20171212070116113" creator="Yifan" modified="20180904024036165" modifier="Yifan" tags="ROOT" title="ROOT Misc">
 <pre>`tree-&gt;Draw(&quot;var1:var2&gt;&gt;hist2d&quot;,cut);`: drawing a graph from tree with a cut, store into a hist;
 
-`canvas-&gt;SaveAs(filename);`</pre>
+`canvas-&gt;SaveAs(filename);`
+
+----
+
+!!Monitor timing
+
+''c++''
+
+```
+if (i%500000==0 || i==10000) cout&lt;&lt;&quot;Progress: &quot;&lt;&lt;(i*100.0/nentries)&lt;&lt;&quot;%,                run time(s) = &quot;&lt;&lt;clock()/1000000.&lt;&lt;endl;
+```
+
+
+''python''
+
+```
+import logging
+
+logging.basicConfig(level = logging.INFO,format = '%(message)s',filename=logname,filemode=logging_filemode)
+logger = logging.getLogger(__name__)
+
+
+logger.info(&quot;Starting: &quot;+datetime.datetime.now().strftime(&quot;%y-%m-%d %H:%M:%S&quot;))
+
+```
+
+
+
+----
+</pre>
 </div>
 <div created="20171129095153628" creator="Yifan" modified="20180409093523170" modifier="Yifan" tags="ROOT" title="ROOT SHELL Command">
 <pre>In Command line:
@@ -16458,8 +16495,84 @@ $body$
 #[[github|http://github.com]]:version control service
 #XShell: unix shell.</pre>
 </div>
-<div created="20180722120123493" creator="Yifan" modified="20180814054408257" modifier="Yifan" tags="Worklog" title="Tuesday Group Meeting">
-<pre>#[[2017.11.14]]
+<div created="20180904023355381" creator="Yifan" modified="20180904023542815" modifier="Yifan" tags="BOSS" title="Topology Package">
+<pre>Quoting 李龙科's  relevant mail:
+
+```
+
+I want to share the usage of a topology package developed by Dr. Xingyu ZHOU(Beihang Univ.), 
+especially for analyses under BOSS v7.0.3 with XYZ inclusive MC.
+
+Maybe some persons have found there are maybe some special processes 
+for events production in new XYZ inclusive MC. For example, my signal 
+channel is e+e—&gt;pi+D-D*0, there are three processes in inclusive MC (7.0.3)
+as follows, 
+(1) e+e- —&gt; gamma* gamma —&gt; pi+D-D*0
+(2) e+e- —&gt; vgam gamma —&gt; pi+D-D*0
+(3) e+e- —&gt; pi+D-D*0
+Now Topology v1.3.2 is ability to discern all of these channels, and we can 
+tag all of them as our signal component.
+
+Here I give a detailed information about the usage of this good Topology package.
+1) add following code into your analysis code to save MC truth information. (much simpler 
+than previous topology requirement, of course you should define the variables in header file.)
+/******
+   // add items of our ntuple in initialize() for MC info.                               
+   status = m_tuple_best-&gt;addItem(&quot;m_best_indexmc&quot;, m_nps, 0, 200);  
+   status = m_tuple_best-&gt;addIndexedItem(&quot;m_best_pdgid&quot;, m_nps, m_pid);
+   status = m_tuple_best-&gt;addIndexedItem(&quot;m_best_motherIdx&quot;, m_nps, m_midx);
+……
+  // add follows into execute() to save info. for topology analysis
+  if(eventHeader-&gt;runNumber()&lt;0){
+     SmartDataPtr&lt;Event::McParticleCol&gt; mcParticleCol(eventSvc(),&quot;/Event/MC/McParticleCol&quot;);
+     if(!mcParticleCol) {      
+        std::cout&lt;&lt;&quot;Could not retrieve McParticelCol&quot;&lt;&lt;std::endl;
+        return(StatusCode::FAILURE);  
+     } 
+     Event::McParticleCol::iterator iter_mc=mcParticleCol-&gt;begin();
+     m_nps=0;
+     for(;iter_mc!=mcParticleCol-&gt;end();iter_mc++) 
+     {
+        if (!(*iter_mc)-&gt;decayFromGenerator())  continue;
+        m_pid[m_nps]=(*iter_mc)-&gt;particleProperty();
+        m_midx[m_nps]=((*iter_mc)-&gt;mother()).trackIndex();
+        m_nps++;            
+     }    
+  }
+******/
+
+2) then you can copy the Topology package under this directory: 
+~lilk/public/topo_v1.3.2
+firstly, you need compile it with run core/compile.sh 
+then you can add the info. in topoana.card to achieve what you want.
+I give an example in the file named ./test 
+(1) cd ./test
+(2) ../core/topoana.exe topoana.card
+ ==&gt; obtain a root/pdf/txt/tex files with topology
+(3) root -l DrawSigBkg.cxx 
+ ==&gt; to show the signal and background component distribution.
+
+The topoana.card is well understandable benefiting from many comments added by Xingyu. 
+If you want to tag the special channel with this version, you can add them under 
+‘Signal sequential event branches’ . Note that: the conjugated decay is not added 
+automatically, you should add them by yourself. Considering the above three processes 
+in the new inclusive MC, you should add all of them, as I have added in test/topoana.card; 
+then you can choose them via NSigSeqEvtBrs[i], which is a flag for the i^{th} channel. 
+The events with NSigSeqEvtBrs[i]&gt;0 means these events are our choose signal; 
+otherwise are not. For example you can refer to the DrawSigBkg.cxx.
+
+If any questions, please be free to discuss with me (lilongke@ihep.ac.cn) or directly contact 
+with the developer Dr. Xingyu ZHOU (zhouxy@buaa.edu.cn).
+
+```</pre>
+</div>
+<div created="20180722120123493" creator="Yifan" modified="20180904063051495" modifier="Yifan" tags="Worklog" title="Tuesday Group Meeting">
+<pre>!!Indico Pages
+#[[2018.08.21-2018.11|https://indico.ihep.ac.cn/event/8712/]]
+
+----
+
+#[[2017.11.14]]
 #[[2017.11.28]]
 #[[2018.1.9]]
 #[[2018.1.16]]
@@ -16469,7 +16582,8 @@ $body$
 #[[2018.3.13]]
 #[[2018.4.3]]
 #[[Digamma Problem]]
-#[ext[gam Etac(2S)|./materials/yangyf/gKKpi0_gKsKpi.pdf]]</pre>
+#[ext[gam Etac(2S)|./materials/yangyf/gKKpi0_gKsKpi.pdf]]
+#[ext[ROOT Performance Problem|./materials/yangyf/ROOT_Performance_Problem.pdf]]</pre>
 </div>
 <div created="20170413095123511" creator="Yifan" modified="20180608015147955" modifier="Yifan" tags="Writing" title="Typing Practices">
 <pre>*[[Numpad Typing |http://www.typeonline.co.uk/number_pad_lesson1.html]]
