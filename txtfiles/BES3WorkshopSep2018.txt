@@ -1,0 +1,44 @@
+2018/9/13:
+Discussion on White Paper:
+	-While a lot of work has been done, the concern has been raised by foreign colleagues that there is not enough cooperation. 
+	 The bald Wolfgang commented that he feels that it's rather inappropraite to have the white paper send out of collaboration without
+	 the work being circulated within the collaboration and the consensus has been reached. Things like the difference of the lengths in sections can mislead outsiders to guess about the importance
+	 wrong. 
+	-look to the next 5 years for data taking
+	 
+Light Hadron:
+	-X(2370): 0-+ glueball?
+	-X(1835)
+	-light meson decays
+
+Charmonium:
+	need to read about the white paper.
+	
+
+----------------------------------------
+
+2018/9/10
+
+CGEM Status Update
+	by G.Cibinetto
+	geometry: 8 sectors
+	problem with hardware:	low efficiency, inhomogeneity
+	software:	digitalnization tuning; event display
+		Application of Machine Learning in Tracking:	by Xiong Xi'an
+		
+CGEM Software
+	Wang Liangliang
+	
+BES3 Software
+	Sun Shengsen
+	BOSS 7.0.4
+		-some improvements
+		-new Generator;
+		-Event Display
+		
+Study of PID and Tracking Efficiency		**
+	by Lu Jiada
+		* important
+		
+dAngle Cut Study
+	by	Ms Himmelreich

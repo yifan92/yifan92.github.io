@@ -1,0 +1,160 @@
+2018/10/30:
+	写memo：	
+		-luminosity of XYZ data?
+
+2018/10/29:
+	写memo：
+		-need to get the numbers right
+			-selection criterion:	chi_all<30
+				-rerun scripts
+		-generated gKsKpi continuum
+			-all success; hadd;
+			-
+		-checked gKKpi0 continuum
+			-bad metac2s, rerun script
+			
+			V. The scaling factors f are determined to be 3.61 and 20.56 for the 2009 and 2012 data samples, respectively.
+				-wrong, the scaling factor for 2012 data is in relation to tau-scan data.
+2018/10/28:
+	写memo
+
+2018/10/27:
+	下周四照片采集：
+		中关村校区：	9:00-16:00
+		通知：	http://edu1.ihep.ac.cn/tzgg/2017/2018/10/702688.shtml
+
+	gEtacpri:
+		写memo:
+			-graph for 3C/4C mass:
+				-check gKsKpi.py
+					-done
+				-rerun gKsKpi.py
+					-updated 12data
+					-12signal FSR files are bad: 
+						-不能在lxslc6上使用BOSS v664p03，需设置lxslc7:		done
+						-got ana file
+					-all result.root but for 09len, 12len are good
+				-run
+				
+2018/10/22:
+	gEtacpri:	
+		写memo：
+			-section 3.1:3C/4C mass for signal/KsKpi background
+				-KsKpi hadd ana file. (generated at unknown time)
+				-needs to check gKsKpi.py
+					-chi2_pi_wrong, chi2_k_wrong: Not saved, but appeared in script. Are they useful?
+					-之前没有改完成功运行，尚有不少错误。
+					
+
+2018/10/17:
+	中期考核：（目前安排是11月22日）
+		-检查学分要求
+			-通过
+		-网上流程：
+			-中期考核填写相关内容后请求导师指导
+		-纸质材料：
+			-网上的登记表导师指导后在线生成《中国科学院大学研究生学位论文中期考核登记表》		
+			-研究生学位论文中期报告
+
+2018/10/16:
+	gEtacpri:
+		-3.58附近拟合不上：
+			调整高斯的宽度为可变，解决
+	
+		-杂项本底：
+			-用continuum background考虑
+			
+		-IO check：
+			generate spectrum from random number generator
+			-用的gauss形状效率太低；抽样抽不出来。
+			-useMCshape 拟合不上
+	
+2018/10/15:
+	Luminosity:
+		回答张老师问题：
+			done
+		回答周兴玉问题：
+			能散：
+				BeamEnergy1:	result.root	890 files			nEvents=1378223		1548.56/10000
+				BeamEnergy2:	result.root 907 files 			1405320				1549.42/10000		
+			Generator Configuration:
+				MC 产生有误，重新产生
+				-babayaga算截面:	
+					alternative cos range:
+						138.11076177 +- 0.04405449				
+
+2018/10/12:
+	Luminosity:
+		回答张老师问题：
+			改图：
+				-
+			合并文件：
+				
+				
+		回答周兴玉问题：
+			能散不对
+				-产生各10 mil. 4600 能散2.2和能散1.36试验
+					-submitted ana
+					
+			产生子的精度
+				-产生2 mil. 4190事例试试theta角(30,150)的变化；
+
+
+
+2018/10/11:
+	Luminosity:
+		改图：	
+			-correction ratio graph 更改完毕；correction.eps in memo181010
+			-main graphs eps ready: pp, pm, ep, em, ctp, ctm, mee, phip_emc,phim_emc,phip,phim,ctp_emc,ctm_emc, ct1,ct2,deltaphi, phi1,phi2,e1,e2
+			-normPH graphs：从rootfile中画出
+			
+			
+
+2018/10/10:
+	round table报告：
+		-进一步改图；
+			-Correction Ratio Graph的style
+			-二维能量分布；
+		-检查是否是pipi：
+			-cos角分布
+			
+
+2018/10/09:
+	回答zhang jingzhi的问题：
+		-改图：
+			对于其他能量点，Legend位置需要再调整
+				Ep,Em:中下
+				pp,pm:中下
+				E1,E2:中下
+			
+			resubmitted.
+		-廖龙洲的memo怎么办？
+
+2018/10/08:
+	帮songjj改了memo
+	Luminosity:
+		-resubmitted jobs
+	
+
+2018/10/07:
+	Luminosity:
+		改图:
+			ratio graph:
+				X axis: label size ->0.15, title size -> 0.14, tick length -> 0.06 
+				Y axis: label size ->0.15, title size -> 0.14,					
+			pad1:
+				bottom margin 0.15	#applied
+			pad2:
+				top margin 0.05, bottom margin 0.15	#applied
+			Legend Size:
+				0.2,0.2
+				positions to be decided
+		submitted all jobs
+				-failed because the PyResults folder was deleted
+				
+2018/10/05:
+	Luminosity:
+		-张景芝老师的问题：
+			-改图：	Legend Size; 
+				Ratio graph: label size 0.06->0.10, 
+			-eps格式
