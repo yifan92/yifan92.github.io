@@ -1,7 +1,27 @@
+2018/10/31:
+	领取就业推荐表：
+		http://edu1.ihep.ac.cn/tzgg/2017/2018/10/702952.shtml
+
+	写memo：
+		-needs mumu graph:
+			-regenerate rootfiles needed by Drawmumu.C.
+				
+			
+
 2018/10/30:
 	写memo：	
-		-luminosity of XYZ data?
-
+		-luminosity of continuum data?
+			Got luminosity from Wang Zhiyong:
+				mode    energy (GeV)    lum. (pb-1)
+				bb        3.550        23.31+-0.02
+				bb        3.650        44.39+-0.03
+				bb(12)    3.686       510.49+-0.08
+				bb(09)    3.686       163.49+-0.05
+				gg        3.550       23.14+-0.05
+				gg        3.650       43.88+-0.07
+				gg(12)    3.686       506.92+-0.23
+				gg(09)    3.686       161.63+-0.13		
+		
 2018/10/29:
 	写memo：
 		-need to get the numbers right
@@ -44,6 +64,7 @@
 				-needs to check gKsKpi.py
 					-chi2_pi_wrong, chi2_k_wrong: Not saved, but appeared in script. Are they useful?
 					-之前没有改完成功运行，尚有不少错误。
+					
 					
 
 2018/10/17:

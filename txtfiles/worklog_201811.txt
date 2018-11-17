@@ -1,0 +1,71 @@
+
+
+2018/11/13:
+	gEtacpri:
+		-estimating the systematic uncertainties:
+			-still need that of the mass range, need to redo with alternative mass range.
+
+2018/11/12:
+	gEtacpri:
+		tried Novosibirsk func to fit pi0KsKpi: there's not much difference
+
+2018/11/10:
+	gEtacpri:
+		kmfit check
+			-写好了gKsKpi的包，未充分测试
+			-gKKpi0的包有问题，m_chic2不对，重跑。
+
+2018/11/9:
+	FS Filter包：/besfs/users/hpwang/2018/1st/lingliangwang
+
+	gEtacpri Note:
+		-efficiency of kmfit (gKKpi0):
+			-got root: 09signal, 12signal, xc1,xc2,09data,12data,09mc,12mc
+
+2018/11/7:
+	gEtacpri:
+		-添加一段Event Selection的叙述
+		-18.21% vs 18.47% in signal efficiency of gKsKpi and gKKpi0?
+			-not caused by partial file lost.
+		-efficiency of kmfit
+			-modified alg, rerun:
+				09signal,12signal, xc1,xc2,09mc,12mc,09data,12data
+			
+2018/11/6
+	开会订票：
+		G487, 10:52
+		
+	gEtacpri:
+		simultaneous fit:
+			fitting result stored in tiddlywiki.
+			fixed bug: fit_with_sig, number of sig events, the FCN.
+			fitting 事例数不对：
+				-gKsKpi 09 和 12 的事例数比例不是亮度比
+					-log checking:
+						going back to ana.
+		
+		
+2018/11/5:
+	Fitting Result:
+
+
+	gEtacpri Note:
+		-use Novosibirsk function to fit?
+		-
+
+2018/11/4:
+	gEtacpri Note:
+		-need to deal with continuum background
+
+
+2018/11/2:
+	BESIII 冬季年会：
+		-自己找酒店
+			-龙洲找了主办方，帮忙解决了
+
+	gEtacpri Note:
+		-gKKpi0 KKpi0 background:
+			estimate with another background channel?
+			
+		-Needs to write an introduction.
+	
