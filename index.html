@@ -329,6 +329,8 @@ Error message and password prompt
 
 <li>draft content</li>
 
+<li>EKHARA/PHOKHARA MC Event Generator</li>
+
 <li>English</li>
 
 <li>Execution of Backslash</li>
@@ -342,6 +344,12 @@ Error message and password prompt
 <li>Fortran Example 1</li>
 
 <li>Fortran Example 2</li>
+
+<li>Gaudi Framework</li>
+
+<li>Gaudi: SubAlgorithm</li>
+
+<li>Gaudi: Tool</li>
 
 <li>General Phrases</li>
 
@@ -424,6 +432,8 @@ Error message and password prompt
 <li>HEP Experiments</li>
 
 <li>HEP Phrases</li>
+
+<li>HEP Softwares</li>
 
 <li>HTcondor</li>
 
@@ -613,7 +623,7 @@ Error message and password prompt
 
 <li>slider</li>
 
-<li>Some C++ Notions</li>
+<li>Some C++ Concepts</li>
 
 <li>Statistics</li>
 
@@ -628,6 +638,8 @@ Error message and password prompt
 <li>Tool Programs</li>
 
 <li>Topology Package</li>
+
+<li>Tracking and PID Efficiency of p, K, pi at BESIII</li>
 
 <li>Tuesday Group Meeting</li>
 
@@ -8421,7 +8433,7 @@ Error message and password prompt
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;Untitled&quot;: {
-            &quot;text&quot;: &quot;http://pdg.lbl.gov/2016/reviews/rpp2016-rev-kinematics.pdf&quot;,
+            &quot;text&quot;: &quot;http://www-glast.slac.stanford.edu/software/gaudi/doc/gaudiDevelopersGuide_v2.pdf&quot;,
             &quot;title&quot;: &quot;Untitled&quot;
         },
         &quot;gKKpi0_mctruth.png&quot;: {
@@ -8683,7 +8695,7 @@ allow edit&lt;/$button&gt;
 <div created="20170407032738738" creator="Y" modified="20170407032739594" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div list="ContentList C++ [[Some C++ Notions]] [[Communication Skills]]" title="$:/StoryList">
+<div list="ContentList QCD [[Communication Skills]] English [[HEP Softwares]] [[EKHARA/PHOKHARA MC Event Generator]] [[Work Log]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20180316112035263" creator="Yifan" modified="20180625093128014" modifier="Yifan" tags="$:/tags/Stylesheet" title="$:/Style.css">
@@ -10354,21 +10366,18 @@ Done:
 **The list of event information to display
 *@@color:green;The construction of the BESIII experiment@@</pre>
 </div>
-<div created="20170412111817131" creator="Yifan" modified="20181027055745673" modifier="Yifan" tags="[[Computer Skill]]" title="BOSS">
+<div created="20170412111817131" creator="Yifan" modified="20181120090657821" modifier="Yifan" tags="[[Computer Skill]] BES3" title="BOSS">
 <pre>BES-3 Offline Software System.
 
 *[[Offline Software Group Page|http://docbes3.ihep.ac.cn/~offlinesoftware/index.php/Main_Page]]
 *[[Class Reference Documentation |http://bes3.to.infn.it/BESIII_Doxygen_Documentation.html]]: generated from source code by Doxygen
 *[[CLHEP doxygen|http://psi.phys.wits.ac.za/public/Doxygen/CLHEP_1.9.2.2/]] and [[ROOT Class Reference|https://root.cern.ch/root/html/ClassIndex.html]] may also be useful here.
-
-*[[Introduction to Gaudi Framework|https://www.cern.ch/.../Frameworks/Gaudi/Tutorial/1_Introduction.ppt]]: basic concepts
-
 ----
 *[[IHEP Condor]]
 *[[lxslc Servers]]
 *[[BOSS CVS]]
 *[[Topology Package]]
-</pre>
+*[[Gaudi Framework]]</pre>
 </div>
 <div created="20170629050548861" creator="Yifan" modified="20180904023410307" modifier="Yifan" tags="BOSS" title="BOSS CVS">
 <pre>公共CVS账号：bes3/bes3charm
@@ -11209,7 +11218,7 @@ On same channel.
 #[[German]]
 #[[Adrian Wallwork Series]]</pre>
 </div>
-<div created="20170407022748393" creator="Yifan" modified="20181117152743513" modifier="Yifan" title="ContentList">
+<div created="20170407022748393" creator="Yifan" modified="20181121060942780" modifier="Yifan" title="ContentList">
 <pre>#[[Advanced Search|$:/AdvancedSearch]]
 #[[Resources|Physics Resources]]: talks, memos and papers
 
@@ -11241,6 +11250,7 @@ On same channel.
 #[[github]]
 #[[算法导论]]
 #[[CUDA]]
+#[[HEP Softwares]]
 
 ----
 !!Others
@@ -11503,6 +11513,19 @@ Execute 中尽可能只保留物理信息
 物理信息可在joboption控制
 常数放一个文件
 ```</pre>
+</div>
+<div created="20181121061134613" creator="Yifan" modified="20181121062031933" modifier="Yifan" tags="[[HEP Software]]" title="EKHARA/PHOKHARA MC Event Generator">
+<pre>*[[Official Site|http://ific.uv.es/~rodrigo/phokhara/]]
+*[[PHOKHARA Manual|http://ific.uv.es/~rodrigo/phokhara/phokhara9.3.pdf]]
+*[[The Paper that describe the model|https://arxiv.org/pdf/1711.00820.pdf]]
+
+----
+
+*Used for the interaction of photons, pseudoscalars and the vector mesons.
+*NLO accuracy.
+
+
+</pre>
 </div>
 <div created="20180605032005179" creator="Yifan" modified="20181116035236821" modifier="Yifan" title="English">
 <pre>&lt;&lt;list-links filter:&quot;[tag[English]]&quot;&gt;&gt;
@@ -11770,6 +11793,62 @@ c  (missing part)
  9999 stop
       end
 ```</pre>
+</div>
+<div created="20181118145341220" creator="Yifan" modified="20181118155718244" modifier="Yifan" title="Gaudi Framework">
+<pre>*[[Gaudi Developer Guide|http://www-glast.slac.stanford.edu/software/gaudi/doc/gaudiDevelopersGuide_v2.pdf]]
+*[[Gaudi Tutorials|https://lhcb-comp.web.cern.ch/lhcb-comp/Frameworks/Gaudi/GaudiTutorial.htm]]
+
+----
+
+''Design goal'': insulate users from irrevelant details of the software system.
+
+''Base Classes''
+
+*~DataObject
+*Algorithm
+*Converter
+
+''The four main services for algorithm:''
+
+*The event data store
+**`IDataProviderSvc`: allow alg to access/add data in the store
+**`IDataManagerSvc`: clear data before a new event
+*The detector data store
+*The histogram service
+*The message service
+**`IProperty` interface
+**`IMessageSvc` interface
+
+&quot;interface&quot; here means a pure virtual c++ class.
+
+
+''The three basic methods for an Gaudi Alg'': `initialize()`, `execute()`, `finalize()`
+
+----
+
+*[[Gaudi: SubAlgorithm]]
+*[[Gaudi: Tool]]
+</pre>
+</div>
+<div created="20181118152308363" creator="Yifan" modified="20181118154359466" modifier="Yifan" tags="Gaudi" title="Gaudi: SubAlgorithm">
+<pre>You may wish to execute some
+algorithms only for specific types of event, or you may wish to “loop” over an algorithm’s
+execute method. 
+
+```
+Algorithm* m_pSubAlgorithm; // Pointer to the sub algorithm
+// Must be a member variable of the parent class
+std::string type; // Type of sub algorithm
+std::string name; // Name to be given to subAlgorithm
+StatusCode sc; // Status code returned by the call
+sc = createSubAlgorithm(type, name, Algorithm*&amp; m_pSubAlgorithm);
+```
+
+
+If a common sub-algorithm should be shared among many different parental algorithms, you should make an [[Tool|Gaudi: Tool]] out of it.</pre>
+</div>
+<div created="20181118154448240" creator="Yifan" modified="20181118155145619" modifier="Yifan" title="Gaudi: Tool">
+<pre>https://lhcb-comp.web.cern.ch/lhcb-comp/Frameworks/Gaudi/Tutorial/7_Using_and_Writing_Tools.pdf</pre>
 </div>
 <div created="20180605032224934" creator="Yifan" modified="20181031065530278" modifier="Yifan" tags="English" title="General Phrases">
 <pre>* per mille, 0.1%.
@@ -14094,7 +14173,7 @@ bachelor particle, ~TGenPhaseSpace package
 
 !!Lesson 3</pre>
 </div>
-<div created="20180605031541603" creator="Yifan" modified="20181031074401489" modifier="Yifan" title="HEP Experiments">
+<div created="20180605031541603" creator="Yifan" modified="20181118135733283" modifier="Yifan" title="HEP Experiments">
 <pre>!!CLEO
 
 Cornell Electron Storage Ring
@@ -14108,8 +14187,8 @@ Design Luminosity: $$1\times 10^{33} cm^{-2}s^{-1}$$
 
 224m circumference, 93 electron/positron bunches spaced by 8 ns. Energy spread: $$5.16 \times 10^{-4}$$
 
-[[Author Page|http://english.ihep.cas.cn/bes/doc/2799.html]]: The procedures; and useful templates. 
-
+*[[Author Page|http://english.ihep.cas.cn/bes/doc/2799.html]]: The procedures; and useful templates. 
+*[[Tracking and PID Efficiency of p, K, pi at BESIII]]
 
 ----
 
@@ -14152,6 +14231,10 @@ Design Luminosity: $$1\times 10^{33} cm^{-2}s^{-1}$$
 * multiply-counted events
 * Tracks must be within 10 cm along z and 1 cm radially from the interaction region ''at their closest approach''
 * the ''opening angle'' of two tracks</pre>
+</div>
+<div created="20181121060950214" creator="Yifan" modified="20181121061714830" modifier="Yifan" tags="[[Computer Skill]]" title="HEP Softwares">
+<pre>&lt;&lt;list-links filter:&quot;[tag[HEP Software]]&quot;&gt;&gt;
+</pre>
 </div>
 <div created="20181012085122109" creator="Yifan" modified="20181012085215747" modifier="Yifan" title="HTcondor">
 <pre>https://research.cs.wisc.edu/htcondor/
@@ -14299,7 +14382,7 @@ https://en.wikipedia.org/wiki/Student%27s_t-distribution
 ----
 </pre>
 </div>
-<div created="20170512051300843" creator="Yifan" modified="20170512081727695" modifier="Yifan" title="Kinematics">
+<div created="20170512051300843" creator="Yifan" modified="20181121060855384" modifier="Yifan" title="Kinematics">
 <pre>[[PDG Documents|http://pdg.lbl.gov/2016/reviews/rpp2016-rev-kinematics.pdf]]
 
 ----
@@ -14318,7 +14401,7 @@ $$d\tau=\frac{(2\pi)^{4}}{2M}|M|^{2}d\Phi_{n}(P;p_{1},...,p_{n})$$, where $$d\Ph
 
 $$E_{1}=\frac{M^{2}-m_{2}^{2}-m_{1}^{2}}{2M}$$,
 
-$$|p_{1}|=|p_{2}|=\frac{[(M^{2}-(m_{1}+m_{2})^{2})(M^{2}+(m_{1}+m_{2})^{2})]^{1/2}}{2M},$$
+$$|p_{1}|=|p_{2}|=\frac{[(M^{2}-(m_{1}+m_{2})^{2})(M^{2}-(m_{1}-m_{2})^{2})]^{1/2}}{2M},$$
 
 $$d\tau=\frac{1}{32\pi^{2}}|M'|^{2}\frac{p_{1}}{M^{2}}d\Omega$$
 
@@ -16697,7 +16780,7 @@ from some.deep.module.inside.a.module import (
     a_nice_function, another_nice_function, yet_another_nice_function)
 ```</pre>
 </div>
-<div created="20180612004823511" creator="Yifan" modified="20181113024651090" modifier="Yifan" title="QCD">
+<div created="20180612004823511" creator="Yifan" modified="20181121062313143" modifier="Yifan" title="QCD">
 <pre>*[[PDG section|http://pdg.lbl.gov/2018/reviews/rpp2018-rev-qcd.pdf]]
 
 
@@ -16715,7 +16798,6 @@ Pole mass: the position of the divergence of the propagator.
 
 ----
 
-*http://frankwilczek.com/Wilczek_Easy_Pieces/298_QCD_Made_Simple.pdf
 *http://depts.washington.edu/physcert/radcert/575website/slides/presentations1210/2-FTAN_PHYS575_QCD.pdf
 
 
@@ -18132,7 +18214,7 @@ os.system('ls')
 
 &lt;$macrocall $name=&quot;slider&quot; label={{!!title}}/&gt;</pre>
 </div>
-<div created="20181102083250832" creator="Yifan" modified="20181118040353491" modifier="Yifan" tags="C++" title="Some C++ Notions">
+<div created="20181102083250832" creator="Yifan" modified="20181118152600006" modifier="Yifan" tags="C++" title="Some C++ Concepts">
 <pre>''Friend Class''
 
 A friend class in C++ can access the private and protected members of the class in which it is declared as a friend.
@@ -18141,6 +18223,10 @@ A friend class in C++ can access the private and protected members of the class 
 
 A virtual function is a special type of function that, when called, resolves to the most-derived version of the function that exists between the base and derived class.
 
+''Pure Virtual Function''
+
+A pure virtual function implicitly makes the class it is defined for abstract.
+Abstract classes cannot be instantiated. Derived classes need to override/implement all inherited pure virtual functions. If they do not, they too will become abstract.
 </pre>
 </div>
 <div created="20170412032224446" creator="Yifan" modified="20181030122500542" modifier="Yifan" tags="math" title="Statistics">
@@ -18525,6 +18611,45 @@ If any questions, please be free to discuss with me (lilongke@ihep.ac.cn) or dir
 with the developer Dr. Xingyu ZHOU (zhouxy@buaa.edu.cn).
 
 ```</pre>
+</div>
+<div created="20181118113510181" creator="Yifan" modified="20181118135741632" modifier="Yifan" title="Tracking and PID Efficiency of p, K, pi at BESIII">
+<pre>According to Song Jiaojiao, the tracking and PID efficiency of $$p,K,\pi$$ is correlated.
+
+It's analyzed with $$J/\psi \rightarrow pp\pi\pi$$ for p and $$\pi$$, while $$J/\psi \rightarrow K_sK\pi$$ and $$J/\psi \rightarrow pK\Lambda$$ for K.
+
+''Event Selection''
+
+$$pp\pi\pi$$
+
+```
+*3 of the 4 good charged tracks
+*veto: m(ppi)&gt;1.15
+*efficiency= n4/(n3+n4)
+```
+
+$$K_sK\pi$$
+
+```
+*3 charged pion tracks; K may be missing
+*vertex fit: decay length &gt; 2.3
+*M(Kpi) in 0.12 range, M(K_s) in 0.008 range.
+*counting; sideband technique
+*efficiency = nmatch_0/(nmatch_0+nmatch_1)
+```
+-----
+
+The two dimensional distribution of $$p_t$$ and $$cos\theta$$.
+
+----
+
+!!How to do the correction?
+
+$$R_{eff} = \frac{data_{p}*data_{k}*data_{\pi}}{mc_{p}*mc_{K}*mc_{\pi}}$$.
+
+generate a uniform random number $$x$$ in [0,1]. 舍选，如果r&gt;1，舍选二重填充
+
+
+宋娇娇的相关脚本： /besfs/groups/psip/psipgroup/user/songjj/Omega/MC_signal/new_omegamcorrect_helicity.cxx</pre>
 </div>
 <div created="20180722120123493" creator="Yifan" modified="20180918052209485" modifier="Yifan" tags="Worklog" title="Tuesday Group Meeting">
 <pre>!!Indico Pages

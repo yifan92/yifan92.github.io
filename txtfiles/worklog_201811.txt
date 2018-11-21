@@ -1,4 +1,15 @@
+2018/11/20:
+	在charmonium组内做了工作的报告
+		-平老师问题：gamma_FSR的筛选；谱形考虑效率曲线
+		-tex文件损坏，需要补做
+		
+	需要进行撰写中期考核报告。
 
+2018/11/19:
+	上周四将粗略的memo发给了苑老师，昨晚得到了他的回复
+	some work to do：
+		-the end cap of EMC should be "costheta in [0.86,0.92]"
+		-apply song jiaojiao's method of Tracking and PID efficiency
 
 2018/11/13:
 	gEtacpri:
