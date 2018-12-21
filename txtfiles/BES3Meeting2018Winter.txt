@@ -1,0 +1,139 @@
+
+---------------------------------------------------------------------------------
+
+2018/11/26:
+
+Performance Study of Tag Based Analysis
+	Deng Ziyan
+	tag the information like ntrack, nneutral, ... Thereby saving user the trouble of running all the data.
+	Performance: ~1/5 user time
+
+Procedures for evaluation of systematic uncertainties in BESIII
+	Karin Schoenning
+	Tolerance vs. systematic:	
+		-tolerance: the bridge is not break
+		-overestimating uncertainty make us lose discriminating power
+	There is no point to collect more data when sigma_stat<sigma_sys
+	Source of systematics:
+		-data collection
+			-time variation in detector conditions
+			-trigger efficiency
+			-luminosity
+		-reconstruction and calibration
+			-efficiency of tracking algorithm
+			-track resolution
+			-calibtration constants
+		-analysis
+			-PID
+			-Kinematic fits
+			-cut efficiencies
+			-physics model dependence
+		-parameter estimation
+			-bias of method
+			-QED corrections/ line shape dependence
+			
+	The "common practise" about SU of analysis not written down, which is a problem.
+	For parameter estimation, recommended procedures needed.
+	
+	wish-list:
+		-re-evaluation of tracking efficiencies and correlations
+		-understand and correct for observed shifts in a systematic way
+		-better understanding of resolution
+			-include effect that contribute to data/MC mismatch
+	
+	
+	
+	
+
+Application of Machine Learning on BESIII
+	Zhang Yao
+	Physics analysis with python ecosystem
+		Python ecosystem like Numpy or Pandas can speed up the physics analysis
+		python libraries for the HEP:
+			Scikit-HEP
+		
+		
+Partial Wave Analysis Based on Spark
+	Wei Zhanchen
+	PWA as a computation intensive application
+	Two ways to improve computing efficiency:
+		-Using GPU(Parallel)
+			-performance
+		-Using a Fat-mode(4-way SMP server with 120+ CPU cores and 160GB memory, parallel)
+			-big memory; code reuse
+	A new idea:
+		use cluster to do calculation
+	Spark:	
+		A lightning-fast open-source unified analytics engine
+		data model
+
+
+Storage for BESIII:
+	Li Haibo
+	Lustre is working well
+	Verifying a new file system: EOS
+
+
+BESIII Computing Status:
+	Shi Jinyan
+	lxslc5 retired:
+		replacement with a container(OS-level virtualization)
+	lxslc7 will be the main OS for BESIII
+		(scientific linux 7)
+
+
+Study of Tracking Efficiency:
+	Lu jiada
+	The process:	
+		J/psi -> pp pi pi
+		tracking efficiency: n4/(n3+n4)
+	Background Estimation: 
+		overall background level = 2.3%
+	Validation:
+		comparison between singleMC and ExclusiveMC
+	Problem:
+		-inconsistency in different MC:
+			whether J/psi decay with resonance in low Pt
+		-Reliability of fitting method:
+			comparison of fitting method
+				-fit with gauss/MC shape
+			Further checking with MC based on the PWA result is planned.
+	
+Status of Offline Software
+	Deng Ziyan
+	BOSS 7.0.4 Release:
+		-Improvement of PID for MRPC end cap TOF
+			-Endcap TOF upgraded in 2015
+			-PID optimized in BOSSv7.0.4
+			-1%~2% improvement for PID efficiency for XYZ data
+		-Performance check
+			-last paper on BESIII detector performance was published in 2010.
+			-needs a new one.
+
+Status of CGEM software:
+	Wang Liangliang
+	CgemBoss665b
+	Test done:
+		-Efficiency needs improvement for tracks at low pt
+		-Most resolution comparable with BOSS665p01
+		-Significant improvement in z spatial resolution
+	global track finding with Hough Transformation
+	Alignment study
+	Next to do: finish full digitalization and new version of global tracking.
+
+Procedure of Removing the MDC Inner Chamber
+	Ma Xiaoyan
+	Preparation for the replacement of CGEM
+	study and practice on prototype
+	schedule: 134 days.
+
+BEPCII Stauts and Plan:
+	by Yu Chenhui
+	Operation schedule: 
+		Data taking @ XYZ from 2019.1.16 to 2019.6.20
+	Upgrade progress of top-up operation:
+		may be ready after the summer of 2019
+		upgrade to 2.3~2.45 GeV
+		
+		
+	

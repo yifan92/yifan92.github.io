@@ -1,0 +1,106 @@
+2018/12/21:
+	
+
+2018/12/20:
+	gamma Etacpri:
+		-检查效率：
+			-print 尾部事例：
+				-未正确保存蒙卡信息，需改程序
+					-fixed a bug that not enough events were saved.
+	Luminosity:
+		check efficiency:
+			4210,4220,4190,4260,4270,4280
+			-generating events
+			
+2018/12/19:
+	和贾宇聊天：
+		推荐：邹冰松,Vairo, Eichten,赵强，赵光达，陈莹
+	luminosity:
+		张炳新老师提问：
+			-问我为什么给出的截面不符合平方反比率。
+			-我回答是和m(ee) cut有关。
+			-让我提供不带cut的截面计算结果。
+		
+	gamma Etacpri:
+		-证明了3.62处的cut是粒子性质导致的
+		-3.686处的是总能量的hard cut？
+
+2018/12/17:
+	找贾宇：
+		010--88233181
+
+	效率曲线有问题：
+		事例数在3.62处骤减。 
+			-Wrongly introduced a cut somewhere?
+				-may be from the definition of eta_c(2S) in pdt.table
+				-use a user pdt.table, and check the difference
+					signal 09 of gKKpi0:	sim
+				
+			-But why is there a tail in lower region?
+				-check its distributions
+					-need to save the MC truth info of dynamics before cut.
+		check:
+			-检查代码：
+				-save DECAY code as in the original EvtGen package.
+				-no additional cut in the share file.
+			-plot distributions:
+			-殷俊皓建议我检查源代码中的公式
+				
+
+2018/12/16:
+gamma Etacpri:
+	to do:
+		-测量效率曲线
+			-already saved in the algorithm
+			-not saved in the repick-script, need to rerun it.
+				
+		-优化simFit脚本：
+			-输出
+			-开关
+		-检查数据更新
+
+
+2018/12/14:
+Luminosity:
+	-付颖要求我提供2011-2014数据的筛选效率，事例数
+		-旧数据的修正事例数记录丢失
+		-需要修改note
+
+2018/12/11:
+昨天更新了拟合脚本：
+	-changed to python
+	-related the number of events in gKsKpi/gKKpi0 channels and 09/12 data 
+	to do:
+		-print the result
+更新gamma Etacpri的结果：
+	-gKKpi0
+		-root files: Standard,KKpi0
+		-bad files for standard/, too
+	-gKsKpi
+		-Standard:	 wrongly set the FSR parameter, need to rerun.
+			-rerun done.
+		-
+
+2018/12/7:
+计算了KsKpi和KKpi0过程的截面相对比例：	1:1
+
+2018/12/3
+找文献：
+	-Antonio Vairo:
+		Model-independent study of magnetic dipole transitions in quarkonium:
+			https://arxiv.org/pdf/hep-ph/0512369.pdf
+		phenomenological models about transition widths:
+	
+		prof. Yuan's recommendation:
+			https://arxiv.org/abs/1012.0773
+				-At leading order in the multipole expansion of the photon field,  
+				and in the non-relativistic limit, the overlap integral in the magnetic dipole transition is equal to one.	
+				:CLEO damping function should be one?
+				-or a very large beta in CLEO's fit
+			Heavy Quarkonium Physics from EFT:
+				https://link.springer.com/article/10.1140/epja/i2006-10200-0
+			Heavy Quarkonium: Progress, puzzles, and oppotunities	
+				https://arxiv.org/pdf/1010.5827.pdf	
+			
+check the result of ana again
+	-submitted all missing ones: kkpipi2, wkk,Xc1,Xc2

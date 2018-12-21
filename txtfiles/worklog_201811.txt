@@ -1,3 +1,27 @@
+2018/11/30:
+	gamma Etacpri
+		-昨天在大会上做了报告。
+		-改正问题：
+			good photon theta cut and good photon energy threshold.
+
+2018/11/27:
+	preparation needed before the presentation:
+		-改进拟合：
+			-关联样本间事例数？ 	来不及了
+			-关联各个道之间的事例数？
+			-询问jia yu和Antonia Vairo.
+		-修改事例筛选条件:	not this time
+		-做事例筛选的效率，最后的计算：
+			quote 之前的结果？
+		-check typo
+		-improve graphs
+		-考虑平老师的问题：
+			-gamma FSR不需要检查
+				说辞：因为只需要考虑对我的研究产生影响的部分的gamma_FSR事例，所以使用同样的FSR条件是合理的。
+			-需要检查效率曲线陡不陡
+		-将报告发给苑老师审阅
+		-试讲
+
 2018/11/20:
 	在charmonium组内做了工作的报告
 		-平老师问题：gamma_FSR的筛选；谱形考虑效率曲线
