@@ -1,5 +1,14 @@
-2018/12/21:
-	
+2018/12/24:
+	Luminosity check:
+		-4210,4220未成功
+		-备份问题：
+			原本的result.root命名为original.root
+		-reply on hypernews:
+			yuancz: check if the selected events are all well above the cut you applied in the generator.
+
+	gamma Etacpri:
+		try blatt-weisskopf shape?
+			
 
 2018/12/20:
 	gamma Etacpri:
