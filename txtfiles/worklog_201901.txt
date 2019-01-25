@@ -1,0 +1,155 @@
+2019/1/22:
+
+毕业论文：
+	-读撰写规范，寻找模板
+	-开始写内容
+	-结构
+gamma Etacpri:
+	-got memo v1.0
+	-further refinement to do:
+		-效率曲线
+		-Ks->pipi 效率
+		-算significance
+		-input output check
+
+		
+2019/1/21:
+gamma Etacpri:
+	how to get systematic uncertainty for PID and tracking efficiency?
+		-pt,cos(theta) of tracks
+		-改变填充数，reweight MC，跑效率
+		-表根据宋娇娇的memo
+			-songjj没做k的修正，所以没法用她的方法
+	
+		-quote another study instead
+			BAM 259: wrong quote
+			Old result 09: not formal
+			Zhangchi for 3770: 	arXiv:1508.07560  https://docbes3.ihep.ac.cn/cgi-bin/DocDB/ShowDocument?docid=123
+
+2019/1/16:
+	Reading BESIII White Paper:
+		-QCD multiple expansion: [12,13]
+		-p.42: important published papers with the psi(3686) data set
+		-
+
+2019/1/15:
+	Yinjh:
+		CEPC: tot study
+	Li longke:
+		interference between channels with same final-state-particle
+		belle 2: vertex tree reconstruction, large correlation
+		
+
+2019/1/14:
+make a include file for constants?
+	-particle mass;
+gEtacpri:
+	-reading Zhangchi's 3770->g etacpri
+	-kmfit check:
+		-subtract background
+
+2019/1/13:
+gEtacpri:
+	hadd updated root:
+		
+Luminosity:
+	和张景芝、张炳新老师讨论：
+		-更改修正的逻辑		-done
+		-更详细的解释分布： E1,E2锯齿状		-abandoned
+		-改Figure 6			-done
+		-Ndata/Nmc
+		-合并能量测量	-done
+		-更新荣刚老师要求的效率
+
+2019/1/10:
+gamma Etacpri:
+	updating root file
+	
+Luminosity:
+	回答张老师问题
+	need to update memo:
+		-Figure 6: 右图y轴错误;左图标区间
+		-pull分布重新产生
+		-产生normPH1/normPH2的图，计数
+		-section 4.2: shorten the caption, put the explaination into the text; move the luminosity ormula after the second method.
+
+2019/1/9:
+gamma Etacpri:
+	-bugs with check_kmfit:
+		-J/psi veto was done wrongly
+			fixed
+		-the mass was reconstructed wrongly
+			fixed
+		-submit jobs
+		
+2019/1/8:
+group meeting:
+	Rolke method for getting confidence interval
+
+Luminosity:
+	time to update the draft
+
+gamma Etacpri:
+	-simultaneous fit:
+		-can't obtain the width of breit-wigner; because of bad fitting
+		-events are effected by efficiencies now
+	-systematic uncertainty on kmfit:
+		-successful result
+		-but needs to substract background estimated from Inclusive MC
+	-continuum background:
+		-estimated by fitting the continuum spectrum
+		-study 3773 result, by Zhangchi		
+		
+		
+	-systematic uncertainty on tracking and PID:
+		/besfs/groups/psip/psipgroup/user/songjj/Omega/MC_signal/new_omegamcorrect_helicity.cxx
+		
+2019/1/7:
+gamma Etacpri:
+	-update memo:
+		-calculate uncertainty of kmfit
+		-systematic uncertainty on the tracking and PID:
+			study song jiaojiao's method:
+				-calculate: r_upsilon
+				-accept-reject
+			since not much of my p_t are in the range below 0.3 GeV, I can just use the former result.
+				
+	-update root file
+	
+
+2019/1/6:
+Reading CERN Courier (2018 NoV Edi.):
+	Zc(4100)-:	eta_c(1S) pi-
+		-discovered by LHCb in a Dalitz plot analysis of B0 decays to eta_c(1S)K+pi-
+		LHCb Collaboration 2018 arXiv:1809.07752.
+		LHCb Collaboration 2018 arXiv:1809.07416.
+	ROOT Users’ Workshop
+		
+		
+gamma Etacpri:
+	need to run ana for updated code:
+		-failed
+
+	things to be done:
+		-efficiency for k_s0 reconstruction
+			-geometry acceptance
+			-tracking efficiency
+			-decay length requirement
+				studied by Ma Tian, talk on the efficiency of Ks0 reconstruction, at the DQ/validation meeting in May 2010.
+		-Photon efficiency:
+			1% per photon
+				M.Ablikim et al. (BESIII Collaboration), Phys. Rev. D 81, 052005 (2010).
+		-Tracking Efficiency for K, pi as a function of momentum 
+			 Zhu Kai, talk ”Tracking and PID Efficiency of Pion and Proton” in BESIII Software/Physics Workshop Feb (2010)
+			 Ye Chen, Jiaxu Zuo, talk at the DQ/Validation Meeting on 18th January (2010)
+			[song jj]
+		-Efficiency for chisq cut of kmfit
+			-only one Ks candidate
+			-PID
+			-J/psi veto:	M(pipi) recoil in +-5 MeV of 3.097
+			-if nphoton>1:
+				pi0 veto (-15 MeV, +10 MeV)
+				M_gg= closest mass of two photons
+			-the reconstructed mass should be under Chi_cj mass peaks
+				[3.5,3.525] for Xc1,
+				[3.54,3.58] for Xc2

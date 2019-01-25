@@ -1,3 +1,19 @@
+2018/12/26:
+	gamma Etacpri:
+		读文章，寻找lineshape：
+			-observation of upsilon(2S) -> gamma eta_b(1S)
+				-https://arxiv.org/pdf/1807.01201.pdf
+				-a variation on the Crystal Ball function
+			
+2018/12/25:
+	gamma Etacpri:
+		-inspiration in upsilon->gamma eta_b(2S)?
+			-try to find belle articles
+	Luminosity check:
+		-
+		
+		
+
 2018/12/24:
 	Luminosity check:
 		-4210,4220未成功
