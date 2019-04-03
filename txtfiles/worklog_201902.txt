@@ -1,0 +1,57 @@
+2019/2/28:
+	latex 消除连字符
+		\tolerance=1
+		\emergencystretch=\maxdimen
+		\hyphenpenalty=10000
+		\hbadness=10000
+
+	gammma Etacpri:
+		改note
+			-亮度：
+				to do: 程序中更新比例
+			-a bug in alg of gKsKpi: didn't require Vr and Vz for the two tracks other than Ks candidate
+			-研究KKpi0的f_FSR比例
+				-用gXc1(FSR)道
+				-generating MC: 10 mil.
+			-signal resolution function:
+				-tried to use CB to estimate:
+					15% Nevent difference, tail too long.
+				-accept that?
+					-no
+				-why the bad shape?
+					-threshold effect?
+					-look at what events they are.
+
+2019/2/26:
+	LumEcmNote:
+		before I can comfortably write a draft with Ecm included, I need to rewrite the note.
+		
+		
+
+2019/2/22
+	检查新数据：
+		安装704环境
+			done
+		拷Luminosity Alg到704
+			done
+		产生MC样本
+			-check run info:
+				59163-59222	(online: 37.28 /pb) Ebeam=2.0683	data file at:/bes3fs/offline/data/704-1/xyz/4130/tmp2/dst
+			-run info not in the system, use runNo 49163-49222
+		改代码，run数据
+			-
+	gamma Etacpri的memo：
+		送给charmonium的convenors审查，等消息
+
+
+2019/2/17
+	gamma Etacpri改memo
+		to do:
+			-加图： wkk, data distribution
+				done
+			-检查pi0KsKpi background ratio efficiency的奇怪点
+				-反映的是pi0KsKpi中有Xcj的本底?
+					(m3c,m5c) projection introduced peaking background
+				-图19 y轴title不对。
+			-error of fitted event numbers
+				done

@@ -1,0 +1,92 @@
+2019/3/26:
+	gamma etacpri的分析进物理软件会：
+		还剩朱凯的最后一个问题，拟合看起来不好。
+			KsKpi_12的结果在3.58-3.61 GeV处不好。KKpi0_12也稍微有一些拟合不好。
+				-可以使用MC shape来描述KsKpipi0，KKpi0pi0本底
+				-在Inclusive MC中可以发现KsKpipi0拟合不好现象
+					-topology分析：	mctruth 存储方式有误，	修改后重跑
+					
+				考虑效率曲线？
+				考虑是不是Xc2描述不好？
+				
+
+2019/3/17:
+	latex公式中写中文：
+		\text{}，	需要amsmath软件包
+
+2019/3/14:
+	gamma etacpri:
+		-need to make 2nd reply to Guo Yuping and Zhu Kai.
+		-to do: update numbers.
+	writing the thesis:
+		-want to finish the part of gammaEtacpri before the end of 16th, shall reach 80~85 page.
+
+2019/3/12：
+	writing proceedings:
+		-cover what you said in the talk
+		-have anything to say?
+		-people generally have read the original papers, so they don't care about the file. be quick.
+
+2019/3/9:
+	send reply to yuancz and charmonium convenors.
+		-efficiency curve may need a redraw
+		
+2019/3/7:
+	毕业论文：	
+		改图：
+			-EMC-only分布，boost不对。（改alg，不boost?改option，修正boost值不对的问题）
+			-eps图无法正确显示latex
+
+2019/3/6:
+	error when compiling the new algorithm: expecting unqualified-id before 'template'
+			-> there should be semicolon after the class definition in the head file.
+	segmentation violation error with alg:
+		-didn't book the branch in tuple
+			
+			
+2019/3/5:
+	estimate the KKpi0误差，写ggKKpi0算法包来算比例
+		-checked the sim.	OK
+		
+
+2019/3/4:
+	to do: 需要整理一下我的资料
+	毕业论文写完了BES章节，总长度17页。
+	
+2019/3/3：
+	毕业论文：
+		引言没写完，感觉有点难。
+		开始写探测器部分；
+		目前的进度是11页。
+	gamma Etacpri:
+		
+
+2019/3/1:
+	gamma Etacpri:
+		-reply to PWG
+			-signal resolution function:
+				-program bug? (Filled chi_cj when in signal mode)
+					no
+				-CB shape符号反了
+					结果稍微好了一点点， 	129 vs 156
+				和王亮亮的结果比较，m3c就不对，在我的图里运动学拟合有一条高端尾巴，
+					可能是因为没有限定Kpi from vertex?
+						-checked, but no.
+				found out the bug:
+					-fill the hist before check npass;
+				estimate systematic uncertainty
+					-gaus vs. double gaussian.
+						double gaussian parameters:
+							frac=0.1339 +- 0.0025
+							gaus1=(sigma=0.01508,u=0.00255), 
+							gaus2=(sigma=0.00530,u=5.88e-5)
+					-one gaussian:
+						u=2.63e-5, sigma=0.00576
+					
+					126.56(1 gaus) vs. (2 gaus) 138
+						-created img
+					138.74 (frac=0.1339)	vs 138.94(frac=0.1364)
+						-0.1%
+			-requiring iOP:
+				efficiency: 1414/5000 vs. 1420
+			

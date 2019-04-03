@@ -1,0 +1,44 @@
+20190403：
+	
+
+20190401:
+	-给刘晶译发damping function的事：
+		CLEO damping function paper: 
+			https://arxiv.org/abs/0805.0252
+		Vairo说CLEO damping function不靠谱的paper:
+			arxiv: 1012.0773
+		KEDR damping function paper:
+			https://arxiv.org/abs/1012.1694
+		roofit脚本：
+			/besfs/users/yangyf/scripts/gEtacpri/simFit.py
+			关键字damping
+			
+
+	-修改毕业论文：
+		-to do:
+			英文abstract
+			图表长短名；图标名不加句号
+			图不加英文
+			p4改图
+			p5 add 3800 etc.
+			p10，p11 设计参数改为达到的参数
+			p13	100 ps不对？
+			p15 改为实际参数结果
+			p19 讲讲两个分析哪两个道：gamma KKpi0, gamma KsKpi
+			p20 产生子模型加说明或文献
+			p19 亮度的系统误差？
+			p25,26 图的X,Y轴title
+			应用4.5%的探测效率系统误差
+			p46可以直接引用结果算
+			p63 下标
+			p86 解释下标
+			总结和展望
+			
+		-论文写作要点
+			中文latex:数字、英文前后应打空格；影响排版
+			正文中 \caption[列表]{表下}
+			表的名字不加序号
+			
+			
+			
+		

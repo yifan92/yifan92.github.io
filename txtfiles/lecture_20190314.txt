@@ -1,0 +1,91 @@
+
+AI & GAN in scientific research
+
+1980 Learning: SVM, logistic regression
+2010 Deep Learning: neural network
+
+research
+framework
+AI-as-a-platform
+start-up
+
+a new computing model
+	tranditional machine learning:
+		-require domain expert
+		-time consuming experimentation
+		-custom algorithm
+		-not scalable to new problems
+	deep learning:
+		-learn from data
+		-easy to extend
+		-can accelerate with GPU
+
+theory behind:
+	x->f(x):	f(x) is the result as a fact, x is any possible evidence.
+	残差网络
+		AI自动驾驶的判断图？
+	RNN:循环神经网络；运用序列特征
+		合成语音
+	GAN:生成对抗网络
+		generator-discriminator competition
+		generator: think of an image as a collection of style
+			-github.com/NVlabs/stylegan
+		
+------------------------------------------------
+The introduction of RAPIDS
+	CUDNN
+	data science platform in python:
+		-numpy: matlab copy
+		-panda: data manipulation and anlysis (R语言）
+		-scikit-learn: machine learning library
+		-Dask: parallel processing, dynamic task scheduling
+		
+	the big problem in data science:
+		manage data:
+			ETL: extract, transform, load
+		training:
+			data preparation
+			model training
+		evaluate:
+		deploy:
+	
+	GPU accelerated data science:
+		-put data into GPU early, and till output
+		python, rapids, CUDNN,CUDA,Apache Arrow
+		
+	
+	Ecosystem:
+		DB Enging: BlazingSQL, MapD
+		Spark
+		Pandas
+		CSV file
+		Apache Arrow
+		
+	resources:
+		rapids.ai
+		github.com/RAPIDSai
+		Docker hub: hub.docker.com/r/rapidsai/rapidsai/rapidsai
+	
+	scikit-learn + XGBoost
+	
+	should just download the pdf; heavy on detail.
+	
+---------------------------------------------------------
+Semi-supervised learning on image finding: a case study
+	task: 
+		classify objects into two sets: strong lenses or not
+	challenge:
+		existing data sets: 20000 labeled data for ground based and sky-based telescope, respectively, the size of each image is 101*101
+	
+	what's supervised/unsupervised learning:
+		-聚类:	untagged
+		-supervised deep learning: tagged, supervised loss(x_exp - x_output).
+	what's semi-supervised learning?
+		-tag a small portion of data, and use (tagged+untagged) data set to get a better result.
+		-a guess-tag: 前n次迭代的输出的指数平均S_n.
+			-supervised loss: Y-Y' for tagged data
+			-unsupervised loss: Yn- S(n-1) for untagged data
+			the two data sets share the same network.
+	未考虑点之间的联系：
+		-对untagged data进行聚类
+	
