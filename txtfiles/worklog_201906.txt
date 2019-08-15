@@ -1,0 +1,90 @@
+20190623:
+	博士后入站手续：
+		http://edu1.ihep.ac.cn/bsh/bshgl/sqrz/index.shtml
+
+20190622：
+	提交了Luminosity draft
+
+20190620:
+	6月30日前完成派遣： (http://edu1.ihep.ac.cn/tzgg/2017/2018/2019/05/713112.shtml)
+		博管会批件或博士后接收单位证明复印件
+		暂未落实去处的，需要办理延缓派遣手续的同学需要和离所通知单一起提交：
+			《户口回生源地个人申请》（模板见附件4）、
+			《毕业生户口迁移、转寄人事档案申请表》（附件5），
+			《毕业生延期派遣申请表》（附件10），
+			如在2019年10月31日前仍未落实去处，则户档二分回原籍。
+
+20190619:
+	IO-check：
+		-替换Data.root文件。
+			-needed leafs (result tree): 
+				gKsKpi:	passed_3c, km5c_mkskpi,km5c_chi5c,metac2s
+				gKKpi0:  metac2s
+			-generate according to fitting model:
+				
+	-an error: passed 3C not enforced when simultaneous fit	
+	-脚本错误，事例数计算错误；需要更新结果
+	
+20190617:
+	回复了廖龙洲关于 能量-亮度 不能合作的邮件，为自己辩护
+
+20190610：
+	下一步计划
+		博士后手续：
+			-学位证书及复印件
+			-身份证明
+			-统招统分生身份证明：学校出具
+			-政审表			
+			-体检			-done
+				1、常规体检
+				2、B超
+				3、胸透
+				4、心电图
+				5、尿常规
+			-网上提交申请信息 www.chinapostdoctor.org.cn
+				下载打印纸制申请表、专家推荐表、单位审核表、单位学术部门审核表，
+				并填写前两项，后两项空白附后。
+		离校手续
+			
+		找房子
+		亮度draft
+		gEtacpri的memo回答Referee问题
+		
+		
+20190606：
+	亮度的文章需要写Draft
+	gEtacpri的memo被提出了问题，应当尽快回答
+		
+	熟悉博士后阶段工作：
+			-读JSUB代码
+			-学习XRootD
+			-学习计算机相关知识
+
+20190605
+	做了博士后入站报告：
+		-需要进一步学习相关知识
+		-时间紧迫
+		
+	值班8小时
+
+20190604：
+	准备明天的博士后入站报告，博士后阶段工作部分：
+		1.jsub的完善
+			-Jsub是做什么的
+			-已经做到什么地步了
+			-下一步做什么
+			
+				-done
+			
+		2.研究利用XROOTD建立data federation的方案研究
+			-是什么
+			-准备做什么
+			
+			
+		3.建立testbed，利用Xcache提升和优化本地和远程的数据访问性能
+			-Xcache是什么
+			-准备做什么
+			
+		4.参加WLCG Doma，并承担相应的测试任务
+			-WLCG Doma是什么
+			-准备做什么

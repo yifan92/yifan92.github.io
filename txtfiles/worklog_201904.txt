@@ -1,6 +1,61 @@
-20190403：
+20190418:
+	毕业手续：
+		-答辩申请书：王至勇老师不是博导
+		-进物理软件会
+		
+	scratchfs盘瘦身：
+		删除了bkp，删除了Luminosity中的dst，删除了Luminosity中的data root.
+		删除了GammaEtac2s里的dst
+		减到了300G
+
+20190416:
+	getacpri,zhuk问题：
+		- inc mc vs. incmc-truth:
+			good change on fitting shape.
+			but how much change on the nevents?
+		- data - mctruth events, fit?
+		- test 12_Xc2_MC_shape?
+		- utilize efficiency curve?
+		- discuss with zhuk:
+			-拟合中添加gammaKsKpi成分
+				-产生 psi(2S) -> gKsKpi mc sample.
+			-固定 KsKpi, pi0KsKpi事例数;
+			
+20190415:
+	charmonium wiki 亮度不一致
+
+	关于zhuk的问题：
+		-psi' -> gamma KsKpi 的事例
+			-脚本中用mctruth挑出这部分事例。
+			-需要：Inc MC拟合图，Inc MC -truth 拟合图；data 拟合图。
+			-mv Standard/09mc.root, 12mc.root to Standard/bkp190415
+				-to get temporary graphs for sample without continuum events.
+			
+			
+	被通知scratchfs占用空间太大，需要腾出空间
+		-2.6 T -> 1000 G
+			
+20190412：
+	纸板材料研究生培养计划书还差一个苑老师签字。
+	周一去找曹俊签字
+	周末去打印论文		-
+	申请表贴照片		-done
+	
 	
 
+20190410:
+	周一(4.8)交了毕业的电子版材料。但是没有隐去英文封面姓名。修改后重新提交。
+	找苑老师联系了答辩的时间和答辩委员会。
+
+20190403：
+	今天找黄燕萍谈了一下找博后的事情
+		H->gamma gamma;本底样本的快速模拟;高统计量的弥散样本;ATLAS合作组的光子鉴别组
+		http://www.ihep.cas.cn/jgsz/kyxt/epc/szdw/ryxx/201705/t20170515_4788031.html
+
+		Hadoop、HDFS、MapReduce、Hbase、Hive、Sqoop
+		
+		https://blog.csdn.net/dufufd/article/details/78593945
+		
 20190401:
 	-给刘晶译发damping function的事：
 		CLEO damping function paper: 
@@ -16,23 +71,23 @@
 
 	-修改毕业论文：
 		-to do:
-			英文abstract
-			图表长短名；图标名不加句号
-			图不加英文
-			p4改图
-			p5 add 3800 etc.
-			p10，p11 设计参数改为达到的参数
-			p13	100 ps不对？
-			p15 改为实际参数结果
-			p19 讲讲两个分析哪两个道：gamma KKpi0, gamma KsKpi
-			p20 产生子模型加说明或文献
-			p19 亮度的系统误差？
-			p25,26 图的X,Y轴title
-			应用4.5%的探测效率系统误差
-			p46可以直接引用结果算
-			p63 下标
-			p86 解释下标
-			总结和展望
+*			英文abstract
+*			图表长短名；图标名不加句号
+*			图不加英文
+*			p4改图
+*			p5 add 3800 etc.
+*			p10，p11 设计参数改为达到的参数
+*			p13	100 ps不对？
+*			p15 改为实际参数结果
+*			p19 讲讲两个分析哪两个道：gamma KKpi0, gamma KsKpi
+*			p20 产生子模型加说明或文献
+*			p19 亮度的系统误差？
+*			p25,26 图的X,Y轴title
+*			应用4.5%的探测效率系统误差
+*			p46可以直接引用结果算
+*			p63 下标
+*			p86 解释下标
+*			总结和展望
 			
 		-论文写作要点
 			中文latex:数字、英文前后应打空格；影响排版

@@ -1,0 +1,275 @@
+25 Jul 2019, 13:00 Session: Offline (Computing)
+
+**Status of Distributed Computing in Infrastructure
+	Giuseppe Andronico & Zhang Xiaomei
+	
+	
+
+**Computing model status 
+	Giuseppe Andronico
+	
+	global trigger scheme
+	data type and volume, total resources requirement
+	data storage and low: copy, backup, data management (file catalog, book-keeping)
+	raw data: naming 
+	offline: 
+		-software framework: 
+			based on SNiPER, trac + svn for versioning, build with cmake
+		-reconstruction and analysis: a production tool
+		-analysis:
+			-physics problems: geo neutrinos, solar neutrinos, atmospheric neutrinos, IBD and Mass Ordering
+		-simulation: several tools for different physics problems and detector parts
+			
+Research Data Management: principle and actions
+	Prof. Roberto Barbera
+	
+	bkg:
+		-large amount of data(1 Zb, 2015)
+		-low amount of output(data) in scientific method
+			-> reproducibility crisis
+		-repeat, replicate, reproduce, reuse (same/different lab, same/different condition)
+	open science as a recipe:
+		-efforts to promote open procedures in scientific research activities
+		-open data, wiki, open access repositories, reference management, blogging , ...
+		-FAIR data: findable, accessible, interoperable, re-usable
+		-5 star linked data: even higher standard
+	Data Management Plan:
+		-data management life cycle
+			-the handling of data during/after the project
+			-what data? which methodology/standards? share/open access? how to curate/preserve?
+			
+	
+		
+=============================================================================
+
+Day 2, Session 1: Database & Framework
+
+Discussion of Framework
+	Lin Tao et el.
+	
+	parallelized simulation framework:
+		-SNiPER MT + Geant4 10.x
+		-use global buffer in SNiPER Muster to manage events
+		-a global task initializes the geometry and physics list
+		-multiple worker tasks are in charge of event loops
+		-a dedicated I/O thread for data writing
+	PODIO - a potential candidate for AEDM
+		plain old data I/O
+			YAML-based syntax
+			generate C++ and python code automatically 
+	Jupyter service for analysis
+	Tag-Based analysis:
+	Moving from svn to git?
+		
+
+
+Preliminary Design of Raw Data Input System 
+	Wenhao Huang
+	
+	Raw File: binary in disk
+	Raw Event:
+		-C++ class
+		-readable by RootIO
+		-root file in disk
+	LHASSO offline framework is based on SNiPER
+	Raw Data Input System:
+		-unified file manager
+		-specified decode module
+		-extended raw event
+	The LHASSO implemention can be used in JUNO with some adjustments
+
+Discussion of JUNO DAQ and Offline
+	Fei Li
+	
+	total readout requirement <40 GB/s, storage requirement ~60 MB/s
+	Design of DAQ Data flow: read out, event building, online process, storage 
+	Data Assembling with Timed Fragment
+		-first level: separate from raw data stream to timed fragment at readout nodes
+		-second level: assemble all detector together at EB nodes by timed fragment
+	Stream and File Name Schema; raw data file format schema
+
+
+	Online Software Design:
+		centralized structure: 
+			-redis based
+			-information service: histograms, event rates, process state, log message
+			-unified run control service
+			-process manager service: start, stop, monitor
+			-web based GUI & command line
+			-XML & Json configuration interface
+			
+	software deployment design?
+	
+
+Frontier Distributed Database Caching System
+	Wenhao Huang
+	
+	Frontier Caching System:
+		-decoding the requests, contacting the back end
+		-squid: HTTP proxy caches
+		-frontier client: C++ api, called by CondDB service
+		
+		-cache performance test: number of requests - time; NoR in 1 ip address vs time  
+
+Status of CondDB
+	Lin Tao
+	
+	A C++/python interface to access conditions
+	condition data: non-event data resulting from calibration algorithm
+	varying with time, with different IOV
+	cond DB:	PMT, material properties, others 	-- 		time
+
+	requirements:
+		-on-demand access for users/algs
+		-support time varying condition objects (get the condition for the event)
+		-support different backend for production and validation
+		-support Frontier and Squid for distributed computing
+		-easy to extend for different sub-systems (CD, WP, TT)
+		
+	CondDB framework:
+		-manage the metadata and payload of condition objects
+			metadata: tag, IOV
+			payload: condition data
+		-decouple the transient and persistent conditions data:
+			transient data are used by end users
+			persistent data are defined by experts
+		-conditions data objects: CD.PMT.	 Prop CD.LS.MatProp	 Others
+		-integrate with SNiPER:
+			implement as a SNiPER service component
+			update automatically
+			
+	condition data object is updated during event loop
+	metadata: Global tag, tag, IOV, and payload
+	status of prototype:
+		package: calibration/CondDB
+		binding: python binding of the condDB
+		test and share: scripts and testing data
+		
+	
+Status of CondDB - Web interface
+	Wenshuai Wang
+	
+	Workflow of Data Management
+		-payload, IOV(interval of valid), tag, global tag
+		
+
+===============================================================================
+Day 1, Session 2: Event Classification & Data Quality
+
+Online Charge Reconstruction
+	The (Q, T, W) can be fast reconstructed at FPGA and the Q can be corrected well offline with Charge-Width template.
+
+Development of Charge/Time Extraction Algorithm on FPGA
+	Xuantong Zhang
+	
+	main idea:
+		- add some simple algorithms to do charge/time information extraction at front-end electronics
+		- motivation: data skimming, dealing with events with high signal rates
+		- realization:
+			FPGA has good ability to deal with addition/subtraction/digit calculations
+			1 big point -> continuous small points; tuned (threshold, npoints)
+			
+			
+			
+Proton Decay Study Need PMT Full Waveform
+	Guo Yuhang
+	
+	main idea:
+		-motivation: searching for  p-> v-bar + K^+, for this cause need to suppress atmospheric neutrinos
+		-as the title suggest, need time information for proton decay study
+		
+	noted points:
+		-michel electron?
+
+Requirements on PMT Raw Info for DSNB study
+	Jie Cheng
+	
+	main idea:
+		-DSNB study:
+			-IBD physics channel
+			-10~40 MeV prompt energy range
+			-dominant background Atm. N NC, B/S ~ 20
+		-Fast online event selection
+			muon veto 1 ms, muon tag
+			fiducial volume cut
+			time coincidence cut (1 ms between prompt and delayed)
+			energy cut (Ep in 10,40 / En in 1.8,2.6)
+		-conclusion:
+			-need to do PSD(?) to distinguish background and signal
+			-need the waveform for the prompt signal
+			-for other signals, T/Q is enough
+			
+			
+Online Event Classification
+	Yu Zeyuan
+	
+	main idea:
+		-review the signatures of signals and background to reduce data size
+		
+	noted points:
+		-JUNO electronics: 
+			S/N ratio of ~20; 14 bit FADC, 2 byte per sampling point
+			1 us readout window, at 1 GHz sampling rate
+		-PMT waveform?
+		-JUNO signal event rate ~3 Hz, background event rate ~1000 Hz
+		-want 60 GB/s for CD-LPMT
+
+-------------------------------------------------------------------------------
+
+Day 1, Session 1£ºReconstruction
+
+Muon Reconstruction with CNN
+	Yan Liu
+	
+	main ideas:
+		-Initial CNNs rec[JUNO-doc-3139-v4].
+		
+	noted points:
+		-JUNO optical model (fastest light model)[JUNO-doc-2740]; need additional correction
+		-JUNO: 17.7m spherical container, 20k ton liquid scintillator, 18k 20 inch PMTs, water pool, top tracker
+		-enlarging training and testing data sets with different rotation methods
+
+The combination of GPU application for JUNO Vertex Reconstruction with SNIPER UpdateV
+	Anbo Yang
+	
+	main idea:
+		-a tutorial of how to run the job in the GPU/CPU combined way
+		-a speed up of 20%-140%, depending on the energy
+
+Energy Reconstruction Study:
+	Huang Guihong
+
+Vertex Reconstruction Study
+	li ziyuan
+	
+	main idea:
+		-possible explanation for bad vertex resolution:
+			-tof is not correct
+			-the fix is to introduce a c_eff to correct the path length
+		vertex bias:
+			-caused by T0, gamma PDF (R of energy deposition)
+		using new likelihood function
+		
+	
+	noted points:
+		- 12 cm @ 1 MeV for vertex res = 0.1% @ 1 MeV for energy res	(the vertex-energy res graph)
+			
+
+Vertex Reconstruction with Deep Learning:
+	shu zhang, jiang zhu, zhengyun you
+	
+	main idea:
+		-use deep learning to improve the reconstruction algorithm:
+			-faster, can find complex relationships between input and output variables
+		-got effect:
+			1/20 time usage, better resolution
+		-dependent on training data; next to do is to optimize the model considering electronics, waveform reconstruction and noise
+	
+	
+	noted points£º
+		-existing performance: 20-60 mm @ 10 MeV, 60-140 mm @ 1 MeV
+		-CNN: convolutional neural network
+			-weight sharing using filters; partial connection between two layers of neurons
+		
+	
+	

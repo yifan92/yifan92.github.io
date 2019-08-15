@@ -1,0 +1,94 @@
+20190527：
+	reading jsub:
+		-python inspect module
+		-how to read codes?
+
+
+20190526：
+	答辩后续手续。
+		-回答了吴连近的问题
+		-网上填报完成
+		-更新了其它成果
+		
+		-需要提交纸质材料：
+			-6本论文
+			-更新答辩申请表，其它成果（苑老师签字）
+			-psi(3686) note
+
+20190525：
+	近期工作：
+		-答辩后修改论文；
+		-打印论文（*6），交李苏敏；
+		-网上手续
+		-chenhz 毕业生登记表
+		-派遣系统；
+		
+
+
+20190519：
+	1.关于的kmfit的少一个C的问题：
+		允许光子能量浮动（没有使用能量信息）
+	整理所需的改动：
+		改图：
+			p5: 强子谱学这页可以去除了
+			p6: 粲偶素的研究：多提一些相关的研究
+x			p10: 细节太多？
+x			p11: chisq_5c的图：增大legend，nEvts的单位	/ (x MeV)
+x			p12: kmfit 4c大小写
+x			p13: 单位
+x			p14: 单位，图例
+x			p15: 拟合图的单位，图例
+x			p18: 单位，图例
+x			p19: 单位，图例
+x			p20: BESIII plot style, 图例，XY轴
+x			p21: 
+x			p26 拟合图；
+x			XcJ
+		减少字数
+		修改研究背景介绍：
+			理论现状，实验现状
+			BESIII探测器的介绍
+			
+		配合组织语言，修改叙事
+			-多讲讲自己的贡献，少讲客观内容
+		
+	组织语言
+	准备应对问题：
+		-工作的新颖之处
+		-M1 transition
+		-自己的贡献
+		-damping function
+		-digamma 的亮度对不上。
+		
+		
+	
+		
+
+20190513：
+核对了学信网和国科大学籍管理系统中的信息
+修改论文：
+	-根据张景芝老师的意见，改了图的说明
+		-修改图例（填充？）
+
+	-评审意见：
+		1.但是该论文的前沿介绍略显不足，尤其对先前实验上对相似过程的测量结果和
+		相应的理论解释和讨论不足，可在答辩后进一步完善和修改。
+		2.该论文结构合理，写作规范，文献引用正确，
+		不足之处是某些插图的设计不是很规范，个别专业名词代号前后不统一。
+		
+20190506 - 20190508:
+回答刘北江的问题：
+	-1. FoM not correctly drawn.
+	-2. optimization now use Inc MC instead
+	-3. use r + sigma(r) instead
+	-4. Table 8 add explanation
+	-5. simFit.py 
+		-添加 事例数脱钩的选项;		done
+		-check 事例数脱钩后的变化：	branching ratio 2->1.4
+		-1.41+-0.20
+		-0.02
+				
+				
+	-6. answered that it's not wrong. .
+		need result with fixed-mass, float-width
+	-need to present comparison with previous result

@@ -1,0 +1,40 @@
+20190726：
+	申请网格CA账号，发了邮件。等待回复，须打印和签字。
+
+20190725:
+	learning to work:
+		-https://creately.com/diagram-type/article/simple-guidelines-drawing-uml-class-diagrams
+		-
+		
+		
+	reading jsub's code.	
+		-How?
+			-trace back from the purpose of the code.
+
+20190724：
+	阅读JUNO Collaboration Meeting的报告，整理笔记
+
+20190723：
+	开始参加计算中心的工作。
+	申请JUNO账号
+	Thursday, 25 July 2019 from 13:00 to 18:00 @ Main Building A419:	
+
+20190711:
+	找李卫东老师商量了入所的计划
+	办理博士后入站手续：
+		-迁户口？
+		-保险
+	
+
+20190710:
+	回答imoehl问题：	
+		-更新图29；
+		-增加Tline for cut:
+			-Figure 1, 2, 4, 5, 15, 17
+
+20190708：
+	回答imoehl问题：
+		-更新图29。
+		-更改图片的颜色：
+			-figure 4，17: 全黑成分			-done
+			-figure 5: signal MC-> red, 	-done
