@@ -1,4 +1,154 @@
+20190827:
+	The 'jsub==0.1.0.dev2'  distribution was not found and is required by the application
+
+
+	均被jsub的报告：
+		-准备工作：
+			-run some tests, how to make it work?
+			-阅读之前的报告
+			
+		-报告的结构：
+			软件介绍：
+				目标:
+					实现批量作业的分布式处理(拆分、生成、提交、监控、数据
+					为多个实验组用户使用，统一作业处理
+					与多种后端系统交互，允许用户透明访问资源
+				功能：
+					-与计算节点（CE)通信
+			我做了什么事
+				-阅读代码
+				-run tests
+
+20190826:
+	准备基金申请材料。
+
+	继续做podio：
+		make write/read work.
+			-done.
+		next: see where to improve.
+		read about zoujh's commit on PLCIO:
+			http://cepcgit.ihep.ac.cn/cepc-prototype/CEPCSW/commit/4cd3849a6c94325bbda140cfe441cf6045b71a59
+		
+	note:
+		-看代码用juno环境；运行podio用cepcsw环境
+		
+20190825:
+	回答周兴玉的问题
+
+20190823:
+	check if yaml is complete:
+		DepositEnergyAnaMgr.cc:    checked
+		DepositEnergyCalibAnaMgr.cc:    checked
+		DepositEnergyTTAnaMgr.cc:  checked
+		DepositEnergyTTAnaMgr.cc: checked
+		GenEvtInfoAnaMgr.cc:   checked
+		InteresingProcessAnaMgr.cc:    checked
+		InteresingProcessAnaMgr.cc:    checked
+		MuFastnProcessAnaMgr.cc:   checked
+		MuIsoProcessAnaMgr.cc:   to do
+		MuonFastSimVoxel.cc:       to do
+		MuProcessAnaMgr.cc:    checked
+		NormalAnaMgr.cc:    checked
+		OpticalParameterAnaMgr.cc:    to do
+		PhotonCollectAnaMgr.cc:    to do
+		PhotonTrackingAnaMgr.cc:    to do
+
+20190822:
+	to do list:
+		-本周内更新亮度的draft				-done
+		-尽快向zoujh进度
+			-write_yangyf.cpp,
+		-周五参加JUNO的会议
+		-读jsub的程序，调试，下周四和zhangxm,zhaoxh交流
+		-写面上基金申请	
+		
+			
+
+	-----------------------------------------------------
+
+
+
+	
+	'ExampleEvent' declares a non-allowed many-relation to 'int'
+		can't use OneToManyRelations;
+			-fixed by switching to array.
+	fixed a problem with parsing:	"-member" -> "- member"
+	
+	
+20190820,20190821：
+	-use Lintao's juno environment;		-done
+	-in Simulation/DetSimV2/AnalysisCode src:
+		RootWriter:
+			DepositEnergyAnaMgr.cc 
+			GenEvtInfoAnaMgr.cc
+			GeoAnaMgr.cc
+			InterestingProcessAnaMgr.cc
+			NormalAnaMgr.cc
+			OpticalParameterAnaMgr.cc
+			PhotonCollectAnaMgr.cc
+		
+		code:
+			SniperPtr<RootWriter> svc(*getParent(),"RootWriter");
+			RootWriter->bookTree(),  RootWriter->attach("SIMEVT", nevent)
+	-in podio tests/write.cpp:
+		
+			#include "podio/EventStore.h"
+			#include "podio/ROOTWriter.h"
+			
+			initialize:
+				auto& info = store.create<EventInfoCollection>("info");
+				writer.registerForWrite("info");
+			
+			for each event:
+				item1 = EventInfo();
+				info.push_back(item1);
+		
+				writer.writeEvent();
+				store.clearCollections();
+			
+			in the end:
+				writer.finish();
+				
+	-how to work in JUNO framework?
+		-make podio a library;
+		-write an alg using podio for root writer.
+		
+		update: no need yet
+		
+	-write a yaml file using JUNO framework, write root and read.
+		-obtaining JUNO event data model.
+			-checking: sample_detsim_user.root
+				tree:	evt
+					leaves: nPhotons, totalPE, nPE, hitTime, pmtID, PETrackID, 
+					edep, edepX, isCerenkov, isReemission, isOriginalOP, OriginalOPTime
+					- located into: NormalAnaMgr in AnalysisCode/
+				tree: geninfo
+					GenEvtInfoAnaMgr.cc
+				prmtrkdep
+					DepositEnergyAnaMgr/cc
+				TT/TTDigit
+					DepositEnergyTTAnaMgr.cc
+				michael
+					InterestingProcessAnaMgr.cc
+				nCapture:
+					MuFastnProcessAnaMgr.cc
+				opticalparam:
+					PhotonCollectAnaMgr.cc
+		
+20190819：
+	在JUNO中应用podio:
+		-Simulation/DetSimV2/AnalysisCode	；	用podio 替换RootWriter
+		-/junofs/users/lint/juno-dev-env/juno-dev-mergeG410/offline/Examples/Tutorial/share/sample_detsim_user.root	(ROOT 6)
+
+		-setup juno environment;
+			-source v17r1; source dev;
+			-copied dev to my folders； created dev_yangyf (juno-dev-slc6) env
+
+		
 20190814,20190815:
+	request a CA certificate
+		PIN： 12345
+
 	copy zoujh's repository:
 		-let CMakeLists.txt work
 		-let write.cpp work.
@@ -27,6 +177,8 @@
 			Error in <TClass::LoadClassInfo>: no interpreter information for class EventInfoData is available even though it has a TClass initialization routine.
 		
 		-can't successfully build ROOT 6.10
+			-used the cvmfs version.
+				
 				
 
 20190813:
