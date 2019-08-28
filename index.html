@@ -979,7 +979,7 @@ Error message and password prompt
 <div created="20190319073733610" creator="Yifan" modified="20190319073733610" modifier="Yifan" title="$:/config/TimestampDisable">
 <pre>no</pre>
 </div>
-<div created="20190403113838455" creator="Yifan" modified="20190827144924506" modifier="Yifan" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/edit">
+<div created="20190403113838455" creator="Yifan" modified="20190828003911889" modifier="Yifan" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/edit">
 <pre>hide</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.19">
@@ -10057,10 +10057,10 @@ Error message and password prompt
 <div created="20190319073722459" creator="Yifan" modified="20190319073722459" modifier="Yifan" title="$:/state/folded/Draft of 'ContentList' by Yifan">
 <pre>hide</pre>
 </div>
-<div created="20190815051318376" creator="Yifan" modified="20190827144925720" modifier="Yifan" title="$:/state/HideMode">
+<div created="20190815051318376" creator="Yifan" modified="20190828003914079" modifier="Yifan" title="$:/state/HideMode">
 <pre>hide</pre>
 </div>
-<div created="20190403113858339" creator="Yifan" modified="20190827144927208" modifier="Yifan" title="$:/state/sidebar">
+<div created="20190403113858339" creator="Yifan" modified="20190828003909233" modifier="Yifan" title="$:/state/sidebar">
 <pre>no</pre>
 </div>
 <div created="20190319075639383" creator="Yifan" modified="20190319075838317" modifier="Yifan" title="$:/state/tab/moresidebar-1850697562">
@@ -10126,10 +10126,10 @@ Error message and password prompt
 <div created="20190827092505372" creator="Yifan" modified="20190827092639899" modifier="Yifan" title="$:/state/toc/Class Diagram--832323011">
 <pre>hide</pre>
 </div>
-<div created="20190827093842321" creator="Yifan" modified="20190827143844025" modifier="Yifan" title="$:/state/toc/Classes of jsub--832323011">
-<pre>show</pre>
+<div created="20190827093842321" creator="Yifan" modified="20190828003819234" modifier="Yifan" title="$:/state/toc/Classes of jsub--832323011">
+<pre>hide</pre>
 </div>
-<div created="20190827092500495" creator="Yifan" modified="20190827143843491" modifier="Yifan" title="$:/state/toc/jsubrc example--832323011">
+<div created="20190827092500495" creator="Yifan" modified="20190828003811635" modifier="Yifan" title="$:/state/toc/jsubrc example--832323011">
 <pre>hide</pre>
 </div>
 <div created="20190827092731512" creator="Yifan" modified="20190827093623187" modifier="Yifan" title="$:/state/toc/Main classes of jsub--832323011">
@@ -10153,10 +10153,10 @@ Error message and password prompt
 <div created="20190318020859482" creator="Y" modified="20190318020859968" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div created="20190827140406600" creator="Yifan" list="Manage $:/core/ui/Buttons/save-wiki [[Note on jsub]] [[HEP Note]]" modified="20190827144931466" modifier="Yifan" title="$:/StoryList">
+<div created="20190828003045145" creator="Yifan" list="Manage $:/core/ui/Buttons/save-wiki Note [[Note on jsub]]" modified="20190828003915677" modifier="Yifan" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20190403113859137" creator="Yifan" modified="20190827144923021" modifier="Yifan" tags="$:/tags/Stylesheet" title="$:/Style.css">
+<div created="20190403113859137" creator="Yifan" modified="20190828003910651" modifier="Yifan" tags="$:/tags/Stylesheet" title="$:/Style.css">
 <pre>\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline macrocallblock
 
 /* 目录 */
@@ -10257,7 +10257,7 @@ Error message and password prompt
 
 </pre>
 </div>
-<div created="20190319071840686" creator="Yifan" modified="20190819074309099" modifier="Yifan" title="$:/temp/advancedsearch">
+<div created="20190319071840686" creator="Yifan" modified="20190828003341454" modifier="Yifan" title="$:/temp/advancedsearch">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -15000,7 +15000,7 @@ currently mainly use ROOT I/O. But can improve with special design to make use o
 
 </pre>
 </div>
-<div created="20190827060405904" creator="Yifan" modified="20190827144013386" modifier="Yifan" tags="jsub Note" title="Note on jsub" type="">
+<div created="20190827060405904" creator="Yifan" modified="20190828003804424" modifier="Yifan" tags="jsub Note" title="Note on jsub" type="">
 <pre>*[[github repository|https://github.com/yifan92/jsub]]
 *[ext[索兵报告|./materials/documents/IHEPCC/suob_jsub.pptx]]
 
@@ -15018,6 +15018,8 @@ currently mainly use ROOT I/O. But can improve with special design to make use o
 *为访问PBS, HTCondor, ~DiRAC等不同平台的用户提供统一的界面
 *统一BES3, JUNO, CEPC等多个实验的管理
 *job类型：模拟，刻度，重建，物理分析
+
+[img[./img/jsub/physics_jobs.png]]
 
 ''作业处理流程：''
 
@@ -15045,6 +15047,12 @@ currently mainly use ROOT I/O. But can improve with special design to make use o
 * Job submission: split, generate, workflow, submit
 * Job monitoring: status monitoring, reschedule, task statistics
 * Data operation: dataset, register, download/upload, query
+
+''程序架构''
+
+[img[./img/jsub/jsub_framework.png]]
+
+[img[./img/jsub/internal_structure.png]]
 
 ''相似软件参考''：
 
