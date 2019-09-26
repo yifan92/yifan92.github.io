@@ -1,0 +1,173 @@
+20190925：
+	10.21日周一，helpdesk值班
+	准备XCache的报告：
+		-介绍
+			-读相关文献
+				A federated Xrootd cache 
+				Commissioning of a CERN Production and Analysis Facility Based on xrootd 
+				Tuning grid storage resources for LHC data analysis
+				Functional and large-scale testing of the ATLAS distributed analysis facilities with Ganga  	http://iopscience.iop.org/article/10.1088/1742-6596/219/7/072021
+						-A PanDA Backend for the Ganga Analysis Interface.
+						
+				Grid site testing for ATLAS with HammerCloud			https://iopscience.iop.org/article/10.1088/1742-6596/513/3/032030
+
+		-如何安装
+
+20190916：
+	读XCache
+		A federated Xrootd cache (E Fajardo et al 2018 J. Phys.: Conf. Ser. 1085 032025)
+	
+
+20190912：
+	做开题报告
+		-演讲
+		-填写研究介绍
+		
+		需要研究如何将软件方面的内容讲好，照顾到用户的兴趣和正确的叙述技术重点。
+
+20190911：
+	-9月30日做XCache的报告
+	-将开题报告发给李老师和张晓梅老师
+
+20190909：
+	准备开题报告：
+		get resources:
+			我的入站报告
+			JSUB:
+				zhaoxh's ppt
+				's ppt
+			podio, plcio:
+				在JUNO上的应用
+			WLCG DOMA:
+				https://indico.cern.ch/event/729930/contributions/3007422/attachments/1661024/2661214/WLCGDOMAKickOff.pdf
+				https://twiki.cern.ch/twiki/bin/view/LCG/DomaActivities				
+			XROOTD:
+				https://github.com/xrootd/xrootd
+				http://xrootd.org/
+				XROOTD tutorial: 	http://indico.cern.ch/getFile.py/access?contribId=8&sessionId=0&resId=0&materialId=slides&confId=a058483
+			xcache:
+				https://amito.me/2019/XCache-Config-Testing-And-Optimizing/
+				https://github.com/wyang007/rucioN2N-for-Xcache/wiki/Deploy-Xcache-via-a-Singularity-Container
+		
+		
+		开题报告的结构：
+			选题背景：需求分析，研究意义（主要解决的问题）
+			国内外相似研究的现状，本课题与其的关系
+			预期研究成果
+		
+		
+		
+	debugging jsub:
+		Trying palindrome example:
+	
+		navigator log:
+			[2019-09-05 11:18:04.213931338 +0800 CST] Running the navigator: python...
+			[2019-09-05 11:18:04.350351023 +0800 CST] Finished the navigator with exit code 1
+		
+		bootstrap log:
+			[2019-09-05 11:18:04.213931338 +0800 CST] Running the navigator: python...
+			[2019-09-05 11:18:04.350351023 +0800 CST] Finished the navigator with exit code 1
+		
+		launcher log:
+			[2019-09-05 03:18:04 UTC][JSUB|ERROR]: Exception caught (FileNotFoundError): [Errno 2] No such file or directory: '/afs/ihep.ac.cn/users/y/yangyf/jsub/work/1/main/scenario/scenario.py'
+			Traceback (most recent call last):
+			File "/afs/ihep.ac.cn/users/y/yangyf/jsub/work/1/main/navigator/python/nav.py", line 555, in main
+				scenario = arg_parser.read_scenario()
+			File "/afs/ihep.ac.cn/users/y/yangyf/jsub/work/1/main/navigator/python/nav.py", line 102, in read_scenario
+				f = open(self.options['scenario_file'], 'r')
+			FileNotFoundError: [Errno 2] No such file or directory: '/afs/ihep.ac.cn/users/y/yangyf/jsub/work/1/main/scenario/scenario.py'
+
+			There is no python file, but there is a yaml file instead.	-> the format was wrong?
+				->changed the exts/navigator/python: the scenario_format is changed to py
+
+		-----------------------------------------------------------------------------------------------------		
+		Trying my minimal example:
+			/afs/ihep.ac.cn/users/y/yangyf/jsub/work/2/main/input/common/first_step.py:		permission denied?
+				solution: chmod to the first_step.py 
+			
+			
+			syntax error near unexpected token '('
+				this means that the program was interpreted as a bash script
+				solution:	add	#!/usr/bin/env python
+
+				
+			succeed:
+				-local backend can work.
+					-can generate correct work files;
+					-can write locally.
+				
+20190905:
+	read zhaoxh's slides on jsub.
+		-need to install extension packages.
+		-check API
+		-
+
+20190904:
+	get jsub working:
+		-try jsub:
+			-jsub create:	success
+			-jsub ls:		success
+			-jsub submit:	failed
+				AttributeError: '_io.TextIOWrapper' object has no attribute 'keys'
+					-navigator format = toml, while the file was created from yaml(saved as json in repo).
+					-fixed by using yaml navigator(python scenario) instead.
+					
+			-jsub show:		missing
+			-jsub rename:	success
+			
+			
+		-to do:
+			-add jsub.show()
+			-fix jsub.submit()
+			-add jsub.rm()
+			-add jsub_cepc, jsub_dirac package
+			
+		-understand jsub:
+			-how is task info managed?
+				-saved in disk (handled by repo manager)
+				-position 
+				
+			-when is configuration loaded?
+				-in command/__init__.py:	click option.
+	
+
+20190903:
+	Luminosity:
+		-got 4190,4230 root file (4230 incomplete?)
+		-submitted job.	
+	
+	debugging jsub:
+	
+		File "/junofs/users/yangyf/jsub/jsub/manager/__init__.py", line 60, in load_ext_manager
+			packages = self.load_pkg_manager().packages()
+		TypeError: 'list' object is not callable
+			-solved(20190904)
+		
+		
+
+20190902:
+	make jsub work:
+		-install with virtual env
+		-when trying to run the 'jsub create' example:
+			FileNotFoundError: [Errno 2] No such file or directory: '/afs/ihep.ac.cn/users/y/yangyf/.jsubrc'
+				-work around by copy jsubrc.example into .jsubrc
+				-to do: add ~/.jsubrc creation  
+		
+			jsub.manager.package.PackageNotFoundError: Package "jsub_cepc" not found: Module "jsub_cepc" not found
+				-included in 	./jsub/support/jsubrc.example
+				-comment out for now
+	
+	Luminosity:
+		-updated charmonium wiki page on 2017 dataset's lum.
+		
+		-replying to Zhangjz's comments on correction:
+			-root files were deleted to save space, need to reproduce.
+			-draw a graph on the number of events with one energy requirement?
+		-fixed the problem that Luminosity package doesn't run
+			-reversed the failed migration.
+			-got rid of the bad code Luminosity.useVtxSvc
+				-why did I run the J/psi events?
+				-and what is the Luminosity.useVtxSvc?
+				-can successfully run now.
+					-submitted jobs for 4190
+					
