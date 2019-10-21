@@ -1,0 +1,30 @@
+XRootD usage:
+	installation at Tier-3 site
+		Prior to the installation and configuration of the xrootd storage space at your Tier 3 site. 
+		You have to determine how you want the storage clustered. 
+		Do you have a little bit of space on each worker node? 
+		Do the worker nodes have many TB of disk space. 
+		Do you have an external file server (or servers ) with lots of space. 
+		Do you want to cluster all of your storage together? 
+
+		two scenarios:
+			Worker nodes as xrootd cache space
+				-If the amount of storage on all worker node is significantly smaller than the storage on "NFS" stand alone file server then disk space on the worker nodes could be used as cache space. 
+				-the primary location of data files is on the stand alone data server and xrootd file residency manager (FRM) is used to copy files from the stand alone data server and cluster storage of the worker nodes.
+				-Data comes into the cluster through the gridftp server and is stored on the stand alone file server.
+			All storage clustered together with xrootd
+				-simpler to have all of the xrootd data servers clustered together
+				-Data comes into the cluster through the gridftp server and is distrubted onto each of the nodes.
+				-If the cluster is part of a global xrootd federated storage, then the proxy server is used to provide data to the xrootd federation. 
+				-The data servers with out-bound connectivity can copy files in from other proxies or data servers within the xrootd federated storage.
+				
+				The XRootd service runs on the non-privileged xrootd account on the redirector and data server nodes. The NFS node contains a xrootd data server, gridftp server and xrootd proxy.
+				
+				
+=======================================================
+
+
+WLCG resources: around 800K cores, 600 PB of disk storage and 400 PB of tape storage,.
+concept of storage federation: reducing the operating cost/replication needs
+				
+	

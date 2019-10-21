@@ -1,3 +1,77 @@
+20190928:
+	准备xcache的报告：
+		-什么是XCache
+			-motivation:
+					WLCG computing model.
+					use cases for caching
+			-computing model with XCache
+			-Xcache mechanics
+			-
+		-XCache的使用经验(配置，测试和优化)
+			-安装XRootD
+				-1.build ROOT时打开自动安装选项
+					cmake -Dbuiltin_xrootd=ON <other-cmake-options>
+					
+						try this.
+							-1. install my own ROOT	
+								-git clone
+								-build root v6.16.00
+									-cmake version (use the cmake in set_cepcsw env)
+							-2. git clone xrootd
+				
+					https://twiki.cern.ch/twiki/bin/view/AtlasComputing/Tier3gXrootdSetup
+			-配置XCache
+		-参考资料
+			biyujiang's blog:
+					https://amito.me/2019/XCache-Config-Testing-And-Optimizing/
+			xrood documentation 	
+					http://www.xrootd.org/docs.html
+			Cluster Management Service Configuration Reference
+					http://www.xrootd.org/doc/dev/cms_config.html
+			File Residency Manager Reference		
+					http://www.xrootd.org/doc/dev/frm_config.html
+					
+			The adoption of the HTTP/XRootD protocols for a new data caching architecture in WLCG experiments		
+					https://indico.egi.eu/indico/event/3973/contribution/97
+					
+			Scalla: Structured Cluster Architecture for Low Latency Access
+					https://www.slac.stanford.edu/pubs/slacpubs/14750/slac-pub-14881.pdf
+
+					https://xrootd.slac.stanford.edu/papers/Scalla-Intro.pdf
+					
+			ROOT XRootD exercise
+				https://en.wikitolearn.org/Course:Docker_Workshop/Linux_Containers_and_Docker_Tutorial/ROOT_e_XRootD_exercise
+			
+			寻找相关的ppt
+				Distributed and on-demand cache for CMS experiment at LHC
+					https://indico.nikhef.nl/event/1318/session/1/contribution/10/material/slides/0.pdf
+		
+
+		
+		notes:
+			installation
+				The xrootd redirector runs on the same node as the condor collector/negotiator and the squid and ldap services.
+				machines are either standard SLC5 or SL5. x86_64
+					
+					
+		
+					
+20190926:
+	办理户口迁移手续：
+		中关村青年公寓东平房131室  82640433
+		
+
+	Luminosity draft:
+		-张老师对于回答不满意，要求给出具体的数字
+			-检查数据：4190数据合格
+			-运行脚本
+				可以通过比较已有的程序结果中ics=8,14,0三部分的结果来给出具体数值。
+	软件组组会：
+		-讲了自己在jsub和xcache方面的进度，讲述的内容不清楚。
+			-需要添加讲述软件方面的报告的训练
+				-朗读文献
+				-
+
 20190925：
 	10.21日周一，helpdesk值班
 	准备XCache的报告：
@@ -55,7 +129,7 @@
 			国内外相似研究的现状，本课题与其的关系
 			预期研究成果
 		
-		
+
 		
 	debugging jsub:
 		Trying palindrome example:

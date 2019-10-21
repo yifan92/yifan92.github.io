@@ -1,0 +1,33 @@
+20191009
+
+	https://opensciencegrid.org/docs/data/xrootd/install-client/
+
+20191008：
+	本周工作计划：
+		-办手续：
+			网络；
+			户口；
+		-回答周兴玉关于luminosity draft的提问
+		-回答张老师关于Luminosity memo的问题
+		-安装并测试XCache
+			-need to get a container on cluster
+				-not a root user on cluster.
+					-try it on my computers?
+						Linux containers like Singularity cannot run natively on Windows 
+						or Mac because of basic incompatibilities with the host kernel. 
+							-use vagrant box
+					
+						-install singularity container on my macbook
+							-install Homebrew; install vagrant
+							-install go
+							
+						-on my msi notebook with a vm?
+					-get rootless container:
+						-docker is not free.
+						-use hep_container?
+		
+		
+			https://opensciencegrid.org/docs/data/xrootd/install-client/
+			https://alien.web.cern.ch/content/documentation/howto/site/installxrootd
+		
+		-整理并测试JSUB

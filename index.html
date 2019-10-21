@@ -533,6 +533,8 @@ Error message and password prompt
 
 <li>C++ Preprocessor</li>
 
+<li>CEPC Dirac User Tutorial</li>
+
 <li>Characteristic Function</li>
 
 <li>Class Diagram</li>
@@ -566,6 +568,8 @@ Error message and password prompt
 <li>DiRAC</li>
 
 <li>Documents and Papers</li>
+
+<li>dsub</li>
 
 <li>ee angular distribution</li>
 
@@ -614,6 +618,8 @@ Error message and password prompt
 <li>German Word List 5</li>
 
 <li>German Word List 6</li>
+
+<li>Getting to xrootd hosted data</li>
 
 <li>git</li>
 
@@ -690,6 +696,8 @@ Error message and password prompt
 <li>linux_awk</li>
 
 <li>linux_cat</li>
+
+<li>linux_compgen</li>
 
 <li>linux_cut</li>
 
@@ -896,6 +904,8 @@ Error message and password prompt
 <li>Statistics</li>
 
 <li>Statistics Note</li>
+
+<li>Status of JUNO</li>
 
 <li>Study of Radiative Decays of Psi(2S) Mesons</li>
 
@@ -10198,7 +10208,7 @@ Error message and password prompt
 <div created="20190318020859482" creator="Y" modified="20190318020859968" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div created="20190926014709275" creator="Yifan" list="[[jsub Resources]] [[HEP Note]]" modified="20190926014709275" modifier="Yifan" title="$:/StoryList">
+<div created="20191021051840645" creator="Yifan" list="[[Running jsub on lxslc server]] [[Note on jsub 2]] [[CEPC Dirac User Tutorial]] DiRAC dsub [[HEP Note]]" modified="20191021061521403" modifier="Yifan" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20190403113859137" creator="Yifan" modified="20190828062944498" modifier="Yifan" tags="" title="$:/Style.css">
@@ -11037,7 +11047,7 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20190319072234172" creator="Yifan" modified="20190319072235142" modifier="Yifan" title="$:/temp/RemoteAssetSearch/$:/config/OfficialPluginLibrary">
 <pre>katex</pre>
 </div>
-<div created="20190319064451409" creator="Yifan" modified="20190926014658001" modifier="Yifan" title="$:/temp/search">
+<div created="20190319064451409" creator="Yifan" modified="20191021061526692" modifier="Yifan" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20190319072231833" creator="Yifan" modified="20190319072231833" modifier="Yifan" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.19/index.html" url="https://tiddlywiki.com/library/v5.1.19/index.html">
@@ -12344,6 +12354,9 @@ The operators that can be used in `#define`
 *`__LINE__ `:Defined as the integer line number in the current source file. 
 *`__STDC__`: Defined as 1 only when compiled as C and if the /Za compiler option is specified.</pre>
 </div>
+<div created="20191021031556371" creator="Yifan" modified="20191021031618035" modifier="Yifan" tags="[[Distributed Computing]] CEPC" title="CEPC Dirac User Tutorial">
+<pre>https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/CEPCDIRAC_User_Tutorial</pre>
+</div>
 <div created="20190321050541283" creator="Yifan" modified="20190321050553771" modifier="Yifan" tags="Statistics" title="Characteristic Function">
 <pre>https://en.wikipedia.org/wiki/Characteristic_function_%28probability_theory%29
 
@@ -12794,10 +12807,11 @@ return 0;
 
 This paper will discuss the design and construction of BESIII, which is designed to study physics in the tau-charm energy region utilizing the new high luminosity BEPCII double ring e+e- collider. The expected performance will be given based on Monte Carlo simulations and results of cosmic ray and beam tests. In BESIII, tracking and momentum measurements for charged particles are made by a cylindrical multilayer drift chamber in a 1 T superconducting solenoid. Charged particles are identified with a time-of-flight system based on plastic scintillators in conjunction with dE/dx (energy loss per unit pathlength) measurements in the drift chamber. Energies of electromagnetic showers are measured by a CsI(Tl) crystal calorimeter located inside the solenoid magnet. Muons are identified by arrays of resistive plate chambers in the steel magnetic flux return. The level 1 trigger system, Data Acquisition system and the event filter system based on networked computers will also be described.</pre>
 </div>
-<div created="20190403114754035" creator="Yifan" modified="20190403114842738" modifier="Yifan" tags="[[HEP Software]]" title="DiRAC">
+<div created="20190403114754035" creator="Yifan" modified="20191021051902636" modifier="Yifan" tags="[[HEP Software]]" title="DiRAC">
 <pre>Distributed Research utilizing Advanced Computing
 
-https://dirac.ac.uk/</pre>
+*https://dirac.ac.uk/
+*[[Dirac Documents|https://dirac.readthedocs.io/en/latest/]]</pre>
 </div>
 <div created="20190325112534498" creator="Yifan" modified="20190925083036304" modifier="Yifan" tags="Resource" title="Documents and Papers">
 <pre>&lt;&lt;list-links filter:&quot;[tag[Document]]&quot;&gt;&gt;
@@ -12805,6 +12819,44 @@ https://dirac.ac.uk/</pre>
 ----
 
 &lt;&lt;list-links filter:&quot;[tag[Paper]]&quot;&gt;&gt;
+</pre>
+</div>
+<div created="20191021035611714" creator="Yifan" modified="20191021051818544" modifier="Yifan" tags="[[Distributed Computing]] CEPC" title="dsub">
+<pre>[[CEPC Dirac User Tutorial|https://docbes3.ihep.ac.cn/~offlinesoftware/index.php/CEPCDIRAC_User_Tutorial]]
+
+```
+/cvmfs/dcomputing.ihep.ac.cn/frontend/dsub
+```
+
+----
+
+in `dsub/0.1/bin/dsub-sr`: 
+
+```
+get user params from config file:
+    - seed, evtmax, evtstart, batch, sites, job_group, work_dir, repo_dir
+
+check user parameters:
+    - params assigned
+    - repo dir writable
+    - input dir in /cefs/
+    - input file list is a file
+    - valid CEPC site
+
+split and submit:
+    - getInputDataList(userPara)
+    - for each input data:
+        registerInputData(path, size)
+        for batch in range(userPara['batch']):
+            generateEvtMacro()
+            generateSimuMacro()
+            generateRecoXML()
+            setVarPara()
+            generateJobScript()
+    - RPCClient().createTask
+```
+
+
 </pre>
 </div>
 <div created="20190325135619532" creator="Yifan" modified="20190325135629425" modifier="Yifan" tags="Document" title="ee angular distribution">
@@ -13759,6 +13811,22 @@ The procedure:
 #allerdings: indeed
 #die Prüfung: exam, inspection, scrutiny</pre>
 </div>
+<div created="20190928125357811" creator="Yifan" modified="20190928125456184" modifier="Yifan" tags="XRootD" title="Getting to xrootd hosted data">
+<pre>```
+Via the root framework
+ Automatic when files named root://....
+ Manually, use TXNetFile() object
+ Note: identical TFile() object will not work with xrootd! 
+xrdcp
+    The native copy command
+POSIX preload library
+ Allows POSIX compliant applications to use xrootd
+```
+
+```
+gridFTP
+```</pre>
+</div>
 <div created="20190806103126204" creator="Yifan" modified="20190806110604816" modifier="Yifan" tags="[[Tool Program]]" title="git">
 <pre>A distributed version control system.
 
@@ -14668,7 +14736,7 @@ https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management
 <div created="20190319060258944" creator="Yifan" modified="20190319060448654" modifier="Yifan" tags="[[Computer Skill]]" title="Linux">
 <pre>&lt;&lt;list-links filter:&quot;[tag[Linux]]&quot;&gt;&gt;</pre>
 </div>
-<div created="20190319060547326" creator="Yifan" modified="20190319060625297" modifier="Yifan" tags="Linux" title="Linux Shell Commands">
+<div created="20190319060547326" creator="Yifan" modified="20191008025150622" modifier="Yifan" tags="Linux" title="Linux Shell Commands">
 <pre>----
 !The Basics
 *`pwd`
@@ -14703,6 +14771,7 @@ Single commands:
 *[[cut|linux_cut]]
 *[[awk|linux_awk]]
 *[[vimdiff, diff|linux_diff]]
+*[[compgen|linux_compgen]]
 
 Topics:
 
@@ -14746,6 +14815,14 @@ cat means to concatenate. It can be used to combine text files.
 *`-b`: to number unblank lines.
 *`-n`: to number all lines.
 *`-s`: to squeeze adjacent blank lines</pre>
+</div>
+<div created="20191008025156466" creator="Yifan" modified="20191008025232077" modifier="Yifan" tags="[[shell command]]" title="linux_compgen">
+<pre>*`compgen -c` will list all the commands you could run.
+*`compgen -a` will list all the aliases you could run.
+*`compgen -b` will list all the built-ins you could run.
+*`compgen -k` will list all the keywords you could run.
+*`compgen -A function` will list all the functions you could run.
+*`compgen -A function -abck` will list all the above in one go.</pre>
 </div>
 <div created="20190319060929718" creator="Yifan" modified="20190319060934996" modifier="Yifan" tags="[[shell command]]" title="linux_cut">
 <pre>!!cut
@@ -18442,8 +18519,22 @@ ROOT variable as input:
 gSystem-&gt;GetFromPipe(Form(&quot;mkdir ~/%s&quot;,filename));
 ```</pre>
 </div>
-<div created="20190910130816019" creator="Yifan" modified="20190910130839323" modifier="Yifan" tags="Paper XRootD" title="Scalla: Scalable Cluster Architecture for Low Latency Access">
-<pre>https://xrootd.slac.stanford.edu/papers/Scalla-Intro.pdf</pre>
+<div created="20190910130816019" creator="Yifan" modified="20190928124027727" modifier="Yifan" tags="Paper XRootD" title="Scalla: Scalable Cluster Architecture for Low Latency Access">
+<pre>https://xrootd.slac.stanford.edu/papers/Scalla-Intro.pdf
+
+''Abstract'': The Scalla software suite provides two fundamental
+building blocks: an xrootd server for low latency high
+bandwidth data access and an olbd server for building
+scalable xrootd clusters. This paper describes the
+architecture, how low latency is achieved, and the scaling
+opportunities the software allows. Actual performance
+measurements are presented and discussed. Scalla offers
+a readily deployable framework in which to construct
+large fault-tolerant high performance data access
+configurations using commodity hardware with a
+minimum amount of administrative overhead.
+
+----</pre>
 </div>
 <div created="20190318032809328" creator="Yifan" modified="20190318032821306" modifier="Yifan" tags="BES3 [[Code Example]]" title="Scripts for BES3 Plot Style">
 <pre>Data 2D plot
@@ -18691,6 +18782,23 @@ In more precise terms, given certain conditions, the arithmetic mean of a suffic
 
 合并估计：`L(x,y|par)=L(x|par)*L(y|par)`
 
+</pre>
+</div>
+<div created="20191014112308035" creator="Yifan" modified="20191014112348992" modifier="Yifan" tags="JUNO Document" title="Status of JUNO">
+<pre>https://juno.ihep.ac.cn/Dev_DocDB/0051/005172/003/Status%20of%20the%20JUNO%20detectorv2.pdf
+
+----
+
+The Jiangmen Underground Neutrino Observatory is a multipurpose neutrino experiment
+designed to determine neutrino mass hierarchy and precisely measure oscillation parameters
+by detecting reactor neutrinos from the Yangjiang and Taishan Nuclear Power Plants, observe
+supernova neutrinos, study the atmospheric, solar neutrinos and geo-neutrinos, and perform
+exotic searches, with a 20-thousand-ton liquid scintillator detector of unprecedented 3% energy
+resolution (at 1 ~MeV) at 700-meter deep underground. In this proceeding, the subsystems
+of the experiment, including the cental detector, the online scintillator internal radioactivity
+investigation system, the PMT, the veto detector, the calibration system and the taishan
+antineutrino observatory, will be described. The construction is expected to be completed in
+2021.
 </pre>
 </div>
 <div created="20190711124730857" creator="Yifan" modified="20190712021217228" modifier="Yifan" tags="Charmonium Paper" title="Study of Radiative Decays of Psi(2S) Mesons">
@@ -19584,13 +19692,14 @@ references:
 <div created="20190925082819754" creator="Yifan" modified="20190925082836838" modifier="Yifan" tags="Document XRootD" title="XCache Documentation">
 <pre>https://buildmedia.readthedocs.org/media/pdf/xcache/latest/xcache.pdf</pre>
 </div>
-<div created="20190603024958149" creator="Yifan" modified="20190925083135663" modifier="Yifan" tags="[[HEP Software]]" title="XRootD">
+<div created="20190603024958149" creator="Yifan" modified="20190928113718512" modifier="Yifan" tags="XRootD [[HEP Software]]" title="XRootD">
 <pre>The XRootD project aims at giving high performance, scalable fault tolerant access to data repositories of many kinds.
 
 ----
 
 *http://www.xrootd.org/index.html
-*http://xrootd.org/presentations/Google_IO_talk_1305.pdf</pre>
+*http://xrootd.org/presentations/Google_IO_talk_1305.pdf
+*[[installing and configuring xrootd|https://twiki.cern.ch/twiki/bin/view/AtlasComputing/Tier3gXrootdSetup]]</pre>
 </div>
 <div created="20190910125809754" creator="Yifan" modified="20190925071825512" modifier="Yifan" tags="XRootD Paper" title="XRootd caching proxy paper (2014)">
 <pre>!XRootd, disk-based, caching proxy for optimization of data access, data placement and data replication
