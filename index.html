@@ -665,6 +665,8 @@ Error message and password prompt
 
 <li>json</li>
 
+<li>jsub</li>
+
 <li>jsub Resources</li>
 
 <li>jsubrc example</li>
@@ -954,6 +956,8 @@ Error message and password prompt
 <li>Vimscript</li>
 
 <li>Work Log</li>
+
+<li>worklog_20191024</li>
 
 <li>Writing</li>
 
@@ -10121,8 +10125,8 @@ Error message and password prompt
 <div created="20190319075639383" creator="Yifan" modified="20190319075838317" modifier="Yifan" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
-<div created="20190318022439339" creator="Yifan" modified="20190926015253188" modifier="Yifan" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Tools</pre>
+<div created="20190318022439339" creator="Yifan" modified="20191024041145120" modifier="Yifan" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div created="20190319071840686" creator="Yifan" modified="20190925083737788" modifier="Yifan" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/Standard</pre>
@@ -10208,7 +10212,7 @@ Error message and password prompt
 <div created="20190318020859482" creator="Y" modified="20190318020859968" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div created="20191021051840645" creator="Yifan" list="[[Running jsub on lxslc server]] [[Note on jsub 2]] [[CEPC Dirac User Tutorial]] DiRAC dsub [[HEP Note]]" modified="20191021061521403" modifier="Yifan" title="$:/StoryList">
+<div created="20191024041510960" creator="Yifan" list="worklog_20191024 [[HEP Note]]" modified="20191024041510960" modifier="Yifan" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20190403113859137" creator="Yifan" modified="20190828062944498" modifier="Yifan" tags="" title="$:/Style.css">
@@ -14505,6 +14509,76 @@ https://en.wikipedia.org/wiki/F-distribution
 <pre>JSON (~JavaScript Object Notation) is a lightweight data-interchangeformat.
 
 http://json.org/</pre>
+</div>
+<div created="20191023085429197" creator="Yifan" modified="20191023091134295" modifier="Yifan" tags="jsub log" title="jsub">
+<pre>Files in jsub work dir after `jsub create task_desc.yaml`:
+
+```
+./repo
+./repo/task
+./repo/task/1
+./repo/id
+./content
+./content/1
+./content/1/input
+./content/1/input/common
+./content/1/input/common/simu.macro
+./content/1/input/common/event.macro
+./content/1/profile
+./content/1/profile/origin
+```
+
+File list after `jsub submit` command
+
+```
+./repo
+./repo/task
+./repo/task/1
+./repo/id
+./content
+./content/1
+./content/1/input
+./content/1/input/common
+./content/1/input/common/simu.macro
+./content/1/input/common/event.macro
+./content/1/profile
+./content/1/profile/origin
+./work
+./work/1
+./work/1/main
+./work/1/main/input
+./work/1/main/input/common
+./work/1/main/input/common/simu.macro
+./work/1/main/input/common/event.macro
+./work/1/main/scenario
+./work/1/main/scenario/scenario.py
+./work/1/main/action
+./work/1/main/action/cepc_sim
+./work/1/main/action/cepc_sim/cepc_sim.sh
+./work/1/main/navigator
+./work/1/main/navigator/python
+./work/1/main/navigator/python/nav.py
+./work/1/main/navigator/python/executable
+./work/1/main/navigator/navigator.list
+./work/1/main/bootstrap
+./work/1/main/bootstrap/bootstrap.sh
+./work/1/main/bootstrap/executable
+./work/1/launcher.sh
+./work/1/job
+./work/1/job/0
+./work/1/job/0/log
+./work/1/job/0/log/launcher.log
+./work/1/job/0/log/bootstrap.log
+./work/1/job/0/log/navigator.log
+./work/1/job/0/log/unit
+./work/1/job/0/log/unit/do_cepc_sim
+./work/1/job/0/log/unit/do_cepc_sim/cepc_sim.out
+./work/1/job/0/log/unit/do_cepc_sim/cepc_sim.err
+./work/1/job/0/run
+./work/1/job/0/run/do_cepc_sim
+./work/1/job/0/output
+
+```</pre>
 </div>
 <div created="20190926013700436" creator="Yifan" modified="20190926014719292" modifier="Yifan" tags="jsub" title="jsub Resources">
 <pre>*[[github repository|https://github.com/yifan92/jsub]]
@@ -19579,6 +19653,58 @@ the test group is combined every time. use `autocmd!` inside to clear group.
 </div>
 <div created="20190416021632105" creator="Yifan" modified="20190416021739303" modifier="Yifan" title="Work Log">
 <pre>&lt;&lt;list-links filter:&quot;[tag[Work Log]]&quot;&gt;&gt;</pre>
+</div>
+<div created="20191024041455432" creator="Yifan" modified="20191024053213391" modifier="Yifan" tags="[[Work Log]]" title="worklog_20191024">
+<pre>!About JSUB
+
+----
+!!JSUB 工作流程
+
+''`jsub create task_profile_file`''
+
+根据用户提供的task profile文件，在`jsub_content_dir/`生成task的content信息。
+
+*app extension负责对task profile的解析。
+*将指定的输入文件拷入input sandbox。
+*生成task data，存入`jsub_repo_dir/`。
+**保存name, app, workflow, event, input_file, backend, status等信息。
+**根据sequencer extension生成jobvar列表。
+
+''task profile example''
+
+[img[./img/worklog/jsub_task_profile_example.png]]
+
+
+''`jsub submit task_ID`''
+
+*根据jobvar列表产生subjobs。
+*在`jsub_work_dir/`产生input, scenario, bootstrap, action, navigator, launcher文件。
+*提交到backend运行。
+
+''The Running of JSUB in backend''
+
+*`bootstrap` component gets other components to work.
+*`scenario` provides relevant variables (jobvar, sysvar, actvar).
+*`navigator` gets the job to work according to the workflow.
+*`action` is the basic unit of the workflow.
+
+----
+
+!!JSUB CEPC Extension
+
+添加了cepc_sim action extension和iter_all_files sequencer extension。可以实现根据指定目录下的stdhep file list生成subjobs；进入CEPCsoft环境，修改用户提供的simu.macro和event.macro模板，并运行模拟作业，并将生成的slcio文件输出到指定目录。
+
+''task profile file''
+
+[img[./img/worklog/jsub_task_profile.png]]
+
+''input stdhep files''
+
+[img[./img/worklog/20191024_jsub_stdhep_files.png]]
+
+''output slcio files''
+
+[img[./img/worklog/20191024_jsub_slcio_files.png]]</pre>
 </div>
 <div created="20190318022344411" creator="Yifan" modified="20190321052155453" modifier="Yifan" tags="[[Communication Skill]]" title="Writing">
 <pre>&lt;&lt;list-links filter:&quot;[tag[Writing]]&quot;&gt;&gt;

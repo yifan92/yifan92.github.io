@@ -1,4 +1,66 @@
-20191009
+20191023:
+	code CEPC/dirac extension.
+
+
+
+
+	test configuring xcache:
+		
+		Running singularity with vagrant box(mac):
+			http://singularity.lbl.gov/install-mac
+		deploying xcache with singularity:	
+			https://github.com/wyang007/rucioN2N-for-Xcache/wiki/Deploy-Xcache-via-a-Singularity-Container
+		configuring xcache:
+			https://buildmedia.readthedocs.org/media/pdf/xcache/latest/xcache.pdf
+			
+		try again:
+			-use vagrant box to run singularity on Mac.
+				done
+			-install yum in vagrant box 
+				sudo apt-get update
+				sudo apt-get install yum
+			-RPM database is using a weird path: %(bash -c 'echo ./rpmdb')
+				workaround:	(suggested by github.com/singularityware/singularity/issues/241)
+					create a file at path /root/.rpmmacros
+			-the folder bind mounted to /data should be fully writable.
+				what is bind mount?
+			-don't use sudo when running singularity.
+				
+20191022:
+	医保，北京银行；不用可以取。
+
+	code CEPC/dirac extension
+		-try running dirac
+			-successfully run helloworld.sh
+				-how to download output sandbox?
+				
+		-try running CEPC software
+			source /cvmfs/cepc.ihep.ac.cn/software/cepcenv/setup.sh
+			cepcenv use --default 0.1.0
+			
+			git clone http://USERNAME@cepcgit.ihep.ac.cn/cepcsoft/TestExample.git
+			cd TestExample
+			./run_all.sh
+
+			
+		-code CEPC extension:
+			-replace simu.macro:
+				/Mokka/init/lcioFilename
+				/Mokka/init/initialMacroFile
+			-input:
+				event macro, stdhep file (events' physics info)
+			-output:
+				OutputGear.xml
+				
+			next to do:
+				-make a sequencer: from stdhep file list
+					sequencer creates jobvar, which can be seen by the actions as $JSUB_varname
+				-output file name: replace suffix.				
+				-custom output dir, event macro name, event number;
+
+			
+	
+	20191009
 
 	https://opensciencegrid.org/docs/data/xrootd/install-client/
 
