@@ -1,0 +1,153 @@
+20191117:
+	jsub:
+		error when no input assigned.
+			
+
+	jsub-dirac:
+		-minimal_dirac task:
+			-work/job missing.
+			-job successfully run though.
+		-sim_dirac task:
+			-error when creating task: files to register must be under /cefs
+			-use a new stdhep filelist, with files in /cefs/		
+				successfully created the task; list of files to register is right
+			-can't submit the task:
+				FileNotFoundError: [Errno 2] No such file or directory: '/junofs/users/yangyf/jsub-dirac/jsub_dirac/action/dirac_input/run'
+					-fixed. 
+						error cause: param.yml in action extension not rightfully parsed.
+			-make the task work as intended:
+				-dirac_get_file.py should use the input files.
+					-how does python files use input parameters?
+						
+				-how to set the output 
+					can get jobvar in python script with sys.argv
+					can get actvar in python script with os.environ.get(key,default_value)
+				-work with py instead of sh.
+					-#!/usr/bin/env python
+
+
+20191115:
+	learn python:
+		__file__, __cwd__, os.path.dirname(__file__), os.path.realpath(__file__)
+
+	jsub-dirac:
+		-zhaoxh already updated jsub-dirac, need to test
+			-missing launcher param main_pack_file
+				-didn't load launcher from jsub-dirac pack.
+					-dealt with after modifying .jsubrc
+			-cepc-dirac:
+				-need to register data in cepc_app:
+					check if backend['name']='dirac'
+						register data:
+					
+				-need to download/upload data in action.
+					-modified jsub_cepc app
+					-added jsub_dirac actions: dirac_input, dirac_output
+				
+
+20191114:
+	coding jsub-dirac extension:
+		param={'work_dir': '~/jsub/work'}
+		launcher_param={'executable': 'launcher.sh'}
+
+
+20191113:
+	coding jsub dirac: 
+		-try to source dirac, and run jsub:
+			(venv python 3.7)
+			-pip not working after source dirac:
+				-venv not in $PATH
+			-create and submit a task with local backend (after source dirac env):
+				success in create/submit
+			-create and submit a task with dirac backend:
+				error: handled by python 3.7
+				
+			(venv with python 2.7)
+			-create and submit a task with local backend (without source dirac env):
+				success
+			-create and submit a task with local backend (after source dirac env):
+				Could not find platform independent libraries <prefix>
+				Could not find platform dependent libraries <exec_prefix>
+				Consider setting $PYTHONHOME to <prefix>[:<exec_prefix>]
+				ImportError: No module named site
+				
+			-try to python -V:
+				python: error while loading shared libraries: libpython2.7.so.1.0: cannot open shared object file: No such file or directory
+				-it seems that the python 2.7.15 from /cvmfs/dcomputing.ihep.ac.cn is installed wrongly?
+					-has to load module python2.7.15 and common1.0 again when reentering the env.
+			
+			where did the error occurred:
+				-after modifying LD_EXTERNAL_LIB
+					-can work around by changing the order of the original $LD_LIBRARY_PATH to the added content.
+			
+					-try to create a of dirac init script of my own.
+						-doesn't solve the problem: DIRAC only works in its own python env, not in the one with jsub.
+			
+20191111:
+	CEPC Meeting:
+		-Fu chengdong: migration of tracking alg from Marlin to CEPCSW
+		-Fangwx: GAN for simulation
+		-lintao: detector simulation protocol
+
+	jsub:
+		-problem: jsub use the virtualenv, while dirac provide its own python.
+			-not feasible to use jsub outside the virtualenv, 
+			-not solvable by creating a python 2.7 virtualenv; failed
+			-not possible to migrate dirac to python 3.
+			-
+
+20191110:
+	test about zhangjz's question:
+		-added normPH requirement in ics=14,15
+	CEPC dirac:
+		-certificate password: yyf1992
+		
+export DIRAC=/cvmfs/dcomputing.ihep.ac.cn/dirac/IHEPDIRAC/v0r1
+source $DIRAC/bashrc
+dirac-proxy-init -g cepc_user -v 96:00
+
+PATH=/afs/ihep.ac.cn/users/y/yangyf/virtual_env/venv/bin:$PATH			#to solve the pip-jsub problem.
+
+
+20191107:
+	Draft about luminosity:
+		-reply to zhangjz:
+			45070	MDC+EMC CutReduce without normPH
+			44800	MDC+EMC CutReduce
+			32625496 total
+			188442  MDC +EMC one low energy
+			156843  E1>1.55, E2<1.50
+				-compare with the result of (E1>1.55, E2<1.55*0.5)
+			重交作业后得到E1>1.55,E2<0.775的事例数
+		-reply to zhouxy:
+			-polish english
+				changes to make according to the link:
+					https://hnbes3.ihep.ac.cn/HyperNews/get/paper340/10.html
+			-改图：
+				-直接修改img/draft180604/文件夹中的.C文件
+					-can already generate png files from .C files.
+					-finished the update.
+			-target journal
+			-改motivation
+		-removed the red text hightlight for previous version.
+
+20191104：
+	CHEP relevant report about data access:
+		https://indico.cern.ch/event/805983/contributions/3569724/attachments/1937437/3211168/FutureAnalysis-WLCGHSF2019-Adelaide-v2.0.pdf
+
+20191101:
+	coding cepc_rec extension:
+		-succeessed in transporting and modifying reco.xml
+			-how to deal with users' custom patterns in writing reco.xml?	(new lines/ no new lines in parameters)
+			-how to deal with tree output files?
+			-how to deal with GearXMLFile?
+			-event max in rec.
+			-intervals between steps in workflow
+		-need to configure files for reco.xml
+		
+		-connecting sim+rec:
+
+			[ ERROR "MyForwardTracking"] Collection FTDPixelTrackerHits is not available!
+			[ ERROR "MyForwardTracking"] Collection FTDSpacePoints is not available!
+			[ ERROR "MyTrackSubsetProcessor"] Collection ForwardTracks is not available!
+			-bad slcio output from sim.

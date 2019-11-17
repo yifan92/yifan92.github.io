@@ -943,6 +943,8 @@ Error message and password prompt
 
 <li>Typing</li>
 
+<li>Using JSUB</li>
+
 <li>Using Macbook</li>
 
 <li>Using Xrootd to Federate Regional Storage</li>
@@ -10212,7 +10214,7 @@ Error message and password prompt
 <div created="20190318020859482" creator="Y" modified="20190318020859968" modifier="Yifa" title="$:/status/UserName">
 <pre>Yifan</pre>
 </div>
-<div created="20191024041510960" creator="Yifan" list="worklog_20191024 [[HEP Note]]" modified="20191024041510960" modifier="Yifan" title="$:/StoryList">
+<div created="20191117112901896" creator="Yifan" list="[[jsub Resources]] [[Using JSUB]] [[HEP Note]]" modified="20191117114753298" modifier="Yifan" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20190403113859137" creator="Yifan" modified="20190828062944498" modifier="Yifan" tags="" title="$:/Style.css">
@@ -11051,8 +11053,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20190319072234172" creator="Yifan" modified="20190319072235142" modifier="Yifan" title="$:/temp/RemoteAssetSearch/$:/config/OfficialPluginLibrary">
 <pre>katex</pre>
 </div>
-<div created="20190319064451409" creator="Yifan" modified="20191021061526692" modifier="Yifan" title="$:/temp/search">
-<pre></pre>
+<div created="20190319064451409" creator="Yifan" modified="20191117114751561" modifier="Yifan" title="$:/temp/search">
+<pre>jsub</pre>
 </div>
 <div created="20190319072231833" creator="Yifan" modified="20190319072231833" modifier="Yifan" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.19/index.html" url="https://tiddlywiki.com/library/v5.1.19/index.html">
 <pre>loaded</pre>
@@ -19448,6 +19450,105 @@ MyData GetNetworkResource()
 <div created="20190318022944489" creator="Yifan" list="" modified="20190321020734290" modifier="Yifan" tags="Writing todo" title="Typing">
 <pre>*[[Numpad Typing |http://www.typeonline.co.uk/number_pad_lesson1.html]]
 *[[vim Editor]]</pre>
+</div>
+<div created="20191117112937798" creator="Yifan" modified="20191117120110108" modifier="Yifan" tags="jsub" title="Using JSUB">
+<pre>!!Installing JSUB
+
+Load modules from `/cvmfs`
+
+```
+export MODULEPATH=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/modulefiles
+
+source /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/module/4.2.1/init/bash 
+
+```
+
+Load python 3 module.
+
+```
+module avail
+
+module load python/3.7.3
+
+python -V
+```
+
+Create a virtual environment for JSUB to run in.
+
+```
+virtualenv venv_jsub
+
+source venv_jsub/bin/activate
+```
+
+Get JSUB packages from github website, and install with `pip`.
+
+```
+git clone https://github.com/jsubpy/jsub-dirac.git
+git clone https://github.com/jsubpy/jsub.git
+git clone https://github.com/jsubpy/jsub-cepc.git
+```
+
+----
+
+!!Testing JSUB locally
+
+Setup configure file.
+
+`cp JSUB_FOLDER/jsub/support/jsubrc.example ~/.jsubrc`
+
+Provide a task description file (yaml, json).
+
+ Examples in `JSUB_FOLDER/example/test_cepc/`
+
+```
+/junofs/users/yangyf/jsub/examples/test_cepc/cepc_sim.yaml
+/junofs/users/yangyf/jsub/examples/test_cepc/cepc_rec.yaml
+/junofs/users/yangyf/jsub/examples/test_cepc/cepc_simrec.yaml
+
+(/junofs/users/yangyf/jsub/examples/test_cepc/sim_common_app.yaml)
+```
+
+
+''Command Line Interface''
+
+
+currently supported (see [ext[zhaoxh ppt|./materials/documents/IHEPCC/jsub_design_zhaoxh_20160926.pptx]] for design)
+
+```
+jsub create job_description_file.yaml
+jsub submit ID
+```
+
+''Python API''
+
+Again, see  [ext[zhaoxh ppt|./materials/documents/IHEPCC/jsub_design_zhaoxh_20160926.pptx]] for design.
+
+----
+!!Testing CEPC-dirac extensions
+
+''Get certificate and join VO.''
+
+''Setting up DIRAC environment.''
+
+```
+export DIRAC=/cvmfs/dcomputing.ihep.ac.cn/dirac/IHEPDIRAC/v0r1
+source $DIRAC/bashrc
+dirac-proxy-init -g cepc_user -v 96:00
+```
+
+''Example job description files (not working yet)''
+
+```
+/junofs/users/yangyf/jsub/examples/test_cepc/sim_dirac.yaml
+/junofs/users/yangyf/jsub/examples/test_cepc/simrec_dirac.yaml
+```
+
+The input files are listed in the `input_filelist` file.
+The listed files should be under `/cefs/` so that they can be registered to DFC and be transported to remote sites.
+
+The output path is defined in `dirac_output_dir`. 
+The output files shall be able to be seen by the users in `/cefs/dirac/user/`.</pre>
 </div>
 <div created="20190726054913464" creator="Yifan" modified="20190726054936244" modifier="Yifan" tags="" title="Using Macbook">
 <pre>*[[快捷键|https://support.apple.com/zh-cn/HT201236]]</pre>

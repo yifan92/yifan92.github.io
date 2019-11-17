@@ -1,3 +1,16 @@
+20191031:
+	code CEPC/dirac extension.
+	to do list:
+		-improve CEPC-sim extension.
+			-app extension to test: user input yaml.
+			
+			-users don't provide event macro
+			-take cepcsoft as actvar
+			-dealing with ./ as path
+		-do the CEPC-rec extension.
+		-push onto github.
+		-sequencer: input file list.
+
 20191023:
 	code CEPC/dirac extension.
 
