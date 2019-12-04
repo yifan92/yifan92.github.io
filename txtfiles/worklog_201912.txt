@@ -1,0 +1,17 @@
+20191202£º
+	JSUB:
+		preparing for JUNO review:
+			-UI
+				-learn from: ILC dirac
+				-
+			-job handling:
+				reschedule
+			-data management
+				-data transfer on grid.
+			-experiment specific modules:
+				-CEPC:
+					-sim, rec
+				-JUNO:
+					-generic
+				
+				

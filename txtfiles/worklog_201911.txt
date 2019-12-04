@@ -1,3 +1,242 @@
+20191127:
+
+	JSUB JUNO:
+		-JUNO workflow
+			tut_detsim.py
+			tut_det2calib.py
+			tut_calib2rec.py
+
+			
+		-JSUB for users
+			-analysis
+				input: MC info, 
+				output: 
+				
+				low priority?
+				
+				ROOT script. No sniper env needed.
+				
+				bookkeeping: rec data; not user data.
+					-using data here.
+					-api: 欧歌
+				using file catalog.
+					-connecting with bookkeeping
+			-
+			
+20191126:
+	Dirac data management:
+		use gfal copy to put data into dir;
+			which dir?
+				../ of the action run dir.
+				file name = basename of the input file.
+			when running on dirac backend, the input/output in the mid-steps are changed to ../ dir.
+			
+			handling the input of gear_xml_file on dirac backend.
+				-copy into input common dir; and use this replicate on dirac backend.
+			
+		show/reschedule backend job id:
+			need to save backend job id: 
+				modify repo exts
+		
+		to do:
+			deal with multiple submit:
+				update task id;
+					done
+			define task status.
+				
+	
+		example LFN: /cepc/lustre-ro/cefs/data/FullSim/CEPC240/CEPC_v4/higgs/E240.Pnnh_X.e0.p0.whizard195
+		successful with dirac-dms-lfn-metadata
+		failed with dirac-dms-catalog-metadata:
+			No such file or directory
+				(is this permission error?)
+				
+		
+		
+	JSUB:
+		-need to prepare for JUNO review: 2020, January 11th.
+		-to do: read codes of dsub.
+			/cepc/lustre-ro/cefs/data/DstData/qqh/qqh/E250-CDR_ws.Pqqh.eU.pU.03611.slcio
+			
+		-how to deal with output dir when on dirac?
+			sim output dir:
+				local: workflow['cepc_sim']['actvar']['output_dir']
+				dirac: workflow['dirac_output']['actvar']['sim_output_dir']
+			rec output dir:
+				local: workflow['cepc_rec']['actvar']['output_dir']
+				dirac: workflow['dirac_output']['actvar']['rec_output_dir']	
+
+		-provide a DIRAC-like API
+			(like ILCDIRAC)
+	
+		-job show/reschedule
+	
+20191125:
+	JSUB:
+		-use environ variables instead of command line arguments for dirac_get_file.
+			done
+			dirac-dms-filecatalog-cli
+				-can't get basic commands working.
+		-permission denied:
+			找颜田创立目录
+			
+		-to do: deal with dirac_add_file:
+			how to deal with input/output files?
+				output dir (for sim, rec)
+				output file name.
+				permission
+	
+
+	Software group meeting for next CEPC Collaboration meeting:
+
+		-zoujh: 数据模型的关联
+			-tool for cheating-level analysis
+			-LCIO-> PLCIO；没法等待官方版本
+			-模拟时一一映射
+			
+		-tracking:
+		
+		-EMC:
+			-digitalization example working?
+			-use overlapping?
+			-transporting
+			
+		-ACTS
+			张晋
+		
+		-Fast tracking
+			-TPC: 有偏、精度差（silicon的1/10)
+		
+		-Pandora
+			PFA(Arbor)
+			
+		-distributed computing:
+			-data management
+			-JSUB 
+			-Rucio
+		
+		-flavor tagging
+			
+		
+	要延续之前别人提到的关键的地方
+	要让别人看到我们在工作。
+		-sense of progression.
+		
+	
+	
+20191120:
+	CHEP:
+		wlcg-hsf: joined together
+		-quicker analyses: abundant resources, analysis model(less data; interactive ana)
+		-new authentication (token based)
+			no need to apply for certs;
+			
+
+	jsub:
+		FC:/cepc/lustre-ro/cefs/data/stdhep/CEPC240
+
+20191119:
+	jsub:
+		-understand JSUB-dirac:
+			jobs were submitted with a command.
+			how to get job id of submitted job?
+				the output of subprocess is returned as json, and interpreted by dirac/backend/__init__.py
+				is returned in the result of submit in operation/backend_manager
+				
+				-where to put this result so that it can be used by the retrieval?
+			
+			dirac-wms-job-status <jobID>
+			dirac-wms-job-get-output <jobID>
+			
+		-how to debug a job in dirac?
+			elicit output?
+				print to ../../../../jsub.out in workflow steps.
+
+		-cepc-dirac:
+			need to return job-id. and be used for show.
+			Thread "cepc_sim" exception (OSError): [Errno 13] Permission denied
+		
+		
+		-cepc app:
+			use dirac_output_dir instead of output_dir?
+
+20191118：
+CEPC Software Meeting
+	Status of CEPC computing
+		zhang xiaomei
+		computing model:	
+			IHEP as central site;
+				Event Generation, MC production, analyses
+				hold central storage/database for all experiment data/ detector geometry
+			remote sites: 
+				MC production including Mokka simu + Marlin recon
+			data flow:
+				IHEP-> Sites: stdhep files
+				sites -> IHEP: 
+
+	Rucio: Scientific Data Management
+		https://rucio.cern.ch/	
+		https://rucio.readthedocs.io  
+		https://github.com/rucio
+	
+		a data management service:
+			seamless integration of storage and network
+			data stored in files, can contain any potential payload
+			facilities can be distributed at multiple locations belonging to different admin domains
+			designed with extensive operational experience
+		functionalities:
+			file and dataset catalog
+			transfer between facilities including disk, tapes, clouds, HPCs
+			web-UI, CLI and API to discover/download/upload/transfer/annnotate data.
+		
+			data carousel
+				tight integration of workflow and dataflow, for more efficient use of high-latency storage (i.e., tape)
+			rucio concepts:
+				declarative data management:
+					express what you want, not how you want it.
+					replication rules.
+						dynamic
+				Rucio Storage Elements(RSEs)
+					no software needed,
+					collect all necessary metadata: protocols, hostname, ports, prefixes, paths, implementations.
+				Metadata:
+					file internal metadata/ fixed physics/ internal metadata for organization of data, generic metadata
+			architecture:
+			operations model:
+				minimize human intervention
+				
+
+	CMS Software Stacks:
+		Tommaso Boccali
+			Computing at LHC: size, status, tasks
+				LHC: in shutdown after 2015-2018 run, currently 5% of the luminosity
+				typical experiments needs @ 2018: evens to offline ~GB/s (tier0), events to GRID (some GB/s), 500 users per week submitting analyses
+				data management: thousands of daily decisions taken by a policy driven system.
+			The software stacks: components, tools
+				sim
+				rec
+				ana
+			The main SW components
+				-core code
+				-data management, workload management
+				-main external tools.
+					from running on a single node to the grid:
+						-distribute data efficiently: O(5000) datasets appearing per week.
+						-distribute software.
+						-distribute calibrations.
+				
+				algorithms(tracking, clustering, vertexing, ...)
+					must live in a scalable environment with stable APIs, sandboxing for multi threading, offloading etc
+				needs from a framework:
+					-multi threading infrastructure
+						-memory under control, in case of large payloads
+						-grants/ access to special machines for targeted production
+					-heterogeneous computing:
+						GPU/FPGA
+						if GPU is found, run with GPU; otherwise with C.
+					-
+				
+				
 20191117:
 	jsub:
 		error when no input assigned.
