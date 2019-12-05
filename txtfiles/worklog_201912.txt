@@ -1,3 +1,120 @@
+20191205：
+	Opticks: GPU optical simulation via Nvidia / a Mental model for efffective application of GPUs
+		Simon Blyth
+		JUNO
+		geant 4: toolkit
+			-using a tiny part of it 
+		problem:
+			huge CPU memory + time expense(99% CPU time, memory constraints)
+				-any detector that use scintilattors may have the same problem
+				-what takes time is not the physics, but the inquiry of the detector info.
+			only interested in scintillation/ not cherenkov
+			
+		solving problem:
+			-optical photon simulation ~=ray traced image rendering
+				-rasterization/ray tracing
+				-nvidia ray tracing GPU in 2018
+			-opticks:
+				-geant 4+ opticks hybrid workflow
+				-translation of geometry
+					-find repeated element (instancing technique)
+					-approximate geometry/ analytic geometry;
+					-random aligned bi-simulation:
+						-same input to Opticks and Geant 4;
+						-point by point aligned for both methods;
+							-not clouded by statistics; efficient way to find problems
+							-grazing incidence, edge skimmers; incidence at constituent solid boundaries (<0/05% dif)
+							-display technique (select event through their history)
+		performance:
+			-GPU/CPU comparison; (num of core problem)
+			-effective geometry/ full geometry;
+			-nvidia claim: 10 giga rays/s
+		
+		lesson learned:
+			-physics should enjoy the fruit of industry;
+				-in geant 4 case: just put geometry to GPU, and can easily get 1000x performance.
+				-games -> graphics revolution -> GPU -> cheap TFLOPs
+				-internet scale big datasets -> ML revolutions
+				-computer vision revolution for autonomous vehicles
+			
+	The general application of the techniques/tools from the practice above:
+		-GPU mental model: context and constraints
+			-amdahls law: how much of the speed up can be obtained with parallielization
+				-removing bottlenecks one by one.
+			-GPU graphical origins -> effective GPU computation (rasterization)
+				GPU evolved to rasterize 3D graphics at 30/60 fps
+				
+				-cpu is latency-oriented; avoid latency with caching
+				-gpu is throughput-oriented; hide latency with parallelism
+				-totally different processor architecture( different shape of data/computation)
+			-how to make effective use of GPUs?
+				-abundant parallelism
+				-simplicity(array) 0> big benefits: NumPy + CuPy;
+					objected-oriented: mixing data/compute;
+					array-oriented: separate data from compute;
+				-parallel processing 0th step: re-shape data into "parallel" array form;
+					photo(400m,4,4): first dimension shall be large;
+				-using CUDA:
+					thread hierarchy; memory hierarchy;
+					CuPy: the simplest CUDA interface.
+						numpy API accelorated with CUDA;
+						production CuPy?
+							-if integration (eg Geant 4, OpenGL): no 
+							-control + performance
+					C++ based interfaces:
+						-Thrust
+						-CUB
+						-MGPU
+					mature NVIDIA basis libraries
+					RAPIDS
+				
+				NumPy;
+					loading numpy array from C/C++ (github.com/simoncblyth/np)
+					access/create array data anywhere.
+			-when python not appropriate:
+				try first CUDA thrust.
+				
+			
+20191204:
+	JSUB:
+		dirac backend:
+			-rename "dirac input" and "dirac output" to dirac_download and dirac_upload
+			-dirac_download module:
+				-use gfal-copy command to download file
+				-input file specified by os.environ('JSUB_input_file')
+				-put the input file to the ../ of the action folder.
+				-use basename of input file.
+				-further customization: dest_path, dest_basename
+			
+			-a command to register input files on dirac-file-catalog.
+				-`jsub register file_list`.
+				-run 'command/scripts/dirac-register.py
+				-success (can be seen in dirac-dms-filecatalog-cli)
+				-need to also put the files there. (with a switch)
+				-to do: customize path of lfn.
+	
+		a general script module:
+			-users shall define the files to output.
+				
+
+	网格组会：
+		Biyujiang: 
+			-Belle 2 站点设置
+				-安装EOS
+					-本地能工作吗？
+					-grid 服务
+				-grid ftp
+					-server 和存储节点的结合
+					
+				-dcache: 文件传输命令
+					-xrootd 3rd party copy
+					
+		jiangxiaowei:
+			-网格与网格中间件的结合
+		
+		
+					
+					
 20191202：
 	JSUB:
 		preparing for JUNO review:
