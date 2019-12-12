@@ -1,4 +1,100 @@
+20191212£º
+	JSUB:
+		-need to add functionality graph.
+		-need to modify jsub_workflow graph.
+			-user-oriented version
+			-rename extensions	
+				-changes in code.
+		-need to implement jsub functionalities:
+			-jsub show
+			-jsub query
+			-jsub getoutput
+
+20191211:
+	dirac computing model:
+		Antunes-Nobrega, R., et al.: (LHCb) LHCb TDR
+		Computing Technical Design Report. Tech. Rep.
+		LHCb CERN-LHCC-2005-019 (2005)
+	JSUB:
+		-jsub create
+			-all_files_in_folder should take path relative to job definition file?	
+				-hard to implement; 
+				-just to take it as tolerable behavior for now?
+				-translate to abspath in app?
+			
+
+20191210:
+	JSUB:
+		-jsub register
+			use dm.putAndRegister() instead of dm.registerFile()
+				-otherwise file would not exist in SE.	(file exists in SE would be accessible from /cefs/user/y/yyang/)
+				
+			-can successfully upload, but the file can't be downloaded.
+			
+			 Failed to put file to Storage Element. cepc-user-y-yyang.lfns: BOSS CVMFS not found ( 70 : Failed to copy file cepc-user-y-yyang.lfns to destination url srm://storm.ihep.ac.cn:8444/srm/managerv2?SFN=/cepc/user/y/yyang/x.txt: [70] [gfalt_copy_file][perform_copy][srm_plugin_filecopy][srm_resolve_turls][srm_resolve_put_turl] DESTINATION OVERWRITE [srm_plugin_prepare_dest_put][srm_plugin_delete_existing_copy][gfal_srm_unlinkG][gfal_srm_report_error] srm-ifce err: Communication error on send, err: [SE][srmRm][] httpg://storm.ihep.ac.cn:8444/srm/managerv2: CGSI-gSOAP running on lxslc614.ihep.ac.cn reports Error reading token data header: Connection closed
+				-error caused by pressure test?
+		
+		-succeeded in making the "run_general_script" test case working.
+
+20191209:
+	CEPC meeting:
+		-data objectµÄ¹ØÁª
+		-GearDET
+		-3 collections: MC particles; digitized hits; (link)
+		
+	JSUB:
+		-no responce when trying to dirac-dms-get-file.
+			-pressure test?
+		-jsub register:
+			lfn: must start with /cepc/user/{user-first-char}/{user-name}/				lfn=/cepc/user/y/yyang/ + path_to_upload
+			file to upload: must be in /cefs
+			
+			avoid too-many-level problem: (16 / in path)
+		
+
+20191208:
+	JSUB:
+		[2019-12-08 14:00:12 UTC][JSUB|DEBUG]:  - Standard error:Traceback (most recent call last):  File "/mnt/data/scratch/lcg/pilcepc30/42971677/CREAM782938190/DIRAC_ConZyYpilot/Linux_x86_64_glibc-2.12/bin/gfal-copy", line 8, in <module>    from gfal2_util.shell import Gfal2ShellImportError: No module named gfal2_util.shell
+
+		-the problem is that there is no dirac environment on remote, so can't run gfal command.
+		
+		-jsub register can now take a folder as parameter.
+		
+		/junofs/users/yangyf/jsub/examples/test_juno/input_files
+		/cvmfs/dcomputing.ihep.ac.cn/dirac/IHEPDIRAC/v0r1/DIRAC/DataManagementSystem/scripts/dirac-dms-user-lfns.py
+		/cvmfs/dcomputing.ihep.ac.cn/dirac/IHEPDIRAC/v0r1/DIRAC/Interfaces/scripts/dirac-dms-get-file.py
+		/cvmfs/dcomputing.ihep.ac.cn/dirac/IHEPDIRAC/v0r1/DIRAC/DataManagementSystem/scripts/dirac-dms-add-file.py
+		
+		/cepc/user/y/yyang/junofs/users/yangyf/jsub/examples/test_juno/input_files/2.txt
+			-no accessible replicas found
+			
+			BOSS CVMFS not found ( 70 : GError('srm-ifce err: Communication error on send, err: [SE][Mkdir][] httpg://storm.ihep.ac.cn:8444/srm/managerv2: CGSI-gSOAP running on lxslc603.ihep.ac.cn reports Error reading token data header: Connection closed\n', 70))
+
+			
+		
+		
+		LFN does not follow the DIRAC naming convention
+		/vo/* or /sandbox/*
+
+20191206:
+	JSUB:
+		
+
 20191205£º
+	JSUB:
+		learn from Belle 2:
+			-Belle 2 Dirac frontend;
+			-ILC Dirac;
+		Report on JSUB:
+			-how to introduce my work to others?
+			-software structure;
+			-details:
+				-how to write task description file;
+				-how to write jsubrc file.
+				-how to interact with dirac?
+			-how do users use it;
+			
+	
 	Opticks: GPU optical simulation via Nvidia / a Mental model for efffective application of GPUs
 		Simon Blyth
 		JUNO
