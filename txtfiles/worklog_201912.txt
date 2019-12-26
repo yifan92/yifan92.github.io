@@ -1,3 +1,56 @@
+20191224:
+	jsub:
+		-new pword for yangyf@IHEPKRBS:	yyf,1992
+		-juno package:
+
+			-to run a specific package, the .so file of the compiled package should lie in $LD_LIBRARY_PATH 
+			
+			-how to work in juno?
+				-source env:
+					/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/setup.sh
+				-for compilation, one needs work area:
+					
+				-for simple run, just use runtime env without workarea.
+20191223:
+	jsub:
+		-dataset:
+			/cvmfs/dcomputing.ihep.ac.cn/frontend/gangadist/1.2.5/install/5.6.2/python/GangaBoss/Lib/Dataset
+		-learn from gangaboss:
+			-how did it get boss env for remote wn?
+				/cvmfs/dcomputing.ihep.ac.cn/frontend/gangadist/scripts/libcurl.patch
+			-
+			
+			
+20191222:
+	Luminosity memo:
+		-回答张景芝老师问题
+			
+
+20191218:
+	JSUB:
+		github
+			-connect my computer/ssh with github.
+			-updated the repo.
+		
+		rename things:
+			-navigator should be renamed to driver		
+			-app extension should be renamed to interface
+			-content dir should be renamed to 
+			-repo dir should be renamed to
+			-work dir should be renamed to 
+
+20191217:
+	JSUB:
+		-JUNO's action script:
+			https://juno.ihep.ac.cn/mediawiki/index.php/Offline_Software#Getting_Started
+			/afs/ihep.ac.cn/soft/juno/JUNO-ALL-SLC6/Pre-Release/J19v1r0-Pre3/offline/Validation/JunoTest/production		
+		
+			-need juno env on remote:
+
+				/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3		?
+			-go over it offline.
+				
+		
 20191212：
 	JSUB:
 		-need to add functionality graph.
@@ -6,8 +59,8 @@
 			-rename extensions	
 				-changes in code.
 		-need to implement jsub functionalities:
-			-jsub show
-			-jsub query
+			-jsub show		-done
+			-jsub query		
 			-jsub getoutput
 
 20191211:
