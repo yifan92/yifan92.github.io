@@ -1,3 +1,18 @@
+20191226：
+	jsub:
+		-参考具体的刻度 作为案例
+		-做报告的方法
+		-面向未来
+		
+		calibration for a concrete example.
+		-/junofs/users/wxfang/JUNO/jobs/make_batch.py
+		-/junofs/users/wxfang/JUNO/jobs/setDEto1/job_0.sh
+
+        m_z = m_r*math.cos(j*math.pi/180)
+        m_x = m_r*math.sin(j*math.pi/180)*math.cos(i*math.pi/180)                          
+        m_y = m_r*math.sin(j*math.pi/180)*math.sin(i*math.pi/180)     		
+		
+		
 20191224:
 	jsub:
 		-new pword for yangyf@IHEPKRBS:	yyf,1992

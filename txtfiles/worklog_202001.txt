@@ -1,0 +1,231 @@
+2020/1/9：
+	Using XCache to improve data accessing on WLCG
+		Li Teng
+		
+		-author's work
+			GridPP	-	grid computing for particle physics
+			LSST	-	large synoptic survey telescope
+			IRIS	-	Infrastructure for research and innovation for STFC
+
+		-distributed data management and workload management
+			-DDM systems:	ATLAS:Rucio, LHCb: LHCbDirac, CMS: TFC, moving to Rucio, small VOs: Rucio/Dirac/LFC
+			-a popular principle in last decade: send jobs to the data
+			-things are changing:
+				-more and more light weighted sites;
+				-storage is being consolidated
+				-needs to release manpower
+			new technologies:
+				-data lake
+				-data caching
+			remote data access becomes more popular, making network a 3rd resource
+			
+		-data caching:
+			why:
+				HEP jobs are I/O-heavy, so network is essential
+				-reduce network latency
+				-make better use of the bandwidth
+			what kind of cache:
+				-transparent cache:
+					on node cache,
+					cache for local storage
+					cache for remote storage
+				-cache as a volatile storage element
+				
+		ARC Cache:
+			an internal cache of input files maintained by ARC CE:
+				-cached files are downloaded to the shared filesystem, or the working dir;
+			can be used without ARC CE
+			use case:
+				-sites with a shared filesystem on the CE
+				-HPC with no local storage
+				-the ATLAS case: sends the input files asynchronously before the job starts
+		XCache:
+			XRootd Proxy Cache
+				-XRootD proxy server with a cache
+			Feature & Use cases
+				-Caching at both whole/sub-file level
+				-support POSIX server-less caching
+				-clusterable to scale up
+				-based on a plug-in architecture
+					-specific optimizations for certain VOs/workflows
+					-implement other protocols
+				-capability of integration with Rucio.
+					practical?
+						-frequency of updating cache
+						-job management policy
+							-real-timeness of cache info			
+						-test hit/miss rate to check
+							-how much time data have been used after cache
+							-AOD popularity vs lifetime
+							-test node cache
+								-performance improvement for using one-time usage
+						-cache update/clear policy?
+							-by least used
+							-not actively updated if the source is changed.
+						-misc data not in SE?
+							not recognized by Rucio
+				-current usage:
+					edinburgh, birmingham, cambridge:
+						-transparent cache mode
+						-whole file mode
+						-output unchanged
+				-monitoring:
+					-a metric collector:
+						-metrics collected from XCache logging, cached files and OS
+						-general host info, cache hit rate, data access are monitored 
+						-dashboard built on Kibana
+						
+		Future work:
+			-cache as a volatile RSE
+				-volatile rucio storage element
+				-XCache could work this way by periodically reporting the list of cached files
+				-job management system can then take advantage of the data that's already cached.
+				-rucio and xcache are ready
+					a whistle-blower script is available as a cronjob
+					Rucio API to accept request from XCache
+			-XCache Rucio-Name2Name plugin
+			-regional cache for Tier-2 groups:
+				-cache federation
+				-a regional second level might be useful
+					-data access overlap between sites;
+					-storage backends are based on DataLake, EC, object storage.
+				-some prelminary simulation is done
+			-cache optimization:
+				-decision library
+				-disk cleanup policy
+			-support other data transfer protocols
+			-onboarding more sites, more VOs, and more developers
+				
+	Jsub：
+		-to do:
+			group in splitter
+			a more concrete example
+			documentation
+			
+
+2020/1/8：
+	XCache:
+		-scripts on Xcache github
+		
+		-目标
+			-BES, JUNO, CEPC
+			-JUNO的部分站点:
+				-manchester, 
+				-
+		-怎么开始
+			-cache的中心站点？
+				-XCache doesn't need one		Slater program?
+			-从小站点开始，functional 测试
+				-network status?
+					山大 for example?
+				-依托高能所站点的数据，处理数据（Read/Write）
+				
+				
+
+
+	网格组会：
+		HTCondorCE:	
+			-网络层比较薄？
+			
+		ArchCE？
+			-复杂
+		EOS
+		Lustre	转商业？
+		cache的两层认证
+			-客户 软件
+			-cache - SE
+		how to make a site have XCache
+		combine XCache with Rucio
+			
+
+2020/1/7：
+	jsub:
+		subprocess 与 juno setup.sh 中的pushd不兼容
+			-source doesn't recognize relative path.
+			-make jsub version of setup.sh
+				add `pwd`/
+			
+		some sites can't access	/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/
+			CLUSTER.SJTU.cn
+			
+			
+		-works on local backend 
+		-on dirac backend: 
+			ImportError: No module named libSniperPython
+
+		
+		$PYTHONPATH on local backend
+			/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/offline/InstallArea/python:/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/sniper/InstallArea/python:/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/offline/InstallArea/amd64_linux26/lib:/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/sniper/InstallArea/amd64_linux26/lib:/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/ExternalLibs/ROOT/6.12.06/lib:/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/ExternalLibs/Python/2.7.15/lib/./python2.7/lib-dynload:/cvmfs/dcomputing.ihep.ac.cn/dirac/IHEPDIRAC/v0r1:/usr/lib64/python		
+		$PYTHONPATH on dirac backend:
+			/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/offline/InstallArea/python:/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/sniper/InstallArea/python:/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/offline/InstallArea/Linux-x86_64/lib:/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/sniper/InstallArea/Linux-x86_64/lib:/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/ExternalLibs/ROOT/6.12.06/lib:/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/ExternalLibs/Python/2.7.15/lib/./python2.7/lib-dynload:/scratch/plt00
+			/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/offline/InstallArea/python:/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/sniper/InstallArea/python:/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/offline/InstallArea/Linux-x86_64/lib:/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/sniper/InstallArea/Linux-x86_64/lib:/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/ExternalLibs/ROOT/6.12.06/lib:/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/ExternalLibs/Python/2.7.15/lib/./python2.7/lib-dynload:/scratch/plt00
+
+			
+			
+			missing libSniperPython.so
+				for local backend:	/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/sniper/InstallArea/amd64_linux26/lib
+				for dirac backend:  /cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/sniper/InstallArea/Linux-x86_64/lib
+			
+				solved:
+					CMTCONFIG=amd64_linux26
+		
+		
+		juno scenario exts;
+			done
+		juno detsim action:
+			done;
+		lines_in_file jobvar extension
+				
+			
+			
+		from jsub.error import JsubError
+
+		
+
+2020/1/2:
+	jsub:
+		-to do:
+			a complex splitter:
+				evtmax, input_file -> split.
+				
+	
+		-added enumerate jobvar extension;
+		-renamed sequencer extension to jobvar extension;
+		-renamed increment jobvar extension to range, and support zero/negative step now.
+	
+		-renamed sequencer manager to splitter
+			-support mode=shortest, mode=combination
+				-wrong subjob-idx in work/job dir;
+					-fixed:	there is a max subjob limit for local backend
+	
+			-exe action failed to take parameters?
+				exe.sh didn't pass the args to the target script
+					'--idx', "{'value': 1}", '--idx2', "{'value': 1}"
+	
+	
+		-juno extension - for running juno production:
+			source /junofs/users/wxfang/JUNO/J19v1r0-Pre3/setup.sh
+			python /junofs/users/wxfang/JUNO/J19v1r0-Pre3/offline/Examples/Tutorial/share/tut_detsim.py
+
+			max_job, m_photon, m_seed
+
+			tut_detsim:
+				--output, --user-output, --seed, --evtmax, --light-yield, --totalphotons, --global-position
+				
+			-destination file name:
+				using var names:
+					-a composite_string jobvar extension;
+						-jobvar extension itself 
+							done
+						-its further handling in splitter manager
+							done
+					-translate output destination in scenario extension.
+					
+			-splitter:
+				multiple-dimensional variables:
+					for each dimension: var_name, 1d-splitter
+					-splitter
+					
+
+		-for running user's juno package:
+			

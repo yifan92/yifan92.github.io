@@ -1,0 +1,58 @@
+
+
+
+----------------------------------------------------------------------------------------------------
+
+JUNO Computing PDR	- 20200111
+	https://juno.ihep.ac.cn/cgi-bin/Dev_DocDB/DisplayMeeting?conferenceid=703
+	
+Distributed Computing Prototype
+	-Giuseppe Andronico
+	
+	
+Data Processing Workflow
+	-Zou Jiaheng
+
+JUNO Computing Requirements
+	-Li Weidong
+	Data rate and Data volume
+		-JUNO-doc 4066
+			total data throughput from JUNO detector is about ~40 GB/s
+		-JUNO-doc 4766	
+			data reduction through event classification: 60~70 MB/s
+			99.5% of physics events are kept; no strict fiducial volume cut is applied
+		-JUNO-doc 4084
+	summary:
+		3PB/year storage
+		12000 CPU cores
+		next step:
+			-more accurate evaluation,
+			-preparation for the resources required
+			
+Preliminary design of JUNO data transfer system
+	Qi Fazhi on behalf of Zeng Shan
+	
+	!a good report to look to.
+	
+	Requirements:
+		background
+			-data volume 2PB/year
+			-running for 20 years
+			-SPADE has been used in DYB for 10 years.
+				-2 PB in total
+	architecture design:
+		modular design:
+			sentry
+			configuration module
+			monitoring module
+			log module
+			transfer module
+			
+Final Design of JUNO Onsite Environment
+	Qi Fazhi
+
+JUNO Data Quality Monitoring
+	You zhengyun
+	Why DQM?
+	Data Quality Overview
+		DAQ, DQM, DQA

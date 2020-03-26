@@ -1,0 +1,64 @@
+20200228:
+	testing xcache:
+		-launch an instance of vm:
+			tried an instance without public IP address:
+				Failed to allocate the network(s) with error No fixed IP addresses available for network
+			launched an instance with public IP address: 202.122.35.29
+				can connect with console in cloud.ihep.ac.cn
+				
+		
+		
+20200224：
+	和zhangxm讨论jsub的事情：
+		-指定最后写入的CE；	(根据user的dirac proxy)
+		-指定site
+		-如何设置额外的环境：
+			JUNO_ALL_SLC6/contrib/compat/bashrc		(necessary for SLC7; don't set it for SLC6)
+		-action module for JUNO user algorithms.
+			-how to run JUNO user algorithms
+			-try CEPC first?
+				http://cepcsoft.ihep.ac.cn/guides/Example/docs/vvHmumu/
+		-网格的配置
+			-of job? of JSUB?
+				-general; specific
+				-check GANGA for reference.
+		-backend参数
+			-support jsubrc and yaml definition.
+		
+		-Xcache
+			-使用VPN账号进行操作?
+				-已通过wuling申请
+			-尽快搭建起来；
+			
+		
+			
+20200223:
+	-need to allow deciding whether to overwrite when uploading
+		-current behavior: overwrite=True
+		-
+
+	-try using jsub for production with dirac:
+		[2020-02-23 08:42:02 UTC][JSUB|INFO]: Unit "detsim" finished with exit code: 1
+		[2020-02-23 08:42:02 UTC][JSUB|DEBUG]:  - Standard output:
+		[2020-02-23 08:42:02 UTC][JSUB|DEBUG]:  - Standard error:
+		cp: cannot stat `/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/setup.sh': No such file or directory
+		sed: can't read /home/dirac/condor/pilot_run/DIRAC_Y8S2Oxpilot/6398567/job/8/run/detsim/juno_env.sh: No such file or directory
+			/home/dirac/condor/pilot_run/DIRAC_Y8S2Oxpilot/6398567/main/action/juno_detsim/juno_detsim.sh: line 27: /home/dirac/condor/pilot_run/DIRAC_Y8S2Oxpilot/6398567/job/8/run/detsim/juno_env.sh: No such file or directory
+
+			
+		CLUSTER.SJTU.cn		->	问题出在我的证书，不是JUNO用户组的。
+		
+
+20200222:
+	-部分地回答了王亮亮的问题。
+	
+
+20200220:
+	http://it.ihep.ac.cn/yhfw/jsfw/yjspt/11/480968.shtml
+
+	Things to do in 1 month:
+		-回答关于psi(3686)->gamma eta_c(2S)的问题
+		-回答关于亮度的draft的问题
+		-申请基金
+		-在虚拟机上安装和测试XCache
+		-尝试用JSUB交作业，产生MC

@@ -1,0 +1,172 @@
+20200325:
+	CEPC sim/rec should be able to take input from DFC.
+		-
+
+20200318:
+	learning from weiyang's xcache setup:
+		check the following folders
+			/etc/grid-security/certificates
+			/etc/grid-security/vomsdir
+
+		sudo yum install -y xrootd-server xrootd-client xrootd libmacaroons
+		yum install -y xrootd-rucioN2N-for-Xcache
+		yum install -y vomsxrd
+
+		mount a file system to /xrdcache
+		
+		/etc/xrootd/auth_db					g /atlas / rl
+		/etc/grid-security/xrd
+			touch /etc/grid-security/xrd/xrdcert.pem
+			touch /etc/grid-security/xrd/xrdkey.pem
+			
+		touch /etc/xrootd/xcache.cfg /var/run/x509up
+
+
+20200316:
+	Configuring XCache:
+		https://buildmedia.readthedocs.org/media/pdf/xcache/latest/xcache.pdf
+		
+		important container paths	$PWD/config:/etc/xrootd
+
+		essential rpms:	
+			xrootd xrootd-libs xrootd-server xrootd-cient-libs libssl libcurl
+
+
+
+		sample configuration files:
+			/etc/xrootd
+			/etc/sysconfig/xrootd
+
+			All directories should be writable by user "xrootd" (created by the rpms).
+			
+			x509 related setup
+				define X509_CERT_DIR, X509_VOMS_DIR, X509_USER_PROXY in /etc/sysconfig/xrootd
+				if setup not in standard location.
+
+		Unable to bind socket to port 1094; address already in use
+			------ xrootd anon@xrootdtest:-1 initialization failed.
+		
+				
+20020315:
+	JSUB:
+		-backend setting:
+			site (destination)
+			JobGroup
+			extra env?
+			grid setting:
+				metadata:	resonance, eventType
+		-update CEPC modules
+			-update cepc sim.
+				
+			-update cepc rec.
+			
+			-connecting sim/rec
+			-on dirac backend;
+				-dirac_download stdhep_files for cepc_sim;
+					-input stdhep redirect to ../
+				-dirac_upload output of cepc_sim;
+					-output of cepc_sim redirect to ../
+						lcio output file(xxx.slcio)
+					-move GearOutput.xml to ../
+						
+				-dirac_download gear_xml_file for cepc_rec, if no sim.
+				-if [sim, rec] 
+					-move the output of sim to ../
+					-rec reads gear_xml_file from ../
+				-dirac upload output files of cepc_rec.
+				
+				
+				
+		input_path_to_lfn:
+			'/cepc/user/%s/%s/jsub/'%(username[0],username) + folder_name + '/' + os.path.basename(input_path)
+	
+
+20200312：
+	Software Meeting:
+		-林涛：事例分类
+			-搭建框架软件：	独立、可运行重建算法、事例分类
+			-软件架构：控制，configuration
+		-两个学生：
+			yangyx:	following 刘言
+			yuansc: 
+		-yiph:
+			论文答辩
+
+		-准备ACAT会议的报告
+			https://indico.cern.ch/event/855454/abstracts/		
+			deadline for submission of abstracts is April 7th.
+			
+			
+	JSUB:
+		-未成功的作业的管理
+		-documentation
+		-CEPC Example
+		-修改配置(site, CE, 额外的环境，网格的配置)
+		
+	Xcache:
+		-testing on xrootdtest.ihep.ac.cn
+		
+	
+	
+	超融合架构
+		-VSAN: 虚拟化集群，安装闪存和硬盘来构造存储层。
+		-hyper-converged: hyper意为虚拟化；底层采用x86平台，上层采用软件定义的方式，将计算、存储、网络等资源集合在一起；简化部署，提高运维效率。
+		-edge computing: 在网络边缘进行计算的新型计算模式。下行的云服务，上行的万物互联服务。
+		-
+
+20200308:
+	deploy Xcache:
+		-following the guide:	https://github.com/wyang007/rucioN2N-for-Xcache/wiki/Deploy-Xcache-via-a-Singularity-Container
+		-install singularity
+			-need to install apt-get/wget?
+				-installed via yum;	
+			-error when configuring singularity: no acceptable C compiler found in $PATH	
+				-sudo yum group install "Development Tools" --skip-broken
+					-still doesn't solve dependency problem
+					-try this guide:	https://www.scalescale.com/tips/nginx/install-gcc-development-tools-centos-7/
+						-failed
+					-https://linux.jadoel.info/
+						-install from source with wget
+						-error: a gcc is needed when configuring
+				-use "yum --disablerepo sl-base install gcc" to avoid dependency problem.
+
+			-can use singularity; but can't sudo singularity
+				alias mysudo='sudo -E env "PATH=$PATH"'
+				
+				
+		-test xcache:
+			https://alien.web.cern.ch/content/documentation/howto/site/installxrootd#Xrootd_and_how_it_works
+				
+				
+			
+		-how to use centos?
+			rpm, yum available;
+			-how to solve dependency problems in yum?
+				yum clean all
+				yum update
+				
+				if yum update fail, it may be caused by corrupted RPM database
+					# rm -f /var/lib/rpm/__db.*
+					# rpm -vv –rebuilddb
+					# yum update
+		
+20200306：
+	基金申请：
+		报告
+			-应用场景
+			-dirac 访问数据
+			-两件事情的串联
+		
+			
+20200305：
+	to do:
+		-博士后在站成果填写（中国博士后网上办公系统）
+		-赵忠尧申请			3.31
+		-博士后创新人才支持计划 	3.31
+			-not likely to qualify
+		-面上资助		3.31
+	
+	Xcache:
+		xrootdtest.ihep.ac.cn		test/12345qwert
+		root zhyan=202
+	
