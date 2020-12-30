@@ -1,0 +1,147 @@
+TAU Performance Analysis:
+	by Argonne Leadership Computing Facility
+
+direct performance observation
+	-source instrumentation
+	-compiler instrumentation
+	-binary rewriting
+
+	problem:
+		overhead not evenly distributed:
+			constant overhead for each instrumentation-point
+	
+indirect performance observation:
+		-do not do instrumentation for program code.
+		-performance is observed indirectly
+			-interrupt execution:
+				can be triggered by different events
+			-execution state is queried （sampled)
+				performance data measured
+			-Event-based sampling
+		-performance attribution is infered:
+			-determined by execution context
+			-observation resolution determined by interrupt period.
+			-performance data associated with context for period
+
+			-less accuracy for less overhead
+			
+		at what level of granuality store data:
+			-how much time was spent in each routine
+			-when events take place on a timeline
+			
+		types of performance profiles:
+			-flat profiles:
+				metric(time) spent in an event
+				exclusive/inclusive, number of calls, child calls;
+			-callpath profiles
+				time spent along a calling path
+			-phase profile:
+				flat profiles under a phase
+				
+		how much data do you want?
+			O(KB) to O(TB)
+				limited profile -> flat profile -> loop profile -> phase profile -> callpath profile -> Trace
+		inclusive measurement vs. exclusive measurements
+			-exclusive measurement doesn't include time spent in a call to some other functions
+			-inclusive: itself + children
+		
+		direct observation events:
+			-interval events (begin/end events)
+			-atomic events (trigger with data value)
+				-e.g.: heap memory consumed at a particular point.
+				
+		measure what matters:
+			-identify hotspots -> focus optimization
+				File I/O:	buffers, data formats, in-memory filesystems
+				communication: collectives, blocking, non-blocking, topology, load balance
+				memory: bandwidth/latency, cache utilization
+				compute: vectors, branches, integer, floating point
+			
+A high level overview of TAU's capabilities
+	The TAU performance system:
+		-intergrated toolkit for performance problem solving:
+			-instrumentation, measurement, analysis, visualization
+			-portable profiling and tracing
+			-performance data management and data mining
+		-direct and indirect measurement
+		-free, open source, BSD license
+		-available on all HPC platforms
+		-http://tau.uoregon.edu/
+		
+	Performance Tool checklist:
+		-universal tool or integrated toolkit;
+		-unbiased, accurate measurements:
+			File I/O: serial and parallel
+			communication: inter- and intra-node
+			memory: allocation and access
+			CPU: vectorization, cache utilization, etc.
+		-minimal overhead:
+			-provide multiple measurement methods
+			-focus on one performance aspect at a time
+		
+	TAU workflow:
+		-instrumentation
+			source
+			library
+			linker
+			executable
+		-measurement:
+			events
+			profiling
+			tracing
+			metadata
+		-analysis:
+			profiles
+			traces
+			online
+		
+	questions that TAU can answer:
+		how much time per code region?
+		how many instructions per code region?
+		how much memory does the code use?
+			-high-water mark
+			-total allocated/deallocated
+			-allocation/ deallocation events
+		how much time is spent in MPI collectives?
+			message sizes/ time spent
+		3D profile/communication/topology visualization
+		how does each routine scale?
+		When do events occur?
+	
+	
+Using TAU:
+	installation:
+		-an unusual thing about TAU installation:
+			./configure -foo; make install
+			./configure -bar; make install
+		-in TAU, the configurations are installed side by side.
+			-to reduce overhead, many features are enabled at compile time rather than runtime.
+		-for each configuration, a Makefile is presented in $TAU/<arch>/lib/Makefile.tau-*
+		-TAU_MAKEFILE environment variable determines configuration used by compiler wrappers
+		- -T option determines configuration used by tau_exec
+			-tau_exec -T intel,papi,pdt
+			-tau_exec assumes mpi: specify serial if not.
+			
+	typical workflow:
+		-sample to identify hotspots:
+			tau_exec -ebs
+		-selectively instrument hotspots:
+			tau_f90.sh, -optSelectFile
+		-storage:
+			paraprof -pack file.ppk
+			taudb_loadtrial
+		-gather hardware performance counter data:
+			papi_avail, TAU_METRICS
+		-visualize performance data, derived metrics(paraprof)
+		-visualize scaling data(perfexplorer)
+		-derived metrics
+			paraprof
+		
+	sampling with TAU:
+		build your app without TAU as dynamic executable
+		run application through tau_exec:
+			aprun -n 16 {tau_exec -T mpi,pthread -ebs} ./foo
+	insert TAU api calls automatically:
+		-use TAU's compiler wrappers
+		-run normally through launcher
+	

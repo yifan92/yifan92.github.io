@@ -1,0 +1,80 @@
+2020/08/28:
+	debug jsub:
+		invalid settings:
+		- max subjob
+		- site: IHEP.GRID.cn
+
+		error prompt:
+			-when user use yaml instead of job number for task submission.
+
+2020/08/24：
+	jsub reschedule 26 -f:
+		work successfully
+	104/120 jobs succeeded for testLS; 
+		-same bad sites (PADOVANA, JINRONE)
+		-with all nuclears.
+		-5000 evts per job.
+		
+	locate bad jobs:
+		testAcrylic 55,35,33,14:	received kill signal
+		testAcrylic 10,11,17,18: 	singularity CE error, command failed with exit code 1;	Unknown shell.
+			all acrylic with jobs at In2P3 failed, but with testPMTglass succeeded
+
+2020/08/19:
+	jsub gendecay task:
+		4340 failed jobs;
+			3950 from CLOUD.JINRONE.ru
+			4303 with app status (Executing RunScriptStep1), 37 others
+			possible reason: no sufficient memory?
+			cannot download log:
+				dirac job failed.
+		
+			get the seeds of failed jobs；手动跑一遍，加上内存监控
+		
+	jsub getlog command now support filtering job status, and max njobs
+		jsub getlog <task-id> -i sub_ids -n njobs -s status
+		
+			
+			
+2020/08/18:
+	杨毅翔：
+		-做站点测试
+		-我需要提供帮助：
+			证书申请
+			提交作业
+			
+
+	gendecay production:
+		5000*10000	 (3T data)
+		DFC folder:	/juno/production/gendecay
+		
+		error in gendecay example:
+			- stderr cannot be decode
+			
+			[2020-08-18 02:17:31 UTC][JSUB|ERROR]: Thread "detsim" exception (UnicodeDecodeError): 'ascii' codec can't decode byte 0xe2 in position 169: ordinal not in range(128)
+			Traceback (most recent call last):
+			File "/tmp/6902244/main/navigator/python/nav.py", line 255, in run
+				stderr = stderr.decode()
+			UnicodeDecodeError: 'ascii' codec can't decode byte 0xe2 in position 169: ordinal not in range(128)
+
+			task status error:
+				Access denied to get task progress for task 1140
+				task manager with status Ready
+
+	testing performance of jsub:
+		-提交时间
+		-后端等待时间
+		-全部作业后端运行时间
+		-失败率，失败原因
+				
+
+2020/08/13:
+	instrumentation:
+		performance evaluation
+		what is TAU?
+			- what it can do?
+		Using TAU on JUNO
+			
+		using tau on my MAC-OS:
+			-install with cmd line:		brew cask install tau 
+			

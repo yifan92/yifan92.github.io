@@ -1,0 +1,130 @@
+2020/09/28:
+jsub:
+	-on dirac backend, job group reflects user name now.
+	-now extends the package lists on default jsubrc
+	-re-arrange folder structure:
+		-a bug when loading task when there is no taskInfo file but other files exists.
+		-a bug when there is None-int folders in jsub-folder.
+		-for local/condor: move log files in launcher.sh
+		-fixed a bug with additionalArg
+		-fixed a bug concerned with auto-completion of detsim/elecsim/calib/rec
+		
+		$JUNOTOP/offline/Validation/JunoTest/production/libs/jobmom.sh $$ >& log-detsim-${SEED}.txt.mem.usage &
+	
+		ps -aufx
+	
+		Memory usage:  9.34765625, 3025.36328125
+		yangyf   24069 97.3  1.9 3197428 2562408 pts/13 R   01:35   2:23  \_ python /cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/offline/Examples/Tutorial/share/tut_detsim.py --evtmax 100
+		
+		USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+		yangyf    7032  0.0  0.0 118008  4712 pts/92   Ss   Sep28   0:02 -bash USER=yangyf LOGNAME=yangyf HOME=/afs/ihep.ac.cn/users/y/yangyf PATH=/usr/local/bin:/usr/bin MAIL=/var/mail/yangyf SHELL=/bin/bas
+		yangyf   19172  0.0  0.0 157552  1920 pts/92   R+   01:42   0:00  \_ ps -eufx MANPATH=:/opt/puppetlabs/puppet/share/man XDG_SESSION_ID=329884 HOSTNAME=lxslc703.ihep.ac.cn TERM=xterm SHELL=/bin/bash C
+		yangyf   31299  0.0  0.0 113280  1456 pts/92   S    01:39   0:00 /bin/sh /junofs/users/yangyf/workdir/jsub/13/runtime/launcher.sh 0 MANPATH=:/opt/puppetlabs/puppet/share/man XDG_SESSION_ID=329884 HOS
+		yangyf   31307  0.0  0.0 113288  1484 pts/92   S    01:39   0:00  \_ /bin/sh /junofs/users/yangyf/workdir/jsub/13/runtime/main/bootstrap/bootstrap.sh 0 /junofs/users/yangyf/workdir/jsub/13/runtime/su
+		yangyf   31337  0.0  0.0 246652  8644 pts/92   Sl   01:39   0:00      \_ python /junofs/users/yangyf/workdir/jsub/13/runtime/main/navigator/python/nav.py --task_sub_id=0 --main_root=/junofs/users/yan
+		yangyf   31352  0.0  0.0 113412  1800 pts/92   S    01:39   0:00          \_ /bin/bash /junofs/users/yangyf/workdir/jsub/13/runtime/main/action/juno_prod/juno_prod.sh MANPATH=:/opt/puppetlabs/puppet/
+		yangyf   31952  0.0  0.0 113460  1644 pts/92   S    01:39   0:00              \_ /bin/bash - /cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/offline/Validation/JunoTest/production/li
+		yangyf   19010  0.0  0.0 108088   392 pts/92   S    01:42   0:00              |   \_ sleep 5 G4LEVELGAMMADATA=/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/ExternalLibs/Geant4/10.0
+		yangyf   31953 96.3  1.8 3133340 2498836 pts/92 R   01:39   2:52              \_ python /cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3//offline/Examples/Tutorial/share/tut_detsim.py		
+		
+
+2020/09/26:
+jsub:
+	-cvmfs version:
+		-taskDir shouldn't be yangyf
+		-cepc package not on cvmfs yet.
+		
+	-common experiment UI:
+		-error explanation.
+		-falsefully generate
+
+2020/09/25:
+	check failed gendecay jobs with jsub-condor
+		job group: 00001064
+		seed in job name.
+
+2020/09/15:
+	Sim_Th232_1.root can not be opened (Read-only file system)
+
+	zhangxm:
+		1.缺省目录定义；
+		2.log内容太乱；
+	
+	other problems:
+		1.jsub的内存开销比较大
+		2.
+	
+
+2020/09/13:
+	hep_sub <job_script> -argu arguments_list
+
+ 78 HepSubGo="${HepSubCmd} -o ${JobStdout} -e ${JobStderr} -g ${JobXGroup} ${ExtraArgs}"
+ 79 RunBossGo="${BossShell} -argu ${BossJobOpt}"
+104     ${HepSubGo} -n ${JobXCount} ${RunBossGo}
+
+ 21 JobXCount=0
+ 22 JobXGroup="physics"
+ 23 JobStdout="/dev/null"
+ 24 JobStderr="/dev/null"
+ 25 HepSubCmd="${SW_DIR}/hep_sub"
+ 26 BossShell="/afs/ihep.ac.cn/soft/common/sysgroup/hep_job/bin/xboss"
+ 27 ExtraArgs=""
+ 28 BossJobOpt=""
+	
+	
+	
+	Truss: 不做了
+	Node: Rmax=19300
+	Acrylic: Rmax=18100
+	hep_q -u yangyf -hold			# to check 
+
+2020/09/08:
+试交一批作业，熟悉production用法
+do production:	
+	with juno production system.
+	no user output:
+		except: Th-232 LS,U-238	/	Truss-Tl208
+	folder:
+		nooutput-> prd002
+		output: prd001
+		subdir: 09_07_02
+	seed:
+		no user output: start from 0
+		with user output: start from 1000
+		max2dir:	max nsubjobs in one folder
+		
+	example gendecay5000_LS
+	
+
+2020/09/06:
+jsub condor:
+	JunoTest/python/JunoTest/Job/BatchJob.py
+	JunoTest/python/JunoTest/Utils/shellUtil.py
+	
+		cmd = ["condor_q", user, "-name", schedd, "-format", '%d.', "ClusterId", "-format", "%d ", "ProcId", "-format", "%d\n", "JobStatus"]
+		return os.popen("condor_submit %s -verbose | grep \"** Proc\" | awk \'{print $3}\'" % script).read().strip().strip(':')
+
+backend_manager.get_run_root
+
+2020/09/02:
+和张晓梅老师讨论：
+- 测试TAU：看BOSS的code
+- gendecay 产生
+- 测试GRID.IHEP.cn
+- 测试具体的资源使用情况
+- 整理juno production的参数/成功：
+- jsub向logging发送消息；
+- 如何汇总多个作业的性能信息？
+	- 建立 database?
+	- 小文件数量太多会有性能问题。
+- 更新jsub doc
+	- more user examples
+	- distinguish contents that users should not be interested at first.
+	
+-杨毅翔：
+	- 会提交作业	
+	- 交一个测试站点的frontier squid：证明使用squid比不用squid的性能更好
+		-ihepdirac-resource-get-squids
+	- 使用JSUB：
+	
+	

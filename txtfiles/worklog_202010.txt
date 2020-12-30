@@ -1,0 +1,35 @@
+2020/10/13:
+	jsub:
+		-added a to validity check of action blocks in yaml
+		
+		-test memory usage with gendecay examples:
+			directly submit a script that runs juno:
+				/junofs/users/yangyf/workdir/check_gendecay
+					jsub_local.yaml
+					jsub_condor.yaml
+					
+					one job with size 4150.0 on condor
+			
+			jsub.nav result: resource.getrusage 不准确，无法及时更新子进程
+			
+			
+			
+			yangyf   13925  0.0  0.0 113284  1388 pts/127  S    Oct13   0:00          \_ /bin/sh /junofs/users/yangyf/workdir/jsub/15/runtime/main/action/exe/exe.sh
+			yangyf   13931  0.0  0.0 113284   664 pts/127  S    Oct13   0:00              \_ /bin/sh /junofs/users/yangyf/workdir/jsub/15/runtime/main/action/exe/exe.sh
+			yangyf   13933  0.0  0.0 113424  1756 pts/127  S    Oct13   0:00                  \_ /bin/bash /junofs/users/yangyf/workdir/jsub/15/runtime/main/input/common/gendecay_local.sh Th-232 22 5000
+			yangyf   15095  0.0  0.0 113468  1692 pts/127  S    Oct13   0:00                      \_ /bin/bash - /cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc830/Pre-Release/J20v1r0-Pre2/offline/Validation/JunoTest/production/libs/jobmom.sh 13933
+			yangyf   21795  0.0  0.0 108096   448 pts/127  S    00:51   0:00                      |   \_ sleep 5
+			yangyf   15097 98.4  0.9 2037384 1208432 pts/127 R  Oct13  94:38                      \_ python /cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc830/Pre-Release/J20v1r0-Pre2//offline/Examples/Tutorial/share/tut_detsim.py --evtmax 5000 --seed 22 --output ./detsim_22.root --user-output ./detsim_user_22.root gendecay --nuclear Th-232 --volume pTarget --material LS
+
+			
+			yangyf    7077  0.0  0.0 113284  1388 pts/127  S    01:06   0:00          \_ /bin/sh /junofs/users/yangyf/workdir/jsub/23/runtime/main/action/exe/exe.sh
+			yangyf    7086  0.0  0.0 113284   660 pts/127  S    01:06   0:00              \_ /bin/sh /junofs/users/yangyf/workdir/jsub/23/runtime/main/action/exe/exe.sh
+			yangyf    7088  0.0  0.0 113416  1712 pts/127  S    01:06   0:00                  \_ /bin/bash /junofs/users/yangyf/workdir/jsub/23/runtime/main/input/common/gendecay_local.sh K-40 43 5000
+			yangyf    7972  0.0  0.0 113460  1644 pts/127  S    01:07   0:00                      \_ /bin/bash - /cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3/offline/Validation/JunoTest/production/libs/jobmom.sh 7088
+			yangyf   32129  0.0  0.0 108084   436 pts/127  S    01:12   0:00                      |   \_ sleep 5
+			yangyf    7975 95.1  1.8 3148260 2471180 pts/127 R  01:07   4:52                      \_ python /cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc494/Pre-Release/J19v1r0-Pre3//offline/Examples/Tutorial/share/tut_detsim.py --evtmax 5000 --seed 43 --output ./detsim_43.root --user-output ./detsim_user_43.root gendecay --nuclear K-40 --volume pTarget --material LS
+			
+			
+					
+		-juno scenario:	
+			-user script not supported for splitByEvents splitter.

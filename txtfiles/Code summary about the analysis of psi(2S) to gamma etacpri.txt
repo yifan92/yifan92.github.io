@@ -1,0 +1,33 @@
+Algorithms	(BOSS v.6.6.4.p03):
+	/besfs/users/yangyf/workarea-664p03/
+		gKsKpiAlg:		
+		GammaEta2SAlg:	for gKKpi0 channel
+		ggKsKpiAlg:		algorithm used for getting the lineshape of ggKsKpi background
+		ggKKpi0Alg:		algorithm used for getting the lineshape of ggKKpi0 background
+
+		
+Output data of algorithms:		
+	/scratchfs/bes/yangyf/GammaEtac2S/*
+
+		
+		
+Main dir of scripts: 
+	/besfs/users/yangyf/scripts/gEtacpri
+ 
+ 	
+	Important scripts there:
+		simFit.py: simultaneously fit the result of two channels.
+		simFit.C:	outdated version of the py script.
+		gKKpi0/
+			gKKpi0.py:	the main script that deals with Alg result, output root file with selected events. 
+			gKKpi0.C:		an outdated version of the python script  
+			MassProjection.C:	translate 3C-mass/5C-mass spectra
+			roofit/
+				fit_KKpi0.C:		roofit script to get background lineshape
+				fit_KKpipi.C
+				fit_wKK_shape.C
+				FSRnoFSR.C:		adding up FSR/noFSR events with weight.
+		gKsKpi/
+			similar to scripts in gKKpi0/	
+
+		

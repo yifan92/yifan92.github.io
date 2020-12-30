@@ -1,0 +1,98 @@
+2020/11/30:
+	things to do in two days:
+		- 回答draft问题
+		- 测试xcache
+			disk usage问题： 如果xcache server空间不够，会出错
+			
+			拷贝到本地
+			xrdcp xroot://xrootdtest.ihep.ac.cn//root://junoeos01.ihep.ac.cn//eos/juno/user/yangyf/f1.root f1
+			xrdcp xroot://xrootdtest.ihep.ac.cn//root://eos.jinr.ru:1094/srm/v2/server?SFN=/eos/juno/dirac/juno/user/y/yyang/rec.root f1
+			
+			srm://storm.ihep.ac.cn:8444/srm/managerv2?SFN=//juno/user/y/yyang/try_dirac/calib_0.root
+			Run: [ERROR] Server responded with an error: [3010] Opening path '/srm:/storm.ihep.ac.cn:8444/srm/managerv2' is disallowed.
+
+			本地测试，1 Gb的文件，速度从 63mb/s 提升到 108 mb/s
+			PFN?
+			
+			准备数据：
+			export EOS_MGM_URL="root://junoeos01.ihep.ac.cn"
+			export EOS_HOME="/eos/juno/user/yangyf"
+			eos cp f1 /eos/juno/user/yangyf/f1
+			
+		- instrumentation
+		- 测试对于新版本的缺库问题
+			-在singularity上测试
+				测了林韬和opensciencegrid的singularity， v1r1pre0有问题，其它版本正常
+					in detsim:		
+						Error in <TROOT::WriteTObject>: The current directory (RootApp) is not associated with a file. The object (JunoGeom) has not been written.
+					in rec:	
+						can't find the geometry file sample_detsim.root
+			-测试cloud上的站点
+		- VOMS problem
+		- 回复Joao邮件
+			done
+		- 改jsub
+		- 写简历，准备求职
+			高能所岗位：
+				http://www.ihep.cas.cn/zszp/zpxx/zbzp/202009/t20200911_5695769.html
+				cv.ihep.ac.cn
+				提交初试评表
+
+2020/11/19：
+	find missing dll for CentOS7 env:
+		testing machine:
+		ssh -l root 192.168.60.150
+		cloud4dirac@IHEP （后面有空格）
+	
+		zhangxm:	无法成功运行detsim, 缺库
+		yangyf test:	 成功运行detsim, elecsim； 无法成功运行calib
+			缺libOpenGL.so.0
+
+			查询方法：
+				ldd
+				
+				
+			
+2020/11/16:
+try xcache:
+	xrootd    1193     1  0 Aug08 ?        00:00:19 /usr/bin/xrootd -l /var/log/xrootd/xrootd.log -c /etc/xrootd/xrootd-clustered.cfg -k fifo -s /var/run/xrootd/xrootd-clustered.pid -n clustered
+	xrootd    1195     1  0 Aug08 ?        00:10:44 /usr/bin/cmsd -l /var/log/xrootd/cmsd.log -c /etc/xrootd/xrootd-clustered.cfg -k fifo -s /var/run/xrootd/cmsd-clustered.pid -n clustered
+
+	root://junoeos01.ihep.ac.cn
+
+
+2020/11/02:
+
+JUNO ana:
+	softversion:	/cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc830/Pre-Release/J20v1r1-Pre0
+	alg: /cvmfs/juno.ihep.ac.cn/sl6_amd64_gcc830/Pre-Release/J20v1r1-Pre0/sniper/Examples/libHelloWorld.so
+	
+	Sniper.loadDll("/junofs/users/zhangxt/github/calibRec_juno/Deconvolution/amd64_linux26/libDeconvolution.so")
+	deconv=task.createAlg("Deconvolution")
+	deconv.property("TotalPMT").set(args.TotalPMT)
+
+	/junofs/users/yangyf/jsub/examples/juno/JsubHelloWorld/amd64_linux26/libJsubHelloWorld.so
+	
+	properties:
+		declProp("VarString", m_string);
+		declProp("VectorInt", m_vector_int);
+		declProp("MapStrInt", m_str_int);
+
+	Sniper.loadDll("libDummyAlg.so") 	
+		
+		
+	jsub procedure:
+		
+		cp files to ./		
+		generate run.py
+			-from template
+			-replace texts:
+				-so 
+				-textReplace
+		run the command:
+			python run.py  [with args]
+		
+		
+	
+	
+	

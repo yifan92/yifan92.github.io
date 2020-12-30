@@ -1,3 +1,34 @@
+20200327:
+	jsub job management:
+		-analysis handling
+			-
+	
+		-failed job handling
+			-identify failed jobs
+				-navigator/launcher/bootstrap error handling
+				-define exit code, so that DIRAC knows what error.
+			
+		-backend should allow specifying site/SE.
+			-backend configuration
+				check manager/config.py
+
+		-restructure directories;
+			-in config
+			-where to put logs.
+			-dealing with relative paths in YAML
+				-translate to absolute path first?
+					util->expandpath?
+			-workdir should only contain things that user interested in
+				-rename workdir to execution, telling users not to look there
+				-a new log dir.
+				
+			
+		
+		
+20200326:
+	to do:
+		-add to CEPC mailing list
+
 20200325:
 	CEPC sim/rec should be able to take input from DFC.
 		-
@@ -167,6 +198,7 @@
 		-ÃæÉÏ×ÊÖú		3.31
 	
 	Xcache:
-		xrootdtest.ihep.ac.cn		test/12345qwert
-		root zhyan=202
+		xrootdtest.ihep.ac.cn		
+		test/12345qwert
+		root/zhyan=202
 	

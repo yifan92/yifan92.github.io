@@ -1,0 +1,114 @@
+2020/12/21:
+	jsub:
+		new version:
+			-release note:
+				- todo
+					showing message of why jsub getlog/submit fail
+					dirac logging: dirac_upload, dirac_download
+					xcache in dirac_download module
+					info for 'jsub ls' command
+					'jsub dir' command
+					the way to put logfiles
+				- done
+				
+					
+		joao comments:
+			
+
+	avoid job stalling for file transportation:	
+		in wms/agent/StalledJobAgent.py
+		self.stalledJobsTolerantSites = self.am_getOption('StalledJobsTolerantSites', [])
+		self.stalledJobsToleranceTime = self.am_getOption('StalledJobsToleranceTime', 0)
+
+		or send heartbeat signal.
+
+			
+	adding dirac logging:		
+		relevant code:	
+				from DIRAC.WorkloadManagementSystem.DB.JobLoggingDB import JobLoggingDB
+				gJobLoggingDB = None
+				global gJobDB, gJobLoggingDB, gtaskQueueDB, enablePilotsLogging, gPilotAgentsDB, gPilotsLoggingDB
+				gJobLoggingDB = JobLoggingDB()
+				
+				gJobLoggingDB.addLoggingRecord(jobID, result['Status'], result['MinorStatus'], source='JobManager')
+
+		can't do it in navigator:
+				python version contradiction in jsub/dirac problem.
+				
+		can't do it in dirac_upload:
+			failed to import MySqlDB
+				
+2020/12/15:
+	xrdcp xroot://service.hepg.sdu.edu.cn//root://junoeos01.ihep.ac.cn//eos/juno/user/yangyf/f1.root f1
+	xrdcp xroot://xrootdtest.ihep.ac.cn//root://eos.jinr.ru:1094/srm/v2/server?SFN=/eos/juno/dirac/juno/user/y/yyang/rec.root rec.root
+
+	
+lfn: /juno/user/y/yyang/rec.root
+IHEP-STORM      srm://storm.ihep.ac.cn:8444/srm/managerv2?SFN=//juno/user/y/yyang/rec.root
+JINR-EOS        root://eos.jinr.ru:1094/srm/v2/server?SFN=/eos/juno/dirac/juno/user/y/yyang/rec.root
+	
+	
+	
+2020/12/7:
+	test jobs:
+		jsub.yangyf.4
+
+
+	xrdcp xroot://service.hepg.sdu.edu.cn//root://junoeos01.ihep.ac.cn//eos/juno/user/yangyf/f1.root f1
+	xrdcp xroot://xrootdtest.ihep.ac.cn//root://junoeos01.ihep.ac.cn//eos/juno/user/yangyf/f1.root f1	
+	
+SE                  ReadAccess WriteAccess RemoveAccess CheckAccess
+===================================================================
+BES-USER            Active     Active      Active       Active
+BES-USER-NEW        Active     Active      Active       Active
+CNAF-STORM          Active     Active      Active       Active
+GUCAS-USER          Active     Active      Active       Active
+IHEP-EOS            Active     Active      Active       Active
+IHEP-STORM          Active     Active      Active       Active
+IHEPD-USER          Active     Active      Active       Active
+IN2P3-DCACHE        Active     Active      Active       Active
+IN2P3-XROOTD        Active     Active      Active       Active
+JINR-EOS            Active     Active      Active       Active
+JINR-JUNO           Active     Active      Active       Active
+JINR-USER           Active     Active      Active       Active
+NEU-STORM           Active     Active      Active       Active
+ProductionSandboxSE Active     Active      Active       Active
+QMUL-STORM          Active     Active      Active       Active
+ReCAS-DPM           Active     Active      Active       Active
+TEST-USER           Active     Active      Active       Active
+UMN-USER            Active     Active      Active       Active
+USTC-USER           Active     Active      Active       Active
+WHU-USER            Active     Active      Active       Active
+	
+
+2020/12/3:
+	test jsub on JINRONE
+
+	test jsub on IN2P3:
+		
+		SNiPER::Context Can't load DLL libPMTCalibSvc.so
+		[2020-12-03 09:42:52 UTC][JSUB|DEBUG]:  - Standard error:
+		Traceback (most recent call last):
+		File "/cvmfs/juno.ihep.ac.cn//centos7_amd64_gcc830/Pre-Release/J20v1r0-Pre2//offline/Examples/Tutorial/share/tut_elec2calib.py", line 78, in <module>
+			import PMTCalibSvc
+		File "/cvmfs/juno.ihep.ac.cn/centos7_amd64_gcc830/Pre-Release/J20v1r0-Pre2/offline/InstallArea/python/PMTCalibSvc/__init__.py", line 2, in <module>
+			Sniper.loadDll("libPMTCalibSvc.so")
+		RuntimeError: Can't load DLL libPMTCalibSvc.so
+
+
+
+2020/12/2:
+	/juno/user/y/yyang/try_dirac/rec_0.root
+
+2020/12/1:
+	JSUB improve:
+		- remove action create an empty task repo
+		- cannot remove 'common' task submitted to dirac
+			No VirtualOrganization defined in manifest
+		
+		    result=task_result['Value']
+			KeyError: 'Value'
+		- jsub ls: message to let users wait while fetching info from server
+		
+		
+

@@ -1,0 +1,171 @@
+2020/07/31：
+	JUNO sim/rec Instrumentation:
+		https://www.cs.uoregon.edu/research/tau/docs/newguide/bk01ch01.html
+		以模拟作为一个例子，performance：
+			测量，HOOK
+			
+		
+2020/07/30:
+	JUNO offline会议：
+		近期工作报告/计划：
+			- 根据JUNO的production的muon proxy例子进行测试：
+				- 指定的作业，指定的站点；以补全production中失败的作业。
+			- HTCondor 后端
+			- 接手部分的分布式计算的测试/维护工作：
+				-比如站点的SAMTest
+				-写工具进行文件传输完整性的检查
+			- CEPC的会议上以CEPCSW的例子给一个报告
+			
+			-todo: rucio
+			
+			问题：
+				-目标是用户分析
+				-以模拟重建为目标：不如production自动化
+		
+				-与JUNO data production系统的比较：
+					- production:
+						作业的传输到指定的站点，数据流+作业流
+						基于DIRAC transformation系统实现
+						自动化
+						和JUNO框架的耦合性，多容易移植到CEPC？
+						随机数种子：定义起始,incremental
+						个人的分析：流程不一样
+						-认证问题
+		
+					- JSUB的优势：
+						灵活性
+						用户的界面更方便
+					-两者的分工：review的时候应该很清晰
+				
+
+2020/07/29:
+	CEPC site test
+	BES site test
+		GRID.LANCASTER.uk
+		GRID.ihep.cn
+		/opt/dirac/pro/BESDIRAC/ResourceStatusSystem/SAM/SAMTest
+		boss_test.py
+		submit through grid methods.
+		find out why job failed.
+		
+2020/07/28:
+	find files that are on the DFC but not in target SE
+	/afs/ihep.ac.cn/users/y/yangyf/misc
+	
+	
+2020/07/24:
+	to do:
+		-metadata: DFC LFN folder
+		-每一步结果输出到不同的目录
+
+2020/07/22:
+	done:
+		-outputDir
+		-composite string stop matching ${}, only matches $() now.
+	to do:
+		- splitByJobvar -> splitByJobvars; splitByEvents -> splitByEvent
+
+2020/07/21：
+	discussion with zhangxm:
+		-big memory tasks
+			-filter site.
+		-condor:
+			-dirac->condor?
+			-hep_condor
+		
+		muon example:
+			set seed, set site.
+			outputPath
+				-make it work.
+				-make it support $(jobvar).
+			user script.
+		
+
+
+2020/07/20:
+	HTCondor
+	
+	
+
+2020/07/16:
+	JUNO offline meeting:
+		what to do next?
+			-simulation: 5~6 reports
+				Livia
+				PMT parameter
+				interaction
+				electronics: data model, workflow improvements
+				supernova
+		JSUB:
+			prepare for review.
+
+	condor:
+		parsing jobvar on backend:
+			when submitting:	process = subprocess.Popen([launcher, str(sub_id)], stdout=FNULL, stderr=subprocess.STDOUT)
+		submit:
+			submit description file
+				only 1 arg needed: sub_id;
+		manage:
+			checking progress: 
+				condor_q	(jsub ls)
+				condor_tail:	peeking output
+				condor_rm
+				condor_hold/condor_release
+		automatic resubmit:
+			max_retries
+		shared file system.
+		
+	
+		
+		
+		
+		
+2020/07/15:
+	ssh dcomutingpub@cvmfspublisher -i ~/.ssh/id_rsa
+	lib/python3.7/site-packages
+	
+	
+	
+	uploading jsub:
+		-local python virtualenv
+		-install local jsub packages with pip
+		-upload jsub packages to 
+
+	condor backend:
+		/afs/ihep.ac.cn/soft/common/sysgroup/hep_job/bin/hep_sub
+
+		
+
+2020/07/10:
+	-jsub:
+		simplify: jsubrc configuration:	 extension/ backend setting(type)
+		print jsub configuration.(jsub env)
+		juno softversion: compiler?
+		dirac backend: set SE
+		dirac backend: check user certificate for failure
+
+2020/07/08:
+	-jsub:
+		can now work with empty .jsubrc
+
+2020/07/07:
+	-jsub:
+		-now support splitter-type for splitter-mode
+		-TODO:
+			-jsub remove should trigger task manager.
+			-rework common TDF style.
+			-now jsub knows to show failed status if a unit in workflow failed
+			
+			
+2020/07/01：
+	-installation on cvmfs:
+		
+	-documentation:
+		-good example
+			https://dirac.readthedocs.io/en/latest/
+		-structure
+			using jsub
+				-installation
+				-example
+				-reference
+			reference

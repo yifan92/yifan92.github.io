@@ -1,0 +1,178 @@
+2020/6/30:
+	various improvements on user experience
+
+	tar -xvf <target_gz> -C <target_dir>
+	
+	
+
+2020/6/26：
+	publishing software at 
+	cvmfs-stratum-zero.ihep.ac.cn
+	dcomputingpub 3q4a5z#$
+	
+	a practical example.
+	
+	check source code of taskDB.
+	
+
+2020/6/23:
+	taskDB:
+		source code in IHEPDIRAC
+		access with mySQL
+	installation script:
+		script for cvmfs installation;
+		script for user installation;
+			-from github
+			-one script;
+		-update script:
+			git pull. -> activate cvmfs update.
+				git runner?
+			
+2020/6/22:
+	taskClient job status doesn't strictly match DIRAC status:
+		checking-> waiting.
+		this happens when rescheduling
+		
+	CEPC meeting:
+		learn from FCC task management software?
+
+2020/6/21：
+	now support jsub status <taskID> --state <state>
+
+	used taskClient to implement delete/status.
+
+	DIRAC:
+		RPCClient(WorkloadManagement/TaskManager)		-> TaskManager is a IHEPDIRAC webapp
+		RPCClient(WorkloadManagement/JobManager)
+		RPCClient(WorkloadManagement/JobMonitoring)
+
+	IHEPDIRAC:	
+		taskClient:
+			createTask:	
+			getTaskCount:	
+			listTask
+			getTaskOwners
+			getTaskOwnerGroups
+			getTask				-> use this to return overall task info.
+			getTaskProgress
+			getTaskInfo(taskID)
+			getTaskJobs(taskID)
+			getTaskJobsStatistics: taskID, 	(Owner,OwnerDN,Status,OwnerGroup)
+			getTaskHistories
+			getJobs:	jobIDs, outFields
+			rescheduleTask: taskID, jobStatus
+			deleteTask
+			
+			
+			condDict: Status, ownerDN, 
+			outField: ['jobID','taskID','Info']
+		
+
+2020/6/17:
+	- fixed a get-status bug when backend return OK=false message.
+	- getlog, reschedule, status command
+		-how should users use the command?
+			-use 'jsub status TASK_ID --states TEXT' to check subjobs with matched running states.
+			-use 'jsub getlog TASK_ID --sub_id SUB_IDS --STATES TEXT' to retrieve log files.
+			-use 'jsub reschedule TASK_ID --states TEXT' to reschedule 
+			
+	-the standard format returned by backend.status:
+		'OK':	True/False
+		'Value':	Num of jobs in each running states
+		'Sub_ids':	
+	- HTcondor backend.
+	
+2020/6/12：
+	JUNO offline meeting:
+		prod & validation:
+			需要开个会
+			任务的分配；job option的写法
+			作业放哪里的规则
+
+2020/6/10:
+	jsub
+		sub-id bug:
+			in backend.submit(..., sub_ids=None): the param should be a list of integers; would use njobs to set the sub_id list if no sub_ids(in operation.submit);
+			in dirac backend module: if sub_id = None, don't set --sub_ids command line arg
+			in dirac-run.py:	if no sub-ids arg, sub_ids = [];
+				in Dirac.Interfaces.API.Job:	j.setParameterSequence
+				Invalid job description ( 1501 : Number of parametric jobs exceeds the limit of 100 )
+				better returning of message:	already in std.out of the python subprocess. how to get it when error?
+				
+			discard usage of njobs; run dirac-run.py for every 100 sub-ids.
+				-should run dirac-run.py script only once, with all sub-ids, but submit parametric jobs with 100 sub-ids per time in the script
+					to create only one task manager.
+			
+		solved a bug that jsub fails to delete previous task when resubmitting.
+		
+		how to know if the task is deleted on task manager?
+		
+		
+			
+2020/06/04:
+	testing whether can catch errors with bad user files.
+
+	SFT discussion:
+		- HTCondor backend;
+		- Run actual examples.
+	
+2020/06/02:
+	Discussion with zhangxm:
+		jsub status <task-id> [job-status] -> [job-id]
+		jsub getlog <task-id> [job-id]
+		
+		installation
+		error code
+		task manager 
+		monitoring: getlog, job info;
+		UI design
+
+	jsub:
+		max njobs problem.
+			-in dirac-run.py (submit())
+	
+		-thorough demonstration:
+			1. install:
+			2. configuration:
+				.jsubrc
+				
+			3. jsub commands:
+				version
+				package
+				create
+				register
+				submit
+				show
+				resubmit
+				run
+				ls
+				status
+				remove
+				getlog?	
+					- what log?
+
+				
+				list(range(len(5))
+					
+2020/06/01:
+	-valid task name:
+		how to set taskName to backend.jobName?
+			-done
+		do not set default jobGroup. (just use jsub.taskID for now, and hide from user setting.)
+	-delete task
+		b'{"OK": true, "Value": {"TaskID": 1066, "JobID": [6577011, 6577012, 6577013, 6577014, 6577015]}}\n'
+		done
+	-jsub status
+		progress = { 'Total': 0, 'Done': 0, 'Failed': 0, 'Running': 0, 'Waiting': 0, 'Deleted': 0 }
+	
+	
+	-jsub ls:
+		task status
+		
+	https://www.digitalocean.com/community/tutorials/understanding-class-inheritance-in-python-3
+
+
+	-connect with juno bookkeeping.
+	-prod rename to sim/rec?
+	-more realistic using cases
+	

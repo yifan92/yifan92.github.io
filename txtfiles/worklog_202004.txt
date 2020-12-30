@@ -1,0 +1,241 @@
+20200430：
+	Juno offline meeting:
+		- JUNO计算流程
+		
+		-zhangshu report:
+			目标
+			已实现的基本功能
+			作业流程
+			演示（图，网页）
+			运行性能测试
+			
+			
+		
+
+20200429:
+	-把几个包整合在一个release里
+	-jsubrc default values
+		-learn from ganga.
+		-jsub/.jsubrc 被 ~/.jsubrc deep-update
+		-backend:
+			default type is name.
+			-to do: default launcher should be specified by backend.
+		
+
+20200428:
+	xrootd:
+		
+
+20200427：
+	JUNO production/validation
+		- 分布式计算适合做模拟： high computation/ low IO
+		- 5月6日 juno data center meeting
+			-需要多少资源 not clear for now.
+			- 1 mev -> operation.
+			  2 mev -> another operation.
+			- data flow.
+			- cvmfs/dcomputing/IHEPDIRAC/scripts
+				-JUNO official production.
+				-file catalog上的位置
+				-如何处理出错
+		近期任务：		
+			-超新星中微子 script
+			-宇宙线muon, 核子衰变，校准组
+			
+		
+			核子衰变 as example.
+			twiki
+			CERN: open ID?
+				-check CMS tutorial?
+				
+
+20200422:
+	jsub:
+		change navigator:
+			-abandon unit folder in run, but keep child folders for log/input.
+			-changed behavior of of other modules accordingly.
+				-dirac-upload/dirac-download
+				-cepc scenario/sim/rec
+				-juno detsim
+		
+	report:
+		jsub design.
+			-what should jsub be able to do?
+				splitting.
+				backend
+					-submission
+					-workflow
+					-monitoring
+					
+					-
+				action modules.
+
+			-how to do it?
+			-status.
+
+
+		
+20200420:
+	to do:
+		-vvHmumu
+			-mannually run CEPC ana.
+			-
+
+			
+		-task manager
+			from DIRAC.Core.DISET.RPCClient import RPCClient
+
+			task = RPCClient('WorkloadManagement/TaskManager')		#remote procedure call.
+			task.createTask(taskname, taskinfo, jobInfos)
+				jobInfos[result['Value']] = {'SubID': job_count}
+				taskInfo:	{'MasterDir': , taskName, evtstart, work_dir, repo_dir, job_group, sites, batch}
+				
+			IHEPDIRAC/v0r1/IHEPDIRAC/WorkloadManagementSystem/Service
+			IHEPDIRAC/WorkloadManagementSystem/Service/TaskManagerHandler.py
+
+			-can now show task some info on task manager.
+			-how to set site and job_group?
+			-how to avoid repeated submit?
+				-resubmit command:
+					-delete backend job/task.
+					-submit
+				-if already has backend_task_id,
+			
+			
+		-报告
+		-产生数据
+		-xcache
+		
+		setExecutionEnv
+		overload jobName: in dirac-run
+		
+		
+
+20200417：
+	JSUB:
+		李老师提的问题：
+			-不同的后端的支持，是否可行。
+			-用户体验的自动化。	auto resubmit
+		准备一个完整的报告
+			-目的
+			-架构
+
+20200416：
+	JSUB:
+		IHEPDirac Task Client		IHEPDIRAC/WorkloadManagementSystem/Client/TaskClient.py
+			-listTask
+			-getTaskProgress
+		
+		more specific application status.
+			
+
+20200414:
+
+	Can now successfully raise exception when an action unit runs wrongly.
+	
+	unit_runner:
+		__finished_unit
+			result: wait_finished_unit
+				returncode
+			outvar
+			
+		__wait_finished_unit:
+			item from queue_unit
+			item['unit']
+			item['returncode']
+			
+			return item
+		
+
+	config site:
+		1. if specified backend property in task_profile, use it;
+		2. if specified backend name in task_profile, use it.
+		3. use default backend if it's not specified.
+		4. fill up the unspecified backend properties.
+		
+
+	reorganized the location in jsub task dir:
+		old:
+			jsub/work/
+			jsub/repo/
+			jsub/content/
+		new:
+			jsub/run/
+			jsub/task_info/{task_id}/repo
+			jsub/task_info/{task_id}/
+
+	ConfigManager:
+		
+
+	jsub dir:
+		repo.param.dir
+		repo.type=file_system
+		
+		content.type:file_system
+		content.param.dir
+
+		renaming:
+			task info:
+				- content
+				- repo
+		
+		
+20200409：
+	JSUB ideas:
+		the driver:
+			-is it right to let action modules run in different folders?
+			-get input from app?
+		CEPC:
+			-a more generic run_marlin action?
+				-inputGEAR
+				-outputREC
+				-outputDST
+				
+
+	learn from ILCDirac:
+		https://gitlab.cern.ch/CLICdp/iLCDirac/ILCDIRAC/
+		https://iopscience.iop.org/article/10.1088/1742-6596/513/3/032077/meta
+	
+		workflow:
+			ApplicationScript.py: Run any application provided by the user. Is used when a specific environment is needed (e.g. ROOT).
+			DDsimanalysis.py
+			FCCanalysis.py
+
+			(Marlin) get input from app?
+			
+		
+			
+		core/utilities:
+			splitting:
+				addJobIndexToFilename
+			
+		
+
+		agent:
+			MonitorAgents.py
+			
+		doc:
+			user guide
+			production manager guide.
+			code documentation
+				-application.
+				-user guide
+				-production manager guide.	
+			
+
+20200408:
+	CEPC alg:
+		-put soFile and GearXMLFile to inputsandbox
+			done
+		-
+		
+		-enable env:
+		-change to template.
+			-not supported yet
+			
+		-execute marlin
+			Marlin xxx.xml
+		-root script 
+			-should run locally?
+			
+		允许用户指定inputData中下载到本地后转存的文件名，方便用户写模板。

@@ -1,0 +1,161 @@
+2020/05/27:
+	-jsub:
+		debugging:
+			-evtMax = None
+			-input = .root
+			can't find the geometry file sample_detsim.root
+
+	
+		juno env:
+		outputSubDir setting;
+			-step_outputSubDir/step_inputSubDir should be used in dirac_upload;dirac_download
+		workflow module setting:
+			-output/user_output
+				use seed for default
+				auto file type?
+				skip redundant ones
+			-input;
+				input map
+			-evtmax;
+				
+			-seed;
+			-outputSubDir
+			
+			some args:
+			-momentum, particles
+				
+		
+			auto file type?
+			redundant user_output;input;
+			file dir?	-> should be handled only by dirac-download/upload
+			additional args as actvar/jobvar
+		
+
+2020/05/21:
+	-jsub:
+		-demo/comb_splitter.yaml
+		-demo/juno_prod_v2.yaml
+		
+		implement yaml interface:
+			taskName
+			softwareVersion
+			
+		dirac_upload:	
+			user_home
+
+2020/05/20:
+	-jsub:
+		-put splitter to extension.
+		-coded splitByJobvars splitter.
+			
+		
+		-new yaml interface
+		-jsub commands to delete/remove/reschedule.
+
+2020/05/12:
+	-jsub:
+		-improve interface:
+			-do a dummy
+			-learn from ganga example:
+				/besfs/users/yangyf/gangadir/workspace/yangyf
+				/besfs/users/yangyf/gangadir/workspace/yangyf/MCProduction/bkp/simrec_hadrons.py
+			-DiracSplitter:
+				Dirac.execAPI( DiracCommands.splitInputData(%s,%d) files,filesPerJob)
+
+			-/cvmfs/dcomputing.ihep.ac.cn/frontend/gangadist/1.2.5/install/5.6.2/python/GangaBoss/Lib/Gaudi
+			
+		
+
+2020/05/07:
+	-jsub:
+		
+
+2020/05/06£º
+	-jsub:
+		The goal is to showcase a working example:
+			- JunoTest for production/validation
+				https://juno.ihep.ac.cn/mediawiki/index.php/Offline:Data_production/JunoTestProduction
+			
+			
+			
+			workDir: Positron
+			workSubDir: uniform, center
+			
+			seed,
+			evtmax,
+			njobs,
+			tags
+			
+			$JUNOTESTROOT/production/libs/chain-template.sh
+			
+			cmd-detsim
+				cat << EOF
+				python \$TUTORIALROOT/share/tut_detsim.py 
+					--evtmax $(g-evtmax) 
+					--seed $(g-seed)
+					--output $(g-output)
+					--user-output $(g-user-output)
+					$(l-with-gdml)
+					$(g-detsim-mode)
+					$(comment: 'begin the different modes')
+					$(detsim-mode)
+				EOF
+
+			cmd-elecsim
+				cat << EOF
+				python \$TUTORIALROOT/share/tut_det2elec.py 
+					--evtmax $(g-evtmax)
+					--seed $(g-seed)
+					--input $(g-input)
+					--output $(g-output)
+					--user-output $(g-user-output)
+					--rate $(elecsim-mode-default-rate)
+					$(g-elecsim-mode)
+					$(elecsim-mode)
+					$(elecsim-mode-mixing)
+				EOF
+
+			cmd-calib
+				cat << EOF
+				python \$TUTORIALROOT/share/tut_elec2calib.py 
+					--evtmax $(g-evtmax)
+					--input $(g-input)
+					--output $(g-output)
+					--user-output $(g-user-output)
+					$(g-calib-mode)
+					$(calib-mode)
+				EOF
+			
+			cmd-calib-woelec
+				cat << EOF
+				python \$TUTORIALROOT/share/tut_det2calib.py 
+					--evtmax $(g-evtmax)
+					--input $(g-input)
+					--output $(g-output)
+				EOF
+			
+			cmd-rec-woelec
+			cat << EOF
+			python \$TUTORIALROOT/share/tut_calib2rec.py 
+				--evtmax $(g-evtmax)
+				--input $(g-input)
+				--output $(g-output)
+				$(g-rec-mode)
+				$(rec-mode)
+			EOF
+
+			cmd-rec
+			cat << EOF
+				python \$TUTORIALROOT/share/tut_calib2rec.py 
+					--evtmax $(g-evtmax)
+					--input $(g-input)
+					--output $(g-output)
+					$(g-rec-mode)
+					$(rec-mode)
+				EOF
+
+			
+			
+			
+			
+			
